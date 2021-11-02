@@ -1,0 +1,143 @@
+References,Sample,Genus/description,extraction,Solvent,depth,Type,pH,c.n.C23,c.n.C25,c.n.C27,c.n.C29,c.n.C31,d.n.C23,d.n.C25,d.n.C27,d.n.C29,d.n.C31
+Aichner et al. 2010,S-22,Potamogeton,ASE,DCM/MeOH 9:1,2.8,macrophyte,9.9,24.4,14.1,9.2,5.1,1.3,-19,-20.1,-21.5,-23.4,
+Aichner et al. 2010,S-22,Myriophyllum,ASE,DCM/MeOH 9:1,2.8,macrophyte,9.9,18.4,11.9,3,1.3,,-20.1,-21.2,-29.3,,
+Aichner et al. 2010,S-22,Chara,ASE,DCM/MeOH 9:1,2.8,algae,9.9,8.2,6.4,5.1,1.8,,,,,,
+Aichner et al. 2010,S-26,Potamogeton,ASE,DCM/MeOH 9:1,0.3,macrophyte,8.1,21.7,30.1,18.1,20.2,11.8,-21.6,-23.5,-24.5,-26.9,-28.2
+Aichner et al. 2010,S-26,Myriophyllum,ASE,DCM/MeOH 9:1,0.3,macrophyte,8.1,36.5,42.5,8.2,6.9,3.7,-21.3,-23,-27.8,-31.9,
+Aichner et al. 2010,S-26,Hippuris,ASE,DCM/MeOH 9:1,,land,8.1,10.1,20.1,162.8,581.2,48.3,,-29.2,-32.6,-32.8,-34.1
+Aichner et al. 2010,Kou-Cha,Potamogeton,ASE,DCM/MeOH 9:1,6,macrophyte,9.8,51.8,30.8,15,12.7,5.2,-17.1,-17.7,-19.8,-19.7,-24.6
+Aichner et al. 2010,Kou-Cha,Hippuris,ASE,DCM/MeOH 9:1,,land,9.8,5.3,12.9,116.7,324.9,28,,-29.9,-33.9,-34.2,-34.5
+Aichner et al. 2010,Donggi,Potamogeton,ASE,DCM/MeOH 9:1,0.3,macrophyte,7.9,39,23.8,10.8,10.1,4.3,-13.4,-13.3,-13.3,-15.5,-20.3
+Aichner et al. 2010,CTP-35,Potamogeton,ASE,DCM/MeOH 9:1,2.1,macrophyte,9.1,37.1,30,15.2,12.6,4.8,-22.8,-25.2,-27.1,-27.3,-31.1
+Aichner et al. 2010,MiY-42,Batrachium,ASE,DCM/MeOH 9:1,0.4,emergent,10.4,15,13,13.5,11.2,7.2,,,,,
+Aichner et al. 2010,MiY-42,Hippuris,ASE,DCM/MeOH 9:1,,land,10.4,12.3,24,167.9,589,63.7,,-27.7,-33.4,-33.9,-33.5
+Aichner et al. 2010,LC-10,Potamogeton,ASE,DCM/MeOH 9:1,0.5,macrophyte,7.7,13.5,16.9,10.8,6.8,1.3,-22,-23.4,-23.5,-23,-26.7
+Aichner et al. 2010,CTP-20,Potamogeton,ASE,DCM/MeOH 9:1,0.4,macrophyte,10.4,12.1,11.8,3.2,2.8,1.2,-15.8,-15.5,-17.2,-19.2,-22.5
+Aichner et al. 2010,Ga-01,Chara,ASE,DCM/MeOH 9:1,0.8,algae,9.7,11.2,11.1,13.5,6.2,,,,,,
+Liu et al. 2015,QHP13-1-1,Cladophora,Ultrasonic,DCM,5.5,algae,,,,1.5,1,0.5,,,-33.8,-26.2,-29.3
+Liu et al. 2015,QHP13-3-1,Cladophora,Ultrasonic,DCM,6.4,algae,,,,0.2,0.2,0.2,,,-28,-31.6,-31.8
+Liu et al. 2015,QHP13-6-1,Cladophora,Ultrasonic,DCM,6,algae,,,,0.8,0.5,0.2,,,-33.8,-26.9,-30.9
+Liu et al. 2015,QHP13-7-1,Cladophora,Ultrasonic,DCM,9.9,algae,,,,0.2,0.2,0.2,,,-33,-34.6,-34.1
+Liu et al. 2015,GHP-13H,Cladophora,Ultrasonic,DCM,4.6,algae,,,,,,,,,-31.7,-32.2,-32
+Liu et al. 2015,QHP05-24H,Cladophora,Ultrasonic,DCM,0.5,algae,,,,,,,,,-29.3,-32.4,-33.7
+Liu et al. 2015,QHP05-11H,Cladophora,Ultrasonic,DCM,0.5,algae,,,,,,,,,-28.5,-32.8,-33.2
+Liu et al. 2015,QHP05-13,Submerged plant,Ultrasonic,DCM,0.5,macrophyte,,,,,,,,,-15.1,-15.7,-14.3
+Liu et al. 2015,GHP12-5,Submerged plant,Ultrasonic,DCM,8.5,macrophyte,,,,,,,,,-25.6,-25.2,
+Liu et al. 2015,GHP12-6,Submerged plant,Ultrasonic,DCM,6,macrophyte,,,,,,,,,-24.1,-23.9,
+Liu et al. 2015,28D-p,Submerged plant,Ultrasonic,DCM,14,macrophyte,,,,,,,,,-25.4,-26.7,
+Liu et al. 2015,QHP13-2-1,Submerged plant,Ultrasonic,DCM,3.2,macrophyte,,,,45.4,14.3,1.2,,,-26,-26.2,-26.6
+Liu et al. 2015,QHP13-4-1,Submerged plant,Ultrasonic,DCM,3,macrophyte,,,,2.3,1.4,0.4,,,-21.8,-22.8,-25.4
+Liu et al. 2015,QHP13-5-2,Submerged plant,Ultrasonic,DCM,3.5,macrophyte,,,,7.4,4.1,1.7,,,-20.6,-21.3,-21.5
+Liu et al. 2015,QHP13-5-3,Submerged plant,Ultrasonic,DCM,3.5,macrophyte,,,,1.8,1.1,0.5,,,-20.5,-21,-22.5
+Liu et al. 2015,QHP13-6-2,Submerged plant,Ultrasonic,DCM,6,macrophyte,,,,30.1,10.5,1,,,-24.2,-25.1,
+Liu et al. 2015,QHP13-12-2,Submerged plant,Ultrasonic,DCM,0.5,macrophyte,,,,29.9,7.5,1.3,,,-17.8,-19.2,-21.6
+Liu et al. 2015,GHP13-1-1,Submerged plant,Ultrasonic,DCM,8.5,macrophyte,,,,30.2,11,,,,-23.7,-24.4,
+Liu et al. 2015,GHP13-2-1,Submerged plant,Ultrasonic,DCM,8.5,macrophyte,,,,42.8,12.5,,,,-24.2,-24.8,
+Liu et al. 2015,GHP13-3-1,Submerged plant,Ultrasonic,DCM,8.5,macrophyte,,,,56.6,18.8,1.2,,,-23.8,-24.2,
+Liu et al. 2015,GHP13-4-1,Submerged plant,Ultrasonic,DCM,6.5,macrophyte,,,,145.8,45.9,2.4,,,-22,-22.5,
+Liu et al. 2015,GHP13-8-2,Submerged plant,Ultrasonic,DCM,7.5,macrophyte,,,,69,21.9,,,,-24.9,-25.2,
+Liu et al. 2015,GHP13-9-1,Submerged plant,Ultrasonic,DCM,1.5,macrophyte,,,,62.4,19.3,2.4,,,-21.6,-22.9,
+Liu et al. 2015,EHP12-5(3)H,Terrigenous plant,Ultrasonic,DCM,,land,,,,91,433.6,131.8,,,-33.2,-35.7,-34.9
+Liu et al. 2015,EHP12-7(1)H,Terrigenous plant,Ultrasonic,DCM,,land,,,,12.7,35.2,80.4,,,-31.1,-35.3,-31.2
+Liu et al. 2015,EHP12-7(2)H,Terrigenous plant,Ultrasonic,DCM,,land,,,,46.8,257.3,134.9,,,-30.2,-34.5,-35
+Liu et al. 2015,EHP12-8(1)H,Terrigenous plant,Ultrasonic,DCM,,land,,,,81.8,169.5,131.5,,,-35.1,-33.9,-35.1
+Liu et al. 2015,EHP12-8(2)H,Terrigenous plant,Ultrasonic,DCM,,land,,,,49.5,351.1,129.9,,,-32,-33.5,-31.2
+Liu et al. 2015,GCP12-5(1)H,Terrigenous plant,Ultrasonic,DCM,,land,,,,21.5,85.4,60.9,,,,-33.4,-33.8
+Liu et al. 2015,GCP12-5(2)H,Terrigenous plant,Ultrasonic,DCM,,land,,,,3.8,51.7,172,,,-33.4,-33.3,-33.8
+Liu et al. 2015,GCP12-6-1(1)H,Terrigenous plant,Ultrasonic,DCM,,land,,,,139.7,124.4,77.4,,,,-32.9,-31.3
+Liu et al. 2015,GCP12-6-1(2)H,Terrigenous plant,Ultrasonic,DCM,,land,,,,13,184,389.3,,,-32.9,-31.6,-33.9
+Liu et al. 2015,GCP12-6-2(1)H,Terrigenous plant,Ultrasonic,DCM,,land,,,,10.6,38.9,31,,,,-30.9,-33.4
+Liu et al. 2015,DGNCP13-2,Terrigenous plant,Ultrasonic,DCM/MeOH 9:1,,land,,20,50.9,70.2,112,58.6,,,,,
+Liu and Liu 2016,QHP15-31,Terrigenous plant,Ultrasonic,DCM/MeOH 9:1,,land,,8.1,22.9,16.5,32.7,3.5,,,,,
+Liu and Liu 2016,QHP15-32,Terrigenous plant,Ultrasonic,DCM/MeOH 9:1,,land,,2.7,17.4,21.2,18.6,3.1,,,,,
+Liu and Liu 2016,QHP15-33,Terrigenous plant,Ultrasonic,DCM/MeOH 9:1,,land,,5,16.4,21.4,14.5,6.8,,,,,
+Liu and Liu 2016,QHP15-34,Terrigenous plant,Ultrasonic,DCM/MeOH 9:1,,land,,0.6,3.6,17.7,49.4,0.9,,,,,
+Liu and Liu 2016,QHP15-36,Terrigenous plant,Ultrasonic,DCM/MeOH 9:1,,land,,1.3,8.3,13.9,16.2,2.3,,,,,
+Liu and Liu 2016,QHP15-60,Terrigenous plant,Ultrasonic,DCM/MeOH 9:1,,land,,7.7,12.2,22.8,13.4,5.7,,,,,
+Liu and Liu 2016,QYHP14-2,Terrigenous plant,Ultrasonic,DCM/MeOH 9:1,,land,,10.6,54.2,82.9,102,21.5,,,,,
+Liu and Liu 2016,QYHP14-3,Terrigenous plant,Ultrasonic,DCM/MeOH 9:1,,land,,9.3,81.9,119,148,17.3,,,,,
+Liu and Liu 2016,QHP15-37,Terrigenous plant,Ultrasonic,DCM/MeOH 9:1,,land,,5.2,28.8,110.3,59.1,107.9,,,,,
+Liu and Liu 2016,QHP15-39,Terrigenous plant,Ultrasonic,DCM/MeOH 9:1,,land,,1.3,18.2,157.7,101,253.1,,,,,
+Liu and Liu 2016,QHP15-41,Terrigenous plant,Ultrasonic,DCM/MeOH 9:1,,land,,4.3,25.1,47.8,23.6,134.1,,,,,
+Liu and Liu 2016,QHP15-43,Terrigenous plant,Ultrasonic,DCM/MeOH 9:1,,land,,2,9.1,12.8,1.9,4.2,,,,,
+Liu and Liu 2016,DGNCP13-1,Potamogeton,Ultrasonic,DCM/MeOH 9:1,13,macrophyte,,189,112,17.7,12.4,,,,,,
+Liu and Liu 2016,DLP14-1-1,Potamogeton,Ultrasonic,DCM/MeOH 9:1,1,macrophyte,,143,56,10,6.9,0.2,,,,,
+Liu and Liu 2016,DLP14-2-1,Potamogeton,Ultrasonic,DCM/MeOH 9:1,1.6,macrophyte,,82.5,39.1,7.1,4.7,0.2,,,,,
+Liu and Liu 2016,EHLP15-1-1,Potamogeton,Ultrasonic,DCM/MeOH 9:1,2,macrophyte,,98.1,92.8,39.5,28.4,,,,,,
+Liu and Liu 2016,EHLP15-2-1,Potamogeton,Ultrasonic,DCM/MeOH 9:1,2,macrophyte,,133,86.6,28.5,23.9,,,,,,
+Liu and Liu 2016,EHLP15-3-1,Potamogeton,Ultrasonic,DCM/MeOH 9:1,2,macrophyte,,57.5,37.5,6.8,4.7,,,,,,
+Liu and Liu 2016,EHLP15-4-1,Potamogeton,Ultrasonic,DCM/MeOH 9:1,2,macrophyte,,83.5,54.1,9.4,7,,,,,,
+Liu and Liu 2016,EHLP15-5,Potamogeton,Ultrasonic,DCM/MeOH 9:1,2.5,macrophyte,,99.7,87.9,32.4,25.7,,,,,,
+Liu and Liu 2016,EHP14-0,Potamogeton,Ultrasonic,DCM/MeOH 9:1,na,macrophyte,,65.4,37.8,8.4,7.1,0.2,,,,,
+Liu and Liu 2016,ELLP15-2,Potamogeton,Ultrasonic,DCM/MeOH 9:1,11,macrophyte,,66.1,30.4,4.1,2.8,,,,,,
+Liu and Liu 2016,GGHP14-1-1,Potamogeton,Ultrasonic,DCM/MeOH 9:1,1.7,macrophyte,,33.7,38.1,15.9,16.2,0.6,,,,,
+Liu and Liu 2016,GGHP14-3-3,Potamogeton,Ultrasonic,DCM/MeOH 9:1,0.5,macrophyte,,32.8,45.8,22.9,15.6,0.6,,,,,
+Liu and Liu 2016,GLLCP13-2,Potamogeton,Ultrasonic,DCM/MeOH 9:1,1.8,macrophyte,,137,91.8,16.9,9.7,,,,,,
+Liu and Liu 2016,JEP14-4-2,Potamogeton,Ultrasonic,DCM/MeOH 9:1,0.8,macrophyte,,70.2,62.3,30.1,25.8,1,,,,,
+Liu and Liu 2016,JEP14-5,Potamogeton,Ultrasonic,DCM/MeOH 9:1,5,macrophyte,,90.2,83.6,35.7,30.9,1.1,,,,,
+Liu and Liu 2016,JEP14-6-2,Potamogeton,Ultrasonic,DCM/MeOH 9:1,3.1,macrophyte,,74.3,84.7,36,36,1.2,,,,,
+Liu and Liu 2016,KCLP14-1,Potamogeton,Ultrasonic,DCM/MeOH 9:1,1.2,macrophyte,,168,59,9.4,5.9,0.3,,,,,
+Liu and Liu 2016,KCLP14-2-1,Potamogeton,Ultrasonic,DCM/MeOH 9:1,1.8,macrophyte,,249,85.5,12.5,6.7,0.3,,,,,
+Liu and Liu 2016,KCLP14-3,Potamogeton,Ultrasonic,DCM/MeOH 9:1,2.7,macrophyte,,170,58.4,8.1,5.1,0.2,,,,,
+Liu and Liu 2016,KCLP14-4-1,Potamogeton,Ultrasonic,DCM/MeOH 9:1,7,macrophyte,,111,51.8,8.8,5.3,,,,,,
+Liu and Liu 2016,KCP13-1,Potamogeton,Ultrasonic,DCM/MeOH 9:1,7.3,macrophyte,,287,159,25.9,12.7,,,,,,
+Liu and Liu 2016,KHP13-1,Potamogeton,Ultrasonic,DCM/MeOH 9:1,8,macrophyte,,133,79.2,21.5,15.1,,,,,,
+Liu and Liu 2016,KHP14-1,Potamogeton,Ultrasonic,DCM/MeOH 9:1,5,macrophyte,,112,52.5,9.3,7.2,0.2,,,,,
+Liu and Liu 2016,QHP15-15-2,Potamogeton,Ultrasonic,DCM/MeOH 9:1,6.3,macrophyte,,90,47,55.9,20.7,1.2,,,,,
+Liu and Liu 2016,QHP15-16-2,Potamogeton,Ultrasonic,DCM/MeOH 9:1,3.3,macrophyte,,119,42.8,45,15.5,0.9,,,,,
+Liu and Liu 2016,TSLP14-11-2,Potamogeton,Ultrasonic,DCM/MeOH 9:1,5,macrophyte,,83.8,46.1,59.3,22.1,1,,,,,
+Liu and Liu 2016,TSLP14-15-2,Potamogeton,Ultrasonic,DCM/MeOH 9:1,2,macrophyte,,179,106,99.1,30.5,1.4,,,,,
+Liu and Liu 2016,TSLP14-2,Potamogeton,Ultrasonic,DCM/MeOH 9:1,6,macrophyte,,96.2,42.1,58.2,26.3,1.5,,,,,
+Liu and Liu 2016,TSLP14-3-2,Potamogeton,Ultrasonic,DCM/MeOH 9:1,8,macrophyte,,153,50.5,54.2,20.1,1.2,,,,,
+Liu and Liu 2016,TSLP14-4-2,Potamogeton,Ultrasonic,DCM/MeOH 9:1,10.4,macrophyte,,83.3,42,60.7,30.1,1.9,,,,,
+Liu and Liu 2016,TSLP14-5-2,Potamogeton,Ultrasonic,DCM/MeOH 9:1,12,macrophyte,,17.4,15.8,28,18.4,,,,,,
+Liu and Liu 2016,SYCP13-1,Potamogeton,Ultrasonic,DCM/MeOH 9:1,3.5,macrophyte,,82.6,46.6,8.9,5.8,1.9,,,,,
+Liu and Liu 2016,SYLP14-1-1,Potamogeton,Ultrasonic,DCM/MeOH 9:1,2,macrophyte,,95.1,32.3,5.4,3.8,1.3,,,,,
+Liu and Liu 2016,SYLP14-2-1,Potamogeton,Ultrasonic,DCM/MeOH 9:1,3.5,macrophyte,,91.4,32.6,6.4,4,1.3,,,,,
+Liu and Liu 2016,SYLP14-3,Potamogeton,Ultrasonic,DCM/MeOH 9:1,3.5,macrophyte,,64.5,26.6,5.8,3.3,1.1,,,,,
+Liu and Liu 2016,SYLP14-4-1,Potamogeton,Ultrasonic,DCM/MeOH 9:1,3,macrophyte,,96.2,33.6,6.1,3.7,1.3,,,,,
+Liu and Liu 2016,XXHLP15-3,Potamogeton,Ultrasonic,DCM/MeOH 9:1,4.5,macrophyte,,91.5,51.8,9.8,6.2,7.5,,,,,
+Liu and Liu 2016,GGHP14-1-3,Myriophyllum,Ultrasonic,DCM/MeOH 9:1,1.7,macrophyte,,166,160,7.2,1.5,0.1,,,,,
+Liu and Liu 2016,GGHP14-2-2,Myriophyllum,Ultrasonic,DCM/MeOH 9:1,1.3,macrophyte,,192,152,6.7,2.3,0.1,,,,,
+Liu and Liu 2016,GGHP14-3-2,Myriophyllum,Ultrasonic,DCM/MeOH 9:1,0.5,macrophyte,,221,305,17.6,4.7,0.3,,,,,
+Liu and Liu 2016,KCP13-2,Myriophyllum,Ultrasonic,DCM/MeOH 9:1,7.3,macrophyte,,74.3,45,8.2,4.6,1.8,,,,,
+Liu and Liu 2016,KCLP14-4-2,Myriophyllum,Ultrasonic,DCM/MeOH 9:1,7,macrophyte,,35.9,23.9,,,,,,,,
+Liu and Liu 2016,SYLP14-1-2,Myriophyllum,Ultrasonic,DCM/MeOH 9:1,2,macrophyte,,112,52.1,1.6,,,,,,,
+Liu and Liu 2016,SYLP14-2-2,Myriophyllum,Ultrasonic,DCM/MeOH 9:1,3.5,macrophyte,,85.4,41.2,1.3,,,,,,,
+Liu and Liu 2016,XLGLP15-1-1,Ruppiaceae,Ultrasonic,DCM/MeOH 9:1,1.5,macrophyte,,161,52.1,67.9,27.5,1.4,,,,,
+Liu and Liu 2016,XLGLP15-2-1,Ruppiaceae,Ultrasonic,DCM/MeOH 9:1,1.7,macrophyte,,140,44.9,64.3,26.6,1.2,,,,,
+Liu and Liu 2016,XLGLP15-2-2,Ruppiaceae,Ultrasonic,DCM/MeOH 9:1,1.7,macrophyte,,7.7,1.6,2,0.9,0.1,,,,,
+Liu and Liu 2016,XLGLP15-1-3-1,Ruppiaceae,Ultrasonic,DCM/MeOH 9:1,1,macrophyte,,174,51.9,62.8,23.7,1.2,,,,,
+Liu and Liu 2016,DGNCP13-3,Chara,Ultrasonic,DCM/MeOH 9:1,13,algae,,0.9,0.2,,0.2,,,,,,
+Liu and Liu 2016,DGNCP14-1,Chara,Ultrasonic,DCM/MeOH 9:1,17,algae,,0.1,,0.1,0.1,0.1,,,,,
+Liu and Liu 2016,DGNCP14-2,Chara,Ultrasonic,DCM/MeOH 9:1,9,algae,,0.3,0.3,0.1,0.1,,,,,,
+Liu and Liu 2016,DLP14-1-2,Chara,Ultrasonic,DCM/MeOH 9:1,1,algae,,0.2,0.1,,,,,,,,
+Liu and Liu 2016,DLP14-2-2,Chara,Ultrasonic,DCM/MeOH 9:1,1.6,algae,,0.4,0.3,0.1,0.1,0.1,,,,,
+Liu and Liu 2016,EHLP15-1-2,Chara,Ultrasonic,DCM/MeOH 9:1,2,algae,,0.3,0.2,,,,,,,,
+Liu and Liu 2016,EHLP15-2-2,Chara,Ultrasonic,DCM/MeOH 9:1,2,algae,,0.3,0.2,,,,,,,,
+Liu and Liu 2016,EHLP15-3-2,Chara,Ultrasonic,DCM/MeOH 9:1,2,algae,,0.2,,,,,,,,,
+Liu and Liu 2016,EHLP15-4-2,Chara,Ultrasonic,DCM/MeOH 9:1,2,algae,,0.4,0.3,,,,,,,,
+Liu and Liu 2016,GGHP14-2-1,Chara,Ultrasonic,DCM/MeOH 9:1,1.3,algae,,2.7,3,0.5,0.3,0.1,,,,,
+Liu and Liu 2016,GGHP14-3-1,Chara,Ultrasonic,DCM/MeOH 9:1,0.5,algae,,0.2,0.2,0.1,0.1,0.1,,,,,
+Liu and Liu 2016,GLLCP13-1,Chara,Ultrasonic,DCM/MeOH 9:1,1.8,algae,,0.8,0.7,0.5,0.6,0.6,,,,,
+Liu and Liu 2016,JEP14-2,Chara,Ultrasonic,DCM/MeOH 9:1,1.5,algae,,0.1,,,,,,,,,
+Liu and Liu 2016,JEP14-4-1,Chara,Ultrasonic,DCM/MeOH 9:1,0.8,algae,,1.7,2,1.3,0.9,,,,,,
+Liu and Liu 2016,JEP14-6-1,Chara,Ultrasonic,DCM/MeOH 9:1,3.1,algae,,0.7,0.8,0.6,0.5,,,,,,
+Liu and Liu 2016,KCLP14-2-2,Chara,Ultrasonic,DCM/MeOH 9:1,1.8,algae,,1,0.5,0.2,0.1,,,,,,
+Liu and Liu 2016,QHP15-5,Chara,Ultrasonic,DCM/MeOH 9:1,5.23,algae,,0.4,0.3,0.2,0.5,0.2,,,,,
+Liu and Liu 2016,QHP15-6,Chara,Ultrasonic,DCM/MeOH 9:1,5,algae,,0.7,0.2,0.4,0.2,0.2,,,,,
+Liu and Liu 2016,QHP15-7,Chara,Ultrasonic,DCM/MeOH 9:1,4.3,algae,,0.1,0.1,0.1,0.3,0.1,,,,,
+Liu and Liu 2016,QHP15-8,Chara,Ultrasonic,DCM/MeOH 9:1,3.7,algae,,0.8,0.8,0.5,0.9,0.4,,,,,
+Liu and Liu 2016,QHP15-11,Cladophora,Ultrasonic,DCM/MeOH 9:1,15.4,algae,,0.3,0.3,0.5,0.4,0.1,,,,,
+Liu and Liu 2016,QHP15-12,Cladophora,Ultrasonic,DCM/MeOH 9:1,16.3,algae,,0.3,0.2,0.5,0.4,,,,,,
+Liu and Liu 2016,QHP15-13,Cladophora,Ultrasonic,DCM/MeOH 9:1,15.7,algae,,0.5,0.4,0.8,0.5,0.2,,,,,
+Liu and Liu 2016,QHP15-14,Cladophora,Ultrasonic,DCM/MeOH 9:1,13.1,algae,,0.4,0.3,0.5,0.3,0.1,,,,,
+Liu and Liu 2016,TSLP14-11-1,Cladophora,Ultrasonic,DCM/MeOH 9:1,5,algae,,2.7,0.8,0.9,0.4,,,,,,
+Liu and Liu 2016,TSLP14-12,Cladophora,Ultrasonic,DCM/MeOH 9:1,14.5,algae,,0.2,0.2,0.2,0.1,,,,,,
+Liu and Liu 2016,TSLP14-15-1,Cladophora,Ultrasonic,DCM/MeOH 9:1,2,algae,,0.6,0.3,0.3,0.2,,,,,,
+Liu and Liu 2016,TSLP14-3-1,Cladophora,Ultrasonic,DCM/MeOH 9:1,8,algae,,0.5,0.2,0.2,,,,,,,
+Liu and Liu 2016,TSLP14-4-1,Cladophora,Ultrasonic,DCM/MeOH 9:1,10.4,algae,,,,,,,,,,,
+Liu and Liu 2016,TSLP14-5-1,Cladophora,Ultrasonic,DCM/MeOH 9:1,12,algae,,0.4,,0.2,,,,,,,
+Liu and Liu 2016,QYHP14-1,Spirogyra,Ultrasonic,DCM/MeOH 9:1,0.8,algae,,0.8,1.3,1.4,1.6,1,,,,,
+Liu and Liu 2016,GHLP14-1,Spirogyra,Ultrasonic,DCM/MeOH 9:1,0.2,algae,,0.3,0.2,0.5,0.8,0.8,,,,,
+Liu and Liu 2016,GHP14-0,Spirogyra,Ultrasonic,DCM/MeOH 9:1,0.2,algae,,,0.2,0.2,0.1,0.1,,,,,
