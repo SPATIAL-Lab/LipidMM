@@ -563,41 +563,41 @@ legend(0.3,15,c("C4","Savanna C3","RF C3"),lwd=c(2,2,2),
 
 ###CS2: Posterior density concentration####
 par(mfrow=c(3,3)) #700*800
-plot(density(log(Schwab.asso.l.mix$BUGSoutput$sims.list$exp.prod_k[,,1,1])),
+plot(density(log(asso.l.mix$BUGSoutput$sims.list$exp.prod_k[,,1,1])),
      col = "red", lwd = 2,type="l",main="n-C29 C4",xlim=c(-4,13),ylim=c(0,0.4))
 lines(Afr.prod.prior.GR$x,Afr.prod.prior.GR$y1, col = "blue", lwd = 1)
 
-plot(density(log(Schwab.asso.l.mix$BUGSoutput$sims.list$exp.prod_k[,,1,2])),
+plot(density(log(asso.l.mix$BUGSoutput$sims.list$exp.prod_k[,,1,2])),
      col = "red", lwd = 2,type="l",main="n-C31 C4",xlim=c(-4,13),ylim=c(0,0.4))
 lines(Afr.prod.prior.GR$x,Afr.prod.prior.GR$y2, col = "blue", lwd = 1)
 
-plot(density(log(Schwab.asso.l.mix$BUGSoutput$sims.list$exp.prod_k[,,1,3])),
+plot(density(log(asso.l.mix$BUGSoutput$sims.list$exp.prod_k[,,1,3])),
      col = "red", lwd = 2,type="l",main="n-C33 C4",xlim=c(-4,13),ylim=c(0,0.4))
 lines(Afr.prod.prior.GR$x,Afr.prod.prior.GR$y3, col = "blue", lwd = 1)
 
 #SV
-plot(density(log(Schwab.asso.l.mix$BUGSoutput$sims.list$exp.prod_k[,,2,1])),
+plot(density(log(asso.l.mix$BUGSoutput$sims.list$exp.prod_k[,,2,1])),
      col = "red", lwd = 2,type="l",main="n-C29 SV",xlim=c(-4,13),ylim = c(0,0.3))
 lines(Afr.prod.prior.SV$x,Afr.prod.prior.SV$y1, col = "blue", lwd = 1)
 
-plot(density(log(Schwab.asso.l.mix$BUGSoutput$sims.list$exp.prod_k[,,2,2])),
+plot(density(log(asso.l.mix$BUGSoutput$sims.list$exp.prod_k[,,2,2])),
      col = "red", lwd = 2,type="l",main="n-C31 SV",xlim=c(-4,13),ylim = c(0,0.3))
 lines(Afr.prod.prior.SV$x,Afr.prod.prior.SV$y2, col = "blue", lwd = 1)
 
-plot(density(log(Schwab.asso.l.mix$BUGSoutput$sims.list$exp.prod_k[,,2,3])),
+plot(density(log(asso.l.mix$BUGSoutput$sims.list$exp.prod_k[,,2,3])),
      col = "red", lwd = 2,type="l",main="n-C33 SV",xlim=c(-4,13),ylim = c(0,0.3))
 lines(Afr.prod.prior.SV$x,Afr.prod.prior.SV$y3, col = "blue", lwd = 1)
 
 #RF
-plot(density(log(Schwab.asso.l.mix$BUGSoutput$sims.list$exp.prod_k[,,3,1])),
+plot(density(log(asso.l.mix$BUGSoutput$sims.list$exp.prod_k[,,3,1])),
      col = "red", lwd = 2,type="l",main="n-C29 RF",xlim=c(-4,13),ylim = c(0,0.3))
 lines(Afr.prod.prior.RF$x,Afr.prod.prior.RF$y1, col = "blue", lwd = 1)
 
-plot(density(log(Schwab.asso.l.mix$BUGSoutput$sims.list$exp.prod_k[,,3,2])),
+plot(density(log(asso.l.mix$BUGSoutput$sims.list$exp.prod_k[,,3,2])),
      col = "red", lwd = 2,type="l",main="n-C31 RF",xlim=c(-4,13),ylim = c(0,0.3))
 lines(Afr.prod.prior.RF$x,Afr.prod.prior.RF$y2, col = "blue", lwd = 1)
 
-plot(density(log(Schwab.asso.l.mix$BUGSoutput$sims.list$exp.prod_k[,,3,3])),
+plot(density(log(asso.l.mix$BUGSoutput$sims.list$exp.prod_k[,,3,3])),
      col = "red", lwd = 2,type="l",main="n-C33 RF",
      xlim=c(-4,13),ylim = c(0,0.3),axes=F)
 lines(Afr.prod.prior.RF$x,Afr.prod.prior.RF$y3, col = "blue", lwd = 1)
@@ -606,39 +606,39 @@ axis(1,log(c(0.01,0.1,1,10,100,1e3,1e4,1e5)))
 
 ###CS2: posterior density of d13C####
 par(mfrow=c(3,3)) #700*800
-plot(density(Schwab.asso.l.mix$BUGSoutput$sims.list$d13C.k[,,1,1]),
+plot(density(asso.l.mix$BUGSoutput$sims.list$d13C.k[,,1,1]),
      col = "red", lwd = 2,type="l",main="n-C29 GR",xlim=c(-50,-15),ylim = c(0,0.25))
 lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y1, col = "blue", lwd = 1)
 
-plot(density(Schwab.asso.l.mix$BUGSoutput$sims.list$d13C.k[,,1,2]),
+plot(density(asso.l.mix$BUGSoutput$sims.list$d13C.k[,,1,2]),
      col = "red", lwd = 2,type="l",main="n-C31 GR",xlim=c(-50,-15),ylim = c(0,0.25))
 lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y2, col = "blue", lwd = 1)
 
-plot(density(Schwab.asso.l.mix$BUGSoutput$sims.list$d13C.k[,,1,3]),
+plot(density(asso.l.mix$BUGSoutput$sims.list$d13C.k[,,1,3]),
      col = "red", lwd = 2,type="l",main="n-C33 GR",xlim=c(-50,-15),ylim = c(0,0.25))
 lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y3, col = "blue", lwd = 1)
 
-plot(density(Schwab.asso.l.mix$BUGSoutput$sims.list$d13C.k[,,2,1]),
+plot(density(asso.l.mix$BUGSoutput$sims.list$d13C.k[,,2,1]),
      col = "red", lwd = 2,type="l",main="n-C29 SV",xlim=c(-50,-15),ylim = c(0,0.25))
 lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y1, col = "blue", lwd = 1)
 
-plot(density(Schwab.asso.l.mix$BUGSoutput$sims.list$d13C.k[,,2,2]),
+plot(density(asso.l.mix$BUGSoutput$sims.list$d13C.k[,,2,2]),
      col = "red", lwd = 2,type="l",main="n-C31 SV",xlim=c(-50,-15),ylim = c(0,0.25))
 lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y2, col = "blue", lwd = 1)
 
-plot(density(Schwab.asso.l.mix$BUGSoutput$sims.list$d13C.k[,,2,3]),
+plot(density(asso.l.mix$BUGSoutput$sims.list$d13C.k[,,2,3]),
      col = "red", lwd = 2,type="l",main="n-C33 SV",xlim=c(-50,-15),ylim = c(0,0.25))
 lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y3, col = "blue", lwd = 1)
 
-plot(density(Schwab.asso.l.mix$BUGSoutput$sims.list$d13C.k[,,3,1]),
+plot(density(asso.l.mix$BUGSoutput$sims.list$d13C.k[,,3,1]),
      col = "red", lwd = 2,type="l",main="n-C29 RF",xlim=c(-50,-15),ylim = c(0,0.25))
 lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y1, col = "blue", lwd = 1)
 
-plot(density(Schwab.asso.l.mix$BUGSoutput$sims.list$d13C.k[,,3,2]),
+plot(density(asso.l.mix$BUGSoutput$sims.list$d13C.k[,,3,2]),
      col = "red", lwd = 2,type="l",main="n-C31 RF",xlim=c(-50,-15),ylim = c(0,0.25))
 lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y2, col = "blue", lwd = 1)
 
-plot(density(Schwab.asso.l.mix$BUGSoutput$sims.list$d13C.k[,,3,3]),
+plot(density(asso.l.mix$BUGSoutput$sims.list$d13C.k[,,3,3]),
      col = "red", lwd = 2,type="l",main="n-C33 RF",xlim=c(-50,-15),ylim = c(0,0.25))
 lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y3, col = "blue", lwd = 1)
 
@@ -765,6 +765,13 @@ plot(density(asso.l.mix$BUGSoutput$sims.list$f[,1],from=0,to=1),
      main = "", xlab="fraction", xlim=c(0,1), ylim =c(0,8),lwd=2,col = plot.col[6])
 lines(density(asso.l.mix$BUGSoutput$sims.list$f[,2],from=0,to=1),lwd=2,col = plot.col[4])
 lines(density(asso.l.mix$BUGSoutput$sims.list$f[,3],from=0,to=1),lwd=2,col = plot.col[2])
+
+plot(density(Schwab.baro.l.mix$BUGSoutput$sims.list$f[,1],from=0,to=1), 
+     main = "", xlab="fraction", xlim=c(0,1), ylim =c(0,8),lwd=2,col = plot.col[6])
+lines(density(Schwab.baro.l.mix$BUGSoutput$sims.list$f[,2],from=0,to=1),lwd=2,col = plot.col[4])
+lines(density(Schwab.baro.l.mix$BUGSoutput$sims.list$f[,3],from=0,to=1),lwd=2,col = plot.col[2])
+legend(0.4,8,c("C4 Grass","C3 Savanna","C3 Forest"),lwd=c(2,2,2),
+       col=plot.col[c(6,4,2)])
 
 ###Sensitivity test2: sensitivity to likelihood functions####
 load("out/rhum_l_test_a.RData")
