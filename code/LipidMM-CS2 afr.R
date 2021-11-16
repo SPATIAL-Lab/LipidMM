@@ -16,9 +16,9 @@ setwd("C:/Users/ydmag/Google Drive/U of U/Proxy project/LipidMM")
 African <- read.csv("data/EA-3 data afr.csv")
 
 #subset the data
-GR <- African[which(African$Habitat == "GR"),]
-SV <- African[which(African$Habitat == "SV"),]
-RF <- African[which(African$Habitat == "RF"),]
+GR <- African[which(African$Source == "GR"),]
+SV <- African[which(African$Source == "SV"),]
+RF <- African[which(African$Source == "RF"),]
 
 ###compile prior parameters######
 
@@ -242,15 +242,15 @@ baro.l.RF.map <- map_estimate(baro.l.mix$BUGSoutput$sims.list$f[,3], method = "K
 baro.l.RF.median <- median(baro.l.mix$BUGSoutput$sims.list$f[,3])
 baro.l.RF.hdi <- hdi(baro.l.mix$BUGSoutput$sims.list$f[,3], ci = .89)
 
-#####sensitiviti tests#####
+#####sensitivity tests#####
 ####test 1: using different priors####
 #using a subset of CS2: western africa
 W.African <- read.csv("data/EA-4 data w-afr.csv")
 
 #subset data
-W.GR <- W.African[which(W.African$Habitat == "GR"),]
-W.SV <- W.African[which(W.African$Habitat == "SV"),]
-W.RF <- W.African[which(W.African$Habitat == "RF"),]
+W.GR <- W.African[which(W.African$Source == "GR"),]
+W.SV <- W.African[which(W.African$Source == "SV"),]
+W.RF <- W.African[which(W.African$Source == "RF"),]
 
 ###compile parameters
 #concentration
@@ -295,7 +295,7 @@ W.d13C.mu <- rbind(W.GR.d13C.mean.est, W.SV.d13C.mean.est, W.RF.d13C.mean.est)
 #prior parameters in the first two lines
 #model parameters in the third
 #data in the fourth
-#only the priors have changed to W.xxx, other parameters are the same
+#only the priors have been changed to W.xxx, other parameters are the same
 dat = list(d13C.mu.est = W.d13C.mu, d13C.sigma.est = W.d13C.vcov,
            prod.mu.est = W.prod.mu, prod.sigma.est = W.prod.vcov,  
            I = I, N = N, K = K, 
@@ -324,7 +324,7 @@ save(W.rhum.l.mix, file = "out/W_rhum_l_results.RData")
 #prior parameters in the first two lines
 #model parameters in the third
 #data in the fourth
-#only the priors have changed to W.xxx, other parameters are the same
+#only the priors have been changed to W.xxx, other parameters are the same
 dat = list(d13C.mu.est = W.d13C.mu, d13C.sigma.est = W.d13C.vcov,
            prod.mu.est = W.prod.mu, prod.sigma.est = W.prod.vcov,  
            I = I, N = N, K = K, 
@@ -353,7 +353,7 @@ save(W.asso.l.mix, file = "out/W_asso_l_results.RData")
 #prior parameters in the first two lines
 #model parameters in the third
 #data in the fourth
-#only the priors have changed to W.xxx, other parameters are the same
+#only the priors have been changed to W.xxx, other parameters are the same
 dat = list(d13C.mu.est = W.d13C.mu, d13C.sigma.est = W.d13C.vcov,
            prod.mu.est = W.prod.mu, prod.sigma.est = W.prod.vcov,  
            I = I, N = N, K = K, 
