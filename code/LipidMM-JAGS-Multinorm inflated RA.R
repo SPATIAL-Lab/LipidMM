@@ -53,8 +53,8 @@ model {
       #multivariat normal produces n products for each chain as d13C for the chains
       #for each gram, it is a new draw, but do we want to record this
       
-      d13C.k[k, i, 1:N] ~ dmnorm.vcov(d13C.mu.est[i,1:N], d13C.sigma[i,1:N,1:N])
-      prod_k[k, i, 1:N] ~ dmnorm.vcov(prod.mu.est[i,1:N], prod.sigma[i,1:N,1:N])
+      d13C.k[k, i, 1:N] ~ dmnorm.vcov(d13C.mu.est[i,1:N], d13C.omega[i,1:N,1:N])
+      prod_k[k, i, 1:N] ~ dmnorm.vcov(prod.mu.est[i,1:N], prod.omega[i,1:N,1:N])
       
       for(n in 1:N){ #production of each gram of leaf is modeled indvidually
         exp.prod_k[k, i, n] <- exp (prod_k[k, i, n])
@@ -63,12 +63,12 @@ model {
     }
   }
   
-  #d13C.sigma and prod.sigma are the compiled vcov, which provides indexing pattern for sigma
+  #d13C.omega and prod.omega are the compiled vcov, which provides indexing pattern for omega
   #mu is the dataframe for means, component as rows and chains as columns
   for(i in 1:I){
     
-    d13C.sigma[i,1:N,1:N] <- d13C.sigma.est[c((N*(i-1)+1):(N*(i-1)+N)),1:N]
-    prod.sigma[i,1:N,1:N] <- prod.sigma.est[c((N*(i-1)+1):(N*(i-1)+N)),1:N]
+    d13C.omega[i,1:N,1:N] <- d13C.omega.est[c((N*(i-1)+1):(N*(i-1)+N)),1:N]
+    prod.omega[i,1:N,1:N] <- prod.omega.est[c((N*(i-1)+1):(N*(i-1)+N)),1:N]
     
   }
   

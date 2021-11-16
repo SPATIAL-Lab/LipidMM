@@ -2,7 +2,6 @@ library(coda)
 library(lattice)
 library(rjags)
 library(R2jags)
-library(msm)
 library(ggmcmc)
 library(mcmcplots)
 library(MASS)
@@ -105,8 +104,8 @@ d13C.sd.Liu <- c(0.3, 0.3, 0.3)
 #prior parameters in the first two lines
 #model parameters in the third
 #data in the fourth
-dat = list(d13C.mu.est = QTP.d13C.mu, d13C.sigma.est = QTP.d13C.vcov,
-           prod.mu.est = QTP.prod.mu, prod.sigma.est = QTP.prod.vcov, 
+dat = list(d13C.mu.est = QTP.d13C.mu, d13C.omega.est = QTP.d13C.vcov,
+           prod.mu.est = QTP.prod.mu, prod.omega.est = QTP.prod.vcov, 
            I = I, N = N, K = K, 
            RA.mix = RA.QHS13_5S, d13C.mix = d13C.QHS13_5S, d13C.mea.sd = d13C.sd.Liu)
 
@@ -144,8 +143,8 @@ d13C.sd.Liu <- c(0.3, 0.3, 0.3)
 #prior parameters in the first two lines
 #model parameters in the third
 #data in the fourth
-dat = list(d13C.mu.est = QTP.d13C.mu, d13C.sigma.est = QTP.d13C.vcov,
-           prod.mu.est = QTP.prod.mu, prod.sigma.est = QTP.prod.vcov, 
+dat = list(d13C.mu.est = QTP.d13C.mu, d13C.omega.est = QTP.d13C.vcov,
+           prod.mu.est = QTP.prod.mu, prod.omega.est = QTP.prod.vcov, 
            I = I, N = N, K = K, 
            RA.mix = RA.QHS13_7S, d13C.mix = d13C.QHS13_7S, d13C.mea.sd = d13C.sd.Liu)
 
@@ -184,8 +183,8 @@ d13C.sd.Liu <- c(0.3, 0.3, 0.3)
 #prior parameters in the first two lines
 #model parameters in the third
 #data in the fourth
-dat = list(d13C.mu.est = QTP.d13C.mu, d13C.sigma.est = QTP.d13C.vcov,
-           prod.mu.est = QTP.prod.mu, prod.sigma.est = QTP.prod.vcov, 
+dat = list(d13C.mu.est = QTP.d13C.mu, d13C.omega.est = QTP.d13C.vcov,
+           prod.mu.est = QTP.prod.mu, prod.omega.est = QTP.prod.vcov, 
            I = I, N = N, K = K, 
            RA.mix = RA.QHS13_9S, d13C.mix = d13C.QHS13_9S, d13C.mea.sd = d13C.sd.Liu)
 

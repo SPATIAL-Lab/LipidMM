@@ -2,7 +2,6 @@ library(coda)
 library(lattice)
 library(rjags)
 library(R2jags)
-library(msm)
 library(ggmcmc)
 library(mcmcplots)
 library(MASS)
@@ -16,9 +15,9 @@ setwd("C:/Users/ydmag/Google Drive/U of U/Proxy project/LipidMM")
 African <- read.csv("data/EA-3 data afr.csv")
 
 #subset the data
-GR <- African[which(African$Habitat == "GR"),]
-SV <- African[which(African$Habitat == "SV"),]
-RF <- African[which(African$Habitat == "RF"),]
+GR <- African[which(African$Source == "GR"),]
+SV <- African[which(African$Source == "SV"),]
+RF <- African[which(African$Source == "RF"),]
 
 ###compile prior parameters######
 
@@ -101,8 +100,8 @@ d13C.sd.rhum.l <- c(0.3, 0.3, 0.3)
 #prior parameters in the first two lines
 #model parameters in the third
 #data in the fourth
-dat = list(d13C.mu.est = Afr.d13C.mu, d13C.sigma.est = Afr.d13C.vcov,
-           prod.mu.est = Afr.prod.mu, prod.sigma.est = Afr.prod.vcov,  
+dat = list(d13C.mu.est = Afr.d13C.mu, d13C.omega.est = Afr.d13C.vcov,
+           prod.mu.est = Afr.prod.mu, prod.omega.est = Afr.prod.vcov,  
            I = I, N = N, K = K, 
            RA.mix = RA.rhum.l, d13C.mix = d13C.rhum.l, d13C.mea.sd = d13C.sd.rhum.l)
 
@@ -140,8 +139,8 @@ d13C.sd.asso.l <- c(0.2, 0.8, 0.8)
 #prior parameters in the first two lines
 #model parameters in the third
 #data in the fourth
-dat = list(d13C.mu.est = Afr.d13C.mu, d13C.sigma.est = Afr.d13C.vcov,
-           prod.mu.est = Afr.prod.mu, prod.sigma.est = Afr.prod.vcov,  
+dat = list(d13C.mu.est = Afr.d13C.mu, d13C.omega.est = Afr.d13C.vcov,
+           prod.mu.est = Afr.prod.mu, prod.omega.est = Afr.prod.vcov,  
            I = I, N = N, K = K, 
            RA.mix = RA.asso.l, d13C.mix = d13C.asso.l, d13C.mea.sd = d13C.sd.asso.l)
 
@@ -181,8 +180,8 @@ d13C.sd.baro.l <- c(0.7, 0.4, 0.04)
 #prior parameters in the first two lines
 #model parameters in the third
 #data in the fourth
-dat = list(d13C.mu.est = Afr.d13C.mu, d13C.sigma.est = Afr.d13C.vcov,
-           prod.mu.est = Afr.prod.mu, prod.sigma.est = Afr.prod.vcov,  
+dat = list(d13C.mu.est = Afr.d13C.mu, d13C.omega.est = Afr.d13C.vcov,
+           prod.mu.est = Afr.prod.mu, prod.omega.est = Afr.prod.vcov,  
            I = I, N = N, K = K, 
            RA.mix = RA.baro.l, d13C.mix = d13C.baro.l, d13C.mea.sd = d13C.sd.baro.l)
 
@@ -242,15 +241,15 @@ baro.l.RF.map <- map_estimate(baro.l.mix$BUGSoutput$sims.list$f[,3], method = "K
 baro.l.RF.median <- median(baro.l.mix$BUGSoutput$sims.list$f[,3])
 baro.l.RF.hdi <- hdi(baro.l.mix$BUGSoutput$sims.list$f[,3], ci = .89)
 
-#####sensitiviti tests#####
+#####sensitivity tests#####
 ####test 1: using different priors####
 #using a subset of CS2: western africa
 W.African <- read.csv("data/EA-4 data w-afr.csv")
 
 #subset data
-W.GR <- W.African[which(W.African$Habitat == "GR"),]
-W.SV <- W.African[which(W.African$Habitat == "SV"),]
-W.RF <- W.African[which(W.African$Habitat == "RF"),]
+W.GR <- W.African[which(W.African$Source == "GR"),]
+W.SV <- W.African[which(W.African$Source == "SV"),]
+W.RF <- W.African[which(W.African$Source == "RF"),]
 
 ###compile parameters
 #concentration
@@ -295,9 +294,9 @@ W.d13C.mu <- rbind(W.GR.d13C.mean.est, W.SV.d13C.mean.est, W.RF.d13C.mean.est)
 #prior parameters in the first two lines
 #model parameters in the third
 #data in the fourth
-#only the priors have changed to W.xxx, other parameters are the same
-dat = list(d13C.mu.est = W.d13C.mu, d13C.sigma.est = W.d13C.vcov,
-           prod.mu.est = W.prod.mu, prod.sigma.est = W.prod.vcov,  
+#only the priors have been changed to W.xxx, other parameters are the same
+dat = list(d13C.mu.est = W.d13C.mu, d13C.omega.est = W.d13C.vcov,
+           prod.mu.est = W.prod.mu, prod.omega.est = W.prod.vcov,  
            I = I, N = N, K = K, 
            RA.mix = RA.rhum.l, d13C.mix = d13C.rhum.l, d13C.mea.sd = d13C.sd.rhum.l)
 
@@ -324,9 +323,9 @@ save(W.rhum.l.mix, file = "out/W_rhum_l_results.RData")
 #prior parameters in the first two lines
 #model parameters in the third
 #data in the fourth
-#only the priors have changed to W.xxx, other parameters are the same
-dat = list(d13C.mu.est = W.d13C.mu, d13C.sigma.est = W.d13C.vcov,
-           prod.mu.est = W.prod.mu, prod.sigma.est = W.prod.vcov,  
+#only the priors have been changed to W.xxx, other parameters are the same
+dat = list(d13C.mu.est = W.d13C.mu, d13C.omega.est = W.d13C.vcov,
+           prod.mu.est = W.prod.mu, prod.omega.est = W.prod.vcov,  
            I = I, N = N, K = K, 
            RA.mix = RA.asso.l, d13C.mix = d13C.asso.l, d13C.mea.sd = d13C.sd.asso.l)
 
@@ -353,9 +352,9 @@ save(W.asso.l.mix, file = "out/W_asso_l_results.RData")
 #prior parameters in the first two lines
 #model parameters in the third
 #data in the fourth
-#only the priors have changed to W.xxx, other parameters are the same
-dat = list(d13C.mu.est = W.d13C.mu, d13C.sigma.est = W.d13C.vcov,
-           prod.mu.est = W.prod.mu, prod.sigma.est = W.prod.vcov,  
+#only the priors have been changed to W.xxx, other parameters are the same
+dat = list(d13C.mu.est = W.d13C.mu, d13C.omega.est = W.d13C.vcov,
+           prod.mu.est = W.prod.mu, prod.omega.est = W.prod.vcov,  
            I = I, N = N, K = K, 
            RA.mix = RA.baro.l, d13C.mix = d13C.baro.l, d13C.mea.sd = d13C.sd.baro.l)
 
@@ -381,8 +380,8 @@ save(W.baro.l.mix, file = "out/W_baro_l_results.RData")
 ### a) RA likelihood functions completely ignored
 ##data point 1: rhum
 ##Data to pass to the model
-dat = list(d13C.mu.est = Afr.d13C.mu, d13C.sigma.est = Afr.d13C.vcov,
-           prod.mu.est = Afr.prod.mu, prod.sigma.est = Afr.prod.vcov, 
+dat = list(d13C.mu.est = Afr.d13C.mu, d13C.omega.est = Afr.d13C.vcov,
+           prod.mu.est = Afr.prod.mu, prod.omega.est = Afr.prod.vcov, 
            I = I, N = N, K = K, 
            RA.mix = RA.rhum.l, d13C.mix = d13C.rhum.l, d13C.mea.sd = d13C.sd.rhum.l)
 
@@ -406,8 +405,8 @@ save(rhum.l.test.a, file = "out/rhum_l_test_a.RData")
 
 ##data point 2: asso
 ##Data to pass to the model
-dat = list(d13C.mu.est = Afr.d13C.mu, d13C.sigma.est = Afr.d13C.vcov,
-           prod.mu.est = Afr.prod.mu, prod.sigma.est = Afr.prod.vcov, 
+dat = list(d13C.mu.est = Afr.d13C.mu, d13C.omega.est = Afr.d13C.vcov,
+           prod.mu.est = Afr.prod.mu, prod.omega.est = Afr.prod.vcov, 
            I = I, N = N, K = K, 
            RA.mix = RA.asso.l, d13C.mix = d13C.asso.l, d13C.mea.sd = d13C.sd.asso.l)
 
@@ -431,8 +430,8 @@ save(asso.l.test.a, file = "out/asso_l_test_a.RData")
 
 ##data point 3: baro
 ##Data to pass to the model
-dat = list(d13C.mu.est = Afr.d13C.mu, d13C.sigma.est = Afr.d13C.vcov,
-           prod.mu.est = Afr.prod.mu, prod.sigma.est = Afr.prod.vcov,  
+dat = list(d13C.mu.est = Afr.d13C.mu, d13C.omega.est = Afr.d13C.vcov,
+           prod.mu.est = Afr.prod.mu, prod.omega.est = Afr.prod.vcov,  
            I = I, N = N, K = K, 
            RA.mix = RA.baro.l, d13C.mix = d13C.baro.l, d13C.mea.sd = d13C.sd.baro.l)
 
@@ -457,8 +456,8 @@ save(baro.l.test.a, file = "out/baro_l_test_a.RData")
 ### b) RA likelihood functions with inflated uncertainty
 ##data point 1: rhum
 ##Data to pass to the model
-dat = list(d13C.mu.est = Afr.d13C.mu, d13C.sigma.est = Afr.d13C.vcov,
-           prod.mu.est = Afr.prod.mu, prod.sigma.est = Afr.prod.vcov, 
+dat = list(d13C.mu.est = Afr.d13C.mu, d13C.omega.est = Afr.d13C.vcov,
+           prod.mu.est = Afr.prod.mu, prod.omega.est = Afr.prod.vcov, 
            I = I, N = N, K = K, 
            RA.mix = RA.rhum.l, d13C.mix = d13C.rhum.l, d13C.mea.sd = d13C.sd.rhum.l)
 
@@ -482,8 +481,8 @@ save(rhum.l.test.b, file = "out/rhum_l_test_b.RData")
 
 ##data point 2: asso
 ##Data to pass to the model
-dat = list(d13C.mu.est = Afr.d13C.mu, d13C.sigma.est = Afr.d13C.vcov,
-           prod.mu.est = Afr.prod.mu, prod.sigma.est = Afr.prod.vcov, 
+dat = list(d13C.mu.est = Afr.d13C.mu, d13C.omega.est = Afr.d13C.vcov,
+           prod.mu.est = Afr.prod.mu, prod.omega.est = Afr.prod.vcov, 
            I = I, N = N, K = K, 
            RA.mix = RA.asso.l, d13C.mix = d13C.asso.l, d13C.mea.sd = d13C.sd.asso.l)
 
@@ -507,8 +506,8 @@ save(asso.l.test.b, file = "out/asso_l_test_b.RData")
 
 ##data point 3: baro
 ##Data to pass to the model
-dat = list(d13C.mu.est = Afr.d13C.mu, d13C.sigma.est = Afr.d13C.vcov,
-           prod.mu.est = Afr.prod.mu, prod.sigma.est = Afr.prod.vcov, 
+dat = list(d13C.mu.est = Afr.d13C.mu, d13C.omega.est = Afr.d13C.vcov,
+           prod.mu.est = Afr.prod.mu, prod.omega.est = Afr.prod.vcov, 
            I = I, N = N, K = K, 
            RA.mix = RA.baro.l, d13C.mix = d13C.baro.l, d13C.mea.sd = d13C.sd.baro.l)
 
@@ -534,8 +533,8 @@ save(baro.l.test.b, file = "out/baro_l_test_b.RData")
 
 ##data point 1: rhum
 ##Data to pass to the model
-dat = list(d13C.mu.est = Afr.d13C.mu, d13C.sigma.est = Afr.d13C.vcov,
-           prod.mu.est = Afr.prod.mu, prod.sigma.est = Afr.prod.vcov,
+dat = list(d13C.mu.est = Afr.d13C.mu, d13C.omega.est = Afr.d13C.vcov,
+           prod.mu.est = Afr.prod.mu, prod.omega.est = Afr.prod.vcov,
            I = I, N = N, K = K, 
            RA.mix = RA.rhum.l, d13C.mix = d13C.rhum.l, d13C.mea.sd = d13C.sd.rhum.l)
 
@@ -559,8 +558,8 @@ save(rhum.l.test.c, file = "out/rhum_l_test_c.RData")
 
 ##data point 2: asso
 ##Data to pass to the model
-dat = list(d13C.mu.est = Afr.d13C.mu, d13C.sigma.est = Afr.d13C.vcov,
-           prod.mu.est = Afr.prod.mu, prod.sigma.est = Afr.prod.vcov,
+dat = list(d13C.mu.est = Afr.d13C.mu, d13C.omega.est = Afr.d13C.vcov,
+           prod.mu.est = Afr.prod.mu, prod.omega.est = Afr.prod.vcov,
            I = I, N = N, K = K, 
            RA.mix = RA.asso.l, d13C.mix = d13C.asso.l, d13C.mea.sd = d13C.sd.asso.l)
 
@@ -584,8 +583,8 @@ save(asso.l.test.c, file = "out/asso_l_test_c.RData")
 
 ##data point 3: baro
 ##Data to pass to the model
-dat = list(d13C.mu.est = Afr.d13C.mu, d13C.sigma.est = Afr.d13C.vcov,
-           prod.mu.est = Afr.prod.mu, prod.sigma.est = Afr.prod.vcov, 
+dat = list(d13C.mu.est = Afr.d13C.mu, d13C.omega.est = Afr.d13C.vcov,
+           prod.mu.est = Afr.prod.mu, prod.omega.est = Afr.prod.vcov, 
            I = I, N = N, K = K, 
            RA.mix = RA.baro.l, d13C.mix = d13C.baro.l, d13C.mea.sd = d13C.sd.baro.l)
 
@@ -613,8 +612,8 @@ d13C.sd.inflated <- c(3, 3, 3)
 
 ##data point 1: rhum
 ##Data to pass to the model
-dat = list(d13C.mu.est = Afr.d13C.mu, d13C.sigma.est = Afr.d13C.vcov,
-           prod.mu.est = Afr.prod.mu, prod.sigma.est = Afr.prod.vcov,
+dat = list(d13C.mu.est = Afr.d13C.mu, d13C.omega.est = Afr.d13C.vcov,
+           prod.mu.est = Afr.prod.mu, prod.omega.est = Afr.prod.vcov,
            I = I, N = N, K = K, 
            RA.mix = RA.rhum.l, d13C.mix = d13C.rhum.l, d13C.mea.sd = d13C.sd.inflated)
 
@@ -638,8 +637,8 @@ save(rhum.l.test.d, file = "out/rhum_l_test_d.RData")
 
 ##data point 2: asso
 ##Data to pass to the model
-dat = list(d13C.mu.est = Afr.d13C.mu, d13C.sigma.est = Afr.d13C.vcov,
-           prod.mu.est = Afr.prod.mu, prod.sigma.est = Afr.prod.vcov,
+dat = list(d13C.mu.est = Afr.d13C.mu, d13C.omega.est = Afr.d13C.vcov,
+           prod.mu.est = Afr.prod.mu, prod.omega.est = Afr.prod.vcov,
            I = I, N = N, K = K, 
            RA.mix = RA.asso.l, d13C.mix = d13C.asso.l, d13C.mea.sd = d13C.sd.inflated)
 
@@ -663,8 +662,8 @@ save(asso.l.test.d, file = "out/asso_l_test_d.RData")
 
 ##data point 3: baro
 ##Data to pass to the model
-dat = list(d13C.mu.est = Afr.d13C.mu, d13C.sigma.est = Afr.d13C.vcov,
-           prod.mu.est = Afr.prod.mu, prod.sigma.est = Afr.prod.vcov,
+dat = list(d13C.mu.est = Afr.d13C.mu, d13C.omega.est = Afr.d13C.vcov,
+           prod.mu.est = Afr.prod.mu, prod.omega.est = Afr.prod.vcov,
            I = I, N = N, K = K, 
            RA.mix = RA.baro.l, d13C.mix = d13C.baro.l, d13C.mea.sd = d13C.sd.inflated)
 
