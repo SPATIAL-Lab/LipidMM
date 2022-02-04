@@ -9,15 +9,16 @@ library(EnvStats)
 library(OpenMx)
 library(bayestestR)
 
-####function 1: calculate chain specific mixing ratios from MCMC output f.sum.prod_n_i###
-chain.spec.ratio<-function(MCMC.res){
+####function 1: calculate FSCn (fractional source contribution to each chain n)
+#or chain specific mixing ratios from MCMC output f.sum.conc_n_i###
+FSC<-function(MCMC.res){
   dim.MCMC <- dim(MCMC.res)
   #typically, the first element is # of interation
-  #second element is end member
+  #second element is source
   #third element is chain
   MCMC.sums<-array(c(0),dim=c(dim.MCMC[1],dim.MCMC[3]))
   for(i in 1:dim.MCMC[2]){
-    for(j in 1:dim.MCMC[3]){#extract individual chains from member
+    for(j in 1:dim.MCMC[3]){#extract individual chains from source
       MCMC.sums[,j]<-MCMC.sums[,j] + MCMC.res[,i,j]
     }
     #sums of chains
@@ -70,7 +71,7 @@ pri.multi.norm.den <- function(X.min,X.max,mu,vcov){
   return(results)
 }
 
-#Function 3: making contour plots
+#Function 3: making contour plots for FLMCs
 contour.fn<-function(MCMC.f){
   require(MASS)
   f1 <- MCMC.f[,1]

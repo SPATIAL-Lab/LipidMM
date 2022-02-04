@@ -48,30 +48,30 @@ QTP.d13C.vcov
 
 ###concentrations are natrual log transformed
 ###means and vcovs
-QTP.Ter.prod.mean.est <- c(mean(log(Ter$c.n.C27), na.rm = T),
+QTP.Ter.conc.mean.est <- c(mean(log(Ter$c.n.C27), na.rm = T),
                          mean(log(Ter$c.n.C29), na.rm = T), mean(log(Ter$c.n.C31), na.rm = T))
-QTP.Ter.prod.vcov <- var(data.frame(log(Ter$c.n.C27), log(Ter$c.n.C29),
+QTP.Ter.conc.vcov <- var(data.frame(log(Ter$c.n.C27), log(Ter$c.n.C29),
                                   log(Ter$c.n.C31)), use = "complete.obs")
 
-QTP.Mac.prod.mean.est <- c(mean(log(Mac$c.n.C27), na.rm = T),
+QTP.Mac.conc.mean.est <- c(mean(log(Mac$c.n.C27), na.rm = T),
                          mean(log(Mac$c.n.C29),na.rm = T), mean(log(Mac$c.n.C31), na.rm = T))
-QTP.Mac.prod.vcov <- var(data.frame(log(Mac$c.n.C27), log(Mac$c.n.C29),
+QTP.Mac.conc.vcov <- var(data.frame(log(Mac$c.n.C27), log(Mac$c.n.C29),
                                   log(Mac$c.n.C31)), use = "complete.obs")
 
-QTP.Alg.prod.mean.est <- c(mean(log(Alg$c.n.C27), na.rm = T),
+QTP.Alg.conc.mean.est <- c(mean(log(Alg$c.n.C27), na.rm = T),
                          mean(log(Alg$c.n.C29), na.rm = T), mean(log(Alg$c.n.C31), na.rm = T))
-QTP.Alg.prod.vcov <- var(data.frame(log(Alg$c.n.C27), log(Alg$c.n.C29),
+QTP.Alg.conc.vcov <- var(data.frame(log(Alg$c.n.C27), log(Alg$c.n.C29),
                                   log(Alg$c.n.C31)), use = "complete.obs")
 
 ###rows are sources i
 ###columns are chain n
-QTP.prod.mu <- rbind(QTP.Ter.prod.mean.est, QTP.Mac.prod.mean.est, QTP.Alg.prod.mean.est)
+QTP.conc.mu <- rbind(QTP.Ter.conc.mean.est, QTP.Mac.conc.mean.est, QTP.Alg.conc.mean.est)
 
-QTP.prod.vcov <- rbind(QTP.Ter.prod.vcov, QTP.Mac.prod.vcov, QTP.Alg.prod.vcov)
+QTP.conc.vcov <- rbind(QTP.Ter.conc.vcov, QTP.Mac.conc.vcov, QTP.Alg.conc.vcov)
 
 #the compiled prior parameters
-QTP.prod.mu
-QTP.prod.vcov
+QTP.conc.mu
+QTP.conc.vcov
 
 #######model parameters#####
 #initialize parameters
@@ -86,7 +86,7 @@ n.thin = floor(n.iter-n.burnin)/2500
 #average runtime is ~2 hours/sample
 
 #model parameters to save
-parameters <- c("d13C.mix.m","RA.mix.m", "f","f.sum.prod_n_i","exp.prod_k","d13C.k")
+parameters <- c("d13C.mix.m","RA.mix.m", "FLMC","f.sum.conc_n_i","exp.conc_k","d13C.k")
 
 ####first data point: Liu et al. 2015 QHS13-05S######
 
@@ -105,7 +105,7 @@ d13C.sd.Liu <- c(0.3, 0.3, 0.3)
 #model parameters in the third
 #data in the fourth
 dat = list(d13C.mu.est = QTP.d13C.mu, d13C.omega.est = QTP.d13C.vcov,
-           prod.mu.est = QTP.prod.mu, prod.omega.est = QTP.prod.vcov, 
+           conc.mu.est = QTP.conc.mu, conc.omega.est = QTP.conc.vcov, 
            I = I, N = N, K = K, 
            RA.mix = RA.QHS13_5S, d13C.mix = d13C.QHS13_5S, d13C.mea.sd = d13C.sd.Liu)
 
@@ -125,7 +125,7 @@ proc.time() - t1
 #use rhat to check convergence
 QHS13_5S.mix$BUGSoutput$summary
 
-save(QHS13_5S.mix, file = "out/QHS13_5S_results.RData")
+#save(QHS13_5S.mix, file = "out/QHS13_5S_results.RData")
 
 ####Second data point: Liu et al. 2015 QHS13-07S######
 
@@ -144,7 +144,7 @@ d13C.sd.Liu <- c(0.3, 0.3, 0.3)
 #model parameters in the third
 #data in the fourth
 dat = list(d13C.mu.est = QTP.d13C.mu, d13C.omega.est = QTP.d13C.vcov,
-           prod.mu.est = QTP.prod.mu, prod.omega.est = QTP.prod.vcov, 
+           conc.mu.est = QTP.conc.mu, conc.omega.est = QTP.conc.vcov, 
            I = I, N = N, K = K, 
            RA.mix = RA.QHS13_7S, d13C.mix = d13C.QHS13_7S, d13C.mea.sd = d13C.sd.Liu)
 
@@ -164,7 +164,7 @@ proc.time() - t1
 #use rhat to check convergence
 QHS13_7S.mix$BUGSoutput$summary
 
-save(QHS13_7S.mix, file = "out/QHS13_7S_results.RData")
+#save(QHS13_7S.mix, file = "out/QHS13_7S_results.RData")
 
 ####third data point: Liu et al. 2015 QHS13-09S######
 
@@ -184,7 +184,7 @@ d13C.sd.Liu <- c(0.3, 0.3, 0.3)
 #model parameters in the third
 #data in the fourth
 dat = list(d13C.mu.est = QTP.d13C.mu, d13C.omega.est = QTP.d13C.vcov,
-           prod.mu.est = QTP.prod.mu, prod.omega.est = QTP.prod.vcov, 
+           conc.mu.est = QTP.conc.mu, conc.omega.est = QTP.conc.vcov, 
            I = I, N = N, K = K, 
            RA.mix = RA.QHS13_9S, d13C.mix = d13C.QHS13_9S, d13C.mea.sd = d13C.sd.Liu)
 
@@ -204,45 +204,45 @@ proc.time() - t1
 #use rhat to check convergence
 QHS13_9S.mix$BUGSoutput$summary
 
-save(QHS13_9S.mix, file = "out/QHS13_9S_results.RData")
+#save(QHS13_9S.mix, file = "out/QHS13_9S_results.RData")
 
 #### MAPs, medians, and 89% HDIs ####
 load("out/QHS13_5S_results.RData")
 load("out/QHS13_7S_results.RData")
 load("out/QHS13_9S_results.RData")
 
-QHS13_5S.ter.map <- map_estimate(QHS13_5S.mix$BUGSoutput$sims.list$f[,1], method = "KernSmooth")
-QHS13_5S.ter.median <- median(QHS13_5S.mix$BUGSoutput$sims.list$f[,1])
-QHS13_5S.ter.hdi <- hdi(QHS13_5S.mix$BUGSoutput$sims.list$f[,1], ci = .89)
+QHS13_5S.ter.map <- map_estimate(QHS13_5S.mix$BUGSoutput$sims.list$FLMC[,1], method = "KernSmooth")
+QHS13_5S.ter.median <- median(QHS13_5S.mix$BUGSoutput$sims.list$FLMC[,1])
+QHS13_5S.ter.hdi <- hdi(QHS13_5S.mix$BUGSoutput$sims.list$FLMC[,1], ci = .89)
 
-QHS13_5S.mac.map <- map_estimate(QHS13_5S.mix$BUGSoutput$sims.list$f[,2], method = "KernSmooth")
-QHS13_5S.mac.median <- median(QHS13_5S.mix$BUGSoutput$sims.list$f[,2])
-QHS13_5S.mac.hdi <- hdi(QHS13_5S.mix$BUGSoutput$sims.list$f[,2], ci = .89)
+QHS13_5S.mac.map <- map_estimate(QHS13_5S.mix$BUGSoutput$sims.list$FLMC[,2], method = "KernSmooth")
+QHS13_5S.mac.median <- median(QHS13_5S.mix$BUGSoutput$sims.list$FLMC[,2])
+QHS13_5S.mac.hdi <- hdi(QHS13_5S.mix$BUGSoutput$sims.list$FLMC[,2], ci = .89)
 
-QHS13_5S.alg.map <- map_estimate(QHS13_5S.mix$BUGSoutput$sims.list$f[,3], method = "KernSmooth")
-QHS13_5S.alg.median <- median(QHS13_5S.mix$BUGSoutput$sims.list$f[,3])
-QHS13_5S.alg.hdi <- hdi(QHS13_5S.mix$BUGSoutput$sims.list$f[,3], ci = .89)
+QHS13_5S.alg.map <- map_estimate(QHS13_5S.mix$BUGSoutput$sims.list$FLMC[,3], method = "KernSmooth")
+QHS13_5S.alg.median <- median(QHS13_5S.mix$BUGSoutput$sims.list$FLMC[,3])
+QHS13_5S.alg.hdi <- hdi(QHS13_5S.mix$BUGSoutput$sims.list$FLMC[,3], ci = .89)
 
-QHS13_7S.ter.map <- map_estimate(QHS13_7S.mix$BUGSoutput$sims.list$f[,1], method = "KernSmooth")
-QHS13_7S.ter.median <- median(QHS13_7S.mix$BUGSoutput$sims.list$f[,1])
-QHS13_7S.ter.hdi <- hdi(QHS13_7S.mix$BUGSoutput$sims.list$f[,1], ci = .89)
+QHS13_7S.ter.map <- map_estimate(QHS13_7S.mix$BUGSoutput$sims.list$FLMC[,1], method = "KernSmooth")
+QHS13_7S.ter.median <- median(QHS13_7S.mix$BUGSoutput$sims.list$FLMC[,1])
+QHS13_7S.ter.hdi <- hdi(QHS13_7S.mix$BUGSoutput$sims.list$FLMC[,1], ci = .89)
 
-QHS13_7S.mac.map <- map_estimate(QHS13_7S.mix$BUGSoutput$sims.list$f[,2], method = "KernSmooth")
-QHS13_7S.mac.median <- median(QHS13_7S.mix$BUGSoutput$sims.list$f[,2])
-QHS13_7S.mac.hdi <- hdi(QHS13_7S.mix$BUGSoutput$sims.list$f[,2], ci = .89)
+QHS13_7S.mac.map <- map_estimate(QHS13_7S.mix$BUGSoutput$sims.list$FLMC[,2], method = "KernSmooth")
+QHS13_7S.mac.median <- median(QHS13_7S.mix$BUGSoutput$sims.list$FLMC[,2])
+QHS13_7S.mac.hdi <- hdi(QHS13_7S.mix$BUGSoutput$sims.list$FLMC[,2], ci = .89)
 
-QHS13_7S.alg.map <- map_estimate(QHS13_7S.mix$BUGSoutput$sims.list$f[,3], method = "KernSmooth")
-QHS13_7S.alg.median <- median(QHS13_7S.mix$BUGSoutput$sims.list$f[,3])
-QHS13_7S.alg.hdi <- hdi(QHS13_7S.mix$BUGSoutput$sims.list$f[,3], ci = .89)
+QHS13_7S.alg.map <- map_estimate(QHS13_7S.mix$BUGSoutput$sims.list$FLMC[,3], method = "KernSmooth")
+QHS13_7S.alg.median <- median(QHS13_7S.mix$BUGSoutput$sims.list$FLMC[,3])
+QHS13_7S.alg.hdi <- hdi(QHS13_7S.mix$BUGSoutput$sims.list$FLMC[,3], ci = .89)
 
-QHS13_9S.ter.map <- map_estimate(QHS13_9S.mix$BUGSoutput$sims.list$f[,1], method = "KernSmooth")
-QHS13_9S.ter.median <- median(QHS13_9S.mix$BUGSoutput$sims.list$f[,1])
-QHS13_9S.ter.hdi <- hdi(QHS13_9S.mix$BUGSoutput$sims.list$f[,1], ci = .89)
+QHS13_9S.ter.map <- map_estimate(QHS13_9S.mix$BUGSoutput$sims.list$FLMC[,1], method = "KernSmooth")
+QHS13_9S.ter.median <- median(QHS13_9S.mix$BUGSoutput$sims.list$FLMC[,1])
+QHS13_9S.ter.hdi <- hdi(QHS13_9S.mix$BUGSoutput$sims.list$FLMC[,1], ci = .89)
 
-QHS13_9S.mac.map <- map_estimate(QHS13_9S.mix$BUGSoutput$sims.list$f[,2], method = "KernSmooth")
-QHS13_9S.mac.median <- median(QHS13_9S.mix$BUGSoutput$sims.list$f[,2])
-QHS13_9S.mac.hdi <- hdi(QHS13_9S.mix$BUGSoutput$sims.list$f[,2], ci = .89)
+QHS13_9S.mac.map <- map_estimate(QHS13_9S.mix$BUGSoutput$sims.list$FLMC[,2], method = "KernSmooth")
+QHS13_9S.mac.median <- median(QHS13_9S.mix$BUGSoutput$sims.list$FLMC[,2])
+QHS13_9S.mac.hdi <- hdi(QHS13_9S.mix$BUGSoutput$sims.list$FLMC[,2], ci = .89)
 
-QHS13_9S.alg.map <- map_estimate(QHS13_9S.mix$BUGSoutput$sims.list$f[,3], method = "KernSmooth")
-QHS13_9S.alg.median <- median(QHS13_9S.mix$BUGSoutput$sims.list$f[,3])
-QHS13_9S.alg.hdi <- hdi(QHS13_9S.mix$BUGSoutput$sims.list$f[,3], ci = .89)
+QHS13_9S.alg.map <- map_estimate(QHS13_9S.mix$BUGSoutput$sims.list$FLMC[,3], method = "KernSmooth")
+QHS13_9S.alg.median <- median(QHS13_9S.mix$BUGSoutput$sims.list$FLMC[,3])
+QHS13_9S.alg.hdi <- hdi(QHS13_9S.mix$BUGSoutput$sims.list$FLMC[,3], ci = .89)
