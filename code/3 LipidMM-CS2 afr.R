@@ -1,8 +1,6 @@
 library(coda)
-library(lattice)
 library(rjags)
 library(R2jags)
-library(ggmcmc)
 library(mcmcplots)
 library(MASS)
 library(viridisLite)
@@ -119,9 +117,11 @@ rhum.l.mix = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinor
 proc.time() - t1
 
 #use rhat to check convergence
-rhum.l.mix$BUGSoutput$summary
+rhum.l.mix$BUGSoutput$summary[1:3,]
+#traceplots
+traplot(rhum.l.mix, parms = "FLMC")
 
-save(rhum.l.mix, file = "out/rhum_l_results.RData")
+#save(rhum.l.mix, file = "out/rhum_l_results.RData")
 
 ####second data point: Garcin et al. 2014 Asso lake
 
@@ -158,9 +158,11 @@ asso.l.mix = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinor
 proc.time() - t1
 
 #use rhat to check convergence
-asso.l.mix$BUGSoutput$summary
+asso.l.mix$BUGSoutput$summary[1:3,]
+#traceplots
+traplot(asso.l.mix, parms = "FLMC")
 
-save(asso.l.mix, file = "out/asso_l_results.RData")
+#save(asso.l.mix, file = "out/asso_l_results.RData")
 
 ####third data point: Garcin et al. 2014 Baro lake
 
@@ -199,9 +201,11 @@ baro.l.mix = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinor
 proc.time() - t1
 
 #use rhat to check convergence
-baro.l.mix$BUGSoutput$summary
+baro.l.mix$BUGSoutput$summary[1:3,]
+#traceplots
+traplot(baro.l.mix, parms = "FLMC")
 
-save(baro.l.mix, file = "out/baro_l_results.RData")
+#save(baro.l.mix, file = "out/baro_l_results.RData")
 
 #### MAPs, medians, and 89% HDIs ####
 
@@ -314,9 +318,11 @@ W.rhum.l.mix = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multin
 proc.time() - t1
 
 #use rhat to check convergence
-W.rhum.l.mix$BUGSoutput$summary
+W.rhum.l.mix$BUGSoutput$summary[1:3,]
+#traceplots
+traplot(W.rhum.l.mix, parms = "FLMC")
 
-save(W.rhum.l.mix, file = "out/W_rhum_l_results.RData")
+#save(W.rhum.l.mix, file = "out/W_rhum_l_results.RData")
 
 ##data point 2: asso
 ##Data to pass to the model
@@ -343,9 +349,11 @@ W.asso.l.mix = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multin
 proc.time() - t1
 
 #use rhat to check convergence
-W.asso.l.mix$BUGSoutput$summary
+W.asso.l.mix$BUGSoutput$summary[1:3,]
+#traceplots
+traplot(W.asso.l.mix, parms = "FLMC")
 
-save(W.asso.l.mix, file = "out/W_asso_l_results.RData")
+#save(W.asso.l.mix, file = "out/W_asso_l_results.RData")
 
 ##data point 3: baro
 ##Data to pass to the model
@@ -372,9 +380,11 @@ W.baro.l.mix = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multin
 proc.time() - t1
 
 #use rhat to check convergence
-W.baro.l.mix$BUGSoutput$summary
+W.baro.l.mix$BUGSoutput$summary[1:3,]
+#traceplots
+traplot(W.baro.l.mix, parms = "FLMC")
 
-save(W.baro.l.mix, file = "out/W_baro_l_results.RData")
+#save(W.baro.l.mix, file = "out/W_baro_l_results.RData")
 
 ####test 2: sensitivity to proxy type (likelihood functions)####
 ### a) RA likelihood functions completely ignored
@@ -399,9 +409,11 @@ rhum.l.test.a = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multi
 proc.time() - t1
 
 #use rhat to check convergence
-rhum.l.test.a$BUGSoutput$summary
+rhum.l.test.a$BUGSoutput$summary[1:3,]
+#traceplots
+traplot(rhum.l.test.a, parms = "FLMC")
 
-save(rhum.l.test.a, file = "out/rhum_l_test_a.RData")
+#save(rhum.l.test.a, file = "out/rhum_l_test_a.RData")
 
 ##data point 2: asso
 ##Data to pass to the model
@@ -424,9 +436,11 @@ asso.l.test.a = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multi
 proc.time() - t1
 
 #use rhat to check convergence
-asso.l.test.a$BUGSoutput$summary
+asso.l.test.a$BUGSoutput$summary[1:3,]
+#traceplots
+traplot(asso.l.test.a, parms = "FLMC")
 
-save(asso.l.test.a, file = "out/asso_l_test_a.RData")
+#save(asso.l.test.a, file = "out/asso_l_test_a.RData")
 
 ##data point 3: baro
 ##Data to pass to the model
@@ -449,9 +463,11 @@ baro.l.test.a = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multi
 proc.time() - t1
 
 #use rhat to check convergence
-baro.l.test.a$BUGSoutput$summary
+baro.l.test.a$BUGSoutput$summary[1:3,]
+#traceplots
+traplot(baro.l.test.a, parms = "FLMC")
 
-save(baro.l.test.a, file = "out/baro_l_test_a.RData")
+#save(baro.l.test.a, file = "out/baro_l_test_a.RData")
 
 ### b) RA likelihood functions with inflated uncertainty
 ##data point 1: rhum
@@ -552,9 +568,11 @@ rhum.l.test.c = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multi
 proc.time() - t1
 
 #use rhat to check convergence
-rhum.l.test.c$BUGSoutput$summary
+rhum.l.test.c$BUGSoutput$summary[1:3,]
+#traceplots
+traplot(rhum.l.test.c, parms = "FLMC")
 
-save(rhum.l.test.c, file = "out/rhum_l_test_c.RData")
+#save(rhum.l.test.c, file = "out/rhum_l_test_c.RData")
 
 ##data point 2: asso
 ##Data to pass to the model
@@ -577,9 +595,11 @@ asso.l.test.c = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multi
 proc.time() - t1
 
 #use rhat to check convergence
-asso.l.test.c$BUGSoutput$summary
+asso.l.test.c$BUGSoutput$summary[1:3,]
+#traceplots
+traplot(asso.l.test.c, parms = "FLMC")
 
-save(asso.l.test.c, file = "out/asso_l_test_c.RData")
+#save(asso.l.test.c, file = "out/asso_l_test_c.RData")
 
 ##data point 3: baro
 ##Data to pass to the model
@@ -602,9 +622,11 @@ baro.l.test.c = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multi
 proc.time() - t1
 
 #use rhat to check convergence
-baro.l.test.c$BUGSoutput$summary
+baro.l.test.c$BUGSoutput$summary[1:3,]
+#traceplots
+traplot(baro.l.test.c, parms = "FLMC")
 
-save(baro.l.test.c, file = "out/baro_l_test_c.RData")
+#save(baro.l.test.c, file = "out/baro_l_test_c.RData")
 
 # ### d) d13C likelihood functions with inflated uncertainty
 # #all models will use this uncertainty term

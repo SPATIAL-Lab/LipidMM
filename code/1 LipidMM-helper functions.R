@@ -1,13 +1,5 @@
-library(coda)
-library(lattice)
-library(rjags)
-library(R2jags)
-library(msm)
-library(ggmcmc)
 library(MASS)
-library(EnvStats)
 library(OpenMx)
-library(bayestestR)
 
 ####function 1: calculate FSCn (fractional source contribution to each chain n)
 #or chain specific mixing ratios from MCMC output f.sum.conc_n_i###

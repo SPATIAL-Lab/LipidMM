@@ -1,8 +1,6 @@
 library(coda)
-library(lattice)
 library(rjags)
 library(R2jags)
-library(ggmcmc)
 library(mcmcplots)
 library(MASS)
 library(viridisLite)
@@ -123,7 +121,9 @@ QHS13_5S.mix = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multin
 proc.time() - t1
 
 #use rhat to check convergence
-QHS13_5S.mix$BUGSoutput$summary
+QHS13_5S.mix$BUGSoutput$summary[1:3,]
+#traceplots
+traplot(QHS13_5S.mix, parms = "FLMC")
 
 #save(QHS13_5S.mix, file = "out/QHS13_5S_results.RData")
 
@@ -162,7 +162,9 @@ QHS13_7S.mix = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multin
 proc.time() - t1
 
 #use rhat to check convergence
-QHS13_7S.mix$BUGSoutput$summary
+QHS13_7S.mix$BUGSoutput$summary[1:3,]
+#traceplots
+traplot(QHS13_7S.mix, parms = "FLMC")
 
 #save(QHS13_7S.mix, file = "out/QHS13_7S_results.RData")
 
@@ -202,14 +204,16 @@ QHS13_9S.mix = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multin
 proc.time() - t1
 
 #use rhat to check convergence
-QHS13_9S.mix$BUGSoutput$summary
+QHS13_9S.mix$BUGSoutput$summary[1:3,]
+#traceplots
+traplot(QHS13_9S.mix, parms = "FLMC")
 
 #save(QHS13_9S.mix, file = "out/QHS13_9S_results.RData")
 
 #### MAPs, medians, and 89% HDIs ####
-load("out/QHS13_5S_results.RData")
-load("out/QHS13_7S_results.RData")
-load("out/QHS13_9S_results.RData")
+#load("out/QHS13_5S_results.RData")
+#load("out/QHS13_7S_results.RData")
+#load("out/QHS13_9S_results.RData")
 
 QHS13_5S.ter.map <- map_estimate(QHS13_5S.mix$BUGSoutput$sims.list$FLMC[,1], method = "KernSmooth")
 QHS13_5S.ter.median <- median(QHS13_5S.mix$BUGSoutput$sims.list$FLMC[,1])

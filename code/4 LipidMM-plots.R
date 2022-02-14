@@ -1,9 +1,7 @@
 library(coda)
-library(lattice)
 library(rjags)
 library(R2jags)
 library(MASS)
-library(scales)
 library(viridisLite)
 library(EnvStats)
 library(bayestestR)
@@ -94,9 +92,9 @@ axis(1,log(c(0.01,0.1,1,10,100,1000,10000)))
 
 ###CS1 QTP results: mixing ratios####
 #run the corresponding code in the CS1 file
-load("out/QHS13_5S_results.RData")
-load("out/QHS13_7S_results.RData")
-load("out/QHS13_9S_results.RData")
+#load("out/QHS13_5S_results.RData")
+#load("out/QHS13_7S_results.RData")
+#load("out/QHS13_9S_results.RData")
 
 par(mfrow=c(3,3)) #800*800
 ###barplots for RA of data
@@ -146,7 +144,7 @@ lines(density(QHS13_5S.mix$BUGSoutput$sims.list$FLMC[,2], kernel = "gaussian", f
 lines(density(QHS13_5S.mix$BUGSoutput$sims.list$FLMC[,3], kernel = "gaussian", from = 0, to = 1),
       col = plot.col[2], lwd = 2)
 legend(0.6, 8, c("Terrestrial","Macrophyte","Algae"),lwd = c(2, 2, 2),
-       col = plot.col[c(2, 4, 6)])
+       col = plot.col[c(6, 4, 2)])
 
 plot(density(QHS13_7S.mix$BUGSoutput$sims.list$FLMC[,1], kernel = "gaussian", from = 0, to = 1),
      xlab="FLMC", xlim = c(0, 1), col = plot.col[6], ylim = c(0, 8),lwd = 2, 
@@ -156,7 +154,7 @@ lines(density(QHS13_7S.mix$BUGSoutput$sims.list$FLMC[,2], kernel = "gaussian", f
 lines(density(QHS13_7S.mix$BUGSoutput$sims.list$FLMC[,3], kernel = "gaussian", from = 0, to = 1),
       col = plot.col[2], lwd = 2)
 legend(0.6, 8, c("Terrestrial","Macrophyte","Algae"),lwd = c(2, 2, 2),
-       col = plot.col[c(2, 4, 6)])
+       col = plot.col[c(6, 4, 2)])
 
 plot(density(QHS13_9S.mix$BUGSoutput$sims.list$FLMC[,1], kernel = "gaussian", from = 0, to = 1),
      xlab="FLMC", xlim = c(0, 1), col = plot.col[6], ylim = c(0, 8),lwd = 2, 
@@ -166,12 +164,12 @@ lines(density(QHS13_9S.mix$BUGSoutput$sims.list$FLMC[,2], kernel = "gaussian", f
 lines(density(QHS13_9S.mix$BUGSoutput$sims.list$FLMC[,3], kernel = "gaussian", from = 0, to = 1),
       col = plot.col[2], lwd = 2)
 legend(0.6, 8, c("Terrestrial","Macrophyte","Algae"),lwd = c(2, 2, 2),
-       col = plot.col[c(2, 4, 6)])
+       col = plot.col[c(6, 4, 2)])
 
 ######CS1 QTP Bivariate density plots####
-QHS13_5S.countours<-contour.fn(QHS13_5S.mix$BUGSoutput$sims.list$f)
-QHS13_7S.countours<-contour.fn(QHS13_7S.mix$BUGSoutput$sims.list$f)
-QHS13_9S.countours<-contour.fn(QHS13_9S.mix$BUGSoutput$sims.list$f)
+QHS13_5S.countours<-contour.fn(QHS13_5S.mix$BUGSoutput$sims.list$FLMC)
+QHS13_7S.countours<-contour.fn(QHS13_7S.mix$BUGSoutput$sims.list$FLMC)
+QHS13_9S.countours<-contour.fn(QHS13_9S.mix$BUGSoutput$sims.list$FLMC)
 
 #plot the data by column, each column is a sample
 #from left to right: QHS13_5S, QHS13_7S, QHS13_9S
@@ -343,9 +341,9 @@ axis(1,log(c(0.01,0.1,1,10,100,1e3,1e4,1e5)))
 
 ###CS2 mixing results####
 #run the corresponding code in the CS2 file
-load("out/rhum_l_results.RData")
-load("out/asso_l_results.RData")
-load("out/baro_l_results.RData")
+#load("out/rhum_l_results.RData")
+#load("out/asso_l_results.RData")
+#load("out/baro_l_results.RData")
 
 #bar plots for relative abundance
 #lines for d13C values
@@ -405,9 +403,9 @@ legend(0.4,8,c("C4","Savanna C3","RF C3"),lwd=c(2,2,2),
        col=plot.col[c(6,4,2)])
 
 ######CS2 Bivariate density plots####
-rhum.l.countours<-contour.fn(rhum.l.mix$BUGSoutput$sims.list$f)
-asso.l.countours<-contour.fn(asso.l.mix$BUGSoutput$sims.list$f)
-baro.l.countours<-contour.fn(baro.l.mix$BUGSoutput$sims.list$f)
+rhum.l.countours<-contour.fn(rhum.l.mix$BUGSoutput$sims.list$FLMC)
+asso.l.countours<-contour.fn(asso.l.mix$BUGSoutput$sims.list$FLMC)
+baro.l.countours<-contour.fn(baro.l.mix$BUGSoutput$sims.list$FLMC)
 
 #plot the data by column, each column is a sample
 #from left to right: Rhum, Asso, Baro
@@ -550,7 +548,7 @@ plot(W.conc.prior.RF$x,W.conc.prior.RF$y3, type = "l", lwd=2, col = "red",
      xlim = c(-4,13),ylim = c(0,0.3), main = "n-C33 concentration", axes=F)
 lines(Afr.conc.prior.RF$x,Afr.conc.prior.RF$y3, col = "blue", lwd = 1)
 #log-scale axis
-axis(2,c(0,0.5))
+axis(2,c(0,0.3))
 axis(1,log(c(0.01,0.1,1,10,100,1e3,1e4,1e5)))
 
 #d13C
@@ -603,57 +601,59 @@ lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y3, col = "blue", lwd = 1)
 
 ###Sensitivity test1 vs CS2 mixing ratios####
 #run the corresponding code in the CS2 file
-load("out/W_rhum_l_results.RData")
-load("out/W_asso_l_results.RData")
-load("out/W_baro_l_results.RData")
+#load("out/W_rhum_l_results.RData")
+#load("out/W_asso_l_results.RData")
+#load("out/W_baro_l_results.RData")
 
 #comparing results using two priors
 #first row: western Africa prior
 #second row: CS2 "subsaharan Africa" prior
-par(mfrow=c(2,3))
+par(mfrow=c(1,3))
 plot(density(W.rhum.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
-     main="Rhum fC4 = 0.72",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,8),lwd=2)
+     main="Rhum fC4 = 0.72",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,8),lwd=2,lty=2)
 # lines(density(W.rhum.l.mix$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),col=plot.col[4],lwd=2)
 # lines(density(W.rhum.l.mix$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),col=plot.col[2],lwd=2)
 
-plot(density(W.asso.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
-     main="Asso fC4 = 0.31",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,8),lwd=2)
-# lines(density(W.asso.l.mix$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),col=plot.col[4],lwd=2)
-# lines(density(W.asso.l.mix$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),col=plot.col[2],lwd=2)
-
-plot(density(W.baro.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
-     main="Baro fC4 = 0.05",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,8),lwd=2)
-# lines(density(W.baro.l.mix$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),col=plot.col[4],lwd=2)
-# lines(density(W.baro.l.mix$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),col=plot.col[2],lwd=2)
-
-plot(density(rhum.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
-     main = "", xlab="FLMC", xlim=c(0,1), ylim =c(0,8),lwd=2,col = plot.col[6])
+lines(density(rhum.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
+     lwd=2,col = plot.col[6])
 # lines(density(rhum.l.mix$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),lwd=2,col = plot.col[4])
 # lines(density(rhum.l.mix$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),lwd=2,col = plot.col[2])
 
-plot(density(asso.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
-     main = "", xlab="FLMC", xlim=c(0,1), ylim =c(0,8),lwd=2,col = plot.col[6])
+plot(density(W.asso.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
+     main="Asso fC4 = 0.31",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,8),lwd=2,lty=2)
+# lines(density(W.asso.l.mix$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),col=plot.col[4],lwd=2)
+# lines(density(W.asso.l.mix$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),col=plot.col[2],lwd=2)
+
+lines(density(asso.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
+     lwd=2,col = plot.col[6])
 # lines(density(asso.l.mix$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),lwd=2,col = plot.col[4])
 # lines(density(asso.l.mix$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),lwd=2,col = plot.col[2])
 
-plot(density(baro.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
-     main = "", xlab="FLMC", xlim=c(0,1), ylim =c(0,8),lwd=2,col = plot.col[6])
+plot(density(W.baro.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
+     main="Baro fC4 = 0.05",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,8),lwd=2,lty=2)
+# lines(density(W.baro.l.mix$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),col=plot.col[4],lwd=2)
+# lines(density(W.baro.l.mix$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),col=plot.col[2],lwd=2)
+
+lines(density(baro.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
+     lwd=2,col = plot.col[6])
 # lines(density(baro.l.mix$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),lwd=2,col = plot.col[4])
 # lines(density(baro.l.mix$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),lwd=2,col = plot.col[2])
 # legend(0.4,8,c("C4 Grass","C3 Savanna","C3 Forest"),lwd=c(2,2,2),
 #        col=plot.col[c(6,4,2)])
+legend(0.6,8,c("Prior 1","Prior 2"),lwd=c(2,2),lty=c(2,1),
+               col=plot.col[c(6,6)])
 
 ###Sensitivity test2: sensitivity to likelihood functions####
 #run the corresponding code in the CS2 file
-load("out/rhum_l_test_a.RData")
-load("out/asso_l_test_a.RData")
-load("out/baro_l_test_a.RData")
+# load("out/rhum_l_test_a.RData")
+# load("out/asso_l_test_a.RData")
+# load("out/baro_l_test_a.RData")
 # load("out/rhum_l_test_b.RData")
 # load("out/asso_l_test_b.RData")
 # load("out/baro_l_test_b.RData")
-load("out/rhum_l_test_c.RData")
-load("out/asso_l_test_c.RData")
-load("out/baro_l_test_c.RData")
+# load("out/rhum_l_test_c.RData")
+# load("out/asso_l_test_c.RData")
+# load("out/baro_l_test_c.RData")
 # load("out/rhum_l_test_d.RData")
 # load("out/asso_l_test_d.RData")
 # load("out/baro_l_test_d.RData")
