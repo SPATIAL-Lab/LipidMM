@@ -43,13 +43,13 @@ jobs:
           sudo apt-get install libcurl4-openssl-dev
           sudo apt-get install gdal-bin proj-bin libgdal-dev libproj-dev
 
-      - name: Query dependencies
-        run: |
-          install.packages('remotes')
-          install.packages('sessioninfo')
-          saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
-          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
-        shell: Rscript {0}
+#      - name: Query dependencies
+#        run: |
+#          install.packages('remotes')
+#          install.packages('sessioninfo')
+#          saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
+#          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
+#        shell: Rscript {0}
         
       - name: Install dependencies
         run: |
