@@ -22,27 +22,35 @@ jobs:
       matrix:
         config:
           - {os: macOS-latest,   r: 'release'}
-          - {os: windows-latest, r: 'release'}
-          - {os: windows-latest, r: '3.6'}
-          - {os: ubuntu-16.04,   r: 'devel', rspm: "https://packagemanager.rstudio.com/cran/__linux__/xenial/latest", http-user-agent: "R/4.0.0 (ubuntu-16.04) R (4.0.0 x86_64-pc-linux-gnu x86_64 linux-gnu) on GitHub Actions" }
-          - {os: ubuntu-16.04,   r: 'release', rspm: "https://packagemanager.rstudio.com/cran/__linux__/xenial/latest"}
-          - {os: ubuntu-16.04,   r: 'oldrel',  rspm: "https://packagemanager.rstudio.com/cran/__linux__/xenial/latest"}
-          - {os: ubuntu-16.04,   r: '3.5',     rspm: "https://packagemanager.rstudio.com/cran/__linux__/xenial/latest"}
-          - {os: ubuntu-16.04,   r: '3.4',     rspm: "https://packagemanager.rstudio.com/cran/__linux__/xenial/latest"}
-          - {os: ubuntu-16.04,   r: '3.3',     rspm: "https://packagemanager.rstudio.com/cran/__linux__/xenial/latest"}
-          
-    env:
-      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
-      RSPM: ${{ matrix.config.rspm }}
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-
+          - {os: ubuntu-latest,   r: 'release'}
+          - {os: windows-latest,   arch: x64,   r: 'devel'}
+          - {os: windows-latest,   r: '3.6'}
+      
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up R ${{ matrix.r-version }}
+      - uses: actions/checkout@v2.3.4
+      - name: Set up R ${{ matrix.config.r }}
         uses: r-lib/actions/setup-r@master
         with:
-          r-version: ${{ matrix.r-version }}
-          
+          r-version: ${{ matrix.config.r }}
+      - name: Set up pandoc
+        uses: r-lib/actions/setup-pandoc@master
+        with:
+          pandoc-version: '2.7.3'
+      - run: echo "# Test" | pandoc -t html
+      - name: Linux setup
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get install libcurl4-openssl-dev
+          sudo apt-get install gdal-bin proj-bin libgdal-dev libproj-dev
+
+      - name: Query dependencies
+        run: |
+          install.packages('remotes')
+          install.packages('sessioninfo')
+          saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
+          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
+        shell: Rscript {0}
+        
       - name: Install dependencies
         run: |
           install.packages(c("remotes", "rcmdcheck"))
@@ -50,33 +58,41 @@ jobs:
         shell: Rscript {0}
         
       - name: Check
+        if: matrix.config.r != 'devel'
         run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
         shell: Rscript {0}
         
-      - name: Install dependencies
-        run: |
-          remotes::install_deps(dependencies = TRUE)
+      - name: Check devel
+        if: matrix.config.r == 'devel'
+        run: rcmdcheck::rcmdcheck(args = c("--no-manual", "--no-multiarch"), error_on = "error")
         shell: Rscript {0}
+
+      - name: Cache R packages
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
+          restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
         
-      - name: helper functions
-        run: |
-          source("LipidMM/code/1 LipidMM-helper functions.R")
-        shell: Rscript {0} 
+#      - name: helper functions
+#        run: |
+#          source("LipidMM/code/1 LipidMM-helper functions.R")
+#        shell: Rscript {0} 
         
-      - name: CS1
-        run: |
-          source("LipidMM/code/2 LipidMM-CS1 qtp.R")
-        shell: Rscript {0} 
+#      - name: CS1
+#        run: |
+#          source("LipidMM/code/2 LipidMM-CS1 qtp.R")
+#        shell: Rscript {0} 
         
-      - name: CS2
-        run: |
-          source("LipidMM/code/3 LipidMM-CS2 afr.R")
-        shell: Rscript {0} 
+#      - name: CS2
+#        run: |
+#          source("LipidMM/code/3 LipidMM-CS2 afr.R")
+#        shell: Rscript {0} 
         
-      - name: plots
-        run: |
-          source("LipidMM/code/4 LipidMM-plots.R")
-        shell: Rscript {0} 
+#      - name: plots
+#        run: |
+#          source("LipidMM/code/4 LipidMM-plots.R")
+#        shell: Rscript {0} 
         
       - name: Session info
         run: |
