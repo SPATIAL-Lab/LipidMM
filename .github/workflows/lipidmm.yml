@@ -43,20 +43,26 @@ jobs:
           sudo apt-get install libcurl4-openssl-dev
           sudo apt-get install gdal-bin proj-bin libgdal-dev libproj-dev
 
-#      - name: Query dependencies
-#        run: |
-#          install.packages('remotes')
-#          install.packages('sessioninfo')
-#          saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
-#          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
-#        shell: Rscript {0}
-        
-      - name: Install dependencies
+      - name: Query dependencies
         run: |
           install.packages(c("remotes", "rcmdcheck"))
+          install.packages('sessioninfo')
+          saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
+          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
+        shell: Rscript {0}
+
+      - name: Cache R packages
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
+          restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
+
+      - name: Install dependencies
+        run: |
           remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
-        
+               
       - name: Check
         if: matrix.config.r != 'devel'
         run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
@@ -66,13 +72,6 @@ jobs:
         if: matrix.config.r == 'devel'
         run: rcmdcheck::rcmdcheck(args = c("--no-manual", "--no-multiarch"), error_on = "error")
         shell: Rscript {0}
-
-      - name: Cache R packages
-        uses: actions/cache@v1
-        with:
-          path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
-          restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
         
 #      - name: helper functions
 #        run: |
