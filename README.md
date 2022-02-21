@@ -6,7 +6,7 @@ This is a multi-source mixing model in a Bayesian framework that provides vegeta
 
 ## Case studies
 
-The code presented here involves two case studies with distinct sets of priors, to illustrate how the model can be applied to the interpretation of sedimentary n-alkane records. One involves published long-chain n-alkane records from lake surface sediments of Lake Qinghai, China [https://doi.org/10.1016/j.orggeochem.2015.03.017](Liu et al., 2015). The other involves published long-chain n-alkane records from lake surface sediments along a vegetation gradient in Cameroon, western Africa [https://doi.org/10.1016/j.gca.2014.07.004](Garcin et al., 2014). Both case studies use published data from the literature.
+The code presented here involves two case studies with distinct sets of priors, to illustrate how the model can be applied to the interpretation of sedimentary n-alkane records. One involves published long-chain n-alkane records from lake surface sediments of Lake Qinghai, China [https://doi.org/10.1016/j.orggeochem.2015.03.017](Liu_et_al.,_2015). The other involves published long-chain n-alkane records from lake surface sediments along a vegetation gradient in Cameroon, western Africa [https://doi.org/10.1016/j.gca.2014.07.004](Garcin_et_al.,_2014). Both case studies use published data from the literature.
 
 ## Data
 
