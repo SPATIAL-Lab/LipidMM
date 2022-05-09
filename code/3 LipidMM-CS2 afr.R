@@ -85,7 +85,7 @@ parameters <- c("d13C.mix.m","RA.mix.m", "FLMC","f.sum.conc_n_i","exp.conc_k","d
 ####first data point: Garcin et al. 2014 Rhum lake
 
 #relative abundance among the tree chains from raw concentration values
-#in the order of n-C27, n-C29, n-C31
+#in the order of n-C29, n-C31, n-C33
 RA.rhum.l <- c(0.317, 0.384, 0.299)
 
 #d13C
@@ -126,7 +126,7 @@ traplot(rhum.l.mix, parms = "FLMC")
 ####second data point: Garcin et al. 2014 Asso lake
 
 #relative abundance among the tree chains from raw concentration values
-#in the order of n-C27, n-C29, n-C31
+#in the order of n-C29, n-C31, n-C33
 RA.asso.l <- c(0.502, 0.289, 0.209)
 
 #d13C
@@ -167,7 +167,7 @@ traplot(asso.l.mix, parms = "FLMC")
 ####third data point: Garcin et al. 2014 Baro lake
 
 #relative abundance among the tree chains from raw concentration values
-#in the order of n-C27, n-C29, n-C31
+#in the order of n-C29, n-C31, n-C33
 RA.baro.l <- c(0.317,0.462,0.167)
 
 #d13C
