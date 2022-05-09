@@ -1,0 +1,691 @@
+Compilation #,Kingdom,Plant type,Group,Family,Plant Species,Common name,Growth habit,Photosynthesis pathway,Sample location,Latitude,Longitude,Elevation (m),RH (%),MAT (∞C),dD C27 (â),dD C29 (â),dD C31 (â),OIPC MAP dD (â),SW dD cited(â),eC27/MAP_OIPC,e0C29/MAP_OIPC,e31/MAP_OIPC,"eC27/MAP_best (best estimate where available sw=blue, otherwise OIPC=black)","eC29/MAP_best (best estimate where available sw=blue, otherwise OIPC=black","eC31/MAP_best (best estimate where available sw=blue, otherwise OIPC=black",d13C bulk (â),d13C C25 (â),d13C C27 (â),d13C C29 (â),d13C C31 (â),d13C C33 (â),Reference,Publication sam ID/site ID,Confidence in lat/long,Confidence in elevation,Misspelling in original publication,Additional comments,NCEP_mean T,NCEP_mean RH,NCEP_mean prate,NCEP_mean lhtfl,NCEP_mean evap,NCEP_mean P/E,NCEP_mean P/E,NCEP_mean P-E,CS3_habitat,,,,,,,,,,
+19,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Bothriochloa ischaemum Keng,Yellow bluestem,Graminoid,C4,"Guangzhou, China",23.1,113.3,7,,21.9,-131,-132,-143,-38,,-96,-98,-109,-96,-98,-109,,-20.3,-20.7,-21,-22.1,-22.4,Bi et al. (2005),X,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,GR,,,,,,,,,,
+20,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Imperata cylindrica var. major (Ness) C. E. Hubb.,,Graminoid,C4,"Guangzhou, China",23.1,113.3,7,,21.9,-150,-174,-185,-38,,-116,-142,-153,-116,-142,-153,,-22,-22.1,-21,-19.2,-19.6,Bi et al. (2005),W,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,GR,,,,,,,,,,
+21,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Saccharum sinense Roxb.,na,Graminoid,C4,"Guangzhou, China",23.1,113.3,7,,21.9,-233,-218,-207,-38,,-203,-188,-176,-203,-188,-176,,-14.7,-14.1,-15.3,-16.7,,Bi et al. (2005),Z,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,GR,,,,,,,,,,
+22,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Zea mays L.,Corn,Graminoid,C4,"Guangzhou, China",23.1,113.3,7,,21.9,-161,-149,-157,-38,,-128,-115,-123,-128,-115,-123,,-23.4,-21.7,-21.3,-22.1,-23.5,Bi et al. (2005),T,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,GR,,,,,,,,,,
+23,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Zoysia japonica Stued,Korean lawngrass,Graminoid,C4,"Guangzhou, China",23.1,113.3,7,,21.9,,-120,-130,-38,,,-85,-95,,-85,-95,,,-23.5,-24.1,-23.1,-23.1,Bi et al. (2005),Y,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,GR,,,,,,,,,,
+47,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Miscanthus sinensis,Chinese silvergrass,Graminoid,C4,"Gunma, Japan",36.28,138.52,1084,,14.5,-191,-186,-179,-64,-60,-136,-130,-123,-136,-130,-123,-11.2,-17.6,-17.1,-17.5,-18.6,-18.9,Chikaraishi & Naraoka (2003),MS2,Low,Low,,"Lat, Long, Elev provided by author",12.5,0.85,1504,103,1440,1.0,1.0,102,GR,,,,,,,,,,
+50,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Saccharum officinarum,Sugarcane,Graminoid,C4,"Okinawa, Japan",26.21,127.68,12,,22.6,-186,-188,-185,-38,,-154,-156,-153,-154,-156,-153,-12.6,-20.4,-20.2,-20.6,-20.7,-22.3,Chikaraishi & Naraoka (2003),SO1,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-1991
+Station Naha, Lat, Long, Elev provided by author",22.6,0.82,1456,171,2371,0.6,0.6,170,GR,,,,,,,,,,
+51,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Saccharum officinarum,Sugarcane,Graminoid,C4,Thailand,13.45,100.32,2,,28.3,,-173,-176,-40,,,-139,-142,,-139,-142,-12,,-23,-20,-19.3,-20.1,Chikaraishi & Naraoka (2003),SO2,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-1991
+Station Bangkok, Lat, Long, Elev provided by author",25.3,0.83,2593,129,1795,1.4,1.4,127,GR,,,,,,,,,,
+52,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Sorghum bicolor,Sorghum,Graminoid,C4,Thailand,13.45,100.32,2,,28.3,-162,-171,-176,-40,,-127,-136,-142,-127,-136,-142,-12.1,-27.4,-22.7,-18.9,-19.6,-19.8,Chikaraishi & Naraoka (2003),SB,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-1991
+Station Bangkok, Lat, Long, Elev provided by author",25.3,0.83,2593,129,1795,1.4,1.4,127,GR,,,,,,,,,,
+58,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Miscanthus sinensis,Chinese silvergrass,Graminoid,C4,"Tokyo, Japan",35.17,139.09,12,,15.8,-181,-173,-168,-48,-42,-140,-131,-126,-140,-131,-126,-10.1,-17.6,-16.7,-17.2,-17.3,-18,Chikaraishi & Naraoka (2003),MS1,Low,Low,,"Lat, Long, Elev provided by author",14.4,0.84,1711,114,1588,1.1,1.1,113,GR,,,,,,,,,,
+59,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Zea mays,Corn,Graminoid,C4,"Tokyo, Japan",35.37,139.23,129,,15.8,-160,-153,-156,-48,-42,-118,-110,-113,-118,-110,-113,-12.7,-23.8,-21,-20.9,-21.7,-21,Chikaraishi & Naraoka (2003),ZM,Low,Low,,"Lat, Long, Elev provided by author",14.2,0.84,1683,112,1550,1.1,1.1,110,GR,,,,,,,,,,
+60,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Zoysia japonica,Korean lawngrass,Graminoid,C4,"Tokyo, Japan",35.17,139.09,12,,15.8,,-177,-180,-48,-42,,-136,-139,,-136,-139,-13.5,,,-24.1,-24.2,-22.3,Chikaraishi & Naraoka (2003),ZJ,Low,Low,,"Lat, Long, Elev provided by author",14.4,0.84,1711,114,1588,1.1,1.1,113,GR,,,,,,,,,,
+177,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Aristida latifolia,Feathertop wiregrass,Graminoid,C4,"Queensland, Australia ",-23.22,143.95,191,,23.4,-147,-199,-195,-23,,-127,-180,-176,-127,-180,-176,-14,,,,,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2009
+Station: LONGREACH AIR",23.0,0.46,349,43,596,0.6,0.6,43,GR,,,,,,,,,,
+178,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Astrebla pectinata,Mitchell grass,Graminoid,C4,"Queensland, Australia ",-23.22,143.95,191,,23.4,-183,-187,-176,-23,,-164,-168,-157,-164,-168,-157,-14.4,,-23.2,-25.1,-26.5,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2009
+Station: LONGREACH AIR",23.0,0.46,349,43,596,0.6,0.6,43,GR,,,,,,,,,,
+179,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Enneapogon avenaceusennial,Bottlewasher grass,Graminoid,C4,"Queensland, Australia ",-23.22,143.95,191,,23.4,,,-174,-23,,,,-155,,,-155,-14.3,,,,,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2009
+Station: LONGREACH AIR",23.0,0.46,349,43,596,0.6,0.6,43,GR,,,,,,,,,,
+180,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Iseilema sp.,Flinders grass,Graminoid,C4,"Queensland, Australia ",-23.22,143.95,191,,23.4,-151,-154,-169,-23,,-131,-134,-149,-131,-134,-149,-13.4,,-23.5,-22.7,-23.8,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2009
+Station: LONGREACH AIR",23.0,0.46,349,43,596,0.6,0.6,43,GR,,,,,,,,,,
+181,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Panicum decompositum,Panic grass,Graminoid,C4,"Queensland, Australia ",-23.22,143.95,191,,23.4,,,-151,-23,,,,-131,,,-131,-13.9,,,,,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2009
+Station: LONGREACH AIR",23.0,0.46,349,43,596,0.6,0.6,43,GR,,,,,,,,,,
+182,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae ,Sporobolus sp.,na,Graminoid,C4,"Queensland, Australia ",-23.22,143.95,191,,23.4,,-159,-199,-23,,,-139,-180,,-139,-180,-14.2,,,,,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2009
+Station: LONGREACH AIR",23.0,0.46,349,43,596,0.6,0.6,43,GR,,,,,,,,,,
+187,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Cleistogenes sp.,na,Graminoid,C4,"Ruicheng, China",34.7,110.6825,496,,14.1,-165,-179,-181,-50,,-121,-136,-138,-121,-136,-138,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1956-1990
+Station:YUNCHENG",11.1,0.73,994,69,960,1.0,1.0,68,GR,,,,,,,,,,
+200,Plantae,Vascular plants,Angiosperm-Monocot,na,na,na,Graminoid,C4,"Sanya, China",18.22,109.5,1,,26.2,-171,-171,-163,-36,,-140,-140,-132,-140,-140,-132,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1959-1990
+Station:YAXIAN",25.2,0.84,1687,113,1578,1.1,1.1,112,GR,,,,,,,,,,
+201,Plantae,Vascular plants,Angiosperm-Monocot,na,na,na,Graminoid,C4,"Sanya, China",18.22,109.5,1,,26.2,-148,-148,-151,-36,,-116,-116,-119,-116,-116,-119,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1959-1990
+Station:YAXIAN",25.2,0.84,1687,113,1578,1.1,1.1,112,GR,,,,,,,,,,
+202,Plantae,Vascular plants,Angiosperm-Monocot,na,na,na,Graminoid,C4,"Sanya, China",18.22,109.5,1,,26.2,,,-152,-36,,,,-120,,,-120,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1959-1990
+Station:YAXIAN",25.2,0.84,1687,113,1578,1.1,1.1,112,GR,,,,,,,,,,
+203,Plantae,Vascular plants,Angiosperm-Monocot,na,na,na,Graminoid,C4,"Sanya, China",18.22,109.5,1,,26.2,-165,-175,-178,-36,,-134,-144,-147,-134,-144,-147,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1959-1990
+Station:YAXIAN",25.2,0.84,1687,113,1578,1.1,1.1,112,GR,,,,,,,,,,
+210,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Cleistogenes sp.,na,Graminoid,C4,"Yuxian, China",37.1,113,929,,9.3,-194,-204,-226,-61,,-142,-152,-176,-142,-152,-176,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1957-1990
+Station: YUSHE",9.5,0.69,979,48,673,1.5,1.5,47,GR,,,,,,,,,,
+216,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Bothriochloa ischaemum,na,Graminoid,C4,"Luochuan, China",35.8,109.5,1159,,10.1,-167,-160,-182,-59,,-115,-107,-131,-115,-107,-131,,,,,,,"Liu & Yang (2008), Liu et al. (2006)",,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.9,0.66,887,51,708,1.3,1.3,50,GR,,,,,,,,,,
+217,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Cleistogenes sp.,na,Graminoid,C4,"Luochuan, China",35.8,109.5,1159,,10.1,-176,-207,-204,-59,,-124,-157,-154,-124,-157,-154,,,,,,,"Liu & Yang (2008), Liu et al. (2006)",,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.9,0.66,887,51,708,1.3,1.3,50,GR,,,,,,,,,,
+218,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Themeda triandra,Kangaroo grass,Graminoid,C4,"Luochuan, China",35.8,109.5,1159,,10.1,-200,-192,-181,-59,,-150,-141,-130,-150,-141,-130,,,,,,,"Liu & Yang (2008), Liu et al. (2006)",,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.9,0.66,887,51,708,1.3,1.3,50,GR,,,,,,,,,,
+219,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Bothriochloa ischaemum,na,Graminoid,C4,"Baishui, China",35.267,108.633,1249,,10.1,-173,-170,-188,-59,,-121,-118,-137,-121,-118,-137,,,,,,,Liu et al. (2006),20,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",10.2,0.68,852,54,755,1.1,1.1,53,GR,,,,,,,,,,
+229,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Cleistogenes squarrosa,na,Graminoid,C4,"Ertuokeqi, China",38.383,107.500,1316,,8.6,-149,-161,-151,-59,,-96,-108,-98,-96,-108,-98,,,,,,,Liu et al. (2006),17,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1954-1990
+Station: YANCHI",8.6,0.51,381,18,255,1.5,1.5,17,GR,,,,,,,,,,
+237,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Pennisetum flaccidum,Flaccidgrass,Graminoid,C4,"Lanzhou, China",36.050,103.783,1598,,9.3,-194,-195,-200,-55,,-147,-148,-153,-147,-148,-153,,,,,,,Liu et al. (2006),27,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-1991
+Station: LANZHOU",4.2,0.66,909,50,699,1.3,1.3,49,GR,,,,,,,,,,
+238,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Bothriochloa ischaemum,na,Graminoid,C4,"Luochuan, China",35.817,109.500,1216,,10.1,-163,-157,-173,-59,,-111,-104,-121,-111,-104,-121,,,,,,,Liu et al. (2006),28,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.9,0.66,887,50,704,1.3,1.3,49,GR,,,,,,,,,,
+240,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Cleistogenes squarrosa,na,Graminoid,C4,"Pengyang, China",35.667,106.600,1622,,8.7,-176,-178,-174,-61,,-122,-125,-120,-122,-125,-120,,,,,,,Liu et al. (2006),31,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1955-1990
+Station:PINGLIANG",8.5,0.67,844,47,652,1.3,1.3,45,GR,,,,,,,,,,
+248,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Bothriochloa ischaemum,na,Graminoid,C4,"Yanan, China",36.600,109.050,1340,,10.1,-157,-152,-186,-62,,-101,-96,-132,-101,-96,-132,,,,,,,Liu et al. (2006),2,Low,Low,Borthriochloa ischaemum,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.3,0.61,812,35,487,1.7,1.7,33,GR,,,,,,,,,,
+249,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Pennisetum flaccidum,Flaccidgrass,Graminoid,C4,"Yanan, China",36.600,109.050,1340,,10.1,,-117,-138,-62,,,-59,-81,,-59,-81,,,,,,,Liu et al. (2006),8,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.3,0.61,812,35,487,1.7,1.7,33,GR,,,,,,,,,,
+310,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Spartina alterniflora,Smooth cordgrass,Graminoid,C4,"Cape Cod, MA, USA",41.66,-70.7,0,,11.1,-157,-161,-136,-58,,-105,-109,-83,-105,-109,-83,,,,,,,Sessions (2006),"SP-20, 5/6/03",High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2001
+Station: NEW BEDFORD MA",10.0,0.81,577,62,867,0.7,0.7,62,GR,,,,,,,,,,
+311,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Spartina alterniflora,Smooth cordgrass,Graminoid,C4,"Cape Cod, MA, USA",41.66,-70.7,0,,11.1,-151,-161,-125,-58,,-99,-109,-71,-99,-109,-71,,,,,,,Sessions (2006),"SP-19, 5/6/03",High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2001
+Station: NEW BEDFORD MA",10.0,0.81,577,62,867,0.7,0.7,62,GR,,,,,,,,,,
+312,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Spartina alterniflora,Smooth cordgrass,Graminoid,C4,"Cape Cod, MA, USA",41.66,-70.7,0,,11.1,-178,-192,-133,-58,,-127,-142,-80,-127,-142,-80,,,,,,,Sessions (2006),"SP-53, 7/26/03",High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2001
+Station: NEW BEDFORD MA",10.0,0.81,577,62,867,0.7,0.7,62,GR,,,,,,,,,,
+313,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Spartina alterniflora,Smooth cordgrass,Graminoid,C4,"Cape Cod, MA, USA",41.66,-70.7,0,,11.1,-152,-160,-166,-58,,-100,-108,-115,-100,-108,-115,,,,,,,Sessions (2006),"SP-46, 10/8/03",High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2001
+Station: NEW BEDFORD MA",10.0,0.81,577,62,867,0.7,0.7,62,GR,,,,,,,,,,
+314,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Spartina alterniflora,Smooth cordgrass,Graminoid,C4,"Cape Cod, MA, USA",41.66,-70.7,0,,11.1,-156,-166,,-58,,-104,-115,,-104,-115,,,,,,,,Sessions (2006),"SP-15, 12/9/02",High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2001
+Station: NEW BEDFORD MA",10.0,0.81,577,62,867,0.7,0.7,62,GR,,,,,,,,,,
+316,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Andropogon gerardii,Big bluestem,Graminoid,C4,"Boulder, CO, USA",40.0,-105.0,1650.0,48.0,21.9,-234,-238,-235,-94,-124,-155,-159,-156,-126,-130,-127,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,5.9,0.63,403,52,727,0.6,0.6,52,GR,,,,,,,,,,
+317,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Schizachyrium scoparium,Little bluestem,Graminoid,C4,"Boulder, CO, USA",40.0,-105.0,1650.0,48.0,21.9,-235,-253,-266,-94,-124,-155,-176,-190,-127,-147,-162,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,5.9,0.63,403,52,727,0.6,0.6,52,GR,,,,,,,,,,
+321,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Aristida longiseta,Red threeawn,Graminoid,C4,"Cottonwood, SD, USA",43.96,-101.9,738,72,22,,-196,-214,-85,,,-121,-141,,-121,-141,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,8.4,0.67,442,46,633,0.7,0.7,45,GR,,,,,,,,,,
+322,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Bouteloua curtipendula,Sideoats grama,Graminoid,C4,"Cottonwood, SD, USA",43.96,-101.9,738,72,22,-220,-213,-219,-85,,-148,-140,-147,-148,-140,-147,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,8.4,0.67,442,46,633,0.7,0.7,45,GR,,,,,,,,,,
+323,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Buchloe dactyloides,Buffalograss,Graminoid,C4,"Cottonwood, SD, USA",43.96,-101.9,738,72,22,-215,-219,-209,-85,,-142,-147,-136,-142,-147,-136,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,8.4,0.67,442,46,633,0.7,0.7,45,GR,,,,,,,,,,
+324,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Schizachyrium scoparium,Little bluestem,Graminoid,C4,"Cottonwood, SD, USA",43.96,-101.9,738,72,22,-224,-233,-236,-85,,-152,-162,-165,-152,-162,-165,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,8.4,0.67,442,46,633,0.7,0.7,45,GR,,,,,,,,,,
+326,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Andropogon gerardii,Big bluestem,Graminoid,C4,"Hays, KS, USA",38.90,-99.30,620,60,27.7,-212,-213,-213,-64,,-158,-159,-160,-158,-159,-160,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,13.1,0.63,523,67,939,0.6,0.6,67,GR,,,,,,,,,,
+327,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Panicum virgatum,Switchgrass,Graminoid,C4,"Hays, KS, USA",38.90,-99.30,620,60,27.7,-205,-212,-205,-64,,-150,-158,-151,-150,-158,-151,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,13.1,0.63,523,67,939,0.6,0.6,67,GR,,,,,,,,,,
+328,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Sorghastrum nutans,Indiangrass,Graminoid,C4,"Hays, KS, USA",38.90,-99.30,620,60,27.7,-203,-196,-197,-64,,-148,-142,-142,-148,-142,-142,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,13.1,0.63,523,67,939,0.6,0.6,67,GR,,,,,,,,,,
+332,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Bouteloua gracilis,Blue grama,Graminoid,C4,"Mandan, ND, USA",46.50,100.90,563,74,21.6,-208,-220,-232,-90,,-130,-143,-156,-130,-143,-156,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,-2.1,0.60,234,29,406,0.6,0.6,29,GR,,,,,,,,,,
+333,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Calamovilfa longifolia,Prairie sandreed,Graminoid,C4,"Mandan, ND, USA",46.50,100.90,563,74,21.6,-230,-216,-213,-90,,-153,-139,-135,-153,-139,-135,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,-2.1,0.60,234,29,406,0.6,0.6,29,GR,,,,,,,,,,
+334,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Schizachyrium scoparium,Little bluestem,Graminoid,C4,"Mandan, ND, USA",46.50,100.90,563,74,21.6,-230,-228,-230,-90,,-153,-152,-154,-153,-152,-154,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,-2.1,0.60,234,29,406,0.6,0.6,29,GR,,,,,,,,,,
+337,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Andropogon gerardii,Big bluestem,Graminoid,C4,"Manhattan, KS, USA",39.09,-96.58,418,70,25.4,-211,-205,-204,-56,,-164,-158,-157,-164,-158,-157,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,12.1,0.70,659,75,1038,0.6,0.6,74,GR,,,,,,,,,,
+338,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Schizachyrium scoparium,Little bluestem,Graminoid,C4,"Manhattan, KS, USA",39.09,-96.58,418,70,25.4,-193,-196,-207,-56,,-145,-149,-160,-145,-149,-160,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,12.1,0.70,659,75,1038,0.6,0.6,74,GR,,,,,,,,,,
+339,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Sorghastrum nutans,Indiangrass,Graminoid,C4,"Manhattan, KS, USA",39.09,-96.58,418,70,25.4,-199,-197,-192,-56,,-151,-149,-144,-151,-149,-144,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,12.1,0.70,659,75,1038,0.6,0.6,74,GR,,,,,,,,,,
+342,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Bouteloua gracilis,Blue grama,Graminoid,C4,"Nunn, CO, USA",40.8,-104.8,1600,53,23.7,-171,-189,-211,-95,,-84,-104,-128,-84,-104,-128,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,6.3,0.64,453,48,673,0.7,0.7,48,GR,,,,,,,,,,
+345,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Bouteloua eriopoda,Black grama,Graminoid,C4,"Socorro County, NM, USA",34.35,-106.88,1600,35,26.1,,-136,-155,-77,,,-64,-84,,-64,-84,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,11.5,0.47,265,29,399,0.7,0.7,28,GR,,,,,,,,,,
+346,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Bouteloua gracilis,Blue grama,Graminoid,C4,"Socorro County, NM, USA",34.35,-106.88,1600,35,26.1,-180,-190,-210,-77,,-112,-123,-144,-112,-123,-144,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,11.5,0.47,265,29,399,0.7,0.7,28,GR,,,,,,,,,,
+351,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Andropogon gerardii,Big bluestem,Graminoid,C4,"Woodworth, ND, USA",47.15,-99.30,614,77,21.7,-219,-225,-234,-90,,-142,-148,-159,-142,-148,-159,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,5.7,0.77,586,61,850,0.7,0.7,60,GR,,,,,,,,,,
+352,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Schizachyrium scoparium,Little bluestem,Graminoid,C4,"Woodworth, ND, USA",47.15,-99.30,614,77,21.7,,-223,-224,-90,,,-146,-147,,-146,-147,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,5.7,0.77,586,61,850,0.7,0.7,60,GR,,,,,,,,,,
+286,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula pendula,Silver birch,Tree,C3,"Tunturilampi, Finland",67.35638889,27.16833333,293,,-0.3,-170,-185,-193,-99,,-79,-95,-104,-79,-95,-104,,,,,,,Sachse et al. (2006),SOD007,High,High,,,-1.45,0.90,807,39.51,551,1.46,1.46,38.05,FR,,,,,,,,,,
+276,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula pendula,Silver birch,Tree,C3,"Luosto, Finland",67.17222222,26.85972222,300,,-0.3,-189,-167,-166,-99,,-100,-75,-74,-100,-75,-74,,,,,,,Sachse et al. (2006),SOD004,High,High,,,-1.39,0.90,859,39.67,553,1.55,1.55,38.11,FR,,,,,,,,,,
+259,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula pubescens,Downy birch,Tree,C3,"Hirvii‰nkurunlampi, Finland",67.37888889,26.85083333,178,,-0.3,-195,,,-98,,-108,,,-108,,,,,,,,,Sachse et al. (2006),SOD003,High,High,,,-1.50,0.90,805,39.94,557,1.45,1.45,38.50,FR,,,,,,,,,,
+260,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Fagus sylvatica,European beech,Tree,C3,"Hirvii‰nkurunlampi, Finland",67.37888889,26.85083333,178,,-0.3,-180,,,-98,,-91,,,-91,,,,,,,,,Sachse et al. (2006),SOD003,High,High,,,-1.50,0.90,805,39.94,557,1.45,1.45,38.50,FR,,,,,,,,,,
+266,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula pubescens,Downy birch,Tree,C3,"Kilpisja®rvi, Finland",69.00444444,20.89777778,496,,3.5,-189,,,-110,,-89,,,-89,,,,,,,,,Sachse et al. (2006),FIN002,High,High,,,-0.29,0.89,443,23.47,328,1.35,1.35,22.12,FR,,,,,,,,,,
+278,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula pendula,Silver birch,Tree,C3,"Oikoj‰rvi, Finland",68.84861111,21.18055556,463,,-2,-191,,,-110,,-91,,,-91,,,,,,,,,Sachse et al. (2006),NAI,High,High,,,-0.59,0.89,447,24.42,341,1.31,1.31,23.11,FR,,,,,,,,,,
+264,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula pubescens,Downy birch,Tree,C3,"Keitjoru, Sweden",68.66861111,21.51611111,428,,-2,-193,,,-109,,-94,,,-94,,,,,,,,,Sachse et al. (2006),KEI,High,High,,,-0.92,0.89,460,26.73,373,1.23,1.23,25.50,FR,,,,,,,,,,
+300,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Acer pseudoplatanus,Sycamore maple,Tree,C3,"Thann, Germany",49.325,12.458,505,,7.5,-154,-169,-178,-62,,-98,-114,-124,-98,-114,-124,,,,,,,Sachse et al. (2009),36648,High,High,,T data from Publication,7.01,0.89,1100,68.53,955,1.15,1.15,67.38,FR,,,,,,,,,,
+301,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Acer pseudoplatanus,Sycamore maple,Tree,C3,"Thann, Germany",49.325,12.458,505,,7.5,-158,-159,-169,-62,,-102,-103,-114,-102,-103,-114,,,,,,,Sachse et al. (2009),36668,High,High,,T data from Publication,7.01,0.89,1100,68.53,955,1.15,1.15,67.38,FR,,,,,,,,,,
+302,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Acer pseudoplatanus,Sycamore maple,Tree,C3,"Thann, Germany",49.325,12.458,505,,7.5,-169,-181,-178,-62,,-114,-127,-124,-114,-127,-124,,,,,,,Sachse et al. (2009),36694,High,High,,T data from Publication,7.01,0.89,1100,68.53,955,1.15,1.15,67.38,FR,,,,,,,,,,
+303,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Acer pseudoplatanus,Sycamore maple,Tree,C3,"Thann, Germany",49.325,12.458,505,,7.5,-158,-183,-179,-62,,-102,-129,-125,-102,-129,-125,,,,,,,Sachse et al. (2009),36728,High,High,,T data from Publication,7.01,0.89,1100,68.53,955,1.15,1.15,67.38,FR,,,,,,,,,,
+304,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Acer pseudoplatanus,Sycamore maple,Tree,C3,"Thann, Germany",49.325,12.458,505,,7.5,-142,-175,-164,-62,,-85,-120,-109,-85,-120,-109,,,,,,,Sachse et al. (2009),36765,High,High,,T data from Publication,7.01,0.89,1100,68.53,955,1.15,1.15,67.38,FR,,,,,,,,,,
+305,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Acer pseudoplatanus,Sycamore maple,Tree,C3,"Thann, Germany",49.325,12.458,505,,7.5,-129,-169,-157,-62,,-71,-114,-101,-71,-114,-101,,,,,,,Sachse et al. (2009),36777,High,High,,T data from Publication,7.01,0.89,1100,68.53,955,1.15,1.15,67.38,FR,,,,,,,,,,
+306,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Acer pseudoplatanus,Sycamore maple,Tree,C3,"Thann, Germany",49.325,12.458,505,,7.5,-172,-187,-177,-62,,-117,-133,-123,-117,-133,-123,,,,,,,Sachse et al. (2009),36810,High,High,,T data from Publication,7.01,0.89,1100,68.53,955,1.15,1.15,67.38,FR,,,,,,,,,,
+307,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Acer pseudoplatanus,Sycamore maple,Tree,C3,"Thann, Germany",49.325,12.458,505,,7.5,-137,-176,-159,-62,,-80,-122,-103,-80,-122,-103,,,,,,,Sachse et al. (2009),36818,High,High,,T data from Publication,7.01,0.89,1100,68.53,955,1.15,1.15,67.38,FR,,,,,,,,,,
+308,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Acer pseudoplatanus,Sycamore maple,Tree,C3,"Thann, Germany",49.325,12.458,505,,7.5,-178,-192,-182,-62,,-124,-139,-128,-124,-139,-128,,,,,,,Sachse et al. (2009),36837,High,High,,T data from Publication,7.01,0.89,1100,68.53,955,1.15,1.15,67.38,FR,,,,,,,,,,
+309,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Acer pseudoplatanus,Sycamore maple,Tree,C3,"Thann, Germany",49.325,12.458,505,,7.5,-170,-190,-179,-62,,-115,-136,-125,-115,-136,-125,,,,,,,Sachse et al. (2009),11/8/04 (litter),High,High,,T data from Publication,7.01,0.89,1100,68.53,955,1.15,1.15,67.38,FR,,,,,,,,,,
+289,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Fagus sylvatica,European beech,Tree,C3,"Eisenach, Germany ",51.079,10.452,440,,8,-156,,,-64,,-98,,,-98,,,,,,,,,Sachse et al. (2009),36645,High,High,,T data from Publication,8.24,0.88,1158,60.00,836,1.39,1.39,58.61,FR,,,,,,,,,,
+290,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Fagus sylvatica,European beech,Tree,C3,"Eisenach, Germany ",51.079,10.452,440,,8,-159,,,-64,,-101,,,-101,,,,,,,,,Sachse et al. (2009),36662,High,High,,T data from Publication,8.24,0.88,1158,60.00,836,1.39,1.39,58.61,FR,,,,,,,,,,
+291,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Fagus sylvatica,European beech,Tree,C3,"Eisenach, Germany ",51.079,10.452,440,,8,-168,,,-64,,-111,,,-111,,,,,,,,,Sachse et al. (2009),36671,High,High,,T data from Publication,8.24,0.88,1158,60.00,836,1.39,1.39,58.61,FR,,,,,,,,,,
+292,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Fagus sylvatica,European beech,Tree,C3,"Eisenach, Germany ",51.079,10.452,440,,8,-175,,,-64,,-119,,,-119,,,,,,,,,Sachse et al. (2009),36687,High,High,,T data from Publication,8.24,0.88,1158,60.00,836,1.39,1.39,58.61,FR,,,,,,,,,,
+293,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Fagus sylvatica,European beech,Tree,C3,"Eisenach, Germany ",51.079,10.452,440,,8,-158,,,-64,,-100,,,-100,,,,,,,,,Sachse et al. (2009),36700,High,High,,T data from Publication,8.24,0.88,1158,60.00,836,1.39,1.39,58.61,FR,,,,,,,,,,
+294,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Fagus sylvatica,European beech,Tree,C3,"Eisenach, Germany ",51.079,10.452,440,,8,-168,,,-64,,-111,,,-111,,,,,,,,,Sachse et al. (2009),36713,High,High,,T data from Publication,8.24,0.88,1158,60.00,836,1.39,1.39,58.61,FR,,,,,,,,,,
+295,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Fagus sylvatica,European beech,Tree,C3,"Eisenach, Germany ",51.079,10.452,440,,8,-160,,,-64,,-103,,,-103,,,,,,,,,Sachse et al. (2009),36774,High,High,,T data from Publication,8.24,0.88,1158,60.00,836,1.39,1.39,58.61,FR,,,,,,,,,,
+296,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Fagus sylvatica,European beech,Tree,C3,"Eisenach, Germany ",51.079,10.452,440,,8,-160,,,-64,,-103,,,-103,,,,,,,,,Sachse et al. (2009),36783,High,High,,T data from Publication,8.24,0.88,1158,60.00,836,1.39,1.39,58.61,FR,,,,,,,,,,
+297,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Fagus sylvatica,European beech,Tree,C3,"Eisenach, Germany ",51.079,10.452,440,,8,-140,,,-64,,-81,,,-81,,,,,,,,,Sachse et al. (2009),36797,High,High,,T data from Publication,8.24,0.88,1158,60.00,836,1.39,1.39,58.61,FR,,,,,,,,,,
+298,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Fagus sylvatica,European beech,Tree,C3,"Eisenach, Germany ",51.079,10.452,440,,8,-159,,,-64,,-101,,,-101,,,,,,,,,Sachse et al. (2009),36812,High,High,,T data from Publication,8.24,0.88,1158,60.00,836,1.39,1.39,58.61,FR,,,,,,,,,,
+299,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Fagus sylvatica,European beech,Tree,C3,"Eisenach, Germany ",51.079,10.452,440,,8,-156,,,-64,,-98,,,-98,,,,,,,,,Sachse et al. (2009),36825,High,High,,T data from Publication,8.24,0.88,1158,60.00,836,1.39,1.39,58.61,FR,,,,,,,,,,
+262,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula pendula,Silver birch,Tree,C3,"Holzmaar, Germany",50.11944444,6.878888889,436,,10.5,-175,-169,-168,-60.1,,-122,-116,-115,-122,-116,-115,,,,,,,Sachse et al. (2006),HZM,High,High,,,9.15,0.86,994,61.46,856,1.16,1.16,60.30,FR,,,,,,,,,,
+263,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Fagus sylvatica,European beech,Tree,C3,"Holzmaar, Germany",50.11944444,6.878888889,436,,10.5,-173,,,-60.1,,-120,,,-120,,,,,,,,,Sachse et al. (2006),HZM,High,High,,,9.15,0.86,994,61.46,856,1.16,1.16,60.30,FR,,,,,,,,,,
+27,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Acer argutum,Pointed-leaf maple,Tree,C3,"Gunma, Japan",36.28,138.52,1084,,14.48232439,-119,-119,-111,-64,-60,-59,-59,-50,-59,-59,-50,-34.2,-36.2,-35.7,-35.9,-36.4,-34.7,Chikaraishi & Naraoka (2003),AA1,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-1990
+Station KUMAGAYA Lat, Long, Elev provided by author",12.45,0.85,1504,103.48,1440,1.04,1.04,102.43,FR,,,,,,,,,,
+28,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Acer argutum,Maple,Tree,C3,"Gunma, Japan",36.28,138.52,1084,,14.48232439,-93,-123,-116,-64,-60,-31,-63,-56,-31,-63,-56,-34.8,-34.6,-34.9,-35.6,-36,-34,Chikaraishi & Naraoka (2003),AA2,Low,Low,,"Lat, Long, Elev provided by author",12.45,0.85,1504,103.48,1440,1.04,1.04,102.43,FR,,,,,,,,,,
+29,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Acer carpinifolium,Hornbeam maple,Tree,C3,"Gunma, Japan",36.28,138.52,1084,,14.48232439,-120,-134,-111,-64,-60,-60,-75,-50,-60,-75,-50,-31.8,-35.5,-35.5,-35.5,-35.4,-35.2,Chikaraishi & Naraoka (2003),AC1,Low,Low,,"Lat, Long, Elev provided by author",12.45,0.85,1504,103.48,1440,1.04,1.04,102.43,FR,,,,,,,,,,
+30,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Acer carpinifolium,Maple,Tree,C3,"Gunma, Japan",36.28,138.52,1084,,14.48232439,-105,-161,-127,-64,-60,-44,-104,-67,-44,-104,-67,-33.8,,-35.5,-37.3,-37.1,-37,Chikaraishi & Naraoka (2003),AC2,Low,Low,,"Lat, Long, Elev provided by author",12.45,0.85,1504,103.48,1440,1.04,1.04,102.43,FR,,,,,,,,,,
+33,Plantae,Vascular plants,Angiosperm-Dicot,Asteraceae,Taraxacum officinale,Common dandelion,Tree,C3,"Gunma, Japan",36.28,138.52,1084,,14.48232439,-151,-155,-155,-64,-60,-93,-97,-97,-93,-97,-97,-32.7,-35.7,-36,-37,-36.4,-36,Chikaraishi & Naraoka (2003),TO,Low,Low,,"Lat, Long, Elev provided by author",12.45,0.85,1504,103.48,1440,1.04,1.04,102.43,FR,,,,,,,,,,
+34,Plantae,Vascular plants,Angiosperm-Dicot,Cornaceae,Benthamidia japonica,Japanese flowering dogwood,Tree,C3,"Gunma, Japan",36.28,138.52,1084,,14.48232439,-157,-158,-168,-64,-60,-99,-100,-111,-99,-100,-111,-34.3,-38.1,-37.2,-36.5,-36.5,,Chikaraishi & Naraoka (2003),BJ1,Low,Low,,"Lat, Long, Elev provided by author",12.45,0.85,1504,103.48,1440,1.04,1.04,102.43,FR,,,,,,,,,,
+35,Plantae,Vascular plants,Angiosperm-Dicot,Cornaceae,Benthamidia japonica,Japanese flowering dogwood,Tree,C3,"Gunma, Japan",36.28,138.52,1084,,14.48232439,-149,-170,-176,-64,-60,-91,-113,-120,-91,-113,-120,-35.6,-38.1,-37.4,-38.8,-37.3,,Chikaraishi & Naraoka (2003),BJ2,Low,Low,,"Lat, Long, Elev provided by author",12.45,0.85,1504,103.48,1440,1.04,1.04,102.43,FR,,,,,,,,,,
+36,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus dentata,Daimyo oak,Tree,C3,"Gunma, Japan",36.28,138.52,1084,,14.48232439,-194,-193,-184,-64,-60,-139,-138,-128,-139,-138,-128,-30.9,-34.9,-34.1,-33.5,-34.4,,Chikaraishi & Naraoka (2003),QD,Low,Low,,"Lat, Long, Elev provided by author",12.45,0.85,1504,103.48,1440,1.04,1.04,102.43,FR,,,,,,,,,,
+37,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus mongolica,Mongolian oak,Tree,C3,"Gunma, Japan",36.28,138.52,1084,,14.48232439,-186,-188,-172,-64,-60,-130,-132,-115,-130,-132,-115,-29.7,-33.6,-33.2,-33.4,-32.2,-32.9,Chikaraishi & Naraoka (2003),QM,Low,Low,,"Lat, Long, Elev provided by author",12.45,0.85,1504,103.48,1440,1.04,1.04,102.43,FR,,,,,,,,,,
+39,Plantae,Vascular plants,Angiosperm-Dicot,Rosaceae,Prunus jamasakura,,Tree,C3,"Gunma, Japan",36.28,138.52,1084,,14.48232439,-159,-183,-183,-64,-60,-101,-127,-127,-101,-127,-127,-32,-35.2,-33.9,-34.2,-33.5,-33.2,Chikaraishi & Naraoka (2003),PJ,Low,Low,,"Lat, Long, Elev provided by author",12.45,0.85,1504,103.48,1440,1.04,1.04,102.43,FR,,,,,,,,,,
+45,Plantae,Vascular plants,Gymnosperm,Cupressaceae,Cryptomeria japonica,Japanese cedar,Tree,C3,"Gunma, Japan",36.28,138.52,1084,,14.48232439,-165,-156,-141,-64,-60,-108,-98,-82,-108,-98,-82,-26.4,,-32.2,-32.3,-30.4,-29.5,Chikaraishi & Naraoka (2003),CJ1 ,Low,Low,,"Lat, Long, Elev provided by author",12.45,0.85,1504,103.48,1440,1.04,1.04,102.43,FR,,,,,,,,,,
+46,Plantae,Vascular plants,Gymnosperm,Cupressaceae,Cryptomeria japonica,Japanese cedar,Tree,C3,"Gunma, Japan",36.28,138.52,1084,,14.48232439,-178,-168,-153,-64,-60,-122,-111,-95,-122,-111,-95,-27.9,-34.4,-32.7,-32.9,-32.5,-31.5,Chikaraishi & Naraoka (2003),CJ2 ,Low,Low,,"Lat, Long, Elev provided by author",12.45,0.85,1504,103.48,1440,1.04,1.04,102.43,FR,,,,,,,,,,
+38,Plantae,Vascular plants,Angiosperm-Dicot,Plantaginaceae,Plantago asiatica,Plantain,"Forb, shrub",C3,"Gunma, Japan",36.28,138.52,1084,,14.5,-177,-178,-176,-64,-60,-121,-122,-120,-121,-122,-120,-36.2,-38.6,-39,-39.6,-39.8,-40.3,Chikaraishi & Naraoka (2003),PA,Low,Low,,"Lat, Long, Elev provided by author",12.45,0.85,1504,103.48,1440,1.04,1.04,102.43,FR,,,,,,,,,,
+31,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Acer palmatum,Maple,Forb,C3,"Gunma, Japan",36.28,138.52,1084,,14.5,-174,-171,-179,-64,-60,-118,-114,-123,-118,-114,-123,-37.5,-36.9,-38.5,-40.5,-41.8,-41.7,Chikaraishi & Naraoka (2003),AcP,Low,Low,,"Lat, Long, Elev provided by author",12.5,0.85,1504,103,1440,1.0,1.0,102,FR,,,,,,,,,,
+32,Plantae,Vascular plants,Angiosperm-Dicot,Asteraceae,Artemisia princeps,Sagebrush,Forb,C3,"Gunma, Japan",36.28,138.52,1084,,14.5,-172,-157,-163,-64,-60,-115,-99,-106,-115,-99,-106,-32.2,-36.7,-35.9,-36.5,-35.2,-35.4,Chikaraishi & Naraoka (2003),ArP,Low,Low,,"Lat, Long, Elev provided by author",12.5,0.85,1504,103,1440,1.0,1.0,102,FR,,,,,,,,,,
+267,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula pendula,Silver birch,Tree,C3,"Kiuvaj‰rvi, Finland",61.84861111,24.27944444,149,,3.5,-205,-189,-186,-91,,-125,-108,-105,-125,-108,-105,,,,,,,Sachse et al. (2006),HYY,High,High,,,4.35,0.85,438,50.63,706,0.62,0.62,50.01,FR,,,,,,,,,,
+4,Plantae,Vascular plants,Angiosperm-Dicot,Bignoniaceae,Kigelia africana (am.) Benth.,Sausage tree,Tree,C3,"Guangzhou, China",23.1,113.3,7,,21.88719762,-157,-158,-158,-38,,-123,-125,-125,-123,-125,-125,,,,-33.1,-33.3,-33.2,Bi et al. (2005),I,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.20,0.85,1720,97.84,1362,1.26,1.26,96.57,FR,,,,,,,,,,
+7,Plantae,Vascular plants,Angiosperm-Dicot,Lauraceae,Cinnamomum burmannii (Nees) Bl.,Indonesian cinnamon,Tree,C3,"Guangzhou, China",23.1,113.3,7,,21.88719762,-209,-207,-191,-38,,-178,-175,-159,-178,-175,-159,,,-33,-33.3,-37.2,-37.9,Bi et al. (2005),N,High,High,Cinnamomum burmanni (Nees) Bl.,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.20,0.85,1720,97.84,1362,1.26,1.26,96.57,FR,,,,,,,,,,
+8,Plantae,Vascular plants,Angiosperm-Dicot,Meliaceae,Swietenia mahagoni (L.) Jacq.,West indian mahogany,Tree,C3,"Guangzhou, China",23.1,113.3,7,,21.88719762,,-171,-171,-38,,,-138,-138,,-138,-138,,,,-34.1,-35.9,-38.3,Bi et al. (2005),K,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.20,0.85,1720,97.84,1362,1.26,1.26,96.57,FR,,,,,,,,,,
+9,Plantae,Vascular plants,Angiosperm-Dicot,Moraceae,Ficus altissima Bl.,na,Tree,C3,"Guangzhou, China",23.1,113.3,7,,21.88719762,-175,-166,-159,-38,,-142,-133,-126,-142,-133,-126,,,,-33.9,-36.1,-36.7,Bi et al. (2005),F,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.20,0.85,1720,97.84,1362,1.26,1.26,96.57,FR,,,,,,,,,,
+10,Plantae,Vascular plants,Angiosperm-Dicot,Moraceae,Ficus microcarpa Linn. f.,Golden leaves fig,Tree,C3,"Guangzhou, China",23.1,113.3,7,,21.88719762,,-180,-174,-38,,,-148,-141,,-148,-141,,,,-31,-33.1,-36.5,Bi et al. (2005),G,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.20,0.85,1720,97.84,1362,1.26,1.26,96.57,FR,,,,,,,,,,
+11,Plantae,Vascular plants,Angiosperm-Dicot,Myrtaceae,Syzygium cumini (L.) Skeels,Java plum,Tree,C3,"Guangzhou, China",23.1,113.3,7,,21.88719762,-146,-161,-162,-38,,-112,-128,-129,-112,-128,-129,,,-34.2,-37.2,-35.3,,Bi et al. (2005),J,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.20,0.85,1720,97.84,1362,1.26,1.26,96.57,FR,,,,,,,,,,
+12,Plantae,Vascular plants,Angiosperm-Dicot,Oleaceae,Osmanthus fragrans Lour.,Sweet olive,Tree,C3,"Guangzhou, China",23.1,113.3,7,,21.88719762,-161,-175,-171,-38,,-128,-142,-139,-128,-142,-139,,,,-35.7,-37,-35.2,Bi et al. (2005),H,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.20,0.85,1720,97.84,1362,1.26,1.26,96.57,FR,,,,,,,,,,
+15,Plantae,Vascular plants,Angiosperm-Monocot,Arecaceae,Caryota mitis Lour.,Burmese fishtail palm,Tree,C3,"Guangzhou, China",23.1,113.3,7,,21.88719762,,-196,-205,-38,,,-165,-174,,-165,-174,,,,,-35.3,-35.7,Bi et al. (2005),M,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.20,0.85,1720,97.84,1362,1.26,1.26,96.57,FR,,,,,,,,,,
+16,Plantae,Vascular plants,Gymnosperm,Araucariaceae,Araucaria cunninghamii Sweet,Moreton Bay pine,Tree,C3,"Guangzhou, China",23.1,113.3,7,,21.88719762,-122,-110,-95,-38,,-87,-74,-59,-87,-74,-59,,,,-30.1,-30.5,-29.1,Bi et al. (2005),O,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.20,0.85,1720,97.84,1362,1.26,1.26,96.57,FR,,,,,,,,,,
+2,Plantae,Vascular plants,Angiosperm-Dicot,Amaranthaceae †,Alternanthera dentata 'Rubiginosa' ,Ruby Leaf,Shrub,C3,"Guangzhou, China",23.1,113.3,7,,21.9,-200,-204,-201,-38,,-168,-172,-169,-168,-172,-169,,,-36.3,-36.6,-37.2,-36.9,Bi et al. (2005),P,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.20,0.85,1720,97.84,1362,1.26,1.26,96.57,FR,,,,,,,,,,
+5,Plantae,Vascular plants,Angiosperm-Dicot,Euphorbiaceae,Codiaeum variegatum,Garden croton,Shrub,C3,"Guangzhou, China",23.1,113.3,7,,21.9,,-156,-168,-38,,,-122,-135,,-122,-135,,,,,-35.1,-37.2,Bi et al. (2005),E,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.20,0.85,1720,97.84,1362,1.26,1.26,96.57,FR,,,,,,,,,,
+13,Plantae,Vascular plants,Angiosperm-Dicot,Verbenaceae,Holmskioldia sanguinea Retz.,Chinese hatplant,Shrub,C3,"Guangzhou, China",23.1,113.3,7,,21.9,-202,-204,-210,-38,,-170,-173,-179,-170,-173,-179,,,-34.5,-35.3,-33.8,-34.4,Bi et al. (2005),S,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.20,0.85,1720,97.84,1362,1.26,1.26,96.57,FR,,,,,,,,,,
+6,Plantae,Vascular plants,Angiosperm-Dicot,Euphorbiaceae,Euphorbia pulcherrima Willd.,Poinsettia,"Tree, shrub",C3,"Guangzhou, China",23.1,113.3,7,,21.9,-196,-199,-199,-38,,-164,-167,-168,-164,-167,-168,,,-37.7,-38,-37.4,,Bi et al. (2005),D,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.20,0.85,1720,97.84,1362,1.26,1.26,96.57,FR,,,,,,,,,,
+1,Plantae,Vascular plants,Angiosperm-Dicot,Amaranthaceae †,Alternanthera bettzickiana (Regel) Nichols.,na,Forb,C3,"Guangzhou, China",23.1,113.3,7,,21.9,-202,-208,-216,-38,,-171,-176,-185,-171,-176,-185,,,-35.7,-36.5,-37.2,-37.4,Bi et al. (2005),R,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,FR,,,,,,,,,,
+3,Plantae,Vascular plants,Angiosperm-Dicot,Amaranthaceae †,Alternanthera versicolor Regel,Calico plant,Forb,C3,"Guangzhou, China",23.1,113.3,7,,21.9,-199,-209,-213,-38,,-167,-178,-182,-167,-178,-182,,,,-36.7,-37.5,-38.3,Bi et al. (2005),Q,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,FR,,,,,,,,,,
+14,Plantae,Vascular plants,Angiosperm-Monocot,Araceae,Pistia stratiotes,Water lettuce,Forb,C3,"Guangzhou, China",23.1,113.3,7,,21.9,-169,-161,-154,-38,,-136,-128,-120,-136,-128,-120,,,-37.1,-36.6,-37.1,-36.9,Bi et al. (2005),L,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,FR,,,,,,,,,,
+283,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula pendula,Silver birch,Tree,C3,"Syrj‰nalunen, Finland",61.19361111,25.14138889,156,,3.6,-189,,,-90,,-109,,,-109,,,,,,,,,Sachse et al. (2006),SYR,High,High,,,4.13,0.84,455,48.20,671,0.68,0.68,47.52,FR,,,,,,,,,,
+284,Plantae,Vascular plants,Angiosperm-Dicot,Myrtaceae †,Myrtus sp.,Myrtle,"Tree, shrub",C3,"Syrj‰nalunen, Finland",61.194,25.141,156,,3.6,,-231,-226,-90,,,-155,-149,,-155,-149,,,,,,,Sachse et al. (2006),SYR,High,High,,,4.13,0.84,455,48.20,671,0.68,0.68,47.52,FR,,,,,,,,,,
+54,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus acutissima,Sawtooth Oak,Tree,C3,"Tokyo, Japan",35.37,139.23,129,,15.79543571,-81,-145,-142,-48,-42,-35,-102,-99,-35,-102,-99,-32,-34.6,-35.5,-34.7,-34.8,-34.9,Chikaraishi & Naraoka (2003),QA,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-1991
+Station Tokyo, Lat, Long, Elev provided by author",14.21,0.84,1683,111.56,1550,1.09,1.09,110.47,FR,,,,,,,,,,
+281,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula pendula,Silver birch,Tree,C3,"P‰‰jarvi, Finland",61.06,25.09861111,151,,3.6,-183,-160,-162,-90,,-102,-77,-79,-102,-77,-79,,,,,,,Sachse et al. (2006),LAM,High,High,,,4.19,0.84,462,46.95,654,0.71,0.71,46.24,FR,,,,,,,,,,
+55,Plantae,Vascular plants,Angiosperm-Dicot,Theaceae,Camellia sasanqua,Sasanqua camellia ,Tree,C3,"Tokyo, Japan",35.17,139.09,12,,15.79543571,-166,-167,-159,-48,-42,-124,-125,-117,-124,-125,-117,-28.6,-32.7,-32.5,-31.3,-33.1,,Chikaraishi & Naraoka (2003),CA,Low,Low,,"Lat, Long, Elev provided by author",14.43,0.84,1711,114.28,1588,1.08,1.08,113.20,FR,,,,,,,,,,
+56,Plantae,Vascular plants,Gymnosperm,Cupressaceae,Chamaecyparis obtusa,Hinoki Falsecypress  ,Tree,C3,"Tokyo, Japan",35.17,139.09,12,,15.79543571,-180,-150,-134,-48,-42,-139,-107,-90,-139,-107,-90,-28.3,,,-30.6,-30,-29.2,Chikaraishi & Naraoka (2003),CO,Low,Low,,"Lat, Long, Elev provided by author",14.43,0.84,1711,114.28,1588,1.08,1.08,113.20,FR,,,,,,,,,,
+57,Plantae,Vascular plants,Gymnosperm,Pinaceae,Pinus thunbergii,Japanese black pine,Tree,C3,"Tokyo, Japan",35.17,139.09,12,,15.79543571,-167,-164,-151,-48,-42,-125,-122,-108,-125,-122,-108,-26,-32,-32.7,-33.5,-34.1,-34.6,Chikaraishi & Naraoka (2003),PT,Low,Low,,"Lat, Long, Elev provided by author",14.43,0.84,1711,114.28,1588,1.08,1.08,113.20,FR,,,,,,,,,,
+188,Plantae,Vascular plants,Angiosperm-Dicot,Bignoniaceae,Spathodea campanulata,African tuliptree,Tree,C3,"Sanya, China",18.22,109.5,1,,26.17552813,-139,-140,-134,-36,,-107,-108,-102,-107,-108,-102,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1959-1990
+Station:YAXIAN",25.25,0.84,1687,113.40,1578,1.07,1.07,112.33,FR,,,,,,,,,,
+189,Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Tamarindus indica Linn.,Tamarind,Tree,C3,"Sanya, China",18.22,109.5,1,,26.17552813,-154,-154,-165,-36,,-122,-122,-134,-122,-122,-134,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1959-1990
+Station:YAXIAN",25.25,0.84,1687,113.40,1578,1.07,1.07,112.33,FR,,,,,,,,,,
+190,Plantae,Vascular plants,Angiosperm-Dicot,Magnoliaceae †,Michelia alba,na,Tree,C3,"Sanya, China",18.22,109.5,1,,26.17552813,-174,-186,-188,-36,,-143,-156,-158,-143,-156,-158,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1959-1990
+Station:YAXIAN",25.25,0.84,1687,113.40,1578,1.07,1.07,112.33,FR,,,,,,,,,,
+194,Plantae,Vascular plants,na,na,na,na,Tree,C3,"Sanya, China",18.22,109.5,1,,26.17552813,,-131,-132,-36,,,-99,-100,,-99,-100,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1959-1990
+Station:YAXIAN",25.25,0.84,1687,113.40,1578,1.07,1.07,112.33,FR,,,,,,,,,,
+195,Plantae,Vascular plants,na,na,na,na,Tree,C3,"Sanya, China",18.22,109.5,1,,26.17552813,,-144,-149,-36,,,-112,-117,,-112,-117,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1959-1990
+Station:YAXIAN",25.25,0.84,1687,113.40,1578,1.07,1.07,112.33,FR,,,,,,,,,,
+196,Plantae,Vascular plants,na,na,na,na,Tree,C3,"Sanya, China",18.22,109.5,1,,26.17552813,-140,-159,-143,-36,,-108,-128,-111,-108,-128,-111,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1959-1990
+Station:YAXIAN",25.25,0.84,1687,113.40,1578,1.07,1.07,112.33,FR,,,,,,,,,,
+198,Plantae,Vascular plants,na,na,na,na,Tree,C3,"Sanya, China",18.22,109.5,1,,26.17552813,-134,-134,-141,-36,,-102,-102,-109,-102,-102,-109,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1959-1990
+Station:YAXIAN",25.25,0.84,1687,113.40,1578,1.07,1.07,112.33,FR,,,,,,,,,,
+199,Plantae,Vascular plants,na,na,na,na,Tree,C3,"Sanya, China",18.22,109.5,1,,26.17552813,-163,-160,-170,-36,,-132,-129,-139,-132,-129,-139,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1959-1990
+Station:YAXIAN",25.25,0.84,1687,113.40,1578,1.07,1.07,112.33,FR,,,,,,,,,,
+191,Plantae,Vascular plants,Angiosperm-Dicot,Moraceae,Artocarpus heterophyllus Lam.,na,Shrub,C3,"Sanya, China",18.22,109.5,1,,26.2,-119,-119,-130,-36,,-86,-86,-98,-86,-86,-98,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1959-1990
+Station:YAXIAN",25.25,0.84,1687,113.40,1578,1.07,1.07,112.33,FR,,,,,,,,,,
+197,Plantae,Vascular plants,na,na,na,na,Shrub,C3,"Sanya, China",18.22,109.5,1,,26.2,,-129,-147,-36,,,-96,-115,,-96,-115,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1959-1990
+Station:YAXIAN",25.25,0.84,1687,113.40,1578,1.07,1.07,112.33,FR,,,,,,,,,,
+49,Plantae,Vascular plants,Angiosperm-Dicot,Euphorbiaceae,Manihot utilissima,Cassava,Forb,C3,Thailand,13.45,100.32,2,,28.3,-129,-134,-133,-40,,-93,-98,-97,-93,-98,-97,-28.5,,-25,-30.8,-32,-30.7,Chikaraishi & Naraoka (2003),MU,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-1991
+Station Bangkok, Lat, Long, Elev provided by author",25.3,0.83,2593,129,1795,1.4,1.4,127,FR,,,,,,,,,,
+270,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Alnus incana,Gray alder,Tree,C3,"Lago di Massachiucoli, Italy",43.83333333,10.31361111,18,,14.1,,-174,,-40,,,-140,,,-140,,,,,,,,Sachse et al. (2006),MAS,High,High,,,12.68,0.82,1113,70.66,983,1.13,1.13,69.53,FR,,,,,,,,,,
+271,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus cerris,European turkey oak,Tree,C3,"Lago di Massachiucoli, Italy",43.83333333,10.31361111,18,,14.1,-159,-174,-148,-40,,-124,-140,-113,-124,-140,-113,,,,,,,Sachse et al. (2006),MAS,High,High,,,12.68,0.82,1113,70.66,983,1.13,1.13,69.53,FR,,,,,,,,,,
+272,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus variabilis,Chinese cork oak,Tree,C3,"Lago di Massachiucoli, Italy",43.83333333,10.31361111,18,,14.1,,-181,-161,-40,,,-147,-126,,-147,-126,,,,,,,Sachse et al. (2006),MAS,High,High,,,12.68,0.82,1113,70.66,983,1.13,1.13,69.53,FR,,,,,,,,,,
+48,Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Albizia julibrissin,Persian silk tree,Tree,C3,"Ogasawara, Japan",27.05,142.11,3,,23.20063333,-123,-124,-128,-39,-42,-87,-88,-93,-87,-88,-93,-33.3,-34.6,-35.8,-35.9,-37.8,-36.1,Chikaraishi & Naraoka (2003),AJ,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-1990
+Station TITIZIMA/CHICHIJIMA, Lat, Long, Elev provided by author",23.06,0.81,910,122.90,1705,0.53,0.53,122.37,FR,,,,,,,,,,
+108,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Acer rubrum L.,Maple,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-172,-194,-180,-62,,-117,-141,-126,-117,-141,-126,,,,,,,Hou et al. (2007),ACRU-1,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+109,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Acer rubrum L.,Maple,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-157,-195,-198,-62,,-101,-142,-145,-101,-142,-145,,,,,,,Hou et al. (2007),ACRU-2,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+110,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Acer rubrum L.,Maple,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,,-206,-213,-62,,,-154,-161,,-154,-161,,,,,,,Hou et al. (2007),ACRU-3(a),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+111,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Acer rubrum L.,Maple,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,,-219,-210,-62,,,-167,-158,,-167,-158,,,,,,,Hou et al. (2007),ACRU-3(b),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+115,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula lenta L.,Sweet birch,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-182,-182,,-62,,-128,-128,,-128,-128,,,,,,,,Hou et al. (2007),BELE-1(a),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+116,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula lenta L.,Sweet birch,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,,-197,-178,-62,,-127,-144,-124,-127,-144,-124,,,,,,,Hou et al. (2007),BELE-1(b),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+117,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula lenta L.,Sweet birch,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-181,-181,,-62,,-134,-127,,-134,-127,,,,,,,,Hou et al. (2007),BELE-1(c),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+118,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula lenta L.,Sweet birch,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-188,-168,,-62,,-140,-113,,-140,-113,,,,,,,,Hou et al. (2007),BELE-2(a),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+119,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula lenta L.,Sweet birch,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-193,-174,,-62,,-151,-119,,-151,-119,,,,,,,,Hou et al. (2007),BELE-2(b),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+120,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula lenta L.,Sweet birch,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-204,-174,,-62,,,-119,,,-119,,,,,,,,Hou et al. (2007),BELE-2(c),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+121,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula populifolia Marsh.,Gray birch,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-191,-182,-177,-62,,-138,-128,-123,-138,-128,-123,,,,,,,Hou et al. (2007),BEPO-1(a),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+122,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula populifolia Marsh.,Gray birch,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-186,-176,-174,-62,,-132,-122,-119,-132,-122,-119,,,,,,,Hou et al. (2007),BEPO-1(b),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+123,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula populifolia Marsh.,Gray birch,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-198,-190,-182,-62,,-145,-136,-128,-145,-136,-128,,,,,,,Hou et al. (2007),BEPO-1(c),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+124,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula populifolia Marsh.,Gray birch,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-192,-178,-176,-62,,-139,-124,-122,-139,-124,-122,,,,,,,Hou et al. (2007),BEPO-2(a),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+125,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula populifolia Marsh.,Gray birch,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-192,-177,-180,-62,,-139,-123,-126,-139,-123,-126,,,,,,,Hou et al. (2007),BEPO-2(b),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+129,Plantae,Vascular plants,Angiosperm-Dicot,Cornaceae,Nyssa sylvatica Marsh.,Blackgum,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,,-180,,-62,,,-126,,,-126,,,,,,,,Hou et al. (2007),NYSY(a),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+130,Plantae,Vascular plants,Angiosperm-Dicot,Cornaceae,Nyssa sylvatica Marsh.,Blackgum,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,,-187,,-62,,,-133,,,-133,,,,,,,,Hou et al. (2007),NYSY(b),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+131,Plantae,Vascular plants,Angiosperm-Dicot,Cornaceae,Nyssa sylvatica Marsh.,Blackgum,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,,-188,,-62,,,-134,,,-134,,,,,,,,Hou et al. (2007),NYSY(c),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+133,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus rubra L.,Northern red oak,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-167,-165,-150,-62,,-112,-110,-94,-112,-110,-94,,,,,,,Hou et al. (2007),QURU(a),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+134,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus rubra L.,Northern red oak,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-168,-173,-157,-62,,-113,-118,-101,-113,-118,-101,,,,,,,Hou et al. (2007),QURU(c),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+135,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus velutina Lam.,Black oak,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-152,-167,,-62,,-96,-112,,-96,-112,,,,,,,,Hou et al. (2007),QUVE,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+139,Plantae,Vascular plants,Angiosperm-Dicot,Juglandaceae,Carya sp. Nutt.,Hickory,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,,-194,-172,-62,,,-141,-117,,-141,-117,,,,,,,Hou et al. (2007),CARYA-1(a),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+140,Plantae,Vascular plants,Angiosperm-Dicot,Juglandaceae,Carya sp. Nutt.,Hickory,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,,-188,-175,-62,,,-134,-120,,-134,-120,,,,,,,Hou et al. (2007),CARYA-1(b),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+141,Plantae,Vascular plants,Angiosperm-Dicot,Juglandaceae,Carya sp. Nutt.,Hickory,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,,-176,-185,-62,,,-122,-131,,-122,-131,,,,,,,Hou et al. (2007),CARYA-1©,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+142,Plantae,Vascular plants,Angiosperm-Dicot,Juglandaceae,Carya sp. Nutt.,Hickory,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-190,-208,-203,-62,,-136,-156,-150,-136,-156,-150,,,,,,,Hou et al. (2007),CARYA-2,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+145,Plantae,Vascular plants,Angiosperm-Dicot,Oleaceae,Fraxinus americana L.,White ash,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,,-185,-162,-62,,,-131,-107,,-131,-107,,,,,,,Hou et al. (2007),FRAM2(a),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+146,Plantae,Vascular plants,Angiosperm-Dicot,Oleaceae,Fraxinus americana L.,White ash,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,,-182,-177,-62,,,-128,-123,,-128,-123,,,,,,,Hou et al. (2007),FRAM2(b),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+147,Plantae,Vascular plants,Angiosperm-Dicot,Oleaceae,Fraxinus americana L.,White ash,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,,-187,-172,-62,,,-133,-117,,-133,-117,,,,,,,Hou et al. (2007),FRAM2(c),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+149,Plantae,Vascular plants,Angiosperm-Dicot,Rosaceae,Prunus serotina Ehrh.,na,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,,-184,-166,-62,,,-130,-111,,-130,-111,,,,,,,Hou et al. (2007),PRSE(a),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+150,Plantae,Vascular plants,Angiosperm-Dicot,Rosaceae,Prunus serotina Ehrh.,na,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-201,-173,,-62,,-148,-118,,-148,-118,,,,,,,,Hou et al. (2007),PRSE(b),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+168,Plantae,Vascular plants,Gymnosperm,Pinaceae,Pinus strobus L.,Eastern white pine,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-183,-192,-195,-62,,-129,-139,-142,-129,-139,-142,,,,,,,Hou et al. (2007),PIST (a),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+169,Plantae,Vascular plants,Gymnosperm,Pinaceae,Pinus strobus L.,Eastern white pine,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-173,-201,-200,-62,,-118,-148,-147,-118,-148,-147,,,,,,,Hou et al. (2007),PIST(b),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+170,Plantae,Vascular plants,Gymnosperm,Pinaceae,Pinus strobus L.,Eastern white pine,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-178,-200,-199,-62,,-124,-147,-146,-124,-147,-146,,,,,,,Hou et al. (2007),PIST(c),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+171,Plantae,Vascular plants,Gymnosperm,Pinaceae,Tsuga canadensis L.,Eastern Hemock,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-159,-160,-155,-62,,-103,-104,-99,-103,-104,-99,,,,,,,Hou et al. (2007),TSCA(b),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+172,Plantae,Vascular plants,Gymnosperm,Pinaceae,Tsuga canadensis L.,Eastern Hemock,Tree,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.363226429,-163,-165,-156,-62,,-108,-110,-100,-108,-110,-100,,,,,,,Hou et al. (2007),TSCA(c),High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+126,Plantae,Vascular plants,Angiosperm-Dicot,Caprifoliceae,Lonicera tatarica L.,Twinberry,Shrub,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,,-185,-179,-62,,,-131,-125,,-131,-125,,,,,,,Hou et al. (2007),LOTA,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+127,Plantae,Vascular plants,Angiosperm-Dicot,Caprifoliceae,Viburnum acerifolium L.,Mapleleaf viburnum,Shrub,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,,-187,,-62,,,-133,,,-133,,,,,,,,Hou et al. (2007),VIAC,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+128,Plantae,Vascular plants,Angiosperm-Dicot,Clethraceae,Clethra alnifolia L.,Coastal sweetpepperbush,Shrub,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,,-197,,-62,,,-144,,,-144,,,,,,,,Hou et al. (2007),CLAL3,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+136,Plantae,Vascular plants,Angiosperm-Dicot,Hamamelidaceae,Hamamelis virginiana,Witch hazel,Shrub,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-166,-188,,-62,,-111,-134,,-111,-134,,,,,,,,Hou et al. (2007),HAVI4-1,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+137,Plantae,Vascular plants,Angiosperm-Dicot,Hamamelidaceae,Hamamelis virginiana,Witch hazel,Shrub,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-179,-170,,-62,,-125,-115,,-125,-115,,,,,,,,Hou et al. (2007),HAVI4-2,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+138,Plantae,Vascular plants,Angiosperm-Dicot,Hamamelidaceae,Hamamelis virginiana,Witch hazel,Shrub,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-171,-168,-161,-62,,-116,-113,-106,-116,-113,-106,,,,,,,Hou et al. (2007),HAVI4-3,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+143,Plantae,Vascular plants,Angiosperm-Dicot,Lauraceae,Lindera benzoin (L.),Northern spicebush,Shrub,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-189,-200,-182,-62,,-135,-147,-128,-135,-147,-128,,,,,,,Hou et al. (2007),LIBE3,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+144,Plantae,Vascular plants,Angiosperm-Dicot,Lauraceae,Rhododendron sp. L.,Rhododendron,Shrub,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-190,-190,-168,-62,,-136,-136,-113,-136,-136,-113,,,,,,,Hou et al. (2007),RHODO,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+151,Plantae,Vascular plants,Angiosperm-Dicot,Rosaceae,Rubus allegheniensis,Blackberry,Shrub,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-178,-187,-180,-62,,-124,-133,-126,-124,-133,-126,,,,,,,Hou et al. (2007),RUAL,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.81,0.80,730,74.30,1033,0.71,0.71,73.60,FR,,,,,,,,,,
+112,Plantae,Vascular plants,Angiosperm-Dicot,Apiaceae,Daucus carota L.,Queen Anne's lace,Forb,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-188,-170,-156,-62,,-134,-115,-100,-134,-115,-100,,,,,,,Hou et al. (2007),DACA6,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,FR,,,,,,,,,,
+113,Plantae,Vascular plants,Angiosperm-Dicot,Asteraceae,Aster Divaricatus L.,White wood aster,Forb,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,,-176,-181,-62,,,-122,-127,,-122,-127,,,,,,,Hou et al. (2007),ASDI,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,FR,,,,,,,,,,
+114,Plantae,Vascular plants,Angiosperm-Dicot,Balsaminaceae,Impatiens capensis,Jewelweed,Forb,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-193,-187,,-62,,-140,-133,,-140,-133,,,,,,,,Hou et al. (2007),IMCA,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,FR,,,,,,,,,,
+132,Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Trifolium pratense L.,Red clover,Forb,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-196,-207,-190,-62,,-143,-155,-136,-143,-155,-136,,,,,,,Hou et al. (2007),TRPR2,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,FR,,,,,,,,,,
+148,Plantae,Vascular plants,Angiosperm-Dicot,Plantaginaceae,Plantago major L.,Common plantain,Forb,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,,-204,-208,-62,,,-151,-156,,-151,-156,,,,,,,Hou et al. (2007),PLMA2,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,FR,,,,,,,,,,
+152,Plantae,Vascular plants,Angiosperm-Dicot,Scrophulariaceae,Mimulus ringens L.,Allegheny monkeyflower,Forb,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,,-173,-168,-62,,,,,,,,,,,,,,Hou et al. (2007),MIRI,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,FR,,,,,,,,,,
+164,Plantae,Vascular plants,Angiosperm-Monocot,Typhaceae,Typha latifolia L.,Broadleaf cattail,Forb,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-195,-195,-189,-62,,-142,-142,-135,-142,-142,-135,,,,,,,Hou et al. (2007),TYLA,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,FR,,,,,,,,,,
+173,Plantae,Vascular plants,na,na,na,,Forb,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,,-188,-190,-62,,,-134,-136,,-134,-136,,,,,,,Hou et al. (2007),UNKN2,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,FR,,,,,,,,,,
+253,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Betula pendula,Silver birch,Tree,C3,"Kittitas, WA, USA",46.9,-120.4,502,,8.531991481,-170,,-155,-98,-103,-79,,-64,-79,,-64,,-27.2,-27.2,,-31.6,,Pedentchouk et al (2008),,Medium,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2004
+Station: ELLENSBURG; WA",8.45,0.80,899,44.49,619,1.45,1.45,43.04,FR,,,,,,,,,,
+254,Plantae,Vascular plants,Angiosperm-Dicot,Oleaceae,Syringa vulgaris,Common liliac,Tree,C3,"Kittitas, WA, USA",46.9,-120.4,502,,8.531991481,-175,-191,-209,-98,-103,-86,-103,-123,-81,-98,-118,,,-32.3,-32.6,-33.7,-33.7,Pedentchouk et al (2008),,Medium,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2004
+Station: ELLENSBURG; WA",8.45,0.80,899,44.49,619,1.45,1.45,43.04,FR,,,,,,,,,,
+255,Plantae,Vascular plants,Angiosperm-Dicot,Salicaceae,Populus tremuloides,Quaking aspen,Tree,C3,"Kittitas, WA, USA",46.9,-120.4,502,,8.531991481,-179,,,-98,-103,-90,,,,,,,-32.5,-32.3,,,,Pedentchouk et al (2008),,Medium,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2004
+Station: ELLENSBURG; WA",8.45,0.80,899,44.49,619,1.45,1.45,43.04,FR,,,,,,,,,,
+256,Plantae,Vascular plants,Gymnosperm,Pinaceae,Picea pungens,Blue spruce,Tree,C3,"Kittitas, WA, USA",46.9,-120.4,502,,8.531991481,-207,-211,-193,-98,-103,-121,-125,-106,-116,-121,-101,,-30.4,-29.8,-27.6,-30.1,,Pedentchouk et al (2008),,Medium,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2004
+Station: ELLENSBURG; WA",8.45,0.80,899,44.49,619,1.45,1.45,43.04,FR,,,,,,,,,,
+257,Plantae,Vascular plants,Gymnosperm,Pinaceae,Pinus sylvestris,Scotch pine,Tree,C3,"Kittitas, WA, USA",46.9,-120.4,502,,8.531991481,-193,-207,-190,-98,-103,-105,-121,-102,-100,-116,-97,,-29.5,-28.6,-30.4,,,Pedentchouk et al (2008),,Medium,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2004
+Station: ELLENSBURG; WA",8.45,0.80,899,44.49,619,1.45,1.45,43.04,FR,,,,,,,,,,
+258,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus robur,English oak,Tree,C3,"Castigliano, Italy",42.75388889,10.92277778,11,,14.56781724,-141,-157,-136,-38.9,,-106,-123,-101,-106,-123,-101,,,,,,,Sachse et al. (2006),ITA001,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1952-1980
+Station: GROSSETTO",15.58,0.80,1083,81.65,1134,0.96,0.96,80.69,FR,,,,,,,,,,
+273,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Carpinus betulus,European hornbeam,Tree,C3,"Lago di Mezzano, Italy",42.61277778,11.76916667,466,,13.1,,-153,-142,-43,,,-115,-103,,-115,-103,,,,,,,Sachse et al. (2006),MEZ,High,High,,,15.91,0.79,1109,85.87,1193,0.93,0.93,84.94,FR,,,,,,,,,,
+274,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus petraea,Durmast oak,Tree,C3,"Lago di Mezzano, Italy",42.61277778,11.76916667,466,,13.1,-141,-161,,-43,,-102,-123,,-102,-123,,,,,,,,Sachse et al. (2006),MEZ,High,High,,,15.91,0.79,1109,85.87,1193,0.93,0.93,84.94,FR,,,,,,,,,,
+353,Plantae,Vascular plants,Angiosperm-Dicot,Salicaceae,Salix amygdaloides,Peachleaf willow,"Tree, Shrub",C3,"Clarkia, ID, USA",47,-116,862,,8.0,-246,-227,,-106,,-157,-135,,-157,-135,,,,,,,,Yang and Huang (2003),,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station: MOSCOW ID",5.59,0.78,1023,48.60,676,1.51,1.51,47.09,FR,,,,,,,,,,
+354,Plantae,Vascular plants,Angiosperm-Dicot,Platanaceae,Platanus occidentalis,American sycamore,Tree,C3,"Moscow, ID, USA",46.7,-117,787,,8.028527143,-195,-187,-181,-104,,-102,-93,-86,-102,-93,-86,,,,,,,Yang and Huang (2003),,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station: MOSCOW ID",6.60,0.78,1057,48.35,673,1.57,1.57,46.78,FR,,,,,,,,,,
+355,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus garryana,Oregon white oak,"Tree, Shrub",C3,"Moscow, ID, USA",46.7,-117,787,,8.0,-213,-203,-204,-104,,-122,-110,-112,-122,-110,-112,,,,,,,Yang and Huang (2003),,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station: MOSCOW ID",6.60,0.78,1057,48.35,673,1.57,1.57,46.78,FR,,,,,,,,,,
+275,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Fagus sylvatica,European beech,Tree,C3,"Lago Grande di Monticchio, Italy",40.93277778,15.60277778,674,,13.7,-142,-149,,-43,,-103,-111,,-103,-111,,,,,,,,Sachse et al. (2006),LGM,High,High,,,16.52,0.73,816,73.08,1014,0.80,0.80,72.27,FR,,,,,,,,,,
+184,Plantae,Vascular plants,Angiosperm-Dicot,Rhamnaceae,Ziziphus vulgaris var. spinosa Bunge,na,Shrub,C3,"Ruicheng, China",34.7,110.6825,496,,14.1,-171,-145,-139,-50,,-127,-100,-94,-127,-100,-94,,,,,,,Liu & Yang (2008),,High,Low,"Var, spinosa (Bunge)","T data from http://climexp.knmi.nl/
+mean of annual averages 1956-1990
+Station:YUNCHENG",11.08,0.73,994,68.91,960,1.04,1.04,67.87,FR,,,,,,,,,,
+183,Plantae,Vascular plants,Angiosperm-Dicot,Magnoliaceae   ,Magnolia sp. Linn,na,Forb,C3,"Ruicheng, China",34.7,110.6825,496,,14.1,-162,-159,-164,-50,,-118,-115,-120,-118,-115,-120,,,,,,,Liu & Yang (2008),,High,Low,Magonlia Linn,"T data from http://climexp.knmi.nl/
+mean of annual averages 1956-1990
+Station:YUNCHENG",11.1,0.73,994,69,960,1.0,1.0,68,FR,,,,,,,,,,
+185,Plantae,Vascular plants,Angiosperm-Dicot,Thymelaeaceae,Wikstroemia chamaedaphne,na,Forb,C3,"Ruicheng, China",34.7,110.6825,496,,14.1,-167,-184,-178,-50,,-123,-141,-135,-123,-141,-135,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1956-1990
+Station:YUNCHENG",11.1,0.73,994,69,960,1.0,1.0,68,FR,,,,,,,,,,
+235,Plantae,Vascular plants,Angiosperm-Dicot,Asteraceae,Heteropappus sp.,na,Forb,C3,"Lantian, China",34.167,109.317,518,,13.4,-185,-186,-206,-64,,-129,-130,-152,-129,-130,-152,,,,,,,Liu et al. (2006),29,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-1991
+Station: XIAN",10.8,0.72,826,62,865,1.0,1.0,61,FR,,,,,,,,,,
+205,Plantae,Vascular plants,Angiosperm-Dicot,Asteraceae,Artemisia gmelinii,Gmelin's wormwood,Shrub,C3,"Yuxian, China",37.1,113,929,,9.3,-161,-166,-163,-61,,-106,-112,-109,-106,-112,-109,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1957-1990
+Station: YUSHE",9.47,0.69,979,48.23,673,1.46,1.46,46.78,SV,,,,,,,,,,
+204,Plantae,Vascular plants,Angiosperm-Dicot,Asteraceae,Artemisia giraldii,Sagebrush,"Forb, shrub",C3,"Yuxian, China",37.1,113,929,,9.3,-168,-182,-186,-61,,-114,-129,-133,-114,-129,-133,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1957-1990
+Station: YUSHE",9.47,0.69,979,48.23,673,1.46,1.46,46.78,SV,,,,,,,,,,
+206,Plantae,Vascular plants,Angiosperm-Dicot,Asteraceae,Heteropappus sp.,na,Forb,C3,"Yuxian, China",37.1,113,929,,9.3,-189,-197,-217,-61,,-136,-145,-166,-136,-145,-166,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1957-1990
+Station: YUSHE",9.5,0.69,979,48,673,1.5,1.5,47,SV,,,,,,,,,,
+207,Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Lespedeza davurica,na,Shrub,C3,"Yuxian, China",37.1,113,929,,9.3,-148,-153,-153,-61,,-93,-98,-98,-93,-98,-98,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1957-1990
+Station: YUSHE",9.44,0.69,978,48.19,672,1.45,1.45,46.74,SV,,,,,,,,,,
+208,Plantae,Vascular plants,Angiosperm-Dicot,Rhamnaceae,Ziziphus vulgaris var. spinosa Bunge,na,Shrub,C3,"Yuxian, China",37.1,113,929,,9.3,-199,-156,-157,-61,,-147,-101,-102,-147,-101,-102,,,,,,,Liu & Yang (2008),,High,Low,"Var, spinosa (Bunge)","T data from http://climexp.knmi.nl/
+mean of annual averages 1957-1990
+Station: YUSHE",9.44,0.69,978,48.19,672,1.45,1.45,46.74,SV,,,,,,,,,,
+251,Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Lespedeza davurica,Bush clover,Shrub,C3,"Yijun, China",35.400,109.100,1240,,10.1,-133,-136,-131,-60,,-78,-81,-76,-78,-81,-76,,,,,,,Liu et al. (2006),33,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",10.18,0.67,868,54.59,761,1.14,1.14,53.45,SV,,,,,,,,,,
+213,Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Lespedeza davurica,na,Shrub,C3,"Luochuan, China",35.8,109.5,1216,,10.1,-148,-141,-148,-59,,-95,-87,-95,-95,-87,-95,,,,,,,"Liu & Yang (2008), Liu et al. (2006)",,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.94,0.66,887,50.78,708,1.25,1.25,49.53,SV,,,,,,,,,,
+211,Plantae,Vascular plants,Angiosperm-Dicot,Asteraceae,Artemisia giraldii,Sagebrush,"Forb, shrub",C3,"Luochuan, China",35.8,109.5,1216,,10.1,-159,-173,-167,-59,,-106,-121,-115,-106,-121,-115,,,,,,,"Liu & Yang (2008), Liu et al. (2006)",,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.94,0.66,887,50.78,708,1.25,1.25,49.53,SV,,,,,,,,,,
+212,Plantae,Vascular plants,Angiosperm-Dicot,Asteraceae,Heteropappus sp.,na,Forb,C3,"Luochuan, China",35.8,109.5,1216,,10.1,-191,-189,-198,-59,,-140,-138,-148,-140,-138,-148,,,,,,,"Liu & Yang (2008), Liu et al. (2006)",,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.9,0.66,887,51,708,1.3,1.3,50,SV,,,,,,,,,,
+214,Plantae,Vascular plants,Angiosperm-Dicot,Rosaceae,Potentilla discolor,Cinquefoil,Forb,C3,"Luochuan, China",35.8,109.5,1216,,10.1,-177,-175,-181,-59,,-125,-123,-130,-125,-123,-130,,,,,,,"Liu & Yang (2008), Liu et al. (2006)",,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.9,0.66,887,51,708,1.3,1.3,50,SV,,,,,,,,,,
+230,Plantae,Vascular plants,Gymnosperm,Pinaceae,Pinus tabulaeformis,na,Tree,C3,"Huanglong, China",36,110.133,888,,10.12042683,-136,-136,,-56,,-85,-85,,-85,-85,,,,,,,,Liu et al. (2006),21,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.86,0.66,932,50.29,701,1.33,1.33,48.96,SV,,,,,,,,,,
+231,Plantae,Vascular plants,Gymnosperm,Pinaceae,Pinus tabulaeformis,na,Tree,C3,"Huanglong, China",36,110.133,888,,10.12042683,-150,-137,-155,-56,,-100,-86,-105,-100,-86,-105,,,,,,,Liu et al. (2006),22,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.86,0.66,932,50.29,701,1.33,1.33,48.96,SV,,,,,,,,,,
+100,Plantae,Vascular plants,Angiosperm-Dicot,Platanaceae,Platanus racemosa,California sycamore,Tree,C3,"Topanga, CA, USA",34.09,-118.589,400,,17,-131,,-148,-66,,-70,,-88,-70,,-88,,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,15.67,0.63,150,34.35,476,0.31,0.31,34.03,SV,,,,,,,,,,
+91,Plantae,Vascular plants,Angiosperm-Dicot,Asteraceae,Artemisia californica,Coastal sagebrush,Shrub,C3,"Topanga, CA, USA",34.09,-118.589,400,,17,,-125,-127,-66,,,-63,-65,,-63,-65,,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,15.67,0.63,150,34.35,476,0.31,0.31,34.03,SV,,,,,,,,,,
+94,Plantae,Vascular plants,Angiosperm-Dicot,Ericaceae,Arctostaphylos glandulosa,Eastwood's manzanita,Shrub,C3,"Topanga, CA, USA",34.09,-118.589,400,,17,,,-159,-66,,,,-100,,,-100,,,,,,,Feakins and Sessions (2010),,High,High,Arctostaphyios glandulosa,T data from author,15.67,0.63,150,34.35,476,0.31,0.31,34.03,SV,,,,,,,,,,
+99,Plantae,Vascular plants,Angiosperm-Dicot,Malvaceae †,Malacothamnus fasciculatus,Mendocino bushmallow,Shrub,C3,"Topanga, CA, USA",34.09,-118.589,400,,17,,-102,-90,-66,,,-39,-26,,-39,-26,,,,,,,Feakins and Sessions (2010),,High,High,Maiacothamnus fasciculatus,T data from author,15.67,0.63,150,34.35,476,0.31,0.31,34.03,SV,,,,,,,,,,
+101,Plantae,Vascular plants,Angiosperm-Dicot,Rhamnaceae,Ceanothus integerrimus,Deerbrush,Shrub,C3,"Topanga, CA, USA",34.09,-118.589,400,,17,,-126,-124,-66,,,-64,-62,,-64,-62,,,,,,,Feakins and Sessions (2010),,High,High,Ceanothus intergerrimus,T data from author,15.67,0.63,150,34.35,476,0.31,0.31,34.03,SV,,,,,,,,,,
+103,Plantae,Vascular plants,Angiosperm-Dicot,Rhamnaceae †,Ceanothus megacarpus,Bigpod ceanothus,Shrub,C3,"Topanga, CA, USA",34.09,-118.589,400,,17,,-136,-142,-66,,,-75,-81,,-75,-81,,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,15.67,0.63,150,34.35,476,0.31,0.31,34.03,SV,,,,,,,,,,
+104,Plantae,Vascular plants,Angiosperm-Dicot,Rhamnaceae †,Ceanothus megacarpus,Bigpod ceanothus,Shrub,C3,"Topanga, CA, USA",34.09,-118.589,400,,17,,-130,-136,-66,,,-69,-75,,-69,-75,,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,15.67,0.63,150,34.35,476,0.31,0.31,34.03,SV,,,,,,,,,,
+105,Plantae,Vascular plants,Angiosperm-Dicot,Rosaceae †,Adenostoma fasciculatum,Chamise,Shrub,C3,"Topanga, CA, USA",34.09,-118.589,400,,17,,-121,-102,-66,,,-59,-39,,-59,-39,,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,15.67,0.63,150,34.35,476,0.31,0.31,34.03,SV,,,,,,,,,,
+107,Plantae,Vascular plants,Angiosperm-Dicot,Scrophulariaceae,Keckiella cordifolia,Heartleaf keckiella,Shrub,C3,"Topanga, CA, USA",34.09,-118.589,400,,17,,-130,-121,-66,,,-69,-59,,-69,-59,,,,,,,Feakins and Sessions (2010),,High,High,Keckieiia cordifolia,T data from author,15.67,0.63,150,34.35,476,0.31,0.31,34.03,SV,,,,,,,,,,
+90,Plantae,Vascular plants,Angiosperm-Dicot,Anacardiaceae,Rhus laurina,Laurel sumac,"Tree, shrub",C3,"Topanga, CA, USA",34.09,-118.589,400,,17,,-147,,-66,,,-87,,,-87,,,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,15.67,0.63,150,34.35,476,0.31,0.31,34.03,SV,,,,,,,,,,
+93,Plantae,Vascular plants,Angiosperm-Dicot,Caprifoliaceae,Sambucus mexicana,Elderberry,"Tree, shrub",C3,"Topanga, CA, USA",34.09,-118.589,400,,17,,-133,,-66,,,-72,,,-72,,,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,15.67,0.63,150,34.35,476,0.31,0.31,34.03,SV,,,,,,,,,,
+95,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus agrifolia,California live oak,"Tree, shrub",C3,"Topanga, CA, USA",34.09,-118.589,400,,17,,-126,,-66,,,-64,,,-64,,,,,,,,Feakins and Sessions (2010),,High,High,,Tree,15.67,0.63,150,34.35,476,0.31,0.31,34.03,SV,,,,,,,,,,
+96,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus agrifolia,California live oak,"Tree, shrub",C3,"Topanga, CA, USA",34.09,-118.589,400,,17,,-120,,-66,,,-58,,,-58,,,,,,,,Feakins and Sessions (2010),,High,High,,Tree,15.67,0.63,150,34.35,476,0.31,0.31,34.03,SV,,,,,,,,,,
+97,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus dumosa,Coastal sage scrub oak,"Tree, shrub",C3,"Topanga, CA, USA",34.09,-118.589,400,,17,,-119,,-66,,,-57,,,-57,,,,,,,,Feakins and Sessions (2010),,High,High,,Tree,15.67,0.63,150,34.35,476,0.31,0.31,34.03,SV,,,,,,,,,,
+102,Plantae,Vascular plants,Angiosperm-Dicot,Rhamnaceae,Ceanothus spinosus,Redheart,"Tree, shrub",C3,"Topanga, CA, USA",34.09,-118.589,400,,17,,-128,-137,-66,,,-66,-76,,-66,-76,,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,15.67,0.63,150,34.35,476,0.31,0.31,34.03,SV,,,,,,,,,,
+106,Plantae,Vascular plants,Angiosperm-Dicot,Rosaceae †,Heteromeles arbutifolia,Toyon,"Tree, shrub",C3,"Topanga, CA, USA",34.09,-118.589,400,,17,,-132,,-66,,,-71,,,-71,,,,,,,,Feakins and Sessions (2010),,High,High,Heteromeies arbutifolia,T data from author,15.67,0.63,150,34.35,476,0.31,0.31,34.03,SV,,,,,,,,,,
+98,Plantae,Vascular plants,Angiosperm-Dicot,Hydrophyllaceae,Phacelia cicutaria,Caterpillar phacelia,Forb,C3,"Topanga, CA, USA",34.09,-118.589,400,,17,,-118,-126,-66,,,-56,-64,,-56,-64,,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,15.7,0.63,150,34,476,0.3,0.3,34,SV,,,,,,,,,,
+241,Plantae,Vascular plants,Angiosperm-Dicot,Asteraceae,Artemisia scoparia,Sagebrush,Shrub,C3,"Yanan, China",36.600,109.050,1340,,10.1,-140,-142,-133,-62,,-83,-85,-76,-83,-85,-76,,,,,,,Liu et al. (2006),1,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.32,0.61,812,34.88,487,1.67,1.67,33.22,SV,,,,,,,,,,
+242,Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Sophora viciifolia Hance,Necklacepod,Shrub,C3,"Yanan, China",36.600,109.050,1342,,10.1,-112,-115,-113,-62,,-53,-57,-54,-53,-57,-54,,,,,,,Liu et al. (2006),5,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.32,0.61,812,34.88,487,1.67,1.67,33.22,SV,,,,,,,,,,
+244,Plantae,Vascular plants,Angiosperm-Dicot,Verbenaceae,Vitex negundo,Chinese chastetree,Shrub,C3,"Yanan, China",36.600,109.050,1341,,10.1,,-145,-150,-62,,,-88,-94,,-88,-94,,,,,,,Liu et al. (2006),3,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.32,0.61,812,34.88,487,1.67,1.67,33.22,SV,,,,,,,,,,
+243,Plantae,Vascular plants,Angiosperm-Dicot,Lamiaceae,Dracocephalum moldavica,na,Forb,C3,"Yanan, China",36.600,109.050,1343,,10.1,-140,-167,-183,-61,,-84,-113,-130,-84,-113,-130,,,,,,,Liu et al. (2006),7,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.3,0.61,812,35,487,1.7,1.7,33,SV,,,,,,,,,,
+89,Plantae,Vascular plants,Angiosperm-Dicot,Rhamnaceae †,Ceanothus leucodermis,Chaparral whitethorn,Shrub,C3,"Pasadena, CA, USA",34.226,-118.161,640,,18.0,,-156,-159,-70,-44.5,,-92,-96,,-117,-120,-29,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,15.77,0.58,152,30.95,429,0.35,0.35,30.60,SV,,,,,,,,,,
+86,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus agrifolia,California live oak,"Tree, shrub",C3,"Pasadena, CA, USA",34.226,-118.161,640,,18.0,,-139,,-70,-44.5,,-74,,,-99,,-30,,,,,,Feakins and Sessions (2010),,High,High,,Tree,15.77,0.58,152,30.95,429,0.35,0.35,30.60,SV,,,,,,,,,,
+87,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus agrifolia,California live oak,"Tree, shrub",C3,"Pasadena, CA, USA",34.226,-118.161,640,,18.0,,-127,,-70,-44.5,,-61,,,-86,,-28,,,,,,Feakins and Sessions (2010),,High,High,,Tree,15.77,0.58,152,30.95,429,0.35,0.35,30.60,SV,,,,,,,,,,
+88,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus agrifolia,California live oak,"Tree, shrub",C3,"Pasadena, CA, USA",34.226,-118.161,640,,18.0,,-136,,-70,-44.5,,-71,,,-96,,-29,,,,,,Feakins and Sessions (2010),,High,High,,Tree,15.77,0.58,152,30.95,429,0.35,0.35,30.60,SV,,,,,,,,,,
+250,Plantae,Vascular plants,Angiosperm-Dicot,Zygophyllaceae,Peganum harmala,Harmal,"Forb, shrub",C3,"Yanchi, China",37.767,107.683,1324,,8.6,-158,-160,-134,-59,,-105,-107,-80,-105,-107,-80,,,,,,,Liu et al. (2006),32,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1954-1990
+Station: YANCHI",8.97,0.54,521,19.37,270,1.93,1.93,17.44,SV,,,,,,,,,,
+63,Plantae,Vascular plants,Angiosperm-Dicot,Betulaceae,Alnus glutinosa,European alder,Tree,C3,"Jacinto, CA, USA",33.808,-116.778,1620,,12,-165,,,-83,-66.7,-89,,,-89,,,-29,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,17.05,0.52,110,16.63,230,0.48,0.48,16.15,SV,,,,,,,,,,
+74,Plantae,Vascular plants,Gymnosperm,Pinaceae,Pinus lambertiana,Sugar pine,Tree,C3,"Jacinto, CA, USA",33.808,-116.778,1620,,12,,,-151,-83,-66.7,,,-74,,,-90,-25,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,17.05,0.52,110,16.63,230,0.48,0.48,16.15,SV,,,,,,,,,,
+72,Plantae,Vascular plants,Angiosperm-Dicot,Polygonaceae †,Eriogonum wrightii,Bastardsage,"Forb, shrub",C3,"Jacinto, CA, USA",33.808,-116.778,1620,,12,-119,-119,-111,-83,-66.7,-39,-39,-31,-56,-56,-47,-26,,,,,,Feakins and Sessions (2010),,High,High,Erigonium wrightii,T data from author,17.05,0.52,110,16.63,230,0.48,0.48,16.15,SV,,,,,,,,,,
+64,Plantae,Vascular plants,Angiosperm-Dicot,Ericaceae,Arctostaphylos pringlei,Pringle manzanita,"Tree, shrub",C3,"Jacinto, CA, USA",33.808,-116.778,1620,,12,,-145,-163,-83,-66.7,,-68,-87,,-84,-103,-30,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,17.05,0.52,110,16.63,230,0.48,0.48,16.15,SV,,,,,,,,,,
+65,Plantae,Vascular plants,Angiosperm-Dicot,Ericaceae,Arctostaphylos pringlei,Pringle manzanita,"Tree, shrub",C3,"Jacinto, CA, USA",33.808,-116.778,1620,,12,-182,-191,-210,-83,-66.7,-108,-118,-138,-124,-133,-154,-31,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,17.05,0.52,110,16.63,230,0.48,0.48,16.15,SV,,,,,,,,,,
+66,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus chrysolepis,Canyon live oak,"Tree, shrub",C3,"Jacinto, CA, USA",33.808,-116.778,1620,,12,-159,-150,-146,-83,-66.7,-83,-73,-69,-99,-89,-85,-30,,,,,,Feakins and Sessions (2010),,High,High,,Tree,17.05,0.52,110,16.63,230,0.48,0.48,16.15,SV,,,,,,,,,,
+67,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus chrysolepis,Canyon live oak,"Tree, shrub",C3,"Jacinto, CA, USA",33.808,-116.778,1620,,12,-131,-134,-134,-83,-66.7,-52,-56,-56,-69,-72,-72,-27,,,,,,Feakins and Sessions (2010),,High,High,,Tree,17.05,0.52,110,16.63,230,0.48,0.48,16.15,SV,,,,,,,,,,
+68,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus chrysolepis,Canyon live oak,"Tree, shrub",C3,"Jacinto, CA, USA",33.808,-116.778,1620,,12,-143,-136,-129,-83,-66.7,-65,-58,-50,-82,-74,-67,-28,,,,,,Feakins and Sessions (2010),,High,High,,Tree,17.05,0.52,110,16.63,230,0.48,0.48,16.15,SV,,,,,,,,,,
+69,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus kelloggi,California black oak,"Tree, shrub",C3,"Jacinto, CA, USA",33.808,-116.778,1620,,12,-160,-162,,-83,-66.7,-84,-86,,-100,-102,,-30,,,,,,Feakins and Sessions (2010),,High,High,,Tree,17.05,0.52,110,16.63,230,0.48,0.48,16.15,SV,,,,,,,,,,
+70,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus kelloggi,California black oak,"Tree, shrub",C3,"Jacinto, CA, USA",33.808,-116.778,1620,,12,-147,-172,,-83,-66.7,-70,-97,,-86,-113,,-30,,,,,,Feakins and Sessions (2010),,High,High,,Tree,17.05,0.52,110,16.63,230,0.48,0.48,16.15,SV,,,,,,,,,,
+71,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae,Quercus kelloggi,California black oak,"Tree, shrub",C3,"Jacinto, CA, USA",33.808,-116.778,1620,,12,-137,-158,,-83,-66.7,-59,-82,,-75,-98,,-27,,,,,,Feakins and Sessions (2010),,High,High,,Tree,17.05,0.52,110,16.63,230,0.48,0.48,16.15,SV,,,,,,,,,,
+73,Plantae,Vascular plants,Angiosperm-Dicot,Salicaceae,Salix lasiolepis,Arroyo willow,"Tree, shrub",C3,"Jacinto, CA, USA",33.808,-116.778,1620,,12,-145,,,-83,-66.7,-68,,,-84,,,-31,,,,,,Feakins and Sessions (2010),,High,High,Salix lasioiepsis,Tree,17.05,0.52,110,16.63,230,0.48,0.48,16.15,SV,,,,,,,,,,
+252,Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Oxytropis aciphylla,Locoweed,Shrub,C3,"Yingchuan, China",38.450,106.270,1110,,8.6,-148,-158,-153,-54,,-99,-110,-105,-99,-110,-105,,,,,,,Liu et al. (2006),34,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-1991
+Station: YINCHUAN",8.82,0.51,291,16.67,231,1.26,1.26,15.41,SV,,,,,,,,,,
+220,Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Caragana stenophylla,Peashrub,Shrub,C3,"Ertuokeqi, China",38.383,107.500,1319,,8.6,,-133,-153,-59,,,-79,-100,,-79,-100,,,,,,,Liu et al. (2006),19,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1954-1990
+Station: YANCHI",8.59,0.51,381,18.34,255,1.50,1.50,16.84,SV,,,,,,,,,,
+221,Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Citibetica kom,na,Shrub,C3,"Ertuokeqi, China",38.383,107.500,1316,,8.6,-145,-165,-164,-59,,-91,-113,-112,-91,-113,-112,,,,,,,Liu et al. (2006),11,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1954-1990
+Station: YANCHI",8.59,0.51,381,18.34,255,1.50,1.50,16.84,SV,,,,,,,,,,
+222,Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Oxytropis aciphylla,Locoweed,Shrub,C3,"Ertuokeqi, China",38.383,107.500,1318,,8.6,-142,-162,-158,-59,,-88,-109,-105,-88,-109,-105,,,,,,,Liu et al. (2006),14,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1954-1990
+Station: YANCHI",8.59,0.51,381,18.34,255,1.50,1.50,16.84,SV,,,,,,,,,,
+223,Plantae,Vascular plants,Angiosperm-Monocot,Asparagaceae,Asparagus officianalis,Asparagus,Shrub,C3,"Ertuokeqi, China",38.383,107.500,1317,,8.6,-131,-164,-154,-59,,-77,-112,-101,-77,-112,-101,,,,,,,Liu et al. (2006),12,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1954-1990
+Station: YANCHI",8.59,0.51,381,18.34,255,1.50,1.50,16.84,SV,,,,,,,,,,
+174,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Atalaya hemiglauca,Whitewood,Tree,C3,"Queensland, Australia ",-23.22,143.95,191,,23.42497931,-168,-158,-154,-23,,-148,-138,-134,-148,-138,-134,-26.6,,-33.7,-35.6,-31.9,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2009
+Station: LONGREACH AIR",22.96,0.46,349,43.28,596,0.59,0.59,42.69,SV,,,,,,,,,,
+175,Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae ,Acacia sp.,Acacia,Tree,C3,"Queensland, Australia ",-23.22,143.95,191,,23.42497931,-105,-117,-93,-23,,-84,-96,-72,-84,-96,-72,-28,,-34.9,-35.8,-36,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2009
+Station: LONGREACH AIR",22.96,0.46,349,43.28,596,0.59,0.59,42.69,SV,,,,,,,,,,
+76,Plantae,Vascular plants,Angiosperm-Dicot,Asteraceae,Ericameria cuneata,Cliff goldenbush,Shrub,C3,"Mojave, CA, USA",34.806,-115.664,1500,,17,-149,-143,,-83,-79.1,-72,-65,,-76,-69,,,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,16.70,0.43,163,7.41,102,1.59,1.59,5.82,SV,,,,,,,,,,
+80,Plantae,Vascular plants,Angiosperm-Dicot,Rosaceae,Coleogyne ramosissima,Blackbrush,Shrub,C3,"Mojave, CA, USA",34.806,-115.664,1500,,17,,-192,-150,-83,-79.1,,-119,-73,,-123,-77,,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,16.70,0.43,163,7.41,102,1.59,1.59,5.82,SV,,,,,,,,,,
+81,Plantae,Vascular plants,Angiosperm-Dicot,Rosaceae,Purshia tridentata var. gladulosa,Antelope bitterbrush,Shrub,C3,"Mojave, CA, USA",34.806,-115.664,1500,,17,-191,,,-83,-79.1,-118,,,-122,,,,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,16.70,0.43,163,7.41,102,1.59,1.59,5.82,SV,,,,,,,,,,
+83,Plantae,Vascular plants,Angiosperm-Dicot,Zygophyllaceae,Larrea tridentata,Creosote bush,Shrub,C3,"Mojave, CA, USA",34.806,-115.664,1500,,17,,-114,-120,-83,-79.1,,-34,-40,,-38,-44,,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,16.70,0.43,163,7.41,102,1.59,1.59,5.82,SV,,,,,,,,,,
+84,Plantae,Vascular plants,Angiosperm-Monocot,Agavaceae,Yucca brevifolia,Joshua tree,Shrub,C3,"Mojave, CA, USA",34.806,-115.664,1500,,17,,,-184,-83,-79.1,,,-110,,,-114,,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,16.70,0.43,163,7.41,102,1.59,1.59,5.82,SV,,,,,,,,,,
+85,Plantae,Vascular plants,Gymnosperm,Ephedraceae,Ephedra nevadensis,Nevada jointfir,shrub,C3,"Mojave, CA, USA",34.806,-115.664,1500,,17,,-149,-157,-83,-79.1,,-72,-81,,-76,-85,,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,16.70,0.43,163,7.41,102,1.59,1.59,5.82,SV,,,,,,,,,,
+75,Plantae,Vascular plants,Angiosperm-Dicot,Asteraceae,Artemisia ludoviciana ,White sagebrush,"Forb, shrub",C3,"Mojave, CA, USA",34.806,-115.664,1500,,17,,-127,-128,-83,-79.1,,-48,-49,,-52,-53,,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,16.70,0.43,163,7.41,102,1.59,1.59,5.82,SV,,,,,,,,,,
+78,Plantae,Vascular plants,Angiosperm-Dicot,Onagraceae,Epilobium canum ssp. latifoilium,Hummingbird trumpet,"Forb, shrub",C3,"Mojave, CA, USA",34.806,-115.664,1500,,17,,-207,-221,-83,-79.1,,-135,-150,,-139,-154,,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,16.70,0.43,163,7.41,102,1.59,1.59,5.82,SV,,,,,,,,,,
+77,Plantae,Vascular plants,Angiosperm-Dicot,Fagaceae   ,Quercus chrysolepis,Canyon live oak,"Tree, shrub",C3,"Mojave, CA, USA",34.806,-115.664,1500,,17,-147,-151,-153,-83,-79.1,-70,-74,-76,-74,-78,-80,,,,,,,Feakins and Sessions (2010),,High,High,Quercus chrysolepsis,Tree,16.70,0.43,163,7.41,102,1.59,1.59,5.82,SV,,,,,,,,,,
+79,Plantae,Vascular plants,Angiosperm-Dicot,Rhamnaceae,Rhamnus ilicifolia,Hollyleaf redberry,"Tree, shrub",C3,"Mojave, CA, USA",34.806,-115.664,1500,,17,,-156,,-83,-79.1,,-80,,,-84,,,,,,,,Feakins and Sessions (2010),,High,High,,Shrub,16.70,0.43,163,7.41,102,1.59,1.59,5.82,SV,,,,,,,,,,
+82,Plantae,Vascular plants,Angiosperm-Dicot,Salicaceae,Salix exigua,Narrowleaf willow,"Tree, shrub",C3,"Mojave, CA, USA",34.806,-115.664,1500,,17,,-197,,-83,-79.1,,-124,,,-128,,,,,,,,Feakins and Sessions (2010),,High,High,,Tree,16.70,0.43,163,7.41,102,1.59,1.59,5.82,SV,,,,,,,,,,
+25,Plantae,Vascular plants,Angiosperm-Dicot,Cactaceae,Opuntia dillenii (Ker-Gawl) Haw.,Erect pricklypear,Shrub,CAM,"Guangzhou, China",23.1,113.3,7,,21.88719762,-153.6,-156.4,-152.4,-38,,-120,-123,-119,-120,-123,-119,,,-22.7,-24.2,-25.1,,Bi et al. (2005),C,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,Excluded,,,,,,,,,,
+26,Plantae,Vascular plants,Angiosperm-Dicot,Euphorbiaceae,Euphorbia trigona How.,African milk tree,Shrub,CAM,"Guangzhou, China",23.1,113.3,7,,21.88719762,-201.6,-177.6,-181.6,-38,,-170,-145,-149,-170,-145,-149,,,-24.6,-28.7,-29.4,-29.5,Bi et al. (2005),B,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,Excluded,,,,,,,,,,
+228,Plantae,Vascular plants,Angiosperm-Dicot,Chenopodiaceae,Corispermum hyssopifolium,na,Shrub,C4,"Ertuokeqi, China",38.383,107.5,1316,,8.617781351,-123,-116,-124,-59,,-68,-61,-69,-68,-61,-69,,,,,,,Liu et al. (2006),13,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1954-1990
+Station: YANCHI",8.6,0.51,381,18,255,1.5,1.5,17,Excluded,,,,,,,,,,
+233,Plantae,Vascular plants,Angiosperm-Dicot,Chenopodiaceae,Haloxylon ammodendron,na,Shrub,C4,"Jitantai, China",40.75,108.6666667,1022,,5.139339211,-152,-140,-145,-60,,-98,-85,-90,-98,-85,-90,,,,,,,Liu et al. (2006),24,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1954-2009
+Station: HALIIUT",6.5,0.48,154,19,263,0.6,0.6,18,Excluded,,,,,,,,,,
+234,Plantae,Vascular plants,Angiosperm-Dicot,Chenopodiaceae,Haloxylon ammodendron,na,Shrub,C4,"Jitantai, China",40.75,108.6666667,1022,,5.139339211,-113,-114,-129,-60,,-56,-57,-73,-56,-57,-73,,,,,,,Liu et al. (2006),25,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1954-2009
+Station: HALIIUT",6.5,0.48,154,19,263,0.6,0.6,18,Excluded,,,,,,,,,,
+236,Plantae,Vascular plants,Angiosperm-Dicot,Chenopodiaceae,Salsola collina,na,Shrub,C4,"Lanzhou, China",36.05,103.7833333,1598,,9.290926667,-128,-130,-130,-55,,-77,-79,-79,-77,-79,-79,,,,,,,Liu et al. (2006),26,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-1991
+Station: LANZHOU",4.2,0.66,909,50,699,1.3,1.3,49,Excluded,,,,,,,,,,
+247,Plantae,Vascular plants,Angiosperm-Dicot,Rosaceae,Prinsepia sp.,na,Shrub,C4,"Yanan, China",36.6,109.05,1340,,10.12042683,,-156,-178,-62,,,-100,-124,,-100,-124,,,,,,,Liu et al. (2006),9,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.3,0.61,812,35,487,1.7,1.7,33,Excluded,,,,,,,,,,
+17,Plantae,Vascular plants,Angiosperm-Dicot,Amaranthaceae,Amaranthus paniculatus L.,Red amaranth,Forb,C4,"Guangzhou, China",23.1,113.3,7,,21.88719762,-94.5,-94.5,-107.8,-38,,-59,-59,-73,-59,-59,-73,,-24.2,-25.1,-25.4,-22.9,,Bi et al. (2005),V,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,Excluded,,,,,,,,,,
+18,Plantae,Vascular plants,Angiosperm-Dicot,Amaranthaceae,Amaranthus tricolor L.,Joseph's-coat,Forb,C4,"Guangzhou, China",23.1,113.3,7,,21.88719762,-123.4,-123.1,-119.3,-38,,-89,-88,-85,-89,-88,-85,,-24.1,-24.3,-25.8,-23.4,,Bi et al. (2005),U,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,Excluded,,,,,,,,,,
+176,Plantae,Vascular plants,Angiosperm-Dicot,Chenopodiaceae    ,Enchylaena saltbush,Ruby saltbrush ,Forb,C4,"Queensland, Australia ",-23.22,143.95,191,,23.42497931,-119,-158,-162,-23,,-98,-138,-142,-98,-138,-142,-13.5,,,,,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2009
+Station: LONGREACH AIR",23.0,0.46,349,43,596,0.6,0.6,43,Excluded,,,,,,,,,,
+53,Plantae,Vascular plants,Angiosperm-Monocot,Bromeliaceae,Ananas comosus,Pineapple,Forb,CAM,Thailand,13.45,100.32,2,,28.3,-184,-190,-194,-40,,-150,-156,-160,-150,-156,-160,-13.6,,-22.9,-21.7,-20.5,-20.5,Chikaraishi & Naraoka (2003),AnC,Low,Low,Ananas comsus,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-1991
+Station Bangkok, Lat, Long, Elev provided by author",25.3,0.83,2593,129,1795,1.4,1.4,127,Excluded,,,,,,,,,,
+61,Plantae,Vascular plants,Angiosperm-Monocot,Araceae,Colocasia esculenta,Coco yam,Forb,CAM,"Tokyo, Japan",35.17,139.09,12,,15.8,-170,-196,-179,-48,-42,-128,-155,-138,-128,-155,-138,-27.1,,-34.1,-33.2,-34,-37.2,Chikaraishi & Naraoka (2003),CE,Low,Low,,"Carbon isotopic value indicates plant is actively using C3 not CAM metabolism, Lat, Long, Elev provided by author",14.4,0.84,1711,114,1588,1.1,1.1,113,Excluded,,,,,,,,,,
+62,Plantae,Vascular plants,Angiosperm-Monocot,Liliaceae,Lycoris radiata,Red spider lily,Forb,CAM,"Tokyo, Japan",35.17,139.09,12,,15.8,,-188,-186,-48,-42,,-147,-145,,-147,-145,-21.9,,,-28,-27.8,,Chikaraishi & Naraoka (2003),LR,Low,Low,,"Lat, Long, Elev provided by author",14.4,0.84,1711,114,1588,1.1,1.1,113,Excluded,,,,,,,,,,
+42,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Phragmites communis,Common reed,Graminoid,C3,"Gunma, Japan",36.28,138.52,1084,,14.5,-142,-206,-196,-64,-60,-83,-152,-141,-83,-152,-141,-32.3,-35.3,-34.9,-34.6,-38.1,-39,Chikaraishi & Naraoka (2003),PC,Low,Low,Phrogmites communis,"Lat, Long, Elev provided by author",12.5,0.85,1504,103,1440,1.0,1.0,102,Excluded,,,,,,,,,,
+154,Plantae,Vascular plants,Angiosperm-Monocot,Juncaceae †,Juncus tenuis Willd.,Slender rush,Graminoid,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-216,-217,-198,-62,,-164,-165,-145,-164,-165,-145,,,,,,,Hou et al. (2007),JUTE,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,Excluded,,,,,,,,,,
+156,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Agropyron sp.,Wheatgrass,Graminoid,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-175,-231,-228,-62,,-120,-180,-177,-120,-180,-177,,,,,,,Hou et al. (2007),AGRO,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,Excluded,,,,,,,,,,
+157,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Alopercurus sp L.,Foxtail,Graminoid,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-171,-186,-188,-62,,-116,-132,-134,-116,-132,-134,,,,,,,Hou et al. (2007),ALOPE,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,Excluded,,,,,,,,,,
+158,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Dactylis glomerata L.,Orchardgrass,Graminoid,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-202,-218,-221,-62,,-149,-166,-170,-149,-166,-170,,,,,,,Hou et al. (2007),DAGL,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,Excluded,,,,,,,,,,
+159,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Phleum pratense L.,Timothy grass,Graminoid,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-232,-226,-217,-62,,-181,-175,-165,-181,-175,-165,,,,,,,Hou et al. (2007),PHPR3,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,Excluded,,,,,,,,,,
+160,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,na,na,Graminoid,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-206,-232,-238,-62,,-154,-181,-188,-154,-181,-188,,,,,,,Hou et al. (2007),POAC,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,Excluded,,,,,,,,,,
+161,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae †,Dactylis glomerata L.,Orchardgrass,Graminoid,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-202,-218,-221,-62,,-149,-166,-170,-149,-166,-170,,,,,,,Hou et al. (2007),DAGL,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,Excluded,,,,,,,,,,
+186,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Stipa bungeana,na,Graminoid,C3,"Ruicheng, China",34.7,110.6825,496,,14.1,-179,-179,-203,-50,,-136,-136,-161,-136,-136,-161,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1956-1990
+Station:YUNCHENG",11.1,0.73,994,69,960,1.0,1.0,68,Excluded,,,,,,,,,,
+192,Plantae,Vascular plants,na,na,na,na,Graminoid,C3,"Sanya, China",18.22,109.5,1,,26.2,-139,-155,-165,-36,,-107,-123,-134,-107,-123,-134,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1959-1990
+Station:YAXIAN",25.2,0.84,1687,113,1578,1.1,1.1,112,Excluded,,,,,,,,,,
+193,Plantae,Vascular plants,na,na,na,na,Graminoid,C3,"Sanya, China",18.22,109.5,1,,26.2,-148,-162,-155,-36,,-116,-131,-123,-116,-131,-123,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1959-1990
+Station:YAXIAN",25.2,0.84,1687,113,1578,1.1,1.1,112,Excluded,,,,,,,,,,
+209,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Stipa bungeana,na,Graminoid,C3,"Yuxian, China",37.1,113,929,,9.3,-213,-218,-252,-61,,-162,-167,-203,-162,-167,-203,,,,,,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1957-1990
+Station: YUSHE",9.5,0.69,979,48,673,1.5,1.5,47,Excluded,,,,,,,,,,
+215,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Stipa bungeana,na,Graminoid,C3,"Luochuan, China",35.8,109.5,1216,,10.1,-158,-168,-213,-59,,-105,-116,-164,-105,-116,-164,,,,,,,"Liu & Yang (2008), Liu et al. (2006)",,High,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.9,0.66,887,51,708,1.3,1.3,50,Excluded,,,,,,,,,,
+224,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Achnatherum splendens,na,Graminoid,C3,"Ertuokeqi, China",38.383,107.500,1316,,8.6,-173,-182,-180,-59,,-121,-131,-129,-121,-131,-129,,,,,,,Liu et al. (2006),15,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1954-1990
+Station: YANCHI",8.6,0.51,381,18,255,1.5,1.5,17,Excluded,,,,,,,,,,
+225,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Agropyron desertorum,na,Graminoid,C3,"Ertuokeqi, China",38.383,107.500,1316,,8.6,-168,-185,-184,-59,,-116,-134,-133,-116,-134,-133,,,,,,,Liu et al. (2006),10,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1954-1990
+Station: YANCHI",8.6,0.51,381,18,255,1.5,1.5,17,Excluded,,,,,,,,,,
+226,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Stipa bungeana,na,Graminoid,C3,"Ertuokeqi, China",38.383,107.500,1316,,8.6,-156,-167,-197,-59,,-103,-115,-147,-103,-115,-147,,,,,,,Liu et al. (2006),16,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1954-1990
+Station: YANCHI",8.6,0.51,381,18,255,1.5,1.5,17,Excluded,,,,,,,,,,
+227,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Stipa glareosa,na,Graminoid,C3,"Ertuokeqi, China",38.383,107.500,1316,,8.6,-162,-159,-179,-59,,-109,-106,-128,-109,-106,-128,,,,,,,Liu et al. (2006),18,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1954-1990
+Station: YANCHI",8.6,0.51,381,18,255,1.5,1.5,17,Excluded,,,,,,,,,,
+232,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Stipa bungeana,na,Graminoid,C3,"Huining, China",36.000,105.049,1697,,9.3,-171,-173,-188,-59,,-119,-121,-137,-119,-121,-137,,,,,,,Liu et al. (2006),23,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-1991
+Station: LANZHOU",6.5,0.66,850,46,644,1.3,1.3,45,Excluded,,,,,,,,,,
+239,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Stipa grandis,na,Graminoid,C3,"Neimeng, China",43.950,116.050,983,,2.0,-200,-205,-226,-75,,-135,-141,-163,-135,-141,-163,,,,,,,Liu et al. (2006),30,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: XILIN HOT",2.0,0.61,344,27,382,0.9,0.9,27,Excluded,,,,,,,,,,
+245,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Stipa bungeana,na,Graminoid,C3,"Yanan, China",36.600,109.050,1340,,10.1,,-154,-197,-62,,,-98,-144,,-98,-144,,,,,,,Liu et al. (2006),6,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.3,0.61,812,35,487,1.7,1.7,33,Excluded,,,,,,,,,,
+246,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Stipa grandis,na,Graminoid,C3,"Yanan, China",36.600,109.050,1340,,10.1,-107,-146,-149,-62,,-48,-90,-93,-48,-90,-93,,,,,,,Liu et al. (2006),4,Low,Low,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1951-2009
+Station: YANAN",9.3,0.61,812,35,487,1.7,1.7,33,Excluded,,,,,,,,,,
+315,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Bromus inermis,Smooth brome,Graminoid,C3,"Boulder, CO, USA",40.0,-105.0,1650.0,48.0,21.9,,-273,-284,-94,-124,,-198,-210,142,-170,-183,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,5.9,0.63,403,52,727,0.6,0.6,52,Excluded,,,,,,,,,,
+318,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Agropyron smithii,Western wheatgrass,Graminoid,C3,"Cottonwood, SD, USA",43.96,-101.9,738,72,22,,-244,-246,-85,,,-174,-176,,-174,-176,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,8.4,0.67,442,46,633,0.7,0.7,45,Excluded,,,,,,,,,,
+319,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Bromus inermis,Smooth brome,Graminoid,C3,"Cottonwood, SD, USA",43.96,-101.9,738,72,22,-237,-238,-255,-85,,-167,-167,-186,-167,-167,-186,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,8.4,0.67,442,46,633,0.7,0.7,45,Excluded,,,,,,,,,,
+320,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Koeleria pyramidata,Prairie june grass,Graminoid,C3,"Cottonwood, SD, USA",43.96,-101.9,738,72,22,-262,-261,-263,-85,,-193,-193,-195,-193,-193,-195,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,8.4,0.67,442,46,633,0.7,0.7,45,Excluded,,,,,,,,,,
+325,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Agropyron smithii,Western wheatgrass,Graminoid,C3,"Hays, KS, USA",38.90,-99.30,620,60,27.7,,-211,-207,-64,,,-157,-153,,-157,-153,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,13.1,0.63,523,67,939,0.6,0.6,67,Excluded,,,,,,,,,,
+329,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Agropyron smithii,Western wheatgrass,Graminoid,C3,"Mandan, ND, USA",46.50,-100.90,563,74,21.6,-248,-251,-249,-90,,-173,-176,-175,-173,-176,-175,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,6.3,0.72,435,60,829,0.5,0.5,59,Excluded,,,,,,,,,,
+330,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Stipa comata,Needle and thread,Graminoid,C3,"Mandan, ND, USA",46.50,-100.90,563,74,21.6,-244,-222,-218,-90,,-169,-145,-140,-169,-145,-140,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,6.3,0.72,435,60,829,0.5,0.5,59,Excluded,,,,,,,,,,
+331,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Stipa viridula,Green needlegrass,Graminoid,C3,"Mandan, ND, USA",46.50,-100.90,563,74,21.6,-235,-239,-254,-90,,-159,-163,-180,-159,-163,-180,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,6.3,0.72,435,60,829,0.5,0.5,59,Excluded,,,,,,,,,,
+335,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Elymus canadensis,Canada wildrye,Graminoid,C3,"Manhattan, KS, USA",39.09,-96.58,418,70,25.4,-234,-234,-230,-56,,-189,-189,-184,-189,-189,-184,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,12.1,0.70,659,75,1038,0.6,0.6,74,Excluded,,,,,,,,,,
+336,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Poa pratensis,Kentucky bluegrass,Graminoid,C3,"Manhattan, KS, USA",39.09,-96.58,418,70,25.4,,-220,-230,-56,,,-174,-185,,-174,-185,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,12.1,0.70,659,75,1038,0.6,0.6,74,Excluded,,,,,,,,,,
+340,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Agropyron smithii,Western wheatgrass,Graminoid,C3,"Nunn, CO, USA",40.8,-104.8,1600,53,23.7,,-214,-218,-95,,,-131,-136,,-131,-136,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,6.3,0.64,453,48,673,0.7,0.7,48,Excluded,,,,,,,,,,
+341,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Stipa comata,Needle and thread,Graminoid,C3,"Nunn, CO, USA",40.8,-104.8,1600,53,23.7,-221,-210,-219,-95,,-139,-127,-138,-139,-127,-138,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,6.3,0.64,453,48,673,0.7,0.7,48,Excluded,,,,,,,,,,
+343,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Oryzopsis hymenoides,Indian ricegrass,Graminoid,C3,"Socorro County, NM, USA",34.35,-106.88,1600,35,26.1,-193,-187,-189,-77,,-126,-119,-122,-126,-119,-122,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,11.5,0.47,265,29,399,0.7,0.7,28,Excluded,,,,,,,,,,
+344,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Stipa comata,Needle and thread,Graminoid,C3,"Socorro County, NM, USA",34.35,-106.88,1600,35,26.1,,-167,-174,-77,,,-97,-105,,-97,-105,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,11.5,0.47,265,29,399,0.7,0.7,28,Excluded,,,,,,,,,,
+347,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Bromus inermis,Smooth brome,Graminoid,C3,"Woodworth, ND, USA",47.15,-99.30,614,77,21.7,,-275,-280,-90,,,-204,-209,,-204,-209,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,5.7,0.77,586,61,850,0.7,0.7,60,Excluded,,,,,,,,,,
+348,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Poa pratensis,Kentucky bluegrass,Graminoid,C3,"Woodworth, ND, USA",47.15,-99.30,614,77,21.7,-227,-247,-254,-90,,-151,-173,-181,-151,-173,-181,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,5.7,0.77,586,61,850,0.7,0.7,60,Excluded,,,,,,,,,,
+349,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Stipa comata,Needle and thread,Graminoid,C3,"Woodworth, ND, USA",47.15,-99.30,614,77,21.7,,-231,-238,-90,,,-155,-162,,-155,-162,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,5.7,0.77,586,61,850,0.7,0.7,60,Excluded,,,,,,,,,,
+350,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Stipa viridula,Pickerelweed,Graminoid,C3,"Woodworth, ND, USA",47.15,-99.30,614,77,21.7,,-232,-257,-90,,,-156,-183,,-156,-183,,,,,,,Smith and Freeman (2006),,Medium,Medium,,RH  and July Temp from publication,5.7,0.77,586,61,850,0.7,0.7,60,Excluded,,,,,,,,,,
+261,Fungus,Mycophycophta,Lichen,Cladoniaceae,Cladonia sp.,Cup lichen,Lichenous,,"Hirvii‰nkurunlampi, Finland",67.379,26.851,178,,-0.3,-173,,,-98,,-83,,,-83,,,,,,,,,Sachse et al. (2006),SOD003,High,High,,,-1.5,0.90,805,40,557,1.4,1.4,38,Excluded,,,,,,,,,,
+265,Fungus,Mycophycophta,Lichen,Cladoniaceae,Cladonia sp.,Cup lichen,Lichenous,,"Keitjoru, Sweden",68.669,21.516,428,,-2,-167,-207,-199,-109,,-65,-110,-101,-65,-110,-101,,,,,,,Sachse et al. (2006),KEI,High,High,,,-0.9,0.89,460,27,373,1.2,1.2,25,Excluded,,,,,,,,,,
+282,Fungus,Mycophycophta,Lichen,Cladoniaceae,Cladonia sp.,Cup lichen,Lichenous,,"P‰‰jarvi, Finland",61.060,25.099,151,,3.6,-179,,,-90,,-98,,,-98,,,,,,,,,Sachse et al. (2006),LAM,High,High,,,4.2,0.84,462,47,654,0.7,0.7,46,Excluded,,,,,,,,,,
+288,Fungus,Mycophycophta,Lichen,Cladoniaceae,Cladonia sp.,Cup lichen,Lichenous,,"Tunturilampi, Finland",67.356,27.168,293,,-0.3,-204,-190,-179,-99,,-117,-101,-89,-117,-101,-89,,,,,,,Sachse et al. (2006),SOD007,High,High,,,-1.4,0.90,807,40,551,1.5,1.5,38,Excluded,,,,,,,,,,
+268,Plantae,Non-vascular plants,Bryophyta,Sphagnaceae,Sphagnum sp.,Moss,Non-vascular,C3,"Kiuvaj‰rvi, Finland",61.849,24.279,149,,3.5,-200,,,-91,,-120,,,-120,,,,,,,,,Sachse et al. (2006),HYY,High,High,,,4.3,0.85,438,51,706,0.6,0.6,50,Excluded,,,,,,,,,,
+269,Plantae,Non-vascular plants,Bryophyta,na,na,Moss,Non-vascular,C3,"Kiuvaj‰rvi, Finland",61.849,24.279,149,,3.5,-183,,,-91,,-101,,,-101,,,,,,,,,Sachse et al. (2006),HYY,High,High,,,4.3,0.85,438,51,706,0.6,0.6,50,Excluded,,,,,,,,,,
+277,Plantae,Non-vascular plants,Bryophyta,na,na,Moss,Non-vascular,C3,"Luosto, Finland",67.172,26.860,300,,-0.3,-176,,,-99,,-85,,,-85,,,,,,,,,Sachse et al. (2006),SOD004,High,High,,,-1.4,0.90,859,40,553,1.6,1.6,38,Excluded,,,,,,,,,,
+279,Plantae,Non-vascular plants,Bryophyta,Sphagnaceae,Sphagnum,Moss,Non-vascular,C3,"Oikoj‰rvi, Finland",68.849,21.181,463,,-2,-213,,,-110,,-116,,,-116,,,,,,,,,Sachse et al. (2006),NAI,High,High,,,-0.6,0.89,447,24,341,1.3,1.3,23,Excluded,,,,,,,,,,
+280,Plantae,Non-vascular plants,Bryophyta,na,na,Moss,Non-vascular,C3,"Oikoj‰rvi, Finland",68.849,21.181,463,,-2,-108,,,-110,,2,,,2,,,,,,,,,Sachse et al. (2006),NAI,High,High,,,-0.6,0.89,447,24,341,1.3,1.3,23,Excluded,,,,,,,,,,
+285,Plantae,Non-vascular plants,Bryophyta,na,na,Moss,Non-vascular,C3,"Syrj‰nalunen, Finland",61.194,25.141,156,,3.6,-182,-198,-186,-90,,-101,-119,-105,-101,-119,-105,,,,,,,Sachse et al. (2006),SYR,High,High,,,4.1,0.84,455,48,671,0.7,0.7,48,Excluded,,,,,,,,,,
+287,Plantae,Non-vascular plants,Bryophyta,Sphagnaceae,Sphagnum sp.,Moss,Non-vascular,C3,"Tunturilampi, Finland",67.356,27.168,293,,-0.3,-198,-235,-209,-99,,-110,-151,-122,-110,-151,-122,,,,,,,Sachse et al. (2006),SOD007,High,High,,,-1.4,0.90,807,40,551,1.5,1.5,38,Excluded,,,,,,,,,,
+24,Plantae,Vascular plants,Angiosperm-Dicot,Cactaceae,Hylocereus undatus (Haw.) Britt. et Rose,Nightblooming cactus,"Shrub, vine",CAM,"Guangzhou, China",23.1,113.3,7,,21.9,,,-171,-38,,,,-138,,,-138,,,,,-21.8,-21.5,Bi et al. (2005),A,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,Excluded,,,,,,,,,,
+92,Plantae,Vascular plants,Angiosperm-Dicot,Caprifoliaceae,Lonicera subspicata,Southern honeysuckle,"Shrub, vine",C3,"Topanga, CA, USA",34.09,-118.589,400,,17,,-132,,-66,,,-71,,,-71,,,,,,,,Feakins and Sessions (2010),,High,High,,T data from author,15.7,0.63,150,34,476,0.3,0.3,34,Excluded,,,,,,,,,,
+163,Plantae,Vascular plants,Angiosperm-Monocot,Smilacaceae,Smilax rotundifolia L.,Roundleaf greenbrier,"Shrub, vine",C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,,-202,-175,-62,,,-149,-120,,-149,-120,,,,,,,Hou et al. (2007),SMRO,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,Excluded,,,,,,,,,,
+40,Plantae,Vascular plants,Angiosperm-Monocot,Hydrocharitaceae,Hydrilla verticillata,Waterthyme,"Forb, aquatic",C3,"Gunma, Japan",36.28,138.52,1084,,14.5,-192,-190,-171,-64,-60,-137,-135,-114,-137,-135,-114,-16.5,-25.5,-25.4,-26.2,-30,-28.2,Chikaraishi & Naraoka (2003),HV,Low,Low,,"Lat, Long, Elev provided by author",12.5,0.85,1504,103,1440,1.0,1.0,102,Excluded,,,,,,,,,,
+41,Plantae,Vascular plants,Angiosperm-Monocot,Hydrocharitaceae,Vallisneria asiatica,Eelgrass,"Forb, aquatic",C3,"Gunma, Japan",36.28,138.52,1084,,14.5,-175,-167,-156,-64,-60,-119,-110,-98,-119,-110,-98,-14.6,-23.2,-23.5,-23.9,-23.4,-24.6,Chikaraishi & Naraoka (2003),VA,Low,Low,,"Lat, Long, Elev provided by author",12.5,0.85,1504,103,1440,1.0,1.0,102,Excluded,,,,,,,,,,
+155,Plantae,Vascular plants,Angiosperm-Monocot,Lemnaceae †,Lemna sp. L.,Duckweed,"Forb, aquatic",C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-172,-200,,-62,,-117,-147,,-117,-147,,,,,,,,Hou et al. (2007),LEMNA,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,Excluded,,,,,,,,,,
+162,Plantae,Vascular plants,Angiosperm-Monocot,Pontederiaceae,Pontederia cordata L.,Pickerelweed,"Forb, aquatic",C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-188,-179,,-62,-60,-134,-125,,-134,-127,,,,,,,,Hou et al. (2007),POCO14,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,Excluded,,,,,,,,,,
+43,Plantae,Vascular plants,Angiosperm-Monocot,Potamogetonaceae,Potamogeton perfoliatus,Claspingleaf pondweed,"Forb, aquatic",C3,"Gunma, Japan",36.28,138.52,1084,,14.5,-209,-202,-183,-64,-60,-155,-147,-127,-155,-147,-127,-15.8,-27.5,-28.8,-26.6,-27.4,-24.9,Chikaraishi & Naraoka (2003),PP,Low,Low,,"Lat, Long, Elev provided by author",12.5,0.85,1504,103,1440,1.0,1.0,102,Excluded,,,,,,,,,,
+153,Plantae,Vascular plants,Angiosperm-Dicot,Vitaceae,Vitis aestivalis Michx.,Summer grape,"Forb, vine",C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-179,-193,-167,-62,,-125,-140,-112,-125,-140,-112,,,,,,,Hou et al. (2007),VIAE,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,Excluded,,,,,,,,,,
+44,Plantae,Vascular plants,Pteridophyta,na,na,na,Fern,C3,"Gunma, Japan",36.28,138.52,1084,,14.5,-166,-170,-175,-64,-60,-109,-113,-119,-109,-113,-119,-32,,-34.9,-36,-36.9,-37.4,Chikaraishi & Naraoka (2003),fern,Low,Low,,"Lat, Long, Elev provided by author",12.5,0.85,1504,103,1440,1.0,1.0,102,Excluded,,,,,,,,,,
+165,Plantae,Vascular plants,Pteridophyta,Dryopteridaceae,Onoclea sensibilis L.,Sensitive fern,Fern,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-156,-156,,-62,,-100,-100,,-100,-100,,,,,,,,Hou et al. (2007),ONSE,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,Excluded,,,,,,,,,,
+166,Plantae,Vascular plants,Pteridophyta,Dryopteridaceae,Polystichum acrostichoides,Christmas fern,Fern,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-162,-170,-165,-62,,-107,-115,-110,-107,-115,-110,,,,,,,Hou et al. (2007),POAC4,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,Excluded,,,,,,,,,,
+167,Plantae,Vascular plants,Pteridophyta,Osmundaceae,Osmunda cinnamomea L.,Cinnamon fern,Fern,C3,"Blood Pond, MA, USA",42.08,-71.96,212,,8.4,-152,-159,,-62,,-96,-103,,-96,-103,,,,,,,,Hou et al. (2007),OSCI,High,High,,"T data from http://climexp.knmi.nl/
+mean of annual averages 1950-2005
+Station Amherst, MA",8.8,0.80,730,74,1033,0.7,0.7,74,Excluded,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
