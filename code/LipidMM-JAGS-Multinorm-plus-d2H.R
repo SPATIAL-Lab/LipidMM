@@ -65,8 +65,8 @@ model {
       d13C.k[k, i, 1:N] ~ dmnorm.vcov(d13C.mu.est[i,1:N], d13C.omega[i,1:N,1:N])
       conc_k[k, i, 1:N] ~ dmnorm.vcov(conc.mu.est[i,1:N], conc.omega[i,1:N,1:N])
       
-      #multivariat normal produces n products for each chain as the epsilon value of the chains
-      epsilon.d2H.k[k, i, 1:N] ~ dmnorm.vcov(epsilon.d2H.mu.est[i,1:N], epsilon.d2H.omega[i,1:N,1:N])
+      #multivariat normal produces n products for each chain as the epsilon of the chains
+      epsilon.app.k[k, i, 1:N] ~ dmnorm.vcov(epsilon.app.mu.est[i,1:N], epsilon.app.omega[i,1:N,1:N])
       
       for(n in 1:N){ #concentration of each gram of leaf is modeled indvidually
 
@@ -74,8 +74,8 @@ model {
         conc.d13C_k[k, i, n] <- exp.conc_k[k, i, n] * d13C.k[k, i, n]
         exp.conc_k[k, i, n] <- exp (conc_k[k, i, n])
         
-        #calculate leaf wax d2H using apparent fractionation factor: epsilon
-        d2H.k[k, i, n] <- d2H.MAP + epsilon.d2H.k[k, i, n]
+        #calculate leaf wax d2H using apparent fractionation factor: epsilon alkane-MAP
+        d2H.k[k, i, n] <- d2H.MAP + epsilon.app.k[k, i, n]
 
       }
     }
