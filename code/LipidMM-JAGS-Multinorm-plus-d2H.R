@@ -75,7 +75,7 @@ model {
         exp.conc_k[k, i, n] <- exp (conc_k[k, i, n])
         
         #calculate leaf wax d2H using apparent fractionation factor: epsilon alkane-MAP
-        d2H.k[k, i, n] <- d2H.MAP + epsilon.app.k[k, i, n]
+        d2H.k[k, i, n] <- (d2H.MAP + 1000) * (epsilon.app.k[k, i, n]/1000 + 1) - 1000
 
       }
     }
