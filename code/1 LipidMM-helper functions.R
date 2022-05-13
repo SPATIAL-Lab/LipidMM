@@ -26,44 +26,54 @@ FSC<-function(MCMC.res){
 }
 
 ####function 2: prior multivariate normal density###
-#can be used in both d13C and log transformed concentration
-#note that this function is optimized for a 3 chain 3 endmember mixing regime
+#can be used in d2H, d13C and log transformed concentration
 
 pri.multi.norm.den <- function(X.min,X.max,mu,vcov){
   require(OpenMx)
   X.range <- X.max - X.min
-  X.interval<-X.range/511
-  X.multinorm <- seq(from = X.min, to = X.max, by =X.interval)
+  X.interval <- X.range/511
+  X.multinorm <- seq(from = X.min, to = X.max, by = X.interval)
+  dim.vcov <- dim(vcov)
   
-  density.1<-rep(0,length(X.multinorm))
-  density.2<-rep(0,length(X.multinorm))
-  density.3<-rep(0,length(X.multinorm))
+  #initiate density matrix
+  density <- as.data.frame(matrix(nrow=length(X.multinorm)-1, ncol = dim.vcov[1]))
   
-  for(i in 2:length(X.multinorm)){
-    #integrating one interval for density[i]
-    density.1[i] <- omxMnor(vcov,mu,c(X.multinorm[i-1],X.min,X.min),
-                            c(X.multinorm[i],X.max,X.max))
-    density.2[i] <- omxMnor(vcov,mu,c(X.min,X.multinorm[i-1],X.min),
-                            c(X.max,X.multinorm[i],X.max))
-    density.3[i] <- omxMnor(vcov,mu,c(X.min,X.min,X.multinorm[i-1]),
-                            c(X.max,X.max,X.multinorm[i]))
-    
+  #initiate index matrix
+  index <- as.data.frame(matrix(nrow=dim.vcov[1], ncol = 2))
+  for (i in 1: dim.vcov[1]){
+    index[1,i] <- X.min
+    index[2,i] <- X.max
   }
+  
+  for (i in 1: dim.vcov[1]){
+    for(j in 2:length(X.multinorm)){
+      #assigning new values
+      index[1,i] <- X.multinorm[j-1]
+      index[2,i] <- X.multinorm[j]
+      #integrating one interval for density[i]
+      density[i,j-1] <- omxMnor(vcov,mu,index[1,],index[2,])
+    }
+    #revert to the default values
+    index[1,i] <- X.min
+    index[2,i] <- X.max
+  }
+  
   #scaling density values to 1
-  density.1.sc<-density.1/X.interval
-  density.2.sc<-density.2/X.interval
-  density.3.sc<-density.3/X.interval
+  density.sc <- density/X.interval
+
   #monitoring the density scaling approximation
   #the sum should be close to 1
-  print(sum(density.1))
-  print(sum(density.2))
-  print(sum(density.3))
   
-  results<-list(x = X.multinorm, y1 = density.1.sc, y2 = density.2.sc, y3 = density.3.sc)
+  for (i in 1: dim.vcov[1]){
+    print(sum(density[i,]))
+  }
+
+  results<-list(x = X.multinorm, density.sc)
   return(results)
 }
 
 #Function 3: making contour plots for FLMCs
+#note that this function is optimized for 3 chains
 contour.fn<-function(MCMC.f){
   require(MASS)
   f1 <- MCMC.f[,1]
