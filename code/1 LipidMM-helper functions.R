@@ -31,12 +31,12 @@ FSC<-function(MCMC.res){
 pri.multi.norm.den <- function(X.min,X.max,mu,vcov){
   require(OpenMx)
   X.range <- X.max - X.min
-  X.interval <- X.range/511
+  X.interval <- X.range/512
   X.multinorm <- seq(from = X.min, to = X.max, by = X.interval)
   dim.vcov <- dim(vcov)
   
   #initiate density matrix
-  density <- as.data.frame(matrix(nrow=length(X.multinorm)-1, ncol = dim.vcov[1]))
+  density <- as.data.frame(matrix(0, nrow=length(X.multinorm), ncol = dim.vcov[1]))
   
   #initiate index matrix
   index <- as.data.frame(matrix(nrow=dim.vcov[1], ncol = 2))
@@ -59,7 +59,7 @@ pri.multi.norm.den <- function(X.min,X.max,mu,vcov){
   }
   
   #scaling density values to 1
-  density.sc <- density/X.interval
+  density.sc <- density[,]/X.interval
 
   #monitoring the density scaling approximation
   #the sum should be close to 1
@@ -68,7 +68,7 @@ pri.multi.norm.den <- function(X.min,X.max,mu,vcov){
     print(sum(density[i,]))
   }
 
-  results<-list(x = X.multinorm, density.sc)
+  results<-list(x = (X.multinorm[1:512]+ X.interval/2), y = density.sc)
   return(results)
 }
 
