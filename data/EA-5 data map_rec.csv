@@ -1,150 +1,150 @@
-Compilation #,Kingdom,Plant type,Group,Family,Plant Species,Common name,Growth habit,Photosynthesis pathway,Sample location,Latitude,Longitude,Elevation (m),RH (%),MAT (°C),dD C27 (‰),dD C29 (‰),dD C31 (‰),dD C33 (‰),OIPC3.1 MAP dD (‰),SW dD cited(‰),eC27/MAP_OIPC,eC29/MAP_OIPC,eC31/MAP_OIPC,eC33/MAP_OIPC,"eC27/MAP_best (best estimate where available sw=blue, otherwise OIPC=black)","eC29/MAP_best (best estimate where available sw=blue, otherwise OIPC=black","eC31/MAP_best (best estimate where available sw=blue, otherwise OIPC=black","eC33/MAP_best (best estimate where available sw=blue, otherwise OIPC=black",Reference,Publication sam ID/site ID,Confidence in lat/long,Confidence in elevation,Misspelling in original publication,Additional comments,NCEP_mean T,NCEP_mean RH,NCEP_mean prate,NCEP_mean lhtfl,NCEP_mean evap,NCEP_mean P/E,NCEP_mean P/E,NCEP_mean P-E,Source
-19,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Bothriochloa ischaemum Keng,Yellow bluestem,Graminoid,C4,"Guangzhou, China",23.1,113.3,7,,21.9,-131,-132,-143,-149,-40,,-94,-96,-107,-113,-94,-96,-107,,Bi et al. (2005),X,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,GR
-20,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Imperata cylindrica var. major (Ness) C. E. Hubb.,,Graminoid,C4,"Guangzhou, China",23.1,113.3,7,,21.9,-150,-174,-185,-182,-40,,-114,-140,-151,-148,-114,-140,-151,,Bi et al. (2005),W,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,GR
-21,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Saccharum sinense Roxb.,na,Graminoid,C4,"Guangzhou, China",23.1,113.3,7,,21.9,-233,-218,-207,,-40,,-201,-186,-174,,-201,-186,-174,,Bi et al. (2005),Z,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,GR
-22,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Zea mays L.,Corn,Graminoid,C4,"Guangzhou, China",23.1,113.3,7,,21.9,-161,-149,-157,-154,-40,,-126,-113,-122,-119,-126,-113,-122,,Bi et al. (2005),T,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,GR
-23,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Zoysia japonica Stued,Korean lawngrass,Graminoid,C4,"Guangzhou, China",23.1,113.3,7,,21.9,,-120,-130,-124,-40,,,-83,-93,-88,,-83,-93,,Bi et al. (2005),Y,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,GR
-4,Plantae,Vascular plants,Angiosperm-Dicot,Bignoniaceae,Kigelia africana (am.) Benth.,Sausage tree,Tree,C3,"Guangzhou, China",23.1,113.3,7,,21.9,-157,-158,-158,-148,-40,,-122,-123,-123,-112,-122,-123,-123,,Bi et al. (2005),I,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,97.84,1362,1.26,1.26,96.57,RF
-7,Plantae,Vascular plants,Angiosperm-Dicot,Lauraceae,Cinnamomum burmannii (Nees) Bl.,Indonesian cinnamon,Tree,C3,"Guangzhou, China",23.1,113.3,7,,21.9,-209,-207,-191,-191,-40,,-176,-174,-158,-157,-176,-174,-158,,Bi et al. (2005),N,High,High,Cinnamomum burmanni (Nees) Bl.,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,97.84,1362,1.26,1.26,96.57,RF
-8,Plantae,Vascular plants,Angiosperm-Dicot,Meliaceae,Swietenia mahagoni (L.) Jacq.,West indian mahogany,Tree,C3,"Guangzhou, China",23.1,113.3,7,,21.9,,-171,-171,-172,-40,,,-136,-136,-137,,-136,-136,,Bi et al. (2005),K,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,97.84,1362,1.26,1.26,96.57,RF
-9,Plantae,Vascular plants,Angiosperm-Dicot,Moraceae,Ficus altissima Bl.,na,Tree,C3,"Guangzhou, China",23.1,113.3,7,,21.9,-175,-166,-159,-155,-40,,-141,-131,-124,-120,-141,-131,-124,,Bi et al. (2005),F,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,97.84,1362,1.26,1.26,96.57,RF
-10,Plantae,Vascular plants,Angiosperm-Dicot,Moraceae,Ficus microcarpa Linn. f.,Golden leaves fig,Tree,C3,"Guangzhou, China",23.1,113.3,7,,21.9,,-180,-174,-159,-40,,,-146,-139,-124,,-146,-139,,Bi et al. (2005),G,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,97.84,1362,1.26,1.26,96.57,RF
-11,Plantae,Vascular plants,Angiosperm-Dicot,Myrtaceae,Syzygium cumini (L.) Skeels,Java plum,Tree,C3,"Guangzhou, China",23.1,113.3,7,,21.9,-146,-161,-162,-148,-40,,-110,-126,-128,-113,-110,-126,-128,,Bi et al. (2005),J,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,97.84,1362,1.26,1.26,96.57,RF
-12,Plantae,Vascular plants,Angiosperm-Dicot,Oleaceae,Osmanthus fragrans Lour.,Sweet olive,Tree,C3,"Guangzhou, China",23.1,113.3,7,,21.9,-161,-175,-171,-174,-40,,-126,-141,-137,-140,-126,-141,-137,,Bi et al. (2005),H,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,97.84,1362,1.26,1.26,96.57,RF
-15,Plantae,Vascular plants,Angiosperm-Monocot,Arecaceae,Caryota mitis Lour.,Burmese fishtail palm,Tree,C3,"Guangzhou, China",23.1,113.3,7,,21.9,,-196,-205,-199,-40,,,-163,-172,-166,,-163,-172,,Bi et al. (2005),M,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,97.84,1362,1.26,1.26,96.57,RF
-16,Plantae,Vascular plants,Gymnosperm,Araucariaceae,Araucaria cunninghamii Sweet,Moreton Bay pine,Tree,C3,"Guangzhou, China",23.1,113.3,7,,21.9,-122,-110,-95,-81,-40,,-85,-73,-58,-42,-85,-73,-58,,Bi et al. (2005),O,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,97.84,1362,1.26,1.26,96.57,RF
-2,Plantae,Vascular plants,Angiosperm-Dicot,Amaranthaceae  ,Alternanthera dentata 'Rubiginosa' ,Ruby Leaf,Shrub,C3,"Guangzhou, China",23.1,113.3,7,,21.9,-200,-204,-201,-198,-40,,-166,-171,-167,-165,-166,-171,-167,,Bi et al. (2005),P,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,97.84,1362,1.26,1.26,96.57,RF
-5,Plantae,Vascular plants,Angiosperm-Dicot,Euphorbiaceae,Codiaeum variegatum,Garden croton,Shrub,C3,"Guangzhou, China",23.1,113.3,7,,21.9,,-156,-168,-173,-40,,,-121,-133,-138,,-121,-133,,Bi et al. (2005),E,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,97.84,1362,1.26,1.26,96.57,RF
-13,Plantae,Vascular plants,Angiosperm-Dicot,Verbenaceae,Holmskioldia sanguinea Retz.,Chinese hatplant,Shrub,C3,"Guangzhou, China",23.1,113.3,7,,21.9,-202,-204,-210,-211,-40,,-168,-171,-178,-178,-168,-171,-178,,Bi et al. (2005),S,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,97.84,1362,1.26,1.26,96.57,RF
-6,Plantae,Vascular plants,Angiosperm-Dicot,Euphorbiaceae,Euphorbia pulcherrima Willd.,Poinsettia,"Tree, shrub",C3,"Guangzhou, China",23.1,113.3,7,,21.9,-196,-199,-199,,-40,,-162,-165,-166,,-162,-165,-166,,Bi et al. (2005),D,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,97.84,1362,1.26,1.26,96.57,RF
-1,Plantae,Vascular plants,Angiosperm-Dicot,Amaranthaceae  ,Alternanthera bettzickiana (Regel) Nichols.,na,Forb,C3,"Guangzhou, China",23.1,113.3,7,,21.9,-202,-208,-216,-206,-40,,-169,-174,-183,-173,-169,-174,-183,,Bi et al. (2005),R,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,RF
-3,Plantae,Vascular plants,Angiosperm-Dicot,Amaranthaceae  ,Alternanthera versicolor Regel,Calico plant,Forb,C3,"Guangzhou, China",23.1,113.3,7,,21.9,-199,-209,-213,-208,-40,,-165,-176,-180,-174,-165,-176,-180,,Bi et al. (2005),Q,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,RF
-14,Plantae,Vascular plants,Angiosperm-Monocot,Araceae,Pistia stratiotes,Water lettuce,Forb,C3,"Guangzhou, China",23.1,113.3,7,,21.9,-169,-161,-154,-144,-40,,-134,-126,-118,-108,-134,-126,-118,,Bi et al. (2005),L,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,20.2,0.85,1720,98,1362,1.3,1.3,97,RF
-51,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Saccharum officinarum,Sugarcane,Graminoid,C4,Thailand,13.45,100.32,2,,28.3,,-173,-176,-179,-43,,,-136,-139,-142,,-136,-139,,Chikaraishi & Naraoka (2003),SO2,Low,Low,,"T data from http://climexp.knmi.nl/
+Kingdom,Plant type,Group,Family,Plant Species,Common name,Growth habit,Photosynthesis pathway,Sample location,Latitude,Longitude,Elevation (m),MAT (°C),dD C27 (‰),dD C29 (‰),dD C31 (‰),dD C33 (‰),OIPC3.1 MAP dD (‰),eC27/MAP_OIPC,eC29/MAP_OIPC,eC31/MAP_OIPC,eC33/MAP_OIPC,Reference,Publication sam ID/site ID,Confidence in lat/long,Confidence in elevation,Misspelling in original publication,Additional comments,Source
+Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Bothriochloa ischaemum Keng,Yellow bluestem,Graminoid,C4,"Guangzhou, China",23.1,113.3,7,21.9,-131,-132,-143,-149,-40,-94,-96,-107,-113,Bi et al. (2005),X,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,GR
+Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Imperata cylindrica var. major (Ness) C. E. Hubb.,,Graminoid,C4,"Guangzhou, China",23.1,113.3,7,21.9,-150,-174,-185,-182,-40,-114,-140,-151,-148,Bi et al. (2005),W,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,GR
+Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Saccharum sinense Roxb.,na,Graminoid,C4,"Guangzhou, China",23.1,113.3,7,21.9,-233,-218,-207,,-40,-201,-186,-174,,Bi et al. (2005),Z,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,GR
+Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Zea mays L.,Corn,Graminoid,C4,"Guangzhou, China",23.1,113.3,7,21.9,-161,-149,-157,-154,-40,-126,-113,-122,-119,Bi et al. (2005),T,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,GR
+Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Zoysia japonica Stued,Korean lawngrass,Graminoid,C4,"Guangzhou, China",23.1,113.3,7,21.9,,-120,-130,-124,-40,,-83,-93,-88,Bi et al. (2005),Y,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,GR
+Plantae,Vascular plants,Angiosperm-Dicot,Bignoniaceae,Kigelia africana (am.) Benth.,Sausage tree,Tree,C3,"Guangzhou, China",23.1,113.3,7,21.9,-157,-158,-158,-148,-40,-122,-123,-123,-112,Bi et al. (2005),I,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Lauraceae,Cinnamomum burmannii (Nees) Bl.,Indonesian cinnamon,Tree,C3,"Guangzhou, China",23.1,113.3,7,21.9,-209,-207,-191,-191,-40,-176,-174,-158,-157,Bi et al. (2005),N,High,High,Cinnamomum burmanni (Nees) Bl.,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Meliaceae,Swietenia mahagoni (L.) Jacq.,West indian mahogany,Tree,C3,"Guangzhou, China",23.1,113.3,7,21.9,,-171,-171,-172,-40,,-136,-136,-137,Bi et al. (2005),K,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Moraceae,Ficus altissima Bl.,na,Tree,C3,"Guangzhou, China",23.1,113.3,7,21.9,-175,-166,-159,-155,-40,-141,-131,-124,-120,Bi et al. (2005),F,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Moraceae,Ficus microcarpa Linn. f.,Golden leaves fig,Tree,C3,"Guangzhou, China",23.1,113.3,7,21.9,,-180,-174,-159,-40,,-146,-139,-124,Bi et al. (2005),G,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Myrtaceae,Syzygium cumini (L.) Skeels,Java plum,Tree,C3,"Guangzhou, China",23.1,113.3,7,21.9,-146,-161,-162,-148,-40,-110,-126,-128,-113,Bi et al. (2005),J,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Oleaceae,Osmanthus fragrans Lour.,Sweet olive,Tree,C3,"Guangzhou, China",23.1,113.3,7,21.9,-161,-175,-171,-174,-40,-126,-141,-137,-140,Bi et al. (2005),H,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,RF
+Plantae,Vascular plants,Angiosperm-Monocot,Arecaceae,Caryota mitis Lour.,Burmese fishtail palm,Tree,C3,"Guangzhou, China",23.1,113.3,7,21.9,,-196,-205,-199,-40,,-163,-172,-166,Bi et al. (2005),M,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,RF
+Plantae,Vascular plants,Gymnosperm,Araucariaceae,Araucaria cunninghamii Sweet,Moreton Bay pine,Tree,C3,"Guangzhou, China",23.1,113.3,7,21.9,-122,-110,-95,-81,-40,-85,-73,-58,-42,Bi et al. (2005),O,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Amaranthaceae  ,Alternanthera dentata 'Rubiginosa' ,Ruby Leaf,Shrub,C3,"Guangzhou, China",23.1,113.3,7,21.9,-200,-204,-201,-198,-40,-166,-171,-167,-165,Bi et al. (2005),P,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Euphorbiaceae,Codiaeum variegatum,Garden croton,Shrub,C3,"Guangzhou, China",23.1,113.3,7,21.9,,-156,-168,-173,-40,,-121,-133,-138,Bi et al. (2005),E,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Verbenaceae,Holmskioldia sanguinea Retz.,Chinese hatplant,Shrub,C3,"Guangzhou, China",23.1,113.3,7,21.9,-202,-204,-210,-211,-40,-168,-171,-178,-178,Bi et al. (2005),S,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Euphorbiaceae,Euphorbia pulcherrima Willd.,Poinsettia,"Tree, shrub",C3,"Guangzhou, China",23.1,113.3,7,21.9,-196,-199,-199,,-40,-162,-165,-166,,Bi et al. (2005),D,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Amaranthaceae  ,Alternanthera bettzickiana (Regel) Nichols.,na,Forb,C3,"Guangzhou, China",23.1,113.3,7,21.9,-202,-208,-216,-206,-40,-169,-174,-183,-173,Bi et al. (2005),R,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Amaranthaceae  ,Alternanthera versicolor Regel,Calico plant,Forb,C3,"Guangzhou, China",23.1,113.3,7,21.9,-199,-209,-213,-208,-40,-165,-176,-180,-174,Bi et al. (2005),Q,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,RF
+Plantae,Vascular plants,Angiosperm-Monocot,Araceae,Pistia stratiotes,Water lettuce,Forb,C3,"Guangzhou, China",23.1,113.3,7,21.9,-169,-161,-154,-144,-40,-134,-126,-118,-108,Bi et al. (2005),L,High,High,,data from http://climexp.knmi.nl/ mean of annual averages 1950-1991 Station Guangzhou,RF
+Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Saccharum officinarum,Sugarcane,Graminoid,C4,Thailand,13.45,100.32,2,28.3,,-173,-176,-179,-43,,-136,-139,-142,Chikaraishi & Naraoka (2003),SO2,Low,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1950-1991
-Station Bangkok, Lat, Long, Elev provided by author",25.3,0.83,2593,129,1795,1.4,1.4,127,GR
-52,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Sorghum bicolor,Sorghum,Graminoid,C4,Thailand,13.45,100.32,2,,28.3,-162,-171,-176,-172,-43,,-124,-134,-139,-135,-124,-134,-139,,Chikaraishi & Naraoka (2003),SB,Low,Low,,"T data from http://climexp.knmi.nl/
+Station Bangkok, Lat, Long, Elev provided by author",GR
+Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Sorghum bicolor,Sorghum,Graminoid,C4,Thailand,13.45,100.32,2,28.3,-162,-171,-176,-172,-43,-124,-134,-139,-135,Chikaraishi & Naraoka (2003),SB,Low,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1950-1991
-Station Bangkok, Lat, Long, Elev provided by author",25.3,0.83,2593,129,1795,1.4,1.4,127,GR
-50,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Saccharum officinarum,Sugarcane,Graminoid,C4,"Okinawa, Japan",26.21,127.68,12,,22.6,-186,-188,-185,-169,-38,,-154,-156,-153,-136,-154,-156,-153,,Chikaraishi & Naraoka (2003),SO1,Low,Low,,"T data from http://climexp.knmi.nl/
+Station Bangkok, Lat, Long, Elev provided by author",GR
+Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Saccharum officinarum,Sugarcane,Graminoid,C4,"Okinawa, Japan",26.21,127.68,12,22.6,-186,-188,-185,-169,-38,-154,-156,-153,-136,Chikaraishi & Naraoka (2003),SO1,Low,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1951-1991
-Station Naha, Lat, Long, Elev provided by author",22.6,0.82,1456,171,2371,0.6,0.6,170,GR
-49,Plantae,Vascular plants,Angiosperm-Dicot,Euphorbiaceae,Manihot utilissima,Cassava,Forb,C3,Thailand,13.45,100.32,2,,28.3,-129,-134,-133,-138,-43,,-90,-95,-94,-99,-90,-95,-94,,Chikaraishi & Naraoka (2003),MU,Low,Low,,"T data from http://climexp.knmi.nl/
+Station Naha, Lat, Long, Elev provided by author",GR
+Plantae,Vascular plants,Angiosperm-Dicot,Euphorbiaceae,Manihot utilissima,Cassava,Forb,C3,Thailand,13.45,100.32,2,28.3,-129,-134,-133,-138,-43,-90,-95,-94,-99,Chikaraishi & Naraoka (2003),MU,Low,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1950-1991
-Station Bangkok, Lat, Long, Elev provided by author",25.3,0.83,2593,129,1795,1.4,1.4,127,RF
-48,Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Albizia julibrissin,Persian silk tree,Tree,C3,"Ogasawara, Japan",27.05,142.11,3,,23.2,-123,-124,-128,-126,-41,-42,-86,-87,-91,-89,-86,-87,-91,,Chikaraishi & Naraoka (2003),AJ,Low,Low,,"T data from http://climexp.knmi.nl/
+Station Bangkok, Lat, Long, Elev provided by author",RF
+Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Albizia julibrissin,Persian silk tree,Tree,C3,"Ogasawara, Japan",27.05,142.11,3,23.2,-123,-124,-128,-126,-41,-86,-87,-91,-89,Chikaraishi & Naraoka (2003),AJ,Low,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1950-1990
-Station TITIZIMA/CHICHIJIMA, Lat, Long, Elev provided by author",23.06,0.81,910,122.9,1705,0.53,0.53,122.37,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Bixaceae,Bixa excelsa,,Tree/shrub,C3,"Amazonia, Perú",-12.8309,-69.2705,223,,24.4,-150,-159,-152,,-57,-37,-99,-108,-101,,-118,-127,-120,,"Feakins et al., 2016",,High,High,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Moraceae,Brosimum lactescens,,Tree/shrub,C3,"Amazonia, Perú",-12.8309,-69.2705,223,,24.4,,-145,-143,,-57,-37,,-93,-92,,,-112,-111,,"Feakins et al., 2016",,High,High,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Calophyllaceae,Calophyllum brasiliense,,Tree/shrub,C3,"Amazonia, Perú",-12.8309,-69.2705,223,,24.4,,-189,-201,,-57,-37,,-140,-152,,,-158,-170,,"Feakins et al., 2016",,High,High,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Violaceae,Leonia glycycarpa,,Tree/shrub,C3,"Amazonia, Perú",-12.8309,-69.2705,223,,24.4,,-166,-166,-155,-57,-37,,-116,-116,-104,,-134,-134,-123,"Feakins et al., 2016",,High,High,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Chrysobalanaceae,Licania heteromorpha,,Tree/shrub,C3,"Amazonia, Perú",-12.8309,-69.2705,223,,24.4,,-171,-174,,-57,-37,,-121,-125,,,-139,-143,,"Feakins et al., 2016",,High,High,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Lauraceae,Ocotea bofo,,Tree/shrub,C3,"Amazonia, Perú",-12.8309,-69.2705,223,,24.4,-172,-176,-166,,-57,-37,-122,-127,-116,,-140,-145,-134,,"Feakins et al., 2016",,High,High,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Moraceae,Pseudolmedia laevigata,,Tree/shrub,C3,"Amazonia, Perú",-12.8309,-69.2705,223,,24.4,,-162,-169,,-57,-37,,-111,-119,,,-129,-138,,"Feakins et al., 2016",,High,High,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Cannabaceae,Celtis schippii,,Tree/shrub,C3,"Amazonia, Perú",-12.8385,-69.296,215,,24.4,,-150,-156,,-57,-37,,-99,-105,,,-118,-124,,"Feakins et al., 2016",,High,High,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Euphorbiaceae,Mabea nitida,,Tree/shrub,C3,"Amazonia, Perú",-12.8385,-69.296,215,,24.4,,-167,-163,,-57,-37,,-116,-112,,,-135,-131,,"Feakins et al., 2016",,High,High,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Lauraceae,Ocotea bofo,,Tree/shrub,C3,"Amazonia, Perú",-12.8385,-69.296,215,,24.4,,-191,-186,,-57,-37,,-142,-137,,,-160,-155,,"Feakins et al., 2016",,High,High,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Violaceae,Rinorea viridifolia,,Tree/shrub,C3,"Amazonia, Perú",-12.8385,-69.296,215,,24.4,,-156,-159,-152,-57,-37,,-105,-109,-101,,-124,-127,-120,"Feakins et al., 2016",,High,High,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Clusiaceae,Symphonia globulifera,,Tree/shrub,C3,"Amazonia, Perú",-12.8385,-69.296,215,,24.4,,-174,-172,,-57,-37,,-124,-122,,,-143,-141,,"Feakins et al., 2016",,High,High,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Burseraceae,Boswellia neglecta,,Tree,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,,25.5,-129,-137,-139,-137,-4,-23,-123,-132,-121,-131,-97,-110,-103,-115,Griepentrog et al. 2019,,High,High,,T from author,,,,,,,,,SV
-,Plantae,Vascular plants,Angiosperm-Dicot,Burseraceae,Commiphora africana,,Shrub,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,,25.5,-111,-114,-128,-142,-4,-26,-105,-109,-122,-136,-81,-89,-109,-125,Griepentrog et al. 2019,,High,High,,T from author,,,,,,,,,SV
-,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Enteropogon macrostachyus,,Graminoid,C4,"Lake Chala, TZ/KE",-3.316,37.7,880,,25.5,-149,-170,-160,-161,-4,,-143,-165,-155,-155,,,,,Griepentrog et al. 2019,,High,High,,T from author,,,,,,,,,GR
-,Plantae,Vascular plants,Angiosperm-Dicot,Euphorbiaceae,Euphorbia tirucalli,,Shrub,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,,25.5,-148,-153,-159,-137,-4,-14,-142,-147,-153,-131,-141,-149,-156,,Griepentrog et al. 2019,,High,High,,T from author,,,,,,,,,SV
-,Plantae,Vascular plants,Angiosperm-Dicot,Moraceae,Ficus sycomorus,,Tree,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,,25.5,,-115,-119,-110,-4,6,,-110,-113,-104,,-123,-126,-115,Griepentrog et al. 2019,,High,High,,T from author,,,,,,,,,SV
-,Plantae,Vascular plants,Angiosperm-Dicot,Tiliaceae,Grewia tephrodermis,,Shrub,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,,25.5,-100,-112,-104,-122,-4,-32,-94,-106,-98,-116,-69,-79,-73,-76,Griepentrog et al. 2019,,High,High,,T from author,,,,,,,,,SV
-,Plantae,Vascular plants,Angiosperm-Dicot,Sapindaceae,Lepisanthes senegalensis,,Tree,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,,25.5,,-91,-89,-93,-4,-7,,-85,-83,-87,,-84,-82,-81,Griepentrog et al. 2019,,High,High,,T from author,,,,,,,,,SV
-,Plantae,Vascular plants,Angiosperm-Dicot,Capparaceae,Maerua sp.,,Shrub,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,,25.5,-67,-88,-86,-100,-4,-29,-61,-82,-80,-94,-37,-67,-54,-81,Griepentrog et al. 2019,,High,High,,T from author,,,,,,,,,SV
-,Plantae,Vascular plants,Angiosperm-Dicot,Sapotaceae,Sideroxylon sp.,,Tree,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,,25.5,-111,-105,-102,-116,-4,6,-105,-99,-96,-110,-113,-107,-100,-114,Griepentrog et al. 2019,,High,High,,T from author,,,,,,,,,SV
-,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Themeda triandra,,Graminoid,C4,"Lake Chala, TZ/KE",-3.316,37.7,880,,25.5,-142,-150,-169,-158,-4,,-137,-144,-164,-152,,,,,Griepentrog et al. 2019,,High,High,,T from author,,,,,,,,,GR
-,Plantae,Vascular plants,Angiosperm-Dicot,Capparaceae,Thylachium africanum,,Shrub,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,,25.5,-119,-118,-119,-119,-4,-16,-113,-112,-113,-114,-99,-99,-95,-107,Griepentrog et al. 2019,,High,High,,T from author,,,,,,,,,SV
-,Plantae,Vascular plants,Angiosperm-Dicot,Rutaceae,Vepris uguenensis,,Shrub,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,,25.5,-142,-154,-141,-135,-4,-18,-136,-148,-135,-130,-149,-141,-125,-117,Griepentrog et al. 2019,,High,High,,T from author,,,,,,,,,SV
-,Plantae,Vascular plants,Angiosperm-Dicot,Olacaceae,Ximenia americana,,Shrub,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,,25.5,-131,-128,-174,-130,-4,-23,-125,-123,-169,-124,-117,-118,-151,-132,Griepentrog et al. 2019,,High,High,,T from author,,,,,,,,,SV
-,Plantae,Vascular plants,Angiosperm-Dicot,Leguminosae,Acacia gerrardii,,Tree,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,,25.5,-92,-109,-111,-110,-4,-27,-86,-103,-106,-104,-71,-91,-102,-108,Griepentrog et al. 2020,,High,High,,T from author,,,,,,,,,SV
-,Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Acacia kempiana,,Tree,C3,"Alice springs, Australia",-23.7,133.83,598,,,,,-87,-86,-31,,,,-58,-57,,,,,"Kahmen et al., 2013b",,High,High,,,,,,,,,,,SV
-,Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Acacia cowleana,,Tree,C3,"Tennant creek, Australia",-19.65,134.16,365,,,,,-104,-103,-26,,,,-80,-79,,,,,"Kahmen et al., 2013b",,High,High,,,,,,,,,,,SV
-,Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Acacia colei,,Tree,C3,"Elliott, Australia",-17.5,133.51,234,,,,,-115,-116,-29,,,,-89,-90,,,,,"Kahmen et al., 2013b",,High,High,,,,,,,,,,,SV
-,Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Acacia auriculiformis,,Tree,C3,"Darwin, Australia",-12.43,130.88,33,,,,-119,-102,,-30,,,-92,-74,,,,,,"Kahmen et al., 2013b",,High,High,,,,,,,,,,,SV
-177,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Aristida latifolia,Feathertop wiregrass,Graminoid,C4,"Queensland, Australia ",-23.22,143.95,191,,23.4,-147,-199,-195,,-20,,-130,-183,-179,,-130,-183,-179,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
+Station TITIZIMA/CHICHIJIMA, Lat, Long, Elev provided by author",RF
+Plantae,Vascular plants,Angiosperm-Dicot,Bixaceae,Bixa excelsa,,Tree,C3,"Amazonia, Perú",-12.8309,-69.2705,223,24.4,-150,-159,-152,,-57,-99,-108,-101,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Moraceae,Brosimum lactescens,,Tree,C3,"Amazonia, Perú",-12.8309,-69.2705,223,24.4,,-145,-143,,-57,,-93,-92,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Calophyllaceae,Calophyllum brasiliense,,Tree,C3,"Amazonia, Perú",-12.8309,-69.2705,223,24.4,,-189,-201,,-57,,-140,-152,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Violaceae,Leonia glycycarpa,,Tree,C3,"Amazonia, Perú",-12.8309,-69.2705,223,24.4,,-166,-166,-155,-57,,-116,-116,-104,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Chrysobalanaceae,Licania heteromorpha,,Tree,C3,"Amazonia, Perú",-12.8309,-69.2705,223,24.4,,-171,-174,,-57,,-121,-125,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Lauraceae,Ocotea bofo,,Tree,C3,"Amazonia, Perú",-12.8309,-69.2705,223,24.4,-172,-176,-166,,-57,-122,-127,-116,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Moraceae,Pseudolmedia laevigata,,Tree,C3,"Amazonia, Perú",-12.8309,-69.2705,223,24.4,,-162,-169,,-57,,-111,-119,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Cannabaceae,Celtis schippii,,Tree,C3,"Amazonia, Perú",-12.8385,-69.296,215,24.4,,-150,-156,,-57,,-99,-105,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Euphorbiaceae,Mabea nitida,,Tree,C3,"Amazonia, Perú",-12.8385,-69.296,215,24.4,,-167,-163,,-57,,-116,-112,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Lauraceae,Ocotea bofo,,Tree,C3,"Amazonia, Perú",-12.8385,-69.296,215,24.4,,-191,-186,,-57,,-142,-137,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Violaceae,Rinorea viridifolia,,Tree,C3,"Amazonia, Perú",-12.8385,-69.296,215,24.4,,-156,-159,-152,-57,,-105,-109,-101,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Clusiaceae,Symphonia globulifera,,Tree,C3,"Amazonia, Perú",-12.8385,-69.296,215,24.4,,-174,-172,,-57,,-124,-122,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Clusiaceae,Clusia sp.,,Tree,C3,"Andes, Perú",-13.1751,-71.5948,2868,13.1,-195,-204,-196,,-114,-92,-102,-93,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Sabiaceae,Meliosma frondosa,,Tree,C3,"Andes, Perú",-13.1751,-71.5948,2868,13.1,-213,-212,-210,,-114,-112,-110,-108,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Melastomataceae,Miconia micropetala,,Tree,C3,"Andes, Perú",-13.1751,-71.5948,2868,13.1,-226,-234,-225,,-114,-126,-136,-126,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Primulaceae,Myrsine coriacea,,Tree,C3,"Andes, Perú",-13.1751,-71.5948,2868,13.1,-239,-229,-229,,-114,-141,-129,-130,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Symplocaceae,Symplocos reflexa,,Tree,C3,"Andes, Perú",-13.1751,-71.5948,2868,13.1,-194,-195,-202,-201,-114,-90,-92,-100,-98,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Cunoniaceae,Weinmannia bangii,,Tree,C3,"Andes, Perú",-13.1751,-71.5948,2868,13.1,-189,-205,-202,,-114,-85,-103,-99,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Cunoniaceae,Weinmannia crassifolia,,Tree,C3,"Andes, Perú",-13.1751,-71.5948,2868,13.1,-242,-231,,,-114,-144,-132,,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Sapotaceae,Chrysophyllum sp.,,Tree,C3,"Andes, Perú",-13.0475,-71.5423,1713,17.4,-146,-151,-147,,-95,-57,-62,-58,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Clusiaceae,Clusia elliptica,,Tree,C3,"Andes, Perú",-13.0475,-71.5423,1713,17.4,-201,-199,-191,,-95,-117,-115,-106,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Araliaceae,Dendropanax tessmannii,,Tree,C3,"Andes, Perú",-13.0475,-71.5423,1713,17.4,,-175,-168,,-95,,-89,-81,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Rubiaceae,Elaeagia mariae,,Tree,C3,"Andes, Perú",-13.0475,-71.5423,1713,17.4,-186,-179,-163,,-95,-100,-93,-76,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Euphorbiaceae,Alchornea latifolia,,Tree,C3,"Andes, Perú",-13.0491,-71.5365,1494,18.8,-189,-197,-198,,-92,-107,-115,-117,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Moraceae,Helicostylis tovarensis,,Tree,C3,"Andes, Perú",-13.0491,-71.5365,1494,18.8,-173,-183,-182,,-92,-89,-100,-99,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Phyllanthaceae,Hieronyma macrocarpa,,Tree,C3,"Andes, Perú",-13.0491,-71.5365,1494,18.8,,-150,-147,,-92,,-64,-60,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Monimiaceae,Mollinedia lanceolata,,Tree,C3,"Andes, Perú",-13.0491,-71.5365,1494,18.8,-182,-194,-199,,-92,-99,-112,-118,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Anacardiaceae,Tapirira obtusa,,Tree,C3,"Andes, Perú",-13.0491,-71.5365,1494,18.8,-175,-172,-172,,-92,-92,-88,-88,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Hypericaceae,Vismia glaziovii,,Tree,C3,"Andes, Perú",-13.0491,-71.5365,1494,18.8,-203,-208,-193,,-92,-123,-127,-111,,Feakins et al. (2016),,High,High,,T from author; species average for the sample location,RF
+Plantae,Vascular plants,Angiosperm-Dicot,Burseraceae,Boswellia neglecta,,Tree,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,25.5,-129,-137,-139,-137,-4,-123,-132,-121,-131,Griepentrog et al. (2019),,High,High,,T from author; species average for the sample location,SV
+Plantae,Vascular plants,Angiosperm-Dicot,Burseraceae,Commiphora africana,,Shrub,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,25.5,-111,-114,-128,-142,-4,-105,-109,-122,-136,Griepentrog et al. (2019),,High,High,,T from author; species average for the sample location,SV
+Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Enteropogon macrostachyus,,Graminoid,C4,"Lake Chala, TZ/KE",-3.316,37.7,880,25.5,-149,-170,-160,-161,-4,-143,-165,-155,-155,Griepentrog et al. (2019),,High,High,,T from author; species average for the sample location,GR
+Plantae,Vascular plants,Angiosperm-Dicot,Euphorbiaceae,Euphorbia tirucalli,,Shrub,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,25.5,-148,-153,-159,-137,-4,-142,-147,-153,-131,Griepentrog et al. (2019),,High,High,,T from author; species average for the sample location,SV
+Plantae,Vascular plants,Angiosperm-Dicot,Moraceae,Ficus sycomorus,,Tree,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,25.5,,-115,-119,-110,-4,,-110,-113,-104,Griepentrog et al. (2019),,High,High,,T from author; species average for the sample location,SV
+Plantae,Vascular plants,Angiosperm-Dicot,Tiliaceae,Grewia tephrodermis,,Shrub,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,25.5,-100,-112,-104,-122,-4,-94,-106,-98,-116,Griepentrog et al. (2019),,High,High,,T from author; species average for the sample location,SV
+Plantae,Vascular plants,Angiosperm-Dicot,Sapindaceae,Lepisanthes senegalensis,,Tree,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,25.5,,-91,-89,-93,-4,,-85,-83,-87,Griepentrog et al. (2019),,High,High,,T from author; species average for the sample location,SV
+Plantae,Vascular plants,Angiosperm-Dicot,Capparaceae,Maerua sp.,,Shrub,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,25.5,-67,-88,-86,-100,-4,-61,-82,-80,-94,Griepentrog et al. (2019),,High,High,,T from author; species average for the sample location,SV
+Plantae,Vascular plants,Angiosperm-Dicot,Sapotaceae,Sideroxylon sp.,,Tree,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,25.5,-111,-105,-102,-116,-4,-105,-99,-96,-110,Griepentrog et al. (2019),,High,High,,T from author; species average for the sample location,SV
+Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Themeda triandra,,Graminoid,C4,"Lake Chala, TZ/KE",-3.316,37.7,880,25.5,-142,-150,-169,-158,-4,-137,-144,-164,-152,Griepentrog et al. (2019),,High,High,,T from author; species average for the sample location,GR
+Plantae,Vascular plants,Angiosperm-Dicot,Capparaceae,Thylachium africanum,,Shrub,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,25.5,-119,-118,-119,-119,-4,-113,-112,-113,-114,Griepentrog et al. (2019),,High,High,,T from author; species average for the sample location,SV
+Plantae,Vascular plants,Angiosperm-Dicot,Rutaceae,Vepris uguenensis,,Shrub,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,25.5,-142,-154,-141,-135,-4,-136,-148,-135,-130,Griepentrog et al. (2019),,High,High,,T from author; species average for the sample location,SV
+Plantae,Vascular plants,Angiosperm-Dicot,Olacaceae,Ximenia americana,,Shrub,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,25.5,-131,-128,-174,-130,-4,-125,-123,-169,-124,Griepentrog et al. (2019),,High,High,,T from author; species average for the sample location,SV
+Plantae,Vascular plants,Angiosperm-Dicot,Leguminosae,Acacia gerrardii,,Tree,C3,"Lake Chala, TZ/KE",-3.316,37.7,880,25.5,-92,-109,-111,-110,-4,-86,-103,-106,-104,Griepentrog et al. (2019),,High,High,,T from author; species average for the sample location,SV
+Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Acacia kempiana,,Tree,C3,"Alice springs, Australia",-23.7,133.83,598,20.5,,,-87,-86,-31,,,-58,-57,Kahmen et al. (2013b),,High,High,,"T from author, 9 am",SV
+Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Acacia cowleana,,Tree,C3,"Tennant creek, Australia",-19.65,134.16,365,24.1,,,-104,-103,-26,,,-80,-79,Kahmen et al. (2013b),,High,High,,"T from author, 9 am",SV
+Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Acacia colei,,Tree,C3,"Elliott, Australia",-17.5,133.51,234,25.3,,,-115,-116,-29,,,-89,-90,Kahmen et al. (2013b),,High,High,,"T from author, 9 am",SV
+Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Acacia auriculiformis,,Tree,C3,"Darwin, Australia",-12.43,130.88,33,26.7,,-119,-102,,-30,,-92,-74,,Kahmen et al. (2013b),,High,High,,"T from author, 9 am",SV
+Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Aristida latifolia,Feathertop wiregrass,Graminoid,C4,"Queensland, Australia ",-23.22,143.95,191,23.4,-147,-199,-195,,-20,-130,-183,-179,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1950-2009
-Station: LONGREACH AIR",23,0.46,349,43,596,0.6,0.6,43,GR
-178,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Astrebla pectinata,Mitchell grass,Graminoid,C4,"Queensland, Australia ",-23.22,143.95,191,,23.4,-183,-187,-176,,-20,,-166,-170,-159,,-166,-170,-159,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
+Station: LONGREACH AIR",GR
+Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Astrebla pectinata,Mitchell grass,Graminoid,C4,"Queensland, Australia ",-23.22,143.95,191,23.4,-183,-187,-176,,-20,-166,-170,-159,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1950-2009
-Station: LONGREACH AIR",23,0.46,349,43,596,0.6,0.6,43,GR
-179,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Enneapogon avenaceusennial,Bottlewasher grass,Graminoid,C4,"Queensland, Australia ",-23.22,143.95,191,,23.4,,,-174,,-20,,,,-157,,,,-157,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
+Station: LONGREACH AIR",GR
+Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Enneapogon avenaceusennial,Bottlewasher grass,Graminoid,C4,"Queensland, Australia ",-23.22,143.95,191,23.4,,,-174,,-20,,,-157,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1950-2009
-Station: LONGREACH AIR",23,0.46,349,43,596,0.6,0.6,43,GR
-180,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Iseilema sp.,Flinders grass,Graminoid,C4,"Queensland, Australia ",-23.22,143.95,191,,23.4,-151,-154,-169,,-20,,-134,-137,-152,,-134,-137,-152,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
+Station: LONGREACH AIR",GR
+Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Iseilema sp.,Flinders grass,Graminoid,C4,"Queensland, Australia ",-23.22,143.95,191,23.4,-151,-154,-169,,-20,-134,-137,-152,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1950-2009
-Station: LONGREACH AIR",23,0.46,349,43,596,0.6,0.6,43,GR
-181,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Panicum decompositum,Panic grass,Graminoid,C4,"Queensland, Australia ",-23.22,143.95,191,,23.4,,,-151,,-20,,,,-134,,,,-134,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
+Station: LONGREACH AIR",GR
+Plantae,Vascular plants,Angiosperm-Monocot,Poaceae,Panicum decompositum,Panic grass,Graminoid,C4,"Queensland, Australia ",-23.22,143.95,191,23.4,,,-151,,-20,,,-134,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1950-2009
-Station: LONGREACH AIR",23,0.46,349,43,596,0.6,0.6,43,GR
-182,Plantae,Vascular plants,Angiosperm-Monocot,Poaceae ,Sporobolus sp.,na,Graminoid,C4,"Queensland, Australia ",-23.22,143.95,191,,23.4,,-159,-199,,-20,,,-142,-183,,,-142,-183,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
+Station: LONGREACH AIR",GR
+Plantae,Vascular plants,Angiosperm-Monocot,Poaceae ,Sporobolus sp.,na,Graminoid,C4,"Queensland, Australia ",-23.22,143.95,191,23.4,,-159,-199,,-20,,-142,-183,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1950-2009
-Station: LONGREACH AIR",23,0.46,349,43,596,0.6,0.6,43,GR
-174,Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Atalaya hemiglauca,Whitewood,Tree,C3,"Queensland, Australia ",-23.22,143.95,191,,23.4,-168,-158,-154,,-20,,-151,-141,-137,,-151,-141,-137,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
+Station: LONGREACH AIR",GR
+Plantae,Vascular plants,Angiosperm-Dicot,Aceraceae,Atalaya hemiglauca,Whitewood,Tree,C3,"Queensland, Australia ",-23.22,143.95,191,23.4,-168,-158,-154,,-20,-151,-141,-137,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1950-2009
-Station: LONGREACH AIR",22.96,0.46,349,43.28,596,0.59,0.59,42.69,SV
-175,Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae ,Acacia sp.,Acacia,Tree,C3,"Queensland, Australia ",-23.22,143.95,191,,23.4,-105,-117,-93,,-20,,-87,-99,-74,,-87,-99,-74,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
+Station: LONGREACH AIR",SV
+Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae ,Acacia sp.,Acacia,Tree,C3,"Queensland, Australia ",-23.22,143.95,191,23.4,-105,-117,-93,,-20,-87,-99,-74,,Krull et al. (2006),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1950-2009
-Station: LONGREACH AIR",22.96,0.46,349,43.28,596,0.59,0.59,42.69,SV
-200,Plantae,Vascular plants,Angiosperm-Monocot,na,na,na,Graminoid,C4,"Sanya, China",18.22,109.5,1,,26.2,-171,-171,-163,,-39,,-137,-137,-129,,-137,-137,-129,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+Station: LONGREACH AIR",SV
+Plantae,Vascular plants,Angiosperm-Monocot,na,na,na,Graminoid,C4,"Sanya, China",18.22,109.5,1,26.2,-171,-171,-163,,-39,-137,-137,-129,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1959-1990
-Station:YAXIAN",25.2,0.84,1687,113,1578,1.1,1.1,112,GR
-201,Plantae,Vascular plants,Angiosperm-Monocot,na,na,na,Graminoid,C4,"Sanya, China",18.22,109.5,1,,26.2,-148,-148,-151,,-39,,-113,-113,-117,,-113,-113,-117,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+Station:YAXIAN",GR
+Plantae,Vascular plants,Angiosperm-Monocot,na,na,na,Graminoid,C4,"Sanya, China",18.22,109.5,1,26.2,-148,-148,-151,,-39,-113,-113,-117,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1959-1990
-Station:YAXIAN",25.2,0.84,1687,113,1578,1.1,1.1,112,GR
-202,Plantae,Vascular plants,Angiosperm-Monocot,na,na,na,Graminoid,C4,"Sanya, China",18.22,109.5,1,,26.2,,,-152,,-39,,,,-118,,,,-118,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+Station:YAXIAN",GR
+Plantae,Vascular plants,Angiosperm-Monocot,na,na,na,Graminoid,C4,"Sanya, China",18.22,109.5,1,26.2,,,-152,,-39,,,-118,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1959-1990
-Station:YAXIAN",25.2,0.84,1687,113,1578,1.1,1.1,112,GR
-203,Plantae,Vascular plants,Angiosperm-Monocot,na,na,na,Graminoid,C4,"Sanya, China",18.22,109.5,1,,26.2,-165,-175,-178,,-39,,-131,-142,-145,,-131,-142,-145,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+Station:YAXIAN",GR
+Plantae,Vascular plants,Angiosperm-Monocot,na,na,na,Graminoid,C4,"Sanya, China",18.22,109.5,1,26.2,-165,-175,-178,,-39,-131,-142,-145,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1959-1990
-Station:YAXIAN",25.2,0.84,1687,113,1578,1.1,1.1,112,GR
-188,Plantae,Vascular plants,Angiosperm-Dicot,Bignoniaceae,Spathodea campanulata,African tuliptree,Tree,C3,"Sanya, China",18.22,109.5,1,,26.2,-139,-140,-134,,-39,,-104,-105,-99,,-104,-105,-99,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+Station:YAXIAN",GR
+Plantae,Vascular plants,Angiosperm-Dicot,Bignoniaceae,Spathodea campanulata,African tuliptree,Tree,C3,"Sanya, China",18.22,109.5,1,26.2,-139,-140,-134,,-39,-104,-105,-99,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1959-1990
-Station:YAXIAN",25.25,0.84,1687,113.4,1578,1.07,1.07,112.33,RF
-189,Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Tamarindus indica Linn.,Tamarind,Tree,C3,"Sanya, China",18.22,109.5,1,,26.2,-154,-154,-165,,-39,,-120,-120,-131,,-120,-120,-131,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+Station:YAXIAN",RF
+Plantae,Vascular plants,Angiosperm-Dicot,Fabaceae,Tamarindus indica Linn.,Tamarind,Tree,C3,"Sanya, China",18.22,109.5,1,26.2,-154,-154,-165,,-39,-120,-120,-131,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1959-1990
-Station:YAXIAN",25.25,0.84,1687,113.4,1578,1.07,1.07,112.33,RF
-190,Plantae,Vascular plants,Angiosperm-Dicot,Magnoliaceae  ,Michelia alba,na,Tree,C3,"Sanya, China",18.22,109.5,1,,26.2,-174,-186,-188,,-39,,-140,-153,-155,,-140,-153,-155,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+Station:YAXIAN",RF
+Plantae,Vascular plants,Angiosperm-Dicot,Magnoliaceae  ,Michelia alba,na,Tree,C3,"Sanya, China",18.22,109.5,1,26.2,-174,-186,-188,,-39,-140,-153,-155,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1959-1990
-Station:YAXIAN",25.25,0.84,1687,113.4,1578,1.07,1.07,112.33,RF
-194,Plantae,Vascular plants,na,na,na,na,Tree,C3,"Sanya, China",18.22,109.5,1,,26.2,,-131,-132,,-39,,,-96,-97,,,-96,-97,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+Station:YAXIAN",RF
+Plantae,Vascular plants,na,na,na,na,Tree,C3,"Sanya, China",18.22,109.5,1,26.2,,-131,-132,,-39,,-96,-97,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1959-1990
-Station:YAXIAN",25.25,0.84,1687,113.4,1578,1.07,1.07,112.33,RF
-195,Plantae,Vascular plants,na,na,na,na,Tree,C3,"Sanya, China",18.22,109.5,1,,26.2,,-144,-149,,-39,,,-109,-114,,,-109,-114,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+Station:YAXIAN",RF
+Plantae,Vascular plants,na,na,na,na,Tree,C3,"Sanya, China",18.22,109.5,1,26.2,,-144,-149,,-39,,-109,-114,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1959-1990
-Station:YAXIAN",25.25,0.84,1687,113.4,1578,1.07,1.07,112.33,RF
-196,Plantae,Vascular plants,na,na,na,na,Tree,C3,"Sanya, China",18.22,109.5,1,,26.2,-140,-159,-143,,-39,,-105,-125,-108,,-105,-125,-108,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+Station:YAXIAN",RF
+Plantae,Vascular plants,na,na,na,na,Tree,C3,"Sanya, China",18.22,109.5,1,26.2,-140,-159,-143,,-39,-105,-125,-108,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1959-1990
-Station:YAXIAN",25.25,0.84,1687,113.4,1578,1.07,1.07,112.33,RF
-198,Plantae,Vascular plants,na,na,na,na,Tree,C3,"Sanya, China",18.22,109.5,1,,26.2,-134,-134,-141,,-39,,-99,-99,-106,,-99,-99,-106,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+Station:YAXIAN",RF
+Plantae,Vascular plants,na,na,na,na,Tree,C3,"Sanya, China",18.22,109.5,1,26.2,-134,-134,-141,,-39,-99,-99,-106,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1959-1990
-Station:YAXIAN",25.25,0.84,1687,113.4,1578,1.07,1.07,112.33,RF
-199,Plantae,Vascular plants,na,na,na,na,Tree,C3,"Sanya, China",18.22,109.5,1,,26.2,-163,-160,-170,,-39,,-129,-126,-136,,-129,-126,-136,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+Station:YAXIAN",RF
+Plantae,Vascular plants,na,na,na,na,Tree,C3,"Sanya, China",18.22,109.5,1,26.2,-163,-160,-170,,-39,-129,-126,-136,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1959-1990
-Station:YAXIAN",25.25,0.84,1687,113.4,1578,1.07,1.07,112.33,RF
-191,Plantae,Vascular plants,Angiosperm-Dicot,Moraceae,Artocarpus heterophyllus Lam.,na,Shrub,C3,"Sanya, China",18.22,109.5,1,,26.2,-119,-119,-130,,-39,,-83,-83,-95,,-83,-83,-95,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+Station:YAXIAN",RF
+Plantae,Vascular plants,Angiosperm-Dicot,Moraceae,Artocarpus heterophyllus Lam.,na,Shrub,C3,"Sanya, China",18.22,109.5,1,26.2,-119,-119,-130,,-39,-83,-83,-95,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1959-1990
-Station:YAXIAN",25.25,0.84,1687,113.4,1578,1.07,1.07,112.33,RF
-197,Plantae,Vascular plants,na,na,na,na,Shrub,C3,"Sanya, China",18.22,109.5,1,,26.2,,-129,-147,,-39,,,-94,-112,,,-94,-112,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
+Station:YAXIAN",RF
+Plantae,Vascular plants,na,na,na,na,Shrub,C3,"Sanya, China",18.22,109.5,1,26.2,,-129,-147,,-39,,-94,-112,,Liu & Yang (2008),,High,Low,,"T data from http://climexp.knmi.nl/
 mean of annual averages 1959-1990
-Station:YAXIAN",25.25,0.84,1687,113.4,1578,1.07,1.07,112.33,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Clusiaceae,Clusia sp.,,Tree/shrub,C3,"Andes, Perú",-13.1751,-71.5948,2868,,13.1,-195,-204,-196,,-114,-93,-92,-102,-93,,-113,-123,-114,,"Feakins et al., 2016",,,,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Sabiaceae,Meliosma frondosa,,Tree/shrub,C3,"Andes, Perú",-13.1751,-71.5948,2868,,13.1,-213,-212,-210,,-114,-93,-112,-110,-108,,-133,-131,-129,,"Feakins et al., 2016",,,,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Melastomataceae,Miconia micropetala,,Tree/shrub,C3,"Andes, Perú",-13.1751,-71.5948,2868,,13.1,-226,-234,-225,,-114,-93,-126,-136,-126,,-147,-156,-146,,"Feakins et al., 2016",,,,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Primulaceae,Myrsine coriacea,,Tree/shrub,C3,"Andes, Perú",-13.1751,-71.5948,2868,,13.1,-239,-229,-229,,-114,-93,-141,-129,-130,,-162,-150,-150,,"Feakins et al., 2016",,,,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Symplocaceae,Symplocos reflexa,,Tree/shrub,C3,"Andes, Perú",-13.1751,-71.5948,2868,,13.1,-194,-195,-202,-201,-114,-93,-90,-92,-100,-98,-112,-113,-121,-119,"Feakins et al., 2016",,,,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Cunoniaceae,Weinmannia bangii,,Tree/shrub,C3,"Andes, Perú",-13.1751,-71.5948,2868,,13.1,-189,-205,-202,,-114,-93,-85,-103,-99,,-106,-124,-120,,"Feakins et al., 2016",,,,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Cunoniaceae,Weinmannia crassifolia,,Tree/shrub,C3,"Andes, Perú",-13.1751,-71.5948,2868,,13.1,-242,-231,,,-114,-93,-144,-132,,,-164,-153,,,"Feakins et al., 2016",,,,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Sapotaceae,Chrysophyllum sp.,,Tree/shrub,C3,"Andes, Perú",-13.0475,-71.5423,1713,,17.4,-146,-151,-147,,-95,-70,-57,-62,-58,,-82,-88,-83,,"Feakins et al., 2016",,,,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Clusiaceae,Clusia elliptica,,Tree/shrub,C3,"Andes, Perú",-13.0475,-71.5423,1713,,17.4,-201,-199,-191,,-95,-70,-117,-115,-106,,-141,-139,-131,,"Feakins et al., 2016",,,,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Araliaceae,Dendropanax tessmannii,,Tree/shrub,C3,"Andes, Perú",-13.0475,-71.5423,1713,,17.4,,-175,-168,,-95,-70,,-89,-81,,,-113,-106,,"Feakins et al., 2016",,,,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Rubiaceae,Elaeagia mariae,,Tree/shrub,C3,"Andes, Perú",-13.0475,-71.5423,1713,,17.4,-186,-179,-163,,-95,-70,-100,-93,-76,,-125,-118,-101,,"Feakins et al., 2016",,,,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Euphorbiaceae,Alchornea latifolia,,Tree/shrub,C3,"Andes, Perú",-13.0491,-71.5365,1494,,18.8,-189,-197,-198,,-92,-64,-107,-115,-117,,-133,-141,-143,,"Feakins et al., 2016",,,,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Moraceae,Helicostylis tovarensis,,Tree/shrub,C3,"Andes, Perú",-13.0491,-71.5365,1494,,18.8,-173,-183,-182,,-92,-64,-89,-100,-99,,-116,-126,-125,,"Feakins et al., 2016",,,,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Phyllanthaceae,Hieronyma macrocarpa,,Tree/shrub,C3,"Andes, Perú",-13.0491,-71.5365,1494,,18.8,,-150,-147,,-92,-64,,-64,-60,,,-92,-88,,"Feakins et al., 2016",,,,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Monimiaceae,Mollinedia lanceolata,,Tree/shrub,C3,"Andes, Perú",-13.0491,-71.5365,1494,,18.8,-182,-194,-199,,-92,-64,-99,-112,-118,,-125,-139,-144,,"Feakins et al., 2016",,,,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Anacardiaceae,Tapirira obtusa,,Tree/shrub,C3,"Andes, Perú",-13.0491,-71.5365,1494,,18.8,-175,-172,-172,,-92,-64,-92,-88,-88,,-118,-115,-115,,"Feakins et al., 2016",,,,,T from author,,,,,,,,,RF
-,Plantae,Vascular plants,Angiosperm-Dicot,Hypericaceae,Vismia glaziovii,,Tree/shrub,C3,"Andes, Perú",-13.0491,-71.5365,1494,,18.8,-203,-208,-193,,-92,-64,-123,-127,-111,,-149,-153,-137,,"Feakins et al., 2016",,,,,T from author,,,,,,,,,RF
+Station:YAXIAN",RF
