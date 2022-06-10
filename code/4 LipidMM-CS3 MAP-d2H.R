@@ -7,6 +7,7 @@ library(viridisLite)
 library(EnvStats)
 library(bayestestR)
 
+
 setwd("C:/Users/ydmag/Google Drive/U of U/Proxy project/LipidMM")
 plot.col<-viridis(7)
 
@@ -131,215 +132,38 @@ I <- 3  #number of sources
 N <- 4  #number of chains
 K <- 50 #number of grams of leaves to integrate per source
 
-#common MCMC parameters
-n.iter = 8e5
+#common MCMC parameters, 5 parallel chains are used
+n.iter = 1e6
 n.burnin = 2e5
-n.thin = floor(n.iter-n.burnin)/2500
-#average runtime is ~4 hours/sample
-
-#MAP reconstruction based on Core GIK16160-3, Zambezi River mouth, Wang et al. 2013 
-####first data point: LGM (20.1 ka), HS1 (16.1 ka), YD (12.1 Ka), Holocene (2.15 Ka)
+n.thin = floor(n.iter-n.burnin)/1500
+#average runtime is ~8 hours/sample
 
 
-#relative abundance among the three chains from raw concentration values
-#in the order of n-C27, n-C29, n-C31, n-C33
-RA.LGM <- c(195.9, 430.3, 465, 313.3)/(195.9 + 430.3 + 465 + 313.3)
-
-#d2H, 
-d2H.LGM <- c(-146.2, -141.3, -154.3, -158.9)
-#use ice volume correcte values
-d2H.LGM.ivc <- c(-153.1, -148.3, -161.2, -165.7)
-
-#analytical precision
-d2H.sd.LGM <- c(1.2, 0.6, 1, 0.9)
-
-#d13C
-d13C.LGM <- c(-26.9, -29.8, -27.8, -24.9)
-
-#analytical precision
-d13C.sd.LGM <- c(0.1, 0.1, 0.1, 0.2)
-
-###correction for atm CO2 d13C, should set it as a parameter?
-#-8.3 year 2010 (Graven et al 2017)
-#-6.5 LGM (Schmitt et al 2012)
-Afr.d13C.mu.cor <- Afr.d13C.mu + 8.3 - 6.5 
-
-##Data to pass to the model
-#prior parameters in the first three lines
-#model parameters in the fourth
-#data in the fifth and sixth lines
-dat = list(d13C.mu.est = Afr.d13C.mu.cor, d13C.omega.est = Afr.d13C.vcov,
-           conc.mu.est = Afr.conc.mu, conc.omega.est = Afr.conc.vcov, 
-           epsilon.app.mu.est = map_rec.epsilon.app.mu, epsilon.app.omega.est = map_rec.epsilon.app.vcov,
-           I = I, N = N, K = K, 
-           RA.mix = RA.LGM, d13C.mix = d13C.LGM, d13C.mea.sd = d13C.sd.LGM,
-           d2H.mix = d2H.LGM.ivc, d2H.mea.sd = d2H.sd.LGM)
-
-#model parameters to save
-parameters <- c("d13C.mix.m","RA.mix.m", "FLMC","f.sum.conc_n_i","exp.conc_k","d13C.k",
-                "d2H.mix.m", "d2H.k", "d2H.MAP", "epsilon.app.k")
-
-#Start time
-t1 = proc.time()
-
-set.seed(t1[3])
-#Run it
-Wang.LGM.4ch = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinorm-plus-d2H.R", 
-                                          parameters.to.save = parameters, 
-                                          data = dat, n.chains = 3, n.iter = n.iter, 
-                                          n.burnin = n.burnin, n.thin = n.thin))
-
-#Time taken
-proc.time() - t1 #~5 hours
-
-#use rhat to check convergence
-Wang.LGM.4ch$BUGSoutput$summary[1:3,]
-#traceplots
-traplot(Wang.LGM.4ch, parms = "FLMC")
-
-save(Wang.LGM.4ch, file = "out/Wang_LGM_results.RData")
-
-#relative abundance among the three chains from raw concentration values
-#in the order of n-C27, n-C29, n-C31, n-C33
-
-RA.HS1 <- c(305.8, 962.3, 885.9, 473.2)/(305.8 + 962.3 + 885.9 + 473.2)
-
-#d2H
-d2H.HS1 <- c(-142.3, -137.3, -148.2, -152.5)
-#use ice volume correcte values
-d2H.HS1.ivc <- c(-148.6, -143.6, -154.4, -158.7)
-
-#analytical precision
-d2H.sd.HS1 <- c(0.7, 0.2, 0.4, 0.6)
-
-#d13C
-d13C.HS1 <- c(-28.6, -31.8, -30.3, -27)
-
-#analytical precision
-d13C.sd.HS1 <- c(0.2, 0.1, 0.1, 0.1)
-
-###correction for atm CO2 d13C, should set it as a parameter?
-#-8.3 year 2010 (Graven et al 2017)
-#-6.7 HS1 (Schmitt et al 2012)
-Afr.d13C.mu.cor <- Afr.d13C.mu + 8.3 - 6.7 
-
-##Data to pass to the model
-#prior parameters in the first three lines
-#model parameters in the fourth
-#data in the fifth and sixth lines
-dat = list(d13C.mu.est = Afr.d13C.mu.cor, d13C.omega.est = Afr.d13C.vcov,
-           conc.mu.est = Afr.conc.mu, conc.omega.est = Afr.conc.vcov, 
-           epsilon.app.mu.est = map_rec.epsilon.app.mu, epsilon.app.omega.est = map_rec.epsilon.app.vcov,
-           I = I, N = N, K = K, 
-           RA.mix = RA.HS1, d13C.mix = d13C.HS1, d13C.mea.sd = d13C.sd.HS1,
-           d2H.mix = d2H.HS1.ivc, d2H.mea.sd = d2H.sd.HS1)
-
-#model parameters to save
-parameters <- c("d13C.mix.m","RA.mix.m", "FLMC","f.sum.conc_n_i","exp.conc_k","d13C.k",
-                "d2H.mix.m", "d2H.k", "d2H.MAP", "epsilon.app.k")
-
-#Start time
-t1 = proc.time()
-
-set.seed(t1[3])
-#Run it
-Wang.HS1.4ch = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinorm-plus-d2H.R", 
-                                          parameters.to.save = parameters, 
-                                          data = dat, n.chains = 3, n.iter = n.iter, 
-                                          n.burnin = n.burnin, n.thin = n.thin))
-
-#Time taken
-proc.time() - t1
-
-#use rhat to check convergence
-Wang.HS1.4ch$BUGSoutput$summary[1:3,]
-#traceplots
-traplot(Wang.HS1.4ch, parms = "FLMC")
-
-save(Wang.HS1.4ch, file = "out/Wang_HS1_results.RData")
-
-#relative abundance among the three chains from raw concentration values
-#in the order of n-C27, n-C29, n-C31, n-C33
-
-RA.YD <- c(146, 308, 343.2, 246.5)/(146 + 308 + 343.2 + 246.5)
-
-#d2H 
-d2H.YD <- c(-139.1, -138.8, -145.6, -147)
-#use ice volume correcte values
-d2H.YD.ivc <- c(-142, -141.8, -148.5, -149.9)
-
-#analytical precision
-d2H.sd.YD <- c(1.3, 0.7, 0.7, 1)
-
-#d13C
-d13C.YD <- c(-29.4, -30.1, -29.8, -27.9)
-
-#analytical precision
-d13C.sd.YD <- c(0.2, 0.1, 0.1, 0.2)
-
-###correction for atm CO2 d13C, should set it as a parameter?
-#-8.3 year 2010 (Graven et al 2017)
-#-6.7 YD (Schmitt et al 2012)
-Afr.d13C.mu.cor <- Afr.d13C.mu + 8.3 - 6.7 
-
-##Data to pass to the model
-#prior parameters in the first three lines
-#model parameters in the fourth
-#data in the fifth and sixth lines
-dat = list(d13C.mu.est = Afr.d13C.mu.cor, d13C.omega.est = Afr.d13C.vcov,
-           conc.mu.est = Afr.conc.mu, conc.omega.est = Afr.conc.vcov, 
-           epsilon.app.mu.est = map_rec.epsilon.app.mu, epsilon.app.omega.est = map_rec.epsilon.app.vcov,
-           I = I, N = N, K = K, 
-           RA.mix = RA.YD, d13C.mix = d13C.YD, d13C.mea.sd = d13C.sd.YD,
-           d2H.mix = d2H.YD.ivc, d2H.mea.sd = d2H.sd.YD)
-
-#model parameters to save
-parameters <- c("d13C.mix.m","RA.mix.m", "FLMC","f.sum.conc_n_i","exp.conc_k","d13C.k",
-                "d2H.mix.m", "d2H.k", "d2H.MAP", "epsilon.app.k")
-
-#Start time
-t1 = proc.time()
-
-set.seed(t1[3])
-#Run it
-Wang.YD.4ch = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinorm-plus-d2H.R", 
-                                          parameters.to.save = parameters, 
-                                          data = dat, n.chains = 3, n.iter = n.iter, 
-                                          n.burnin = n.burnin, n.thin = n.thin))
-
-#Time taken
-proc.time() - t1
-
-#use rhat to check convergence
-Wang.YD.4ch$BUGSoutput$summary[1:3,]
-#traceplots
-traplot(Wang.YD.4ch, parms = "FLMC")
-
-save(Wang.YD.4ch, file = "out/Wang_YD_results.RData")
-
-######2.1 Ka#####
+######1st data point: 33.5 Ka#####
 #relative abundance among the three chains from raw concentration values
 #in the order of n-C27, n-C29, n-C31, c-C33
 
-RA.Ho2.1ka <- c(102.6, 199.8, 223.1, 162.3)/(102.6 + 199.8 + 223.1 + 162.3)
+RA.33.5ka <- c(226, 429.6, 539.6, 452.9)/(226 + 429.6 + 539.6 + 452.9)
 
 #d2H
-d2H.Ho2.1ka <- c(-148.1, -146.7, -154.7, -155.7)
+d2H.33.5ka <- c(-145.3, -143.4, -154.6, -161)
 #use ice volume correcte values
-d2H.Ho2.1ka.ivc <- c(-148.3, -146.9, -154.9, -155.8)
+d2H.33.5ka.ivc <- c(-150.5, -148.7, -159.8, -166.2)
 
 #analytical precision
-d2H.sd.Ho2.1ka <- c(0.6, 0.5, 0.3, 0.5)
+d2H.sd.33.5ka <- c(0.9, 0.4, 0.3, 0.5)
 
 #d13C
-d13C.Ho2.1ka <- c(-29.1, -30.2, -30.1, -27.8)
+d13C.33.5ka <- c(-26.5, -28, -26.2, -23.6)
 
 #analytical precision
-d13C.sd.Ho2.1ka <- c(0.2, 0.2, 0.2, 0.2)
+d13C.sd.33.5ka <- c(0.1, 0.1, 0.1, 0.1)
 
 ###correction for atm CO2 d13C, should set it as a parameter?
 #-8.3 year 2010 (Graven et al 2017)
-#-6.4 Holocene 2.1 Ka (Schmitt et al 2012)
+#no data on 33.5 Ka, so -6.4 is used here as an approximate value
+#according to Schmitt et al 2012, the values don't vary too much, at +- 0.2 per mil
+#so this should have a very minor effect on the reconstructed vegetation
 Afr.d13C.mu.cor <- Afr.d13C.mu + 8.3 - 6.4 
 
 ##Data to pass to the model
@@ -350,8 +174,8 @@ dat = list(d13C.mu.est = Afr.d13C.mu.cor, d13C.omega.est = Afr.d13C.vcov,
            conc.mu.est = Afr.conc.mu, conc.omega.est = Afr.conc.vcov, 
            epsilon.app.mu.est = map_rec.epsilon.app.mu, epsilon.app.omega.est = map_rec.epsilon.app.vcov,
            I = I, N = N, K = K, 
-           RA.mix = RA.Ho2.1ka, d13C.mix = d13C.Ho2.1ka, d13C.mea.sd = d13C.sd.Ho2.1ka,
-           d2H.mix = d2H.Ho2.1ka.ivc, d2H.mea.sd = d2H.sd.Ho2.1ka)
+           RA.mix = RA.33.5ka, d13C.mix = d13C.33.5ka, d13C.mea.sd = d13C.sd.33.5ka,
+           d2H.mix = d2H.33.5ka.ivc, d2H.mea.sd = d2H.sd.33.5ka)
 
 #model parameters to save
 parameters <- c("d13C.mix.m","RA.mix.m", "FLMC","f.sum.conc_n_i","exp.conc_k","d13C.k",
@@ -362,34 +186,84 @@ t1 = proc.time()
 
 set.seed(t1[3])
 #Run it
-Wang.Ho2.1ka.4ch = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinorm-plus-d2H.R", 
-                                              parameters.to.save = parameters, 
-                                              data = dat, n.chains = 3, n.iter = n.iter, 
-                                              n.burnin = n.burnin, n.thin = n.thin))
+Wang.33.5ka.4ch = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinorm-plus-d2H.R", 
+                                             parameters.to.save = parameters, 
+                                             data = dat, n.chains = 5, n.iter = n.iter, 
+                                             n.burnin = n.burnin, n.thin = n.thin))
 
 #Time taken
 proc.time() - t1
 
 #use rhat to check convergence
-Wang.Ho2.1ka.4ch$BUGSoutput$summary[1:3,]
+Wang.33.5ka.4ch$BUGSoutput$summary[1:3,]
 #traceplots
-traplot(Wang.Ho2.1ka.4ch, parms = "FLMC")
+traplot(Wang.33.5ka.4ch, parms = "FLMC")
 
-save(Wang.Ho2.1ka.4ch, file = "out/Wang_Ho2.1ka_results.RData")
+save(Wang.33.5ka.4ch, file = "out/Wang_33.5ka_results.RData")
 
-#######model parameters#####
-#initialize parameters
-I <- 3  #number of sources
-N <- 4  #number of chains
-K <- 50 #number of grams of leaves to integrate per source
+######2nd data point: 30.0 Ka#####
+#relative abundance among the three chains from raw concentration values
+#in the order of n-C27, n-C29, n-C31, c-C33
 
-#common MCMC parameters
-n.iter = 8e5
-n.burnin = 2e5
-n.thin = floor(n.iter-n.burnin)/2500
-#average runtime is ~4 hours/sample
+RA.30.0ka <- c(194.9, 409.8, 481.9, 386.3)/(194.9 + 409.8 + 481.9 + 386.3)
 
-######22.7 Ka, LGM#####
+#d2H
+d2H.30.0ka <- c(-141.9, -141, -152.2, -159.7)
+#use ice volume correcte values
+d2H.30.0ka.ivc <- c(-147.5, -146.7, -157.8, -165.3)
+
+#analytical precision
+d2H.sd.30.0ka <- c(0.7, 0.5, 0.5, 0.5)
+
+#d13C
+d13C.30.0ka <- c(-26.5, -28.4, -26.2, -24)
+
+#analytical precision
+d13C.sd.30.0ka <- c(0.2, 0.04, 0.2, 0.1)
+
+###correction for atm CO2 d13C, should set it as a parameter?
+#-8.3 year 2010 (Graven et al 2017)
+#no data on 30.0 Ka, so -6.4 is used here as an approximate value
+#according to Schmitt et al 2012, the values don't vary too much, at +- 0.2 per mil
+#so this should have a very minor effect on the reconstructed vegetation
+Afr.d13C.mu.cor <- Afr.d13C.mu + 8.3 - 6.4 
+
+##Data to pass to the model
+#prior parameters in the first three lines
+#model parameters in the fourth
+#data in the fifth and sixth lines
+dat = list(d13C.mu.est = Afr.d13C.mu.cor, d13C.omega.est = Afr.d13C.vcov,
+           conc.mu.est = Afr.conc.mu, conc.omega.est = Afr.conc.vcov, 
+           epsilon.app.mu.est = map_rec.epsilon.app.mu, epsilon.app.omega.est = map_rec.epsilon.app.vcov,
+           I = I, N = N, K = K, 
+           RA.mix = RA.30.0ka, d13C.mix = d13C.30.0ka, d13C.mea.sd = d13C.sd.30.0ka,
+           d2H.mix = d2H.30.0ka.ivc, d2H.mea.sd = d2H.sd.30.0ka)
+
+#model parameters to save
+parameters <- c("d13C.mix.m","RA.mix.m", "FLMC","f.sum.conc_n_i","exp.conc_k","d13C.k",
+                "d2H.mix.m", "d2H.k", "d2H.MAP", "epsilon.app.k")
+
+#Start time
+t1 = proc.time()
+
+set.seed(t1[3])
+#Run it
+Wang.30.0ka.4ch = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinorm-plus-d2H.R", 
+                                             parameters.to.save = parameters, 
+                                             data = dat, n.chains = 5, n.iter = n.iter, 
+                                             n.burnin = n.burnin, n.thin = n.thin))
+
+#Time taken
+proc.time() - t1
+
+#use rhat to check convergence
+Wang.30.0ka.4ch$BUGSoutput$summary[1:3,]
+#traceplots
+traplot(Wang.30.0ka.4ch, parms = "FLMC")
+
+save(Wang.30.0ka.4ch, file = "out/Wang_30.0ka_results.RData")
+
+######3rd data point: 22.7 Ka, LGM#####
 #relative abundance among the three chains from raw concentration values
 #in the order of n-C27, n-C29, n-C31, c-C33
 
@@ -413,11 +287,6 @@ d13C.sd.22.7ka <- c(0.2, 0.1, 0.1, 0.2)
 #-8.3 year 2010 (Graven et al 2017)
 #-6.45 22.7 Ka (Schmitt et al 2012)
 Afr.d13C.mu.cor <- Afr.d13C.mu + 8.3 - 6.45 
-
-n.iter = 1e6
-n.burnin = 2e5
-n.thin = floor(n.iter-n.burnin)/1500
-#average runtime is ~4 hours/sample
 
 ##Data to pass to the model
 #prior parameters in the first three lines
@@ -454,7 +323,7 @@ traplot(Wang.22.7ka.4ch, parms = "FLMC")
 
 save(Wang.22.7ka.4ch, file = "out/Wang_22.7ka_results.RData")
 
-######15.8 Ka, HS1#####
+######4th data point: 15.8 Ka, HS1#####
 #relative abundance among the three chains from raw concentration values
 #in the order of n-C27, n-C29, n-C31, c-C33
 
@@ -501,7 +370,7 @@ set.seed(t1[3])
 #Run it
 Wang.15.8ka.4ch = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinorm-plus-d2H.R", 
                                              parameters.to.save = parameters, 
-                                             data = dat, n.chains = 3, n.iter = n.iter, 
+                                             data = dat, n.chains = 5, n.iter = n.iter, 
                                              n.burnin = n.burnin, n.thin = n.thin))
 
 #Time taken
@@ -514,7 +383,7 @@ traplot(Wang.15.8ka.4ch, parms = "FLMC")
 
 save(Wang.15.8ka.4ch, file = "out/Wang_15.8ka_results.RData")
 
-######~13.8 Ka, #####
+######5th data point: ~13.8 Ka, #####
 #relative abundance among the three chains from raw concentration values
 #in the order of n-C27, n-C29, n-C31, c-C33
 
@@ -561,7 +430,7 @@ set.seed(t1[3])
 #Run it
 Wang.13.8ka.4ch = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinorm-plus-d2H.R", 
                                             parameters.to.save = parameters, 
-                                            data = dat, n.chains = 3, n.iter = n.iter, 
+                                            data = dat, n.chains = 5, n.iter = n.iter, 
                                             n.burnin = n.burnin, n.thin = n.thin))
 
 #Time taken
@@ -574,7 +443,7 @@ traplot(Wang.13.8ka.4ch, parms = "FLMC")
 
 save(Wang.13.8ka.4ch, file = "out/Wang_13.8ka_results.RData")
 
-######~10.6 Ka, #####
+######6th data point: ~10.6 Ka, #####
 #relative abundance among the three chains from raw concentration values
 #in the order of n-C27, n-C29, n-C31, c-C33
 
@@ -621,7 +490,7 @@ set.seed(t1[3])
 #Run it
 Wang.10.6ka.4ch = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinorm-plus-d2H.R", 
                                              parameters.to.save = parameters, 
-                                             data = dat, n.chains = 3, n.iter = n.iter, 
+                                             data = dat, n.chains = 5, n.iter = n.iter, 
                                              n.burnin = n.burnin, n.thin = n.thin))
 
 #Time taken
@@ -634,7 +503,7 @@ traplot(Wang.10.6ka.4ch, parms = "FLMC")
 
 save(Wang.10.6ka.4ch, file = "out/Wang_10.6ka_results.RData")
 
-######7.8 Ka, #####
+######7th data point: 7.8 Ka, #####
 #relative abundance among the three chains from raw concentration values
 #in the order of n-C27, n-C29, n-C31, c-C33
 
@@ -681,7 +550,7 @@ set.seed(t1[3])
 #Run it
 Wang.7.8ka.4ch = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinorm-plus-d2H.R", 
                                              parameters.to.save = parameters, 
-                                             data = dat, n.chains = 3, n.iter = n.iter, 
+                                             data = dat, n.chains = 5, n.iter = n.iter, 
                                              n.burnin = n.burnin, n.thin = n.thin))
 
 #Time taken
@@ -694,7 +563,7 @@ traplot(Wang.7.8ka.4ch, parms = "FLMC")
 
 save(Wang.7.8ka.4ch, file = "out/Wang_7.8ka_results.RData")
 
-######4.0 Ka, #####
+######8th data point: 4.0 Ka, #####
 #relative abundance among the three chains from raw concentration values
 #in the order of n-C27, n-C29, n-C31, c-C33
 
@@ -741,7 +610,7 @@ set.seed(t1[3])
 #Run it
 Wang.4.0ka.4ch = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinorm-plus-d2H.R", 
                                             parameters.to.save = parameters, 
-                                            data = dat, n.chains = 3, n.iter = n.iter, 
+                                            data = dat, n.chains = 5, n.iter = n.iter, 
                                             n.burnin = n.burnin, n.thin = n.thin))
 
 #Time taken
@@ -754,7 +623,7 @@ traplot(Wang.4.0ka.4ch, parms = "FLMC")
 
 save(Wang.4.0ka.4ch, file = "out/Wang_4.0ka_results.RData")
 
-######0.9 Ka, #####
+######9th data point: 0.9 Ka, #####
 #relative abundance among the three chains from raw concentration values
 #in the order of n-C27, n-C29, n-C31, c-C33
 
@@ -801,7 +670,7 @@ set.seed(t1[3])
 #Run it
 Wang.0.9ka.4ch = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinorm-plus-d2H.R", 
                                             parameters.to.save = parameters, 
-                                            data = dat, n.chains = 3, n.iter = n.iter, 
+                                            data = dat, n.chains = 5, n.iter = n.iter, 
                                             n.burnin = n.burnin, n.thin = n.thin))
 
 #Time taken
@@ -815,229 +684,74 @@ traplot(Wang.0.9ka.4ch, parms = "FLMC")
 save(Wang.0.9ka.4ch, file = "out/Wang_0.9ka_results.RData")
 
 #### MAPs, medians, and 89% HDIs ####
-Wang.22.7ka.GR.map <- map_estimate(Wang.22.7ka.4ch$BUGSoutput$sims.list$FLMC[,1], method = "KernSmooth")
-Wang.22.7ka.GR.median <- median(Wang.22.7ka.4ch$BUGSoutput$sims.list$FLMC[,1])
-Wang.22.7ka.GR.hdi <- hdi(Wang.22.7ka.4ch$BUGSoutput$sims.list$FLMC[,1], ci = .89)
+Wang.33.5ka.GR <- MAP_HDI89(Wang.33.5ka.4ch$BUGSoutput$sims.list$FLMC[,1])
+Wang.33.5ka.SV <- MAP_HDI89(Wang.33.5ka.4ch$BUGSoutput$sims.list$FLMC[,2])
+Wang.33.5ka.RF <- MAP_HDI89(Wang.33.5ka.4ch$BUGSoutput$sims.list$FLMC[,3])
+Wang.33.5ka.d2H.MAP <- MAP_HDI89(Wang.33.5ka.4ch$BUGSoutput$sims.list$d2H.MAP)
 
-Wang.22.7ka.SV.map <- map_estimate(Wang.22.7ka.4ch$BUGSoutput$sims.list$FLMC[,2], method = "KernSmooth")
-Wang.22.7ka.SV.median <- median(Wang.22.7ka.4ch$BUGSoutput$sims.list$FLMC[,2])
-Wang.22.7ka.SV.hdi <- hdi(Wang.22.7ka.4ch$BUGSoutput$sims.list$FLMC[,2], ci = .89)
+Wang.30.0ka.GR <- MAP_HDI89(Wang.30.0ka.4ch$BUGSoutput$sims.list$FLMC[,1])
+Wang.30.0ka.SV <- MAP_HDI89(Wang.30.0ka.4ch$BUGSoutput$sims.list$FLMC[,2])
+Wang.30.0ka.RF <- MAP_HDI89(Wang.30.0ka.4ch$BUGSoutput$sims.list$FLMC[,3])
+Wang.30.0ka.d2H.MAP <- MAP_HDI89(Wang.30.0ka.4ch$BUGSoutput$sims.list$d2H.MAP)
 
-Wang.22.7ka.RF.map <- map_estimate(Wang.22.7ka.4ch$BUGSoutput$sims.list$FLMC[,3], method = "KernSmooth")
-Wang.22.7ka.RF.median <- median(Wang.22.7ka.4ch$BUGSoutput$sims.list$FLMC[,3])
-Wang.22.7ka.RF.hdi <- hdi(Wang.22.7ka.4ch$BUGSoutput$sims.list$FLMC[,3], ci = .89)
+Wang.22.7ka.GR <- MAP_HDI89(Wang.22.7ka.4ch$BUGSoutput$sims.list$FLMC[,1])
+Wang.22.7ka.SV <- MAP_HDI89(Wang.22.7ka.4ch$BUGSoutput$sims.list$FLMC[,2])
+Wang.22.7ka.RF <- MAP_HDI89(Wang.22.7ka.4ch$BUGSoutput$sims.list$FLMC[,3])
+Wang.22.7ka.d2H.MAP <- MAP_HDI89(Wang.22.7ka.4ch$BUGSoutput$sims.list$d2H.MAP)
 
-Wang.15.8ka.GR.map <- map_estimate(Wang.15.8ka.4ch$BUGSoutput$sims.list$FLMC[,1], method = "KernSmooth")
-Wang.15.8ka.GR.median <- median(Wang.15.8ka.4ch$BUGSoutput$sims.list$FLMC[,1])
-Wang.15.8ka.GR.hdi <- hdi(Wang.15.8ka.4ch$BUGSoutput$sims.list$FLMC[,1], ci = .89)
+Wang.15.8ka.GR <- MAP_HDI89(Wang.15.8ka.4ch$BUGSoutput$sims.list$FLMC[,1])
+Wang.15.8ka.SV <- MAP_HDI89(Wang.15.8ka.4ch$BUGSoutput$sims.list$FLMC[,2])
+Wang.15.8ka.RF <- MAP_HDI89(Wang.15.8ka.4ch$BUGSoutput$sims.list$FLMC[,3])
+Wang.15.8ka.d2H.MAP <- MAP_HDI89(Wang.15.8ka.4ch$BUGSoutput$sims.list$d2H.MAP)
 
-Wang.15.8ka.SV.map <- map_estimate(Wang.15.8ka.4ch$BUGSoutput$sims.list$FLMC[,2], method = "KernSmooth")
-Wang.15.8ka.SV.median <- median(Wang.15.8ka.4ch$BUGSoutput$sims.list$FLMC[,2])
-Wang.15.8ka.SV.hdi <- hdi(Wang.15.8ka.4ch$BUGSoutput$sims.list$FLMC[,2], ci = .89)
+Wang.13.8ka.GR <- MAP_HDI89(Wang.13.8ka.4ch$BUGSoutput$sims.list$FLMC[,1])
+Wang.13.8ka.SV <- MAP_HDI89(Wang.13.8ka.4ch$BUGSoutput$sims.list$FLMC[,2])
+Wang.13.8ka.RF <- MAP_HDI89(Wang.13.8ka.4ch$BUGSoutput$sims.list$FLMC[,3])
+Wang.13.8ka.d2H.MAP <- MAP_HDI89(Wang.13.8ka.4ch$BUGSoutput$sims.list$d2H.MAP)
 
-Wang.15.8ka.RF.map <- map_estimate(Wang.15.8ka.4ch$BUGSoutput$sims.list$FLMC[,3], method = "KernSmooth")
-Wang.15.8ka.RF.median <- median(Wang.15.8ka.4ch$BUGSoutput$sims.list$FLMC[,3])
-Wang.15.8ka.RF.hdi <- hdi(Wang.15.8ka.4ch$BUGSoutput$sims.list$FLMC[,3], ci = .89)
+Wang.10.6ka.GR <- MAP_HDI89(Wang.10.6ka.4ch$BUGSoutput$sims.list$FLMC[,1])
+Wang.10.6ka.SV <- MAP_HDI89(Wang.10.6ka.4ch$BUGSoutput$sims.list$FLMC[,2])
+Wang.10.6ka.RF <- MAP_HDI89(Wang.10.6ka.4ch$BUGSoutput$sims.list$FLMC[,3])
+Wang.10.6ka.d2H.MAP <- MAP_HDI89(Wang.10.6ka.4ch$BUGSoutput$sims.list$d2H.MAP)
 
-Wang.13.8ka.GR.map <- map_estimate(Wang.13.8ka.4ch$BUGSoutput$sims.list$FLMC[,1], method = "KernSmooth")
-Wang.13.8ka.GR.median <- median(Wang.13.8ka.4ch$BUGSoutput$sims.list$FLMC[,1])
-Wang.13.8ka.GR.hdi <- hdi(Wang.13.8ka.4ch$BUGSoutput$sims.list$FLMC[,1], ci = .89)
+Wang.7.8ka.GR <- MAP_HDI89(Wang.7.8ka.4ch$BUGSoutput$sims.list$FLMC[,1])
+Wang.7.8ka.SV <- MAP_HDI89(Wang.7.8ka.4ch$BUGSoutput$sims.list$FLMC[,2])
+Wang.7.8ka.RF <- MAP_HDI89(Wang.7.8ka.4ch$BUGSoutput$sims.list$FLMC[,3])
+Wang.7.8ka.d2H.MAP <- MAP_HDI89(Wang.7.8ka.4ch$BUGSoutput$sims.list$d2H.MAP)
 
-Wang.13.8ka.SV.map <- map_estimate(Wang.13.8ka.4ch$BUGSoutput$sims.list$FLMC[,2], method = "KernSmooth")
-Wang.13.8ka.SV.median <- median(Wang.13.8ka.4ch$BUGSoutput$sims.list$FLMC[,2])
-Wang.13.8ka.SV.hdi <- hdi(Wang.13.8ka.4ch$BUGSoutput$sims.list$FLMC[,2], ci = .89)
+Wang.4.0ka.GR <- MAP_HDI89(Wang.4.0ka.4ch$BUGSoutput$sims.list$FLMC[,1])
+Wang.4.0ka.SV <- MAP_HDI89(Wang.4.0ka.4ch$BUGSoutput$sims.list$FLMC[,2])
+Wang.4.0ka.RF <- MAP_HDI89(Wang.4.0ka.4ch$BUGSoutput$sims.list$FLMC[,3])
+Wang.4.0ka.d2H.MAP <- MAP_HDI89(Wang.4.0ka.4ch$BUGSoutput$sims.list$d2H.MAP)
 
-Wang.13.8ka.RF.map <- map_estimate(Wang.13.8ka.4ch$BUGSoutput$sims.list$FLMC[,3], method = "KernSmooth")
-Wang.13.8ka.RF.median <- median(Wang.13.8ka.4ch$BUGSoutput$sims.list$FLMC[,3])
-Wang.13.8ka.RF.hdi <- hdi(Wang.13.8ka.4ch$BUGSoutput$sims.list$FLMC[,3], ci = .89)
+Wang.0.9ka.GR <- MAP_HDI89(Wang.0.9ka.4ch$BUGSoutput$sims.list$FLMC[,1])
+Wang.0.9ka.SV <- MAP_HDI89(Wang.0.9ka.4ch$BUGSoutput$sims.list$FLMC[,2])
+Wang.0.9ka.RF <- MAP_HDI89(Wang.0.9ka.4ch$BUGSoutput$sims.list$FLMC[,3])
+Wang.0.9ka.d2H.MAP <- MAP_HDI89(Wang.0.9ka.4ch$BUGSoutput$sims.list$d2H.MAP)
 
-Wang.10.6ka.GR.map <- map_estimate(Wang.10.6ka.4ch$BUGSoutput$sims.list$FLMC[,1], method = "KernSmooth")
-Wang.10.6ka.GR.median <- median(Wang.10.6ka.4ch$BUGSoutput$sims.list$FLMC[,1])
-Wang.10.6ka.GR.hdi <- hdi(Wang.10.6ka.4ch$BUGSoutput$sims.list$FLMC[,1], ci = .89)
+### organize data for plots ###
+Wang.GR <- rbind(Wang.33.5ka.GR, Wang.30.0ka.GR,Wang.22.7ka.GR, 
+                 Wang.15.8ka.GR, Wang.13.8ka.GR, Wang.10.6ka.GR,
+                 Wang.7.8ka.GR, Wang.4.0ka.GR, Wang.0.9ka.GR)
+colnames(Wang.GR) <- c("Wang.GR.MAP","Wang.GR.hdiL","Wang.GR.hdiH")
 
-Wang.10.6ka.SV.map <- map_estimate(Wang.10.6ka.4ch$BUGSoutput$sims.list$FLMC[,2], method = "KernSmooth")
-Wang.10.6ka.SV.median <- median(Wang.10.6ka.4ch$BUGSoutput$sims.list$FLMC[,2])
-Wang.10.6ka.SV.hdi <- hdi(Wang.10.6ka.4ch$BUGSoutput$sims.list$FLMC[,2], ci = .89)
+Wang.SV <- rbind(Wang.33.5ka.SV, Wang.30.0ka.SV, Wang.22.7ka.SV, 
+                 Wang.15.8ka.SV, Wang.13.8ka.SV, Wang.10.6ka.SV,
+                 Wang.7.8ka.SV, Wang.4.0ka.SV, Wang.0.9ka.SV)
+colnames(Wang.SV) <- c("Wang.SV.MAP","Wang.SV.hdiL","Wang.SV.hdiH")
 
-Wang.10.6ka.RF.map <- map_estimate(Wang.10.6ka.4ch$BUGSoutput$sims.list$FLMC[,3], method = "KernSmooth")
-Wang.10.6ka.RF.median <- median(Wang.10.6ka.4ch$BUGSoutput$sims.list$FLMC[,3])
-Wang.10.6ka.RF.hdi <- hdi(Wang.10.6ka.4ch$BUGSoutput$sims.list$FLMC[,3], ci = .89)
+Wang.RF <- rbind(Wang.33.5ka.RF, Wang.30.0ka.RF, Wang.22.7ka.RF, 
+                 Wang.15.8ka.RF, Wang.13.8ka.RF, Wang.10.6ka.RF,
+                 Wang.7.8ka.RF, Wang.4.0ka.RF, Wang.0.9ka.RF)
+colnames(Wang.RF) <- c("Wang.RF.MAP","Wang.RF.hdiL","Wang.RF.hdiH")
 
-Wang.7.8ka.GR.map <- map_estimate(Wang.7.8ka.4ch$BUGSoutput$sims.list$FLMC[,1], method = "KernSmooth")
-Wang.7.8ka.GR.median <- median(Wang.7.8ka.4ch$BUGSoutput$sims.list$FLMC[,1])
-Wang.7.8ka.GR.hdi <- hdi(Wang.7.8ka.4ch$BUGSoutput$sims.list$FLMC[,1], ci = .89)
+Wang.d2H.MAP <- rbind(Wang.33.5ka.d2H.MAP, Wang.30.0ka.d2H.MAP, Wang.22.7ka.d2H.MAP, 
+                      Wang.15.8ka.d2H.MAP, Wang.13.8ka.d2H.MAP, Wang.10.6ka.d2H.MAP,
+                      Wang.7.8ka.d2H.MAP, Wang.4.0ka.d2H.MAP, Wang.0.9ka.d2H.MAP)
+colnames(Wang.d2H.MAP) <- c("Wang.d2H_MAP.MAP","Wang.d2H_MAP.hdiL","Wang.d2H_MAP.hdiH")
 
-Wang.7.8ka.SV.map <- map_estimate(Wang.7.8ka.4ch$BUGSoutput$sims.list$FLMC[,2], method = "KernSmooth")
-Wang.7.8ka.SV.median <- median(Wang.7.8ka.4ch$BUGSoutput$sims.list$FLMC[,2])
-Wang.7.8ka.SV.hdi <- hdi(Wang.7.8ka.4ch$BUGSoutput$sims.list$FLMC[,2], ci = .89)
-
-Wang.7.8ka.RF.map <- map_estimate(Wang.7.8ka.4ch$BUGSoutput$sims.list$FLMC[,3], method = "KernSmooth")
-Wang.7.8ka.RF.median <- median(Wang.7.8ka.4ch$BUGSoutput$sims.list$FLMC[,3])
-Wang.7.8ka.RF.hdi <- hdi(Wang.7.8ka.4ch$BUGSoutput$sims.list$FLMC[,3], ci = .89)
-
-Wang.4.0ka.GR.map <- map_estimate(Wang.4.0ka.4ch$BUGSoutput$sims.list$FLMC[,1], method = "KernSmooth")
-Wang.4.0ka.GR.median <- median(Wang.4.0ka.4ch$BUGSoutput$sims.list$FLMC[,1])
-Wang.4.0ka.GR.hdi <- hdi(Wang.4.0ka.4ch$BUGSoutput$sims.list$FLMC[,1], ci = .89)
-
-Wang.4.0ka.SV.map <- map_estimate(Wang.4.0ka.4ch$BUGSoutput$sims.list$FLMC[,2], method = "KernSmooth")
-Wang.4.0ka.SV.median <- median(Wang.4.0ka.4ch$BUGSoutput$sims.list$FLMC[,2])
-Wang.4.0ka.SV.hdi <- hdi(Wang.4.0ka.4ch$BUGSoutput$sims.list$FLMC[,2], ci = .89)
-
-Wang.4.0ka.RF.map <- map_estimate(Wang.4.0ka.4ch$BUGSoutput$sims.list$FLMC[,3], method = "KernSmooth")
-Wang.4.0ka.RF.median <- median(Wang.4.0ka.4ch$BUGSoutput$sims.list$FLMC[,3])
-Wang.4.0ka.RF.hdi <- hdi(Wang.4.0ka.4ch$BUGSoutput$sims.list$FLMC[,3], ci = .89)
-
-Wang.0.9ka.GR.map <- map_estimate(Wang.0.9ka.4ch$BUGSoutput$sims.list$FLMC[,1], method = "KernSmooth")
-Wang.0.9ka.GR.median <- median(Wang.0.9ka.4ch$BUGSoutput$sims.list$FLMC[,1])
-Wang.0.9ka.GR.hdi <- hdi(Wang.0.9ka.4ch$BUGSoutput$sims.list$FLMC[,1], ci = .89)
-
-Wang.0.9ka.SV.map <- map_estimate(Wang.0.9ka.4ch$BUGSoutput$sims.list$FLMC[,2], method = "KernSmooth")
-Wang.0.9ka.SV.median <- median(Wang.0.9ka.4ch$BUGSoutput$sims.list$FLMC[,2])
-Wang.0.9ka.SV.hdi <- hdi(Wang.0.9ka.4ch$BUGSoutput$sims.list$FLMC[,2], ci = .89)
-
-Wang.0.9ka.RF.map <- map_estimate(Wang.0.9ka.4ch$BUGSoutput$sims.list$FLMC[,3], method = "KernSmooth")
-Wang.0.9ka.RF.median <- median(Wang.0.9ka.4ch$BUGSoutput$sims.list$FLMC[,3])
-Wang.0.9ka.RF.hdi <- hdi(Wang.0.9ka.4ch$BUGSoutput$sims.list$FLMC[,3], ci = .89)
-
-####plots###
-#calculate prior densities by using the helper function "pri.multi.norm.den"
-map_rec.epsilon.app.prior.GR<-pri.multi.norm.den(-200,0,map_rec.epsilon.app.mu[1,],
-                                      map_rec.epsilon.app.vcov[1:4,1:4])
-map_rec.epsilon.app.prior.SV<-pri.multi.norm.den(-200,0,map_rec.epsilon.app.mu[2,],
-                                      map_rec.epsilon.app.vcov[5:8,1:4])
-map_rec.epsilon.app.prior.RF<-pri.multi.norm.den(-200,0,map_rec.epsilon.app.mu[3,],
-                                      map_rec.epsilon.app.vcov[9:12,1:4])
-
-par(mfrow=c(3,4)) #900*800
-#C4 grasses 
-hist(map_rec.GR$eC27.MAP_OIPC, xlim = c(-200,0),freq = F,breaks=11, ylim = c(0,0.08), 
-     main = "C4 n-C27 epsilon")
-lines(map_rec.epsilon.app.prior.GR$x,map_rec.epsilon.app.prior.GR$y[1,], col = "blue", lwd = 2)
-
-hist(map_rec.GR$eC29.MAP_OIPC, xlim = c(-200,0),freq = F,breaks=11, ylim = c(0,0.08), 
-     main = "C4 n-C29 epsilon")
-lines(map_rec.epsilon.app.prior.GR$x,map_rec.epsilon.app.prior.GR$y[2,], col = "blue", lwd = 2)
-
-hist(map_rec.GR$eC31.MAP_OIPC, xlim = c(-200,0),freq = F,breaks=11, ylim = c(0,0.08), 
-     main = "C4 n-C31 epsilon")
-lines(map_rec.epsilon.app.prior.GR$x,map_rec.epsilon.app.prior.GR$y[3,], col = "blue", lwd = 2)
-
-hist(map_rec.GR$eC33.MAP_OIPC, xlim = c(-200,0),freq = F,breaks=11, ylim = c(0,0.08), 
-     main = "C4 n-C33 epsilon")
-lines(map_rec.epsilon.app.prior.GR$x,map_rec.epsilon.app.prior.GR$y[4,], col = "blue", lwd = 2)
-
-#savanna C3 plants
-hist(map_rec.SV$eC27.MAP_OIPC, xlim = c(-200,0),freq = F,breaks=11, ylim = c(0,0.04), 
-     main = "SV n-C27 epsilon")
-lines(map_rec.epsilon.app.prior.SV$x,map_rec.epsilon.app.prior.SV$y[1,], col = "blue", lwd = 2)
-
-hist(map_rec.SV$eC29.MAP_OIPC, xlim = c(-200,0),freq = F,breaks=11, ylim = c(0,0.04), 
-     main = "SV n-C29 epsilon")
-lines(map_rec.epsilon.app.prior.SV$x,map_rec.epsilon.app.prior.SV$y[2,], col = "blue", lwd = 2)
-
-hist(map_rec.SV$eC31.MAP_OIPC, xlim = c(-200,0),freq = F,breaks=11, ylim = c(0,0.04), 
-     main = "SV n-C31 epsilon")
-lines(map_rec.epsilon.app.prior.SV$x,map_rec.epsilon.app.prior.SV$y[3,], col = "blue", lwd = 2)
-
-hist(map_rec.SV$eC33.MAP_OIPC, xlim = c(-200,0),freq = F,breaks=11, ylim = c(0,0.04), 
-     main = "SV n-C33 epsilon")
-lines(map_rec.epsilon.app.prior.SV$x,map_rec.epsilon.app.prior.SV$y[4,], col = "blue", lwd = 2)
-
-#rainforest C3 plants
-hist(map_rec.RF$eC27.MAP_OIPC, xlim = c(-200,0),freq = F,breaks=11, ylim = c(0,0.03), 
-     main = "RF n-C27 epsilon")
-lines(map_rec.epsilon.app.prior.RF$x,map_rec.epsilon.app.prior.RF$y[1,], col = "blue", lwd = 2)
-
-hist(map_rec.RF$eC29.MAP_OIPC, xlim = c(-200,0),freq = F,breaks=11, ylim = c(0,0.03), 
-     main = "RF n-C29 epsilon")
-lines(map_rec.epsilon.app.prior.RF$x,map_rec.epsilon.app.prior.RF$y[2,], col = "blue", lwd = 2)
-
-hist(map_rec.RF$eC31.MAP_OIPC, xlim = c(-200,0),freq = F,breaks=11, ylim = c(0,0.03), 
-     main = "RF n-C31 epsilon")
-lines(map_rec.epsilon.app.prior.RF$x,map_rec.epsilon.app.prior.RF$y[3,], col = "blue", lwd = 2)
-
-hist(map_rec.RF$eC33.MAP_OIPC, xlim = c(-200,0),freq = F,breaks=11, ylim = c(0,0.03), 
-     main = "RF n-C33 epsilon")
-lines(map_rec.epsilon.app.prior.RF$x,map_rec.epsilon.app.prior.RF$y[4,], col = "blue", lwd = 2)
-
-#posterior densities of mixing fractions
-
-
-
-# par(mfrow=c(2,2)) #900*800
-# plot(density(Wang.LGM.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
-#      main = "LGM", xlab="FLMC", xlim=c(0,1), ylim =c(0,10),lwd=2,col = plot.col[6])
-# lines(density(Wang.LGM.mix$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),lwd=2,col = plot.col[4])
-# lines(density(Wang.LGM.mix$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),lwd=2,col = plot.col[2])
-# legend(0.4,10,c("C4","Savanna C3","RF C3"),lwd=c(2,2,2),
-#        col=plot.col[c(6,4,2)])
-# plot(density(Wang.LGM.4ch$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
-#      main = "LGM", xlab="FLMC", xlim=c(0,1), ylim =c(0,10),lwd=2,col = plot.col[6])
-# lines(density(Wang.LGM.4ch$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),lwd=2,col = plot.col[4])
-# lines(density(Wang.LGM.4ch$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),lwd=2,col = plot.col[2])
-# legend(0.4,10,c("C4","Savanna C3","RF C3"),lwd=c(2,2,2),
-#        col=plot.col[c(6,4,2)])
-# 
-# plot(density(Wang.HS1.4ch$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
-#      main = "HS1", xlab="FLMC", xlim=c(0,1), ylim =c(0,10),lwd=2,col = plot.col[6])
-# lines(density(Wang.HS1.4ch$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),lwd=2,col = plot.col[4])
-# lines(density(Wang.HS1.4ch$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),lwd=2,col = plot.col[2])
-# legend(0.4,10,c("C4","Savanna C3","RF C3"),lwd=c(2,2,2),
-#        col=plot.col[c(6,4,2)])
-# 
-plot(density(Wang.YD.4ch$BUGSoutput$sims.list$FLMC[,1],from=0,to=1),
-     main = "YD", xlab="FLMC", xlim=c(0,1), ylim =c(0,10),lwd=2,col = plot.col[6])
-lines(density(Wang.YD.4ch$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),lwd=2,col = plot.col[4])
-lines(density(Wang.YD.4ch$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),lwd=2,col = plot.col[2])
-legend(0.4,10,c("C4","Savanna C3","RF C3"),lwd=c(2,2,2),
-       col=plot.col[c(6,4,2)])
-
-par(mfrow=c(1,3)) #900*800
-plot(density(Wang.22.7ka.4ch$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
-     main = "LGM 22.7 Ka", xlab="FLMC", xlim=c(0,1), ylim =c(0,10),lwd=2,col = plot.col[6])
-lines(density(Wang.22.7ka.4ch$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),lwd=2,col = plot.col[4])
-lines(density(Wang.22.7ka.4ch$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),lwd=2,col = plot.col[2])
-legend(0.4,10,c("C4","Savanna C3","RF C3"),lwd=c(2,2,2),
-       col=plot.col[c(6,4,2)])
-
-plot(density(Wang.15.8ka.4ch$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
-     main = "HS1 15.8 Ka", xlab="FLMC", xlim=c(0,1), ylim =c(0,10),lwd=2,col = plot.col[6])
-lines(density(Wang.15.8ka.4ch$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),lwd=2,col = plot.col[4])
-lines(density(Wang.15.8ka.4ch$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),lwd=2,col = plot.col[2])
-legend(0.4,10,c("C4","Savanna C3","RF C3"),lwd=c(2,2,2),
-       col=plot.col[c(6,4,2)])
-
-plot(density(Wang.7.8ka.4ch$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
-     main = "Holocene 7.8 Ka", xlab="FLMC", xlim=c(0,1), ylim =c(0,10),lwd=2,col = plot.col[6])
-lines(density(Wang.7.8ka.4ch$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),lwd=2,col = plot.col[4])
-lines(density(Wang.7.8ka.4ch$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),lwd=2,col = plot.col[2])
-legend(0.4,10,c("C4","Savanna C3","RF C3"),lwd=c(2,2,2),
-       col=plot.col[c(6,4,2)])
-
-par(mfrow=c(1,1))
-plot(density(Wang.22.7ka.4ch$BUGSoutput$sims.list$d2H.MAP), xlim = c(-60,-10), ylim = c(0,0.12),
-     main = "", xlab="d2H",lwd=2,col = plot.col[6])
-lines(density(Wang.15.8ka.4ch$BUGSoutput$sims.list$d2H.MAP), 
-      lwd=2,col = plot.col[4])
-lines(density(Wang.7.8ka.4ch$BUGSoutput$sims.list$d2H.MAP), 
-      lwd=2,col = plot.col[2])
-legend(-60,0.1,c("LGM 22.7ka","HS1 15.8ka","Holocene 7.8ka"),lwd=c(2,2,2),
-       col=plot.col[c(6,4,2)])
-
-# plot(density(Wang.LGM.mix$BUGSoutput$sims.list$d2H.MAP), xlim = c(-60,-10), ylim = c(0,0.1),
-#      main = "", xlab="d2H",lwd=2,col = plot.col[7])
-par(mfrow=c(1,1))
-plot(density(Wang.LGM.4ch$BUGSoutput$sims.list$d2H.MAP), xlim = c(-60,-10), ylim = c(0,0.12),
-     main = "", xlab="d2H",lwd=2,col = plot.col[7])
-
-lines(density(Wang.HS1.4ch$BUGSoutput$sims.list$d2H.MAP), 
-     lwd=2,col = plot.col[5])
-
-lines(density(Wang.YD.4ch$BUGSoutput$sims.list$d2H.MAP), 
-      lwd=2,col = plot.col[3])
-
-lines(density(Wang.Ho2.1ka.4ch$BUGSoutput$sims.list$d2H.MAP), 
-      lwd=2,col = plot.col[1])
-
-legend(-60,0.1,c("LGM","HS1","DY","Ho 2.1 Ka"),lwd=c(2,2,2,2),
-       col=plot.col[c(7,5,3,1)])
+Wang.date <- c(33.5, 30.0, 22.7, 15.8, 13.8, 10.6, 7.8, 4.0, 0.9)
+Wang.d2H.C29.ivc <- c(-149, -147, -151, -141, -144, -145, -141, -143, -145)
+Wang.d2H.C31.ivc <- c(-160, -158, -164, -151, -152, -147, -147, -151, -154)
+Wang.veg <- data.frame(Wang.date, Wang.GR, Wang.SV, Wang.RF, Wang.d2H.MAP, 
+                       Wang.d2H.C29.ivc, Wang.d2H.C31.ivc)
