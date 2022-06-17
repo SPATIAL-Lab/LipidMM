@@ -16,7 +16,7 @@ QTP.d13C.prior.ter<-pri.multi.norm.den(-45,-5,QTP.d13C.mu[1,],QTP.d13C.vcov[1:3,
 QTP.d13C.prior.mac<-pri.multi.norm.den(-45,-5,QTP.d13C.mu[2,],QTP.d13C.vcov[4:6,1:3])
 QTP.d13C.prior.alg<-pri.multi.norm.den(-45,-5,QTP.d13C.mu[3,],QTP.d13C.vcov[7:9,1:3])
 
-
+#####Figure 2######
 #histograms are empirical distributions, blue lines are parameterized distributions
 par(mfrow=c(3,3)) #900*800
 #terrestrial plants
@@ -50,6 +50,7 @@ hist(Alg$d.n.C31, xlim = c(-40,-10),freq = F,breaks=11, ylim = c(0,0.6), main = 
 lines(QTP.d13C.prior.alg$x,QTP.d13C.prior.alg$y3, col = "blue", lwd = 2)
 
 ####CS1 QTP concentration prior distribution###
+
 #empirical distribution in histograms, parameterized prior distribution in density curves
 #calculate prior densities by using the helper function "pri.multi.norm.den"
 QTP.conc.prior.ter<-pri.multi.norm.den(-5,10,QTP.conc.mu[1,],QTP.conc.vcov[1:3,1:3])
@@ -97,6 +98,7 @@ axis(1,log(c(0.01,0.1,1,10,100,1000,10000)))
 #load("out/QHS13_7S_results.RData")
 #load("out/QHS13_9S_results.RData")
 
+#####Figure 5######
 par(mfrow=c(3,3)) #800*800
 ###barplots for RA of data
 barplot(RA.QHS13_5S,ylim = c(0,1),names.arg=c("C27","C29","C31"),space=0.5,xlim = c(0,5),axes=F,
@@ -168,6 +170,7 @@ legend(0.6, 8, c("Terrestrial","Macrophyte","Algae"),lwd = c(2, 2, 2),
        col = plot.col[c(6, 4, 2)])
 
 ######CS1 QTP Bivariate density plots####
+#####Figure 6######
 QHS13_5S.countours<-contour.fn(QHS13_5S.mix$BUGSoutput$sims.list$FLMC)
 QHS13_7S.countours<-contour.fn(QHS13_7S.mix$BUGSoutput$sims.list$FLMC)
 QHS13_9S.countours<-contour.fn(QHS13_9S.mix$BUGSoutput$sims.list$FLMC)
@@ -206,6 +209,8 @@ image(QHS13_9S.countours[[6]],col=viridis(64),xlab="FLMC macrophyte",ylab="FLMC 
 contour(QHS13_9S.countours[[6]], lwd = 0.6, add = TRUE, labcex = 0.5)
 
 ###CS1 QTP chain specific mixing ratios####
+#####Figure 7######
+
 #calculate FSCn, using helper function "FSC()"
 QHS13_5S.FSC<-FSC(QHS13_5S.mix$BUGSoutput$sims.list$f.sum.conc_n_i)
 QHS13_7S.FSC<-FSC(QHS13_7S.mix$BUGSoutput$sims.list$f.sum.conc_n_i)
@@ -271,6 +276,7 @@ Afr.d13C.prior.SV<-pri.multi.norm.den(-50,-15,Afr.d13C.mu[2,],Afr.d13C.vcov[4:6,
 Afr.d13C.prior.RF<-pri.multi.norm.den(-50,-15,Afr.d13C.mu[3,],Afr.d13C.vcov[7:9,1:3])
 
 #histograms are empirical distributions, blue lines are parameterized distributions
+#####Figure 3######
 par(mfrow=c(3,3)) #900*800
 #C4 grasses 
 hist(GR$d.n.C29, xlim = c(-50,-15),freq = F,breaks=11, ylim = c(0,0.3), main = "C4 n-C29 d13C")
@@ -346,6 +352,7 @@ axis(1,log(c(0.01,0.1,1,10,100,1e3,1e4,1e5)))
 #load("out/asso_l_results.RData")
 #load("out/baro_l_results.RData")
 
+#####Figure 8######
 #bar plots for relative abundance
 #lines for d13C values
 par(mfrow=c(3,3)) #900*800
@@ -404,6 +411,7 @@ legend(0.4,8,c("C4","Savanna C3","RF C3"),lwd=c(2,2,2),
        col=plot.col[c(6,4,2)])
 
 ######CS2 Bivariate density plots####
+#####Figure 9######
 rhum.l.countours<-contour.fn(rhum.l.mix$BUGSoutput$sims.list$FLMC)
 asso.l.countours<-contour.fn(asso.l.mix$BUGSoutput$sims.list$FLMC)
 baro.l.countours<-contour.fn(baro.l.mix$BUGSoutput$sims.list$FLMC)
@@ -442,6 +450,7 @@ image(baro.l.countours[[6]],col=viridis(64),xlab="FLMC SV C3",ylab="FLMC RF C3")
 contour(baro.l.countours[[6]], lwd = 0.6, add = TRUE, labcex = 0.5)
 
 ###CS2: FSCns can be used to help to interpret d2H####
+#####Figure 10######
 #calculate FSCn, using helper function "FSC()"
 rhum.l.FSC<-FSC(rhum.l.mix$BUGSoutput$sims.list$f.sum.conc_n_i)
 asso.l.FSC<-FSC(asso.l.mix$BUGSoutput$sims.list$f.sum.conc_n_i)
@@ -501,38 +510,57 @@ legend(0.3,15,c("C4","Savanna C3","RF C3"),lwd=c(2,2,2),
 ####CS3 Zambezi vegetation and d2H MAP estimation through time###
 
 #######vegetation fraction through time, with 89% HDI####
-par(mfrow=c(1,1))
+#####Figure 11######
+#top panel 800 x 500
 plot(Wang.veg$Wang.date, Wang.veg$Wang.RF.MAP, type = "l", ylim = c(0,1), xlim = c(0,35), 
-     lwd = 2, col = plot.col[2], xlab ="Date, ka BP", ylab = "vegetation fraction")
-lines(Wang.veg$Wang.date, Wang.veg$Wang.RF.hdiL, lty = 2, col = plot.col[2], lwd = 1.5)
-lines(Wang.veg$Wang.date, Wang.veg$Wang.RF.hdiH, lty = 2, col = plot.col[2], lwd = 1.5)
+     lwd = 2, col = plot.col[2], xlab ="Date, ka BP", ylab = "FLMC")
+lines(Wang.veg$Wang.date, Wang.veg$Wang.RF.hdiL, lty = 2, col = plot.col[2], lwd = 1.8)
+lines(Wang.veg$Wang.date, Wang.veg$Wang.RF.hdiH, lty = 2, col = plot.col[2], lwd = 1.8)
 
 lines(Wang.veg$Wang.date, Wang.veg$Wang.GR.MAP, lty = 1, col = plot.col[6], lwd = 2)
-lines(Wang.veg$Wang.date, Wang.veg$Wang.GR.hdiL, lty = 2, col = plot.col[6], lwd = 1.5)
-lines(Wang.veg$Wang.date, Wang.veg$Wang.GR.hdiH, lty = 2, col = plot.col[6], lwd = 1.5)
+lines(Wang.veg$Wang.date, Wang.veg$Wang.GR.hdiL, lty = 2, col = plot.col[6], lwd = 1.8)
+lines(Wang.veg$Wang.date, Wang.veg$Wang.GR.hdiH, lty = 2, col = plot.col[6], lwd = 1.8)
 
 lines(Wang.veg$Wang.date, Wang.veg$Wang.SV.MAP, lty = 1, col = plot.col[4], lwd = 2)
-lines(Wang.veg$Wang.date, Wang.veg$Wang.SV.hdiL, lty = 2, col = plot.col[4], lwd = 1.5)
-lines(Wang.veg$Wang.date, Wang.veg$Wang.SV.hdiH, lty = 2, col = plot.col[4], lwd = 1.5)
+lines(Wang.veg$Wang.date, Wang.veg$Wang.SV.hdiL, lty = 2, col = plot.col[4], lwd = 1.8)
+lines(Wang.veg$Wang.date, Wang.veg$Wang.SV.hdiH, lty = 2, col = plot.col[4], lwd = 1.8)
 legend(25,1,c("C4","Savanna C3","RF C3"),lwd=c(2,2,2),
        col=plot.col[c(6,4,2)])
 
+#bottem panel 800 x 500
+#relative abundance of n-C29 and n-C31#
+plot(Wang.veg$Wang.date, Wang.veg$RA.n.C29, type = "l", ylim = c(0,0.4), xlim = c(0,35), 
+     lwd = 2, col = plot.col[3], xlab ="Date, ka BP", ylab = "Relative abundance")
+lines(Wang.veg$Wang.date, Wang.veg$RA.n.C31, lty = 1, col = plot.col[5], lwd = 2)
+lines(Wang.veg$Wang.date, Wang.veg$RA.n.C33, lty = 1, col = plot.col[7], lwd = 2)
+lines(Wang.veg$Wang.date, Wang.veg$RA.n.C27, lty = 1, col = plot.col[1], lwd = 2)
+legend(0,0.12,c("n-C27","n-C29","n-C31","n-C33"),lwd=c(2,2,2),
+       col=plot.col[c(1,3,5,7)])
+
+#####CS3 MAP d2H estimation based on sedimentary record off the Zambezi River mouth####
+#####Figure 12######
+#maxium a posteriori 
 #####Comparing estimated MAP and d2H of n-alkanes#####
-par(mfrow=c(2,1))
+
+#top panel 800*400
 plot(Wang.veg$Wang.date, Wang.veg$Wang.d2H_MAP.MAP, type = "l", ylim = c(-50,-20), xlim = c(0,35), 
-     lwd = 2, col = "blue", xlab ="Date, ka BP", ylab = "estimated d2H MAP")
+     lwd = 2, col = "blue", xlab ="Date, ka BP", ylab = "Estimated MAP d2H")
+#with 89% HDI
 lines(Wang.veg$Wang.date, Wang.veg$Wang.d2H_MAP.hdiL, lty = 2, col = "blue", lwd = 1.5)
 lines(Wang.veg$Wang.date, Wang.veg$Wang.d2H_MAP.hdiH, lty = 2, col = "blue", lwd = 1.5)
 
-plot(-100,100, ylim = c(-165,-135), xlim = c(0,35),
-     xlab ="Date, ka BP", ylab = "n-alkane d2H")
-lines(Wang.veg$Wang.date, Wang.veg$Wang.d2H.C29.ivc, col = plot.col[4], lwd = 2)
-lines(Wang.veg$Wang.date, Wang.veg$Wang.d2H.C31.ivc, col = plot.col[6], lwd = 2)
+#bottem panel 800*400
+#compared with n-alkane d2H (ice volume corrected) variation
+plot(Wang.veg$Wang.date, Wang.veg$Wang.d2H.C29.ivc, type = "l", xlim = c(0, 35), 
+     ylim = c(-165, -135), xlab= "Date, Ka BP", ylab= "n-alkane d2H IVC",col = plot.col[4], lwd = 2)
+lines(Wang.veg$Wang.date, Wang.veg$Wang.d2H.C31.ivc, lwd =2, col = plot.col[6])
 legend(25,-135,c("n-C29","n-C31"),lwd=c(2,2), col=plot.col[c(4,6)])
+
 
 ###sensitivity test1: different priors####
 
 ###prior2: w.aftrica distributions####
+#####Figure 4######
 #use the same functions to calculate prior densities
 #concentration
 W.conc.prior.GR<-pri.multi.norm.den(-4,13,W.conc.mu[1,],W.conc.vcov[1:3,1:3])
@@ -636,41 +664,29 @@ lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y3, col = "blue", lwd = 1)
 #load("out/W_asso_l_results.RData")
 #load("out/W_baro_l_results.RData")
 
+#####Figure 13######
 #comparing results using two priors
 #first row: western Africa prior
 #second row: CS2 "subsaharan Africa" prior
 par(mfrow=c(1,3))
 plot(density(W.rhum.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
      main="Rhum fC4 = 0.72",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,8),lwd=2,lty=2)
-# lines(density(W.rhum.l.mix$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),col=plot.col[4],lwd=2)
-# lines(density(W.rhum.l.mix$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),col=plot.col[2],lwd=2)
 
 lines(density(rhum.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
      lwd=2,col = plot.col[6])
-# lines(density(rhum.l.mix$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),lwd=2,col = plot.col[4])
-# lines(density(rhum.l.mix$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),lwd=2,col = plot.col[2])
 
 plot(density(W.asso.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
      main="Asso fC4 = 0.31",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,8),lwd=2,lty=2)
-# lines(density(W.asso.l.mix$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),col=plot.col[4],lwd=2)
-# lines(density(W.asso.l.mix$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),col=plot.col[2],lwd=2)
 
 lines(density(asso.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
      lwd=2,col = plot.col[6])
-# lines(density(asso.l.mix$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),lwd=2,col = plot.col[4])
-# lines(density(asso.l.mix$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),lwd=2,col = plot.col[2])
 
 plot(density(W.baro.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
      main="Baro fC4 = 0.05",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,8),lwd=2,lty=2)
-# lines(density(W.baro.l.mix$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),col=plot.col[4],lwd=2)
-# lines(density(W.baro.l.mix$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),col=plot.col[2],lwd=2)
 
 lines(density(baro.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
      lwd=2,col = plot.col[6])
-# lines(density(baro.l.mix$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),lwd=2,col = plot.col[4])
-# lines(density(baro.l.mix$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),lwd=2,col = plot.col[2])
-# legend(0.4,8,c("C4 Grass","C3 Savanna","C3 Forest"),lwd=c(2,2,2),
-#        col=plot.col[c(6,4,2)])
+
 legend(0.6,8,c("Prior 1","Prior 2"),lwd=c(2,2),lty=c(2,1),
                col=plot.col[c(6,6)])
 
@@ -693,6 +709,7 @@ legend(0.6,8,c("Prior 1","Prior 2"),lwd=c(2,2),lty=c(2,1),
 #rows: test a|  test b|  default| test d| test c|
 #columns: sample
 #par(mfrow=c(3,5))#1200*600
+#####Figure 14######
 par(mfrow=c(3,3))#700*600
 #rhum
 plot(density(rhum.l.test.a$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
@@ -1124,39 +1141,12 @@ plot(density(asso.l.mix$BUGSoutput$sims.list$d13C.k[,,3,3]),
      col = "red", lwd = 2,type="l",main="n-C33 RF",xlim=c(-50,-15),ylim = c(0,0.25))
 lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y3, col = "blue", lwd = 1)
 
-####GeoB9311 pollen record####
-pollen_rec<- read.csv("data/EA-6 GeoB9311 pollen.csv")
-
-GeoB9311.RF <- dplyr::filter(pollen_rec, Habitat == "RF")
-GeoB9311.SV <- dplyr::filter(pollen_rec, Habitat == "SV")
-GeoB9311.C4 <- dplyr::filter(pollen_rec, Habitat == "C4")
-GeoB9311.MT <- dplyr::filter(pollen_rec, Habitat == "MT")
-GeoB9311.SW <- dplyr::filter(pollen_rec, Habitat == "SW")
-GeoB9311.Fern <- dplyr::filter(pollen_rec, Habitat == "Fern")
-
-GeoB9311.RF.sum <- dplyr::summarise_each(GeoB9311.RF[3:11], list(total = sum))
-GeoB9311.SV.sum <- dplyr::summarise_each(GeoB9311.SV[3:11], list(total = sum))
-GeoB9311.C4.sum <- dplyr::summarise_each(GeoB9311.C4[3:11], list(total = sum))
-GeoB9311.MT.sum <- dplyr::summarise_each(GeoB9311.MT[3:11], list(total = sum))
-GeoB9311.SW.sum <- dplyr::summarise_each(GeoB9311.SW[3:11], list(total = sum))
-GeoB9311.Fern.sum <- dplyr::summarise_each(GeoB9311.Fern[3:11], list(total = sum))
-
-#fern spores excluded in the analysis#
-GeoB9311.pollen.sum <- GeoB9311.RF.sum + GeoB9311.SV.sum + GeoB9311.C4.sum + GeoB9311.MT.sum + GeoB9311.SW.sum
-
-GeoB9311.RF.pf <- GeoB9311.RF.sum/GeoB9311.pollen.sum
-GeoB9311.SV.pf <- GeoB9311.SV.sum/GeoB9311.pollen.sum
-GeoB9311.C4.pf <- GeoB9311.C4.sum/GeoB9311.pollen.sum
-GeoB9311.MT.pf <- GeoB9311.MT.sum/GeoB9311.pollen.sum
-GeoB9311.SW.pf <- GeoB9311.SW.sum/GeoB9311.pollen.sum
-
-GeoB.date <- rev(c(33.5, 30.0, 22.7, 15.8, 13.8, 10.6, 7.8, 4.0, 0.9))
-
+####plotting GeoB9311 pollen record####
 par(mfrow=c(1,1))
-plot(GeoB.date, GeoB9311.C4.pf, type = "l", ylim = c(0,0.8), col = plot.col[6], lwd = 2,
-     xlab ="Date, ka BP", ylab = "Pollen fraction")
-lines(GeoB.date, GeoB9311.SV.pf, col = plot.col[4], lwd = 2)
-lines(GeoB.date, GeoB9311.RF.pf + GeoB9311.MTW.pf+GeoB9311.MTD.pf + GeoB9311.SW.pf, 
-      col = plot.col[2], lwd = 2)
-legend(20,0.8,c("Grasses & sedges","Woodland/Savanna","Forest, Afromontaine & Swamp"),lwd=c(2,2,2),
+plot(Wang.veg.compare$Wang.date, rev(GeoB9311.C4.pf), type = "l", ylim = c(0,0.8), xlim = c(0,35),
+     col = plot.col[6], lwd = 2, xlab ="Date, ka BP", ylab = "Pollen fraction")
+
+lines(Wang.veg.compare$Wang.date, rev(GeoB9311.SV.pf), col = plot.col[4], lwd = 2)
+lines(Wang.veg.compare$Wang.date, rev(GeoB9311.forest.pf), col = plot.col[2], lwd = 2)
+legend(20,0.8,c("Grasses & sedges","Woodland/Savanna","Forest, Afromontane & Swamp"),lwd=c(2,2,2),
        col=plot.col[c(6,4,2)])

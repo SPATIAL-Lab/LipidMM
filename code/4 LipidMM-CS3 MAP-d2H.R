@@ -323,6 +323,66 @@ traplot(Wang.22.7ka.4ch, parms = "FLMC")
 
 save(Wang.22.7ka.4ch, file = "out/Wang_22.7ka_results.RData")
 
+######4th data point: 18.6 Ka#####
+#relative abundance among the three chains from raw concentration values
+#in the order of n-C27, n-C29, n-C31, c-C33
+
+RA.18.6ka <- c(287.6, 693, 635.4, 364.5)/(287.6 + 693 + 635.4 + 364.5)
+
+#d2H
+d2H.18.6ka <- c(-147, -139.6, -150.4, -158.6)
+#use ice volume correcte values
+d2H.18.6ka.ivc <- c(-154, -146.6, -157.4, -165.5)
+
+#analytical precision
+d2H.sd.18.6ka <- c(1, 0.5, 0.5, 0.5)
+
+#d13C
+d13C.18.6ka <- c(-27.6, -30.9, -28.6, -24.9)
+
+#analytical precision
+d13C.sd.18.6ka <- c(0.1, 0.04, 0.1, 0.1)
+
+###correction for atm CO2 d13C, should set it as a parameter?
+#-8.3 year 2010 (Graven et al 2017)
+#-6.43 18.6 Ka (Schmitt et al 2012)
+Afr.d13C.mu.cor <- Afr.d13C.mu + 8.3 - 6.43 
+
+##Data to pass to the model
+#prior parameters in the first three lines
+#model parameters in the fourth
+#data in the fifth and sixth lines
+dat = list(d13C.mu.est = Afr.d13C.mu.cor, d13C.omega.est = Afr.d13C.vcov,
+           conc.mu.est = Afr.conc.mu, conc.omega.est = Afr.conc.vcov, 
+           epsilon.app.mu.est = map_rec.epsilon.app.mu, epsilon.app.omega.est = map_rec.epsilon.app.vcov,
+           I = I, N = N, K = K, 
+           RA.mix = RA.18.6ka, d13C.mix = d13C.18.6ka, d13C.mea.sd = d13C.sd.18.6ka,
+           d2H.mix = d2H.18.6ka.ivc, d2H.mea.sd = d2H.sd.18.6ka)
+
+#model parameters to save
+parameters <- c("d13C.mix.m","RA.mix.m", "FLMC","f.sum.conc_n_i","exp.conc_k","d13C.k",
+                "d2H.mix.m", "d2H.k", "d2H.MAP", "epsilon.app.k")
+
+#Start time
+t1 = proc.time()
+
+set.seed(t1[3])
+#Run it
+Wang.18.6ka.4ch = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinorm-plus-d2H.R", 
+                                             parameters.to.save = parameters, 
+                                             data = dat, n.chains = 5, n.iter = n.iter, 
+                                             n.burnin = n.burnin, n.thin = n.thin))
+
+#Time taken
+proc.time() - t1
+
+#use rhat to check convergence
+Wang.18.6ka.4ch$BUGSoutput$summary[1:3,]
+#traceplots
+traplot(Wang.18.6ka.4ch, parms = "FLMC")
+
+save(Wang.18.6ka.4ch, file = "out/Wang_18.6ka_results.RData")
+
 ######4th data point: 15.8 Ka, HS1#####
 #relative abundance among the three chains from raw concentration values
 #in the order of n-C27, n-C29, n-C31, c-C33
@@ -442,6 +502,66 @@ Wang.13.8ka.4ch$BUGSoutput$summary[1:3,]
 traplot(Wang.13.8ka.4ch, parms = "FLMC")
 
 save(Wang.13.8ka.4ch, file = "out/Wang_13.8ka_results.RData")
+
+######6th data point: ~12.1 Ka, YD #####
+#relative abundance among the three chains from raw concentration values
+#in the order of n-C27, n-C29, n-C31, c-C33
+
+RA.12.1ka <- c(146, 308, 343.2, 246.5)/(146 + 308 + 343.2 + 246.5)
+
+#d2H
+d2H.12.1ka <- c(-139.1, -138.8, -145.6, -147)
+#use ice volume correcte values
+d2H.12.1ka.ivc <- c(-142, -141.8, -148.5, -149.9)
+
+#analytical precision
+d2H.sd.12.1ka <- c(1.3, 0.7, 0.7, 1)
+
+#d13C
+d13C.12.1ka <- c(-29.4, -30.1, -29.8, -27.9)
+
+#analytical precision
+d13C.sd.12.1ka <- c(0.2, 0.1, 0.1, 0.2)
+
+###correction for atm CO2 d13C, should set it as a parameter?
+#-8.3 year 2010 (Graven et al 2017)
+#-6.69 12.1 Ka (Schmitt et al 2012)
+Afr.d13C.mu.cor <- Afr.d13C.mu + 8.3 - 6.69 
+
+##Data to pass to the model
+#prior parameters in the first three lines
+#model parameters in the fourth
+#data in the fifth and sixth lines
+dat = list(d13C.mu.est = Afr.d13C.mu.cor, d13C.omega.est = Afr.d13C.vcov,
+           conc.mu.est = Afr.conc.mu, conc.omega.est = Afr.conc.vcov, 
+           epsilon.app.mu.est = map_rec.epsilon.app.mu, epsilon.app.omega.est = map_rec.epsilon.app.vcov,
+           I = I, N = N, K = K, 
+           RA.mix = RA.12.1ka, d13C.mix = d13C.12.1ka, d13C.mea.sd = d13C.sd.12.1ka,
+           d2H.mix = d2H.12.1ka.ivc, d2H.mea.sd = d2H.sd.12.1ka)
+
+#model parameters to save
+parameters <- c("d13C.mix.m","RA.mix.m", "FLMC","f.sum.conc_n_i","exp.conc_k","d13C.k",
+                "d2H.mix.m", "d2H.k", "d2H.MAP", "epsilon.app.k")
+
+#Start time
+t1 = proc.time()
+
+set.seed(t1[3])
+#Run it
+Wang.12.1ka.4ch = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinorm-plus-d2H.R", 
+                                             parameters.to.save = parameters, 
+                                             data = dat, n.chains = 5, n.iter = n.iter, 
+                                             n.burnin = n.burnin, n.thin = n.thin))
+
+#Time taken
+proc.time() - t1
+
+#use rhat to check convergence
+Wang.12.1ka.4ch$BUGSoutput$summary[1:3,]
+#traceplots
+traplot(Wang.12.1ka.4ch, parms = "FLMC")
+
+save(Wang.12.1ka.4ch, file = "out/Wang_12.1ka_results.RData")
 
 ######6th data point: ~10.6 Ka, #####
 #relative abundance among the three chains from raw concentration values
@@ -623,66 +743,6 @@ traplot(Wang.4.0ka.4ch, parms = "FLMC")
 
 save(Wang.4.0ka.4ch, file = "out/Wang_4.0ka_results.RData")
 
-######9th data point: 0.9 Ka, #####
-#relative abundance among the three chains from raw concentration values
-#in the order of n-C27, n-C29, n-C31, c-C33
-
-RA.0.9ka <- c(144.5, 268.3, 302, 220.1)/(144.5 + 268.3 + 302 + 220.1)
-
-#d2H
-d2H.0.9ka <- c(-147.1, -145, -153.6, -155.2)
-#use ice volume correcte values
-d2H.0.9ka.ivc <- c(-147.2, -145.2, -153.7, -155.3)
-
-#analytical precision
-d2H.sd.0.9ka <- c(1.2, 0.4, 0.5, 0.5)
-
-#d13C
-d13C.0.9ka <- c(-29.5, -29.5, -29.4, -27.2)
-
-#analytical precision
-d13C.sd.0.9ka <- c(0.2, 0.1, 0.1, 0.2)
-
-###correction for atm CO2 d13C, should set it as a parameter?
-#-8.3 year 2010 (Graven et al 2017)
-#-6.36 0.9 Ka (Schmitt et al 2012)
-Afr.d13C.mu.cor <- Afr.d13C.mu + 8.3 - 6.36 
-
-##Data to pass to the model
-#prior parameters in the first three lines
-#model parameters in the fourth
-#data in the fifth and sixth lines
-dat = list(d13C.mu.est = Afr.d13C.mu.cor, d13C.omega.est = Afr.d13C.vcov,
-           conc.mu.est = Afr.conc.mu, conc.omega.est = Afr.conc.vcov, 
-           epsilon.app.mu.est = map_rec.epsilon.app.mu, epsilon.app.omega.est = map_rec.epsilon.app.vcov,
-           I = I, N = N, K = K, 
-           RA.mix = RA.0.9ka, d13C.mix = d13C.0.9ka, d13C.mea.sd = d13C.sd.0.9ka,
-           d2H.mix = d2H.0.9ka.ivc, d2H.mea.sd = d2H.sd.0.9ka)
-
-#model parameters to save
-parameters <- c("d13C.mix.m","RA.mix.m", "FLMC","f.sum.conc_n_i","exp.conc_k","d13C.k",
-                "d2H.mix.m", "d2H.k", "d2H.MAP", "epsilon.app.k")
-
-#Start time
-t1 = proc.time()
-
-set.seed(t1[3])
-#Run it
-Wang.0.9ka.4ch = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinorm-plus-d2H.R", 
-                                            parameters.to.save = parameters, 
-                                            data = dat, n.chains = 5, n.iter = n.iter, 
-                                            n.burnin = n.burnin, n.thin = n.thin))
-
-#Time taken
-proc.time() - t1
-
-#use rhat to check convergence
-Wang.0.9ka.4ch$BUGSoutput$summary[1:3,]
-#traceplots
-traplot(Wang.0.9ka.4ch, parms = "FLMC")
-
-save(Wang.0.9ka.4ch, file = "out/Wang_0.9ka_results.RData")
-
 #### MAPs, medians, and 89% HDIs ####
 Wang.33.5ka.GR <- MAP_HDI89(Wang.33.5ka.4ch$BUGSoutput$sims.list$FLMC[,1])
 Wang.33.5ka.SV <- MAP_HDI89(Wang.33.5ka.4ch$BUGSoutput$sims.list$FLMC[,2])
@@ -699,6 +759,11 @@ Wang.22.7ka.SV <- MAP_HDI89(Wang.22.7ka.4ch$BUGSoutput$sims.list$FLMC[,2])
 Wang.22.7ka.RF <- MAP_HDI89(Wang.22.7ka.4ch$BUGSoutput$sims.list$FLMC[,3])
 Wang.22.7ka.d2H.MAP <- MAP_HDI89(Wang.22.7ka.4ch$BUGSoutput$sims.list$d2H.MAP)
 
+Wang.18.6ka.GR <- MAP_HDI89(Wang.18.6ka.4ch$BUGSoutput$sims.list$FLMC[,1])
+Wang.18.6ka.SV <- MAP_HDI89(Wang.18.6ka.4ch$BUGSoutput$sims.list$FLMC[,2])
+Wang.18.6ka.RF <- MAP_HDI89(Wang.18.6ka.4ch$BUGSoutput$sims.list$FLMC[,3])
+Wang.18.6ka.d2H.MAP <- MAP_HDI89(Wang.18.6ka.4ch$BUGSoutput$sims.list$d2H.MAP)
+
 Wang.15.8ka.GR <- MAP_HDI89(Wang.15.8ka.4ch$BUGSoutput$sims.list$FLMC[,1])
 Wang.15.8ka.SV <- MAP_HDI89(Wang.15.8ka.4ch$BUGSoutput$sims.list$FLMC[,2])
 Wang.15.8ka.RF <- MAP_HDI89(Wang.15.8ka.4ch$BUGSoutput$sims.list$FLMC[,3])
@@ -708,6 +773,11 @@ Wang.13.8ka.GR <- MAP_HDI89(Wang.13.8ka.4ch$BUGSoutput$sims.list$FLMC[,1])
 Wang.13.8ka.SV <- MAP_HDI89(Wang.13.8ka.4ch$BUGSoutput$sims.list$FLMC[,2])
 Wang.13.8ka.RF <- MAP_HDI89(Wang.13.8ka.4ch$BUGSoutput$sims.list$FLMC[,3])
 Wang.13.8ka.d2H.MAP <- MAP_HDI89(Wang.13.8ka.4ch$BUGSoutput$sims.list$d2H.MAP)
+
+Wang.12.1ka.GR <- MAP_HDI89(Wang.12.1ka.4ch$BUGSoutput$sims.list$FLMC[,1])
+Wang.12.1ka.SV <- MAP_HDI89(Wang.12.1ka.4ch$BUGSoutput$sims.list$FLMC[,2])
+Wang.12.1ka.RF <- MAP_HDI89(Wang.12.1ka.4ch$BUGSoutput$sims.list$FLMC[,3])
+Wang.12.1ka.d2H.MAP <- MAP_HDI89(Wang.12.1ka.4ch$BUGSoutput$sims.list$d2H.MAP)
 
 Wang.10.6ka.GR <- MAP_HDI89(Wang.10.6ka.4ch$BUGSoutput$sims.list$FLMC[,1])
 Wang.10.6ka.SV <- MAP_HDI89(Wang.10.6ka.4ch$BUGSoutput$sims.list$FLMC[,2])
@@ -724,34 +794,104 @@ Wang.4.0ka.SV <- MAP_HDI89(Wang.4.0ka.4ch$BUGSoutput$sims.list$FLMC[,2])
 Wang.4.0ka.RF <- MAP_HDI89(Wang.4.0ka.4ch$BUGSoutput$sims.list$FLMC[,3])
 Wang.4.0ka.d2H.MAP <- MAP_HDI89(Wang.4.0ka.4ch$BUGSoutput$sims.list$d2H.MAP)
 
-Wang.0.9ka.GR <- MAP_HDI89(Wang.0.9ka.4ch$BUGSoutput$sims.list$FLMC[,1])
-Wang.0.9ka.SV <- MAP_HDI89(Wang.0.9ka.4ch$BUGSoutput$sims.list$FLMC[,2])
-Wang.0.9ka.RF <- MAP_HDI89(Wang.0.9ka.4ch$BUGSoutput$sims.list$FLMC[,3])
-Wang.0.9ka.d2H.MAP <- MAP_HDI89(Wang.0.9ka.4ch$BUGSoutput$sims.list$d2H.MAP)
-
-### organize data for plots ###
+### organize data for analysis and plots ###
 Wang.GR <- rbind(Wang.33.5ka.GR, Wang.30.0ka.GR,Wang.22.7ka.GR, 
-                 Wang.15.8ka.GR, Wang.13.8ka.GR, Wang.10.6ka.GR,
-                 Wang.7.8ka.GR, Wang.4.0ka.GR, Wang.0.9ka.GR)
+                 Wang.18.6ka.GR, Wang.15.8ka.GR, Wang.13.8ka.GR, 
+                 Wang.12.1ka.GR, Wang.10.6ka.GR,
+                 Wang.7.8ka.GR, Wang.4.0ka.GR)
 colnames(Wang.GR) <- c("Wang.GR.MAP","Wang.GR.hdiL","Wang.GR.hdiH")
 
 Wang.SV <- rbind(Wang.33.5ka.SV, Wang.30.0ka.SV, Wang.22.7ka.SV, 
-                 Wang.15.8ka.SV, Wang.13.8ka.SV, Wang.10.6ka.SV,
-                 Wang.7.8ka.SV, Wang.4.0ka.SV, Wang.0.9ka.SV)
+                 Wang.18.6ka.SV, Wang.15.8ka.SV, Wang.13.8ka.SV, 
+                 Wang.12.1ka.SV, Wang.10.6ka.SV,
+                 Wang.7.8ka.SV, Wang.4.0ka.SV)
 colnames(Wang.SV) <- c("Wang.SV.MAP","Wang.SV.hdiL","Wang.SV.hdiH")
 
 Wang.RF <- rbind(Wang.33.5ka.RF, Wang.30.0ka.RF, Wang.22.7ka.RF, 
-                 Wang.15.8ka.RF, Wang.13.8ka.RF, Wang.10.6ka.RF,
-                 Wang.7.8ka.RF, Wang.4.0ka.RF, Wang.0.9ka.RF)
+                 Wang.18.6ka.RF, Wang.15.8ka.RF, Wang.13.8ka.RF, 
+                 Wang.12.1ka.RF, Wang.10.6ka.RF,
+                 Wang.7.8ka.RF, Wang.4.0ka.RF)
 colnames(Wang.RF) <- c("Wang.RF.MAP","Wang.RF.hdiL","Wang.RF.hdiH")
 
 Wang.d2H.MAP <- rbind(Wang.33.5ka.d2H.MAP, Wang.30.0ka.d2H.MAP, Wang.22.7ka.d2H.MAP, 
-                      Wang.15.8ka.d2H.MAP, Wang.13.8ka.d2H.MAP, Wang.10.6ka.d2H.MAP,
-                      Wang.7.8ka.d2H.MAP, Wang.4.0ka.d2H.MAP, Wang.0.9ka.d2H.MAP)
+                      Wang.18.6ka.d2H.MAP, Wang.15.8ka.d2H.MAP, Wang.13.8ka.d2H.MAP,
+                      Wang.12.1ka.d2H.MAP, Wang.10.6ka.d2H.MAP,
+                      Wang.7.8ka.d2H.MAP, Wang.4.0ka.d2H.MAP)
 colnames(Wang.d2H.MAP) <- c("Wang.d2H_MAP.MAP","Wang.d2H_MAP.hdiL","Wang.d2H_MAP.hdiH")
 
-Wang.date <- c(33.5, 30.0, 22.7, 15.8, 13.8, 10.6, 7.8, 4.0, 0.9)
-Wang.d2H.C29.ivc <- c(-149, -147, -151, -141, -144, -145, -141, -143, -145)
-Wang.d2H.C31.ivc <- c(-160, -158, -164, -151, -152, -147, -147, -151, -154)
-Wang.veg <- data.frame(Wang.date, Wang.GR, Wang.SV, Wang.RF, Wang.d2H.MAP, 
+Wang.RA <- rbind(RA.33.5ka, RA.30.0ka, RA.22.7ka, RA.18.6ka, RA.15.8ka,
+                 RA.13.8ka, RA.12.1ka, RA.10.6ka, RA.7.8ka, RA.4.0ka)
+colnames(Wang.RA) <- c("RA.n-C27", "RA.n-C29", "RA.n-C31", "RA.n-C33")
+
+Wang.date <- c(33.5, 30.0, 22.7, 18.6, 15.8, 13.8, 12.1, 10.6, 7.8, 4.0)
+Wang.d2H.C29.ivc <- c(-148.7, -146.7, -150.9, -146.6, -141, -143.7, -141.8, -145, -141.1, -143.3)
+Wang.d2H.C31.ivc <- c(-159.8, -157.8, -163.8, -157.4, -151.1, -152, -148.5, -147, -146.9, -151.3)
+Wang.veg <- data.frame(Wang.date, Wang.RA, Wang.GR, Wang.SV, Wang.RF, Wang.d2H.MAP, 
                        Wang.d2H.C29.ivc, Wang.d2H.C31.ivc)
+
+####qualitative comparison between veg reconstructions based on n-alkanes and pollen#
+
+####loading GeoB9311 pollen record####
+pollen_rec<- read.csv("data/EA-6 GeoB9311 pollen.csv")
+#note that the data are at a much lower temporal resolutoin
+#12.1 ka data point not available
+
+#use taxon groups by Dupont and Kuhlmann, 2017
+GeoB9311.RF <- dplyr::filter(pollen_rec, Habitat == "RF")
+GeoB9311.SV <- dplyr::filter(pollen_rec, Habitat == "SV")
+GeoB9311.C4 <- dplyr::filter(pollen_rec, Habitat == "C4")
+GeoB9311.MT <- dplyr::filter(pollen_rec, Habitat == "MT")
+GeoB9311.SW <- dplyr::filter(pollen_rec, Habitat == "SW")
+GeoB9311.Fern <- dplyr::filter(pollen_rec, Habitat == "Fern")
+
+GeoB9311.RF.sum <- dplyr::summarise_each(GeoB9311.RF[4:11], list(total = sum))
+GeoB9311.SV.sum <- dplyr::summarise_each(GeoB9311.SV[4:11], list(total = sum))
+GeoB9311.C4.sum <- dplyr::summarise_each(GeoB9311.C4[4:11], list(total = sum))
+GeoB9311.MT.sum <- dplyr::summarise_each(GeoB9311.MT[4:11], list(total = sum))
+GeoB9311.SW.sum <- dplyr::summarise_each(GeoB9311.SW[4:11], list(total = sum))
+GeoB9311.Fern.sum <- dplyr::summarise_each(GeoB9311.Fern[4:11], list(total = sum))
+
+#fern spores excluded in the analysis#
+GeoB9311.pollen.sum <- GeoB9311.RF.sum + GeoB9311.SV.sum + GeoB9311.C4.sum + GeoB9311.MT.sum + GeoB9311.SW.sum
+
+GeoB9311.RF.pf <- as.numeric(GeoB9311.RF.sum/GeoB9311.pollen.sum)
+GeoB9311.SV.pf <- as.numeric(GeoB9311.SV.sum/GeoB9311.pollen.sum)
+GeoB9311.C4.pf <- as.numeric(GeoB9311.C4.sum/GeoB9311.pollen.sum)
+GeoB9311.MT.pf <- as.numeric(GeoB9311.MT.sum/GeoB9311.pollen.sum)
+GeoB9311.SW.pf <- as.numeric(GeoB9311.SW.sum/GeoB9311.pollen.sum)
+
+##grouping Afromontane and swamp taxa into RF for comparison
+GeoB9311.forest.pf<- GeoB9311.RF.pf + GeoB9311.MT.pf + GeoB9311.SW.pf
+
+###pull out the sequence that is comparable between the two records
+Wang.indeces <- c(1:3,5, 6, 8:10)
+Wang.veg.compare <- Wang.veg[Wang.indeces,]
+
+####qualitative comparison with non-parametric tests#####
+#spearman's rank correlation#
+
+cor.test(Wang.veg$Wang.GR.MAP, rev(GeoB9311.C4.pf), method = "spearman")
+#S = 24, p-value = 0.05759
+#      rho 
+#0.7142857
+cor.test(Wang.veg$Wang.SV.MAP, rev(GeoB9311.SV.pf), method = "spearman")
+#S = 32, p-value = 0.115
+#rho 
+#0.6190476 
+cor.test(Wang.veg$Wang.RF.MAP, rev(GeoB9311.forest.pf), method = "spearman")
+#S = 116, p-value = 0.3599
+#       rho 
+#-0.3809524
+
+cor.test(Wang.veg$Wang.GR.MAP, rev(GeoB9311.C4.pf), method = "kendall")
+#T = 22, p-value = 0.06101
+#      tau 
+#0.5714286  
+cor.test(Wang.veg$Wang.SV.MAP, rev(GeoB9311.SV.pf), method = "kendall")
+#T = 20, p-value = 0.1789
+#      tau 
+#0.4285714
+cor.test(Wang.veg$Wang.RF.MAP, rev(GeoB9311.forest.pf), method = "kendall")
+#T = 10, p-value = 0.3988
+#       tau 
+#-0.2857143
