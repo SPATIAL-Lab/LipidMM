@@ -25,9 +25,9 @@ map_rec.RF <- map_rec[which(map_rec$Source == "RF"),]
 ###means and vcovs
 
 map_rec.GR.e.mean.est <- c(mean(map_rec.GR$eC27.MAP_OIPC, na.rm = T),
-                          mean(map_rec.GR$eC29.MAP_OIPC, na.rm = T), 
-                          mean(map_rec.GR$eC31.MAP_OIPC, na.rm = T),
-                          mean(map_rec.GR$eC33.MAP_OIPC, na.rm = T))
+                           mean(map_rec.GR$eC29.MAP_OIPC, na.rm = T), 
+                           mean(map_rec.GR$eC31.MAP_OIPC, na.rm = T),
+                           mean(map_rec.GR$eC33.MAP_OIPC, na.rm = T))
 map_rec.GR.e.vcov <- var(data.frame(map_rec.GR$eC27.MAP_OIPC, 
                                     map_rec.GR$eC29.MAP_OIPC, 
                                     map_rec.GR$eC31.MAP_OIPC,
@@ -63,7 +63,7 @@ map_rec.epsilon.app.mu
 map_rec.epsilon.app.vcov
 
 ####Adopt the d13C and n-alkane concentrations from CS2
-African <- read.csv("data/EA-3 data afr.csv")
+African <- read.csv("data\EA-3 data afr.csv")
 
 #subset the data
 GR <- African[which(African$Source == "GR"),]
@@ -309,9 +309,9 @@ t1 = proc.time()
 set.seed(t1[3])
 #Run it
 Wang.22.7ka.4ch = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinorm-plus-d2H.R", 
-                                         parameters.to.save = parameters, 
-                                         data = dat, n.chains = 5, n.iter = n.iter, 
-                                         n.burnin = n.burnin, n.thin = n.thin))
+                                             parameters.to.save = parameters, 
+                                             data = dat, n.chains = 5, n.iter = n.iter, 
+                                             n.burnin = n.burnin, n.thin = n.thin))
 
 #Time taken
 proc.time() - t1
@@ -489,9 +489,9 @@ t1 = proc.time()
 set.seed(t1[3])
 #Run it
 Wang.13.8ka.4ch = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinorm-plus-d2H.R", 
-                                            parameters.to.save = parameters, 
-                                            data = dat, n.chains = 5, n.iter = n.iter, 
-                                            n.burnin = n.burnin, n.thin = n.thin))
+                                             parameters.to.save = parameters, 
+                                             data = dat, n.chains = 5, n.iter = n.iter, 
+                                             n.burnin = n.burnin, n.thin = n.thin))
 
 #Time taken
 proc.time() - t1
@@ -669,9 +669,9 @@ t1 = proc.time()
 set.seed(t1[3])
 #Run it
 Wang.7.8ka.4ch = do.call(jags.parallel,list(model.file = "code/LipidMM-JAGS-Multinorm-plus-d2H.R", 
-                                             parameters.to.save = parameters, 
-                                             data = dat, n.chains = 5, n.iter = n.iter, 
-                                             n.burnin = n.burnin, n.thin = n.thin))
+                                            parameters.to.save = parameters, 
+                                            data = dat, n.chains = 5, n.iter = n.iter, 
+                                            n.burnin = n.burnin, n.thin = n.thin))
 
 #Time taken
 proc.time() - t1
@@ -794,6 +794,18 @@ Wang.4.0ka.SV <- MAP_HDI89(Wang.4.0ka.4ch$BUGSoutput$sims.list$FLMC[,2])
 Wang.4.0ka.RF <- MAP_HDI89(Wang.4.0ka.4ch$BUGSoutput$sims.list$FLMC[,3])
 Wang.4.0ka.d2H.MAP <- MAP_HDI89(Wang.4.0ka.4ch$BUGSoutput$sims.list$d2H.MAP)
 
+###95% HDI for d2H MAP###
+# Wang.33.5ka.d2H.MAP <- MAP_HDI89(Wang.33.5ka.4ch$BUGSoutput$sims.list$d2H.MAP)
+# Wang.30.0ka.d2H.MAP <- MAP_HDI89(Wang.30.0ka.4ch$BUGSoutput$sims.list$d2H.MAP)
+# Wang.22.7ka.d2H.MAP <- MAP_HDI89(Wang.22.7ka.4ch$BUGSoutput$sims.list$d2H.MAP)
+# Wang.18.6ka.d2H.MAP <- MAP_HDI89(Wang.18.6ka.4ch$BUGSoutput$sims.list$d2H.MAP)
+# Wang.15.8ka.d2H.MAP <- MAP_HDI89(Wang.15.8ka.4ch$BUGSoutput$sims.list$d2H.MAP)
+# Wang.13.8ka.d2H.MAP <- MAP_HDI89(Wang.13.8ka.4ch$BUGSoutput$sims.list$d2H.MAP)
+# Wang.12.1ka.d2H.MAP <- MAP_HDI89(Wang.12.1ka.4ch$BUGSoutput$sims.list$d2H.MAP)
+# Wang.10.6ka.d2H.MAP <- MAP_HDI89(Wang.10.6ka.4ch$BUGSoutput$sims.list$d2H.MAP)
+# Wang.7.8ka.d2H.MAP <- MAP_HDI89(Wang.7.8ka.4ch$BUGSoutput$sims.list$d2H.MAP)
+# Wang.4.0ka.d2H.MAP <- MAP_HDI89(Wang.4.0ka.4ch$BUGSoutput$sims.list$d2H.MAP)
+
 ### organize data for analysis and plots ###
 Wang.GR <- rbind(Wang.33.5ka.GR, Wang.30.0ka.GR,Wang.22.7ka.GR, 
                  Wang.18.6ka.GR, Wang.15.8ka.GR, Wang.13.8ka.GR, 
@@ -823,13 +835,43 @@ Wang.RA <- rbind(RA.33.5ka, RA.30.0ka, RA.22.7ka, RA.18.6ka, RA.15.8ka,
                  RA.13.8ka, RA.12.1ka, RA.10.6ka, RA.7.8ka, RA.4.0ka)
 colnames(Wang.RA) <- c("RA.n-C27", "RA.n-C29", "RA.n-C31", "RA.n-C33")
 
-Wang.date <- c(33.5, 30.0, 22.7, 18.6, 15.8, 13.8, 12.1, 10.6, 7.8, 4.0)
+Wang.age <- c(33.375, 29.889, 22.691, 18.598, 15.785, 13.744, 12.063, 10.556, 7.985, 3.949)
+
 Wang.d2H.C29.ivc <- c(-148.7, -146.7, -150.9, -146.6, -141, -143.7, -141.8, -145, -141.1, -143.3)
 Wang.d2H.C31.ivc <- c(-159.8, -157.8, -163.8, -157.4, -151.1, -152, -148.5, -147, -146.9, -151.3)
-Wang.veg <- data.frame(Wang.date, Wang.RA, Wang.GR, Wang.SV, Wang.RF, Wang.d2H.MAP, 
+Wang.veg <- data.frame(Wang.age.median.ka, Wang.RA, Wang.GR, Wang.SV, Wang.RF, Wang.d2H.MAP, 
                        Wang.d2H.C29.ivc, Wang.d2H.C31.ivc)
 
+#correlatin tests between estimated MAP d2H and d2H of two n-alkane chains
+#n-C29
+cor.test(Wang.veg$Wang.d2H.C29.ivc,Wang.veg$Wang.d2H_MAP.MAP)
+#Pearson's product-moment correlation
+#data:  Wang.veg$Wang.d2H.C29.ivc and Wang.veg$Wang.d2H_MAP.MAP
+#t = 2.8786, df = 8, p-value = 0.02056
+#r = 0.7132981
+
+#n-C31
+cor.test(Wang.veg$Wang.d2H.C31.ivc,Wang.veg$Wang.d2H_MAP.MAP)
+#Pearson's product-moment correlation
+#data:  Wang.veg$Wang.d2H.C29.ivc and Wang.veg$Wang.d2H_MAP.MAP
+#t = 2.4703, df = 8, p-value = 0.03869
+#r = 0.6578097 
+
+###n-C29 has a higher correlation coefficient
+
 ####qualitative comparison between veg reconstructions based on n-alkanes and pollen#
+
+#load eNd depth profile from van der Lubbe et al 2016
+eNd <- read.csv("data/EA-9 van der lubbe et al eNd.csv")
+
+#use rbacon to create an age depth model#
+library(rbacon)
+#age-depth model is taken from van der Lubbe et al 2016 
+mydir <- "C:/Users/ydmag/Google Drive/U of U/Proxy project/LipidMM"
+Bacon(coredir = mydir, core = "out",d.max = 1100,cc = 2)
+
+vdL.age.a <- Bacon.hist(eNd$Depth.in.Core)
+vdL.age.median.ka <- vdL.age.a[,3]/1000 #use the median age for plotting
 
 ####loading GeoB9311 pollen record####
 pollen_rec<- read.csv("data/EA-6 GeoB9311 pollen.csv")

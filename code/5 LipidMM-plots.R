@@ -512,48 +512,60 @@ legend(0.3,15,c("C4","Savanna C3","RF C3"),lwd=c(2,2,2),
 #######vegetation fraction through time, with 89% HDI####
 #####Figure 11######
 #top panel 800 x 500
-plot(Wang.veg$Wang.date, Wang.veg$Wang.RF.MAP, type = "l", ylim = c(0,1), xlim = c(0,35), 
-     lwd = 2, col = plot.col[2], xlab ="Date, ka BP", ylab = "FLMC")
-lines(Wang.veg$Wang.date, Wang.veg$Wang.RF.hdiL, lty = 2, col = plot.col[2], lwd = 1.8)
-lines(Wang.veg$Wang.date, Wang.veg$Wang.RF.hdiH, lty = 2, col = plot.col[2], lwd = 1.8)
+par(mfrow=c(5,1))
+plot(Wang.veg$Wang.age, Wang.veg$Wang.RF.MAP, type = "l", ylim = c(0,1), xlim = c(0,35), 
+     lwd = 2, col = plot.col[2], xlab ="Age (ka)", ylab = "FLMC")
+lines(Wang.veg$Wang.age, Wang.veg$Wang.RF.hdiL, lty = 2, col = plot.col[2], lwd = 1.5)
+lines(Wang.veg$Wang.age, Wang.veg$Wang.RF.hdiH, lty = 2, col = plot.col[2], lwd = 1.5)
 
-lines(Wang.veg$Wang.date, Wang.veg$Wang.GR.MAP, lty = 1, col = plot.col[6], lwd = 2)
-lines(Wang.veg$Wang.date, Wang.veg$Wang.GR.hdiL, lty = 2, col = plot.col[6], lwd = 1.8)
-lines(Wang.veg$Wang.date, Wang.veg$Wang.GR.hdiH, lty = 2, col = plot.col[6], lwd = 1.8)
+lines(Wang.veg$Wang.age, Wang.veg$Wang.GR.MAP, lty = 1, col = plot.col[6], lwd = 2)
+lines(Wang.veg$Wang.age, Wang.veg$Wang.GR.hdiL, lty = 2, col = plot.col[6], lwd = 1.5)
+lines(Wang.veg$Wang.age, Wang.veg$Wang.GR.hdiH, lty = 2, col = plot.col[6], lwd = 1.5)
 
-lines(Wang.veg$Wang.date, Wang.veg$Wang.SV.MAP, lty = 1, col = plot.col[4], lwd = 2)
-lines(Wang.veg$Wang.date, Wang.veg$Wang.SV.hdiL, lty = 2, col = plot.col[4], lwd = 1.8)
-lines(Wang.veg$Wang.date, Wang.veg$Wang.SV.hdiH, lty = 2, col = plot.col[4], lwd = 1.8)
+lines(Wang.veg$Wang.age, Wang.veg$Wang.SV.MAP, lty = 1, col = plot.col[4], lwd = 2)
+lines(Wang.veg$Wang.age, Wang.veg$Wang.SV.hdiL, lty = 2, col = plot.col[4], lwd = 1.5)
+lines(Wang.veg$Wang.age, Wang.veg$Wang.SV.hdiH, lty = 2, col = plot.col[4], lwd = 1.5)
 legend(25,1,c("C4","Savanna C3","RF C3"),lwd=c(2,2,2),
        col=plot.col[c(6,4,2)])
 
-#bottem panel 800 x 500
+#middle panel 800 x 500
 #relative abundance of n-C29 and n-C31#
-plot(Wang.veg$Wang.date, Wang.veg$RA.n.C29, type = "l", ylim = c(0,0.4), xlim = c(0,35), 
-     lwd = 2, col = plot.col[3], xlab ="Date, ka BP", ylab = "Relative abundance")
-lines(Wang.veg$Wang.date, Wang.veg$RA.n.C31, lty = 1, col = plot.col[5], lwd = 2)
-lines(Wang.veg$Wang.date, Wang.veg$RA.n.C33, lty = 1, col = plot.col[7], lwd = 2)
-lines(Wang.veg$Wang.date, Wang.veg$RA.n.C27, lty = 1, col = plot.col[1], lwd = 2)
-legend(0,0.12,c("n-C27","n-C29","n-C31","n-C33"),lwd=c(2,2,2),
+plot(Wang.veg$Wang.age, Wang.veg$RA.n.C29, type = "l", ylim = c(0.1,0.4), xlim = c(0,35), 
+     lwd = 2, col = plot.col[3], xlab ="Age (ka)", ylab = "Relative abundance")
+lines(Wang.veg$Wang.age, Wang.veg$RA.n.C31, lty = 1, col = plot.col[5], lwd = 2)
+lines(Wang.veg$Wang.age, Wang.veg$RA.n.C33, lty = 1, col = plot.col[7], lwd = 2)
+lines(Wang.veg$Wang.age, Wang.veg$RA.n.C27, lty = 1, col = plot.col[1], lwd = 2)
+legend(0,0.4,c("n-C27","n-C29","n-C31","n-C33"),lwd=c(2,2,2),
        col=plot.col[c(1,3,5,7)])
+
+#bottom panel 800 x 400
+#BIT index from Kasper et al., 2014
+BIT<- read.csv("data/EA-7 Kasper et al 2015.csv")
+
+plot(BIT$Age..ka.BP., BIT$BIT, type = "l", xlim = c(0,35), 
+     lwd = 1.5, col = "black", xlab ="Age (ka)", ylab = "BIT")
+
+#plot epsilon Nd from van der Lubbe et al 2016#
+plot(vdL.age.median.ka, eNd$Nd, type = "l", xlim = c(0,35), ylim = c(-13.0,-15.5),
+     lwd = 1.5, col = "gray", xlab ="Age (ka)", ylab = "eNd")
 
 #####CS3 MAP d2H estimation based on sedimentary record off the Zambezi River mouth####
 #####Figure 12######
 #maxium a posteriori 
 #####Comparing estimated MAP and d2H of n-alkanes#####
-
+par(mfrow=c(2,1))
 #top panel 800*400
-plot(Wang.veg$Wang.date, Wang.veg$Wang.d2H_MAP.MAP, type = "l", ylim = c(-50,-20), xlim = c(0,35), 
-     lwd = 2, col = "blue", xlab ="Date, ka BP", ylab = "Estimated MAP d2H")
+plot(Wang.veg$Wang.age, Wang.veg$Wang.d2H_MAP.MAP, type = "l", ylim = c(-50,-20), xlim = c(0,35), 
+     lwd = 2, col = "blue", xlab ="Age (ka)", ylab = "Estimated MAP d2H")
 #with 89% HDI
-lines(Wang.veg$Wang.date, Wang.veg$Wang.d2H_MAP.hdiL, lty = 2, col = "blue", lwd = 1.5)
-lines(Wang.veg$Wang.date, Wang.veg$Wang.d2H_MAP.hdiH, lty = 2, col = "blue", lwd = 1.5)
+lines(Wang.veg$Wang.age, Wang.veg$Wang.d2H_MAP.hdiL, lty = 2, col = "blue", lwd = 1.5)
+lines(Wang.veg$Wang.age, Wang.veg$Wang.d2H_MAP.hdiH, lty = 2, col = "blue", lwd = 1.5)
 
 #bottem panel 800*400
 #compared with n-alkane d2H (ice volume corrected) variation
-plot(Wang.veg$Wang.date, Wang.veg$Wang.d2H.C29.ivc, type = "l", xlim = c(0, 35), 
-     ylim = c(-165, -135), xlab= "Date, Ka BP", ylab= "n-alkane d2H IVC",col = plot.col[4], lwd = 2)
-lines(Wang.veg$Wang.date, Wang.veg$Wang.d2H.C31.ivc, lwd =2, col = plot.col[6])
+plot(Wang.veg$Wang.age, Wang.veg$Wang.d2H.C29.ivc, type = "l", xlim = c(0, 35), 
+     ylim = c(-165, -135), xlab= "Age (ka)", ylab= "n-alkane d2H IVC",col = plot.col[4], lwd = 2)
+lines(Wang.veg$Wang.age, Wang.veg$Wang.d2H.C31.ivc, lwd =2, col = plot.col[6])
 legend(25,-135,c("n-C29","n-C31"),lwd=c(2,2), col=plot.col[c(4,6)])
 
 
@@ -673,22 +685,22 @@ plot(density(W.rhum.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1),
      main="Rhum fC4 = 0.72",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,8),lwd=2,lty=2)
 
 lines(density(rhum.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
-     lwd=2,col = plot.col[6])
+      lwd=2,col = plot.col[6])
 
 plot(density(W.asso.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
      main="Asso fC4 = 0.31",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,8),lwd=2,lty=2)
 
 lines(density(asso.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
-     lwd=2,col = plot.col[6])
+      lwd=2,col = plot.col[6])
 
 plot(density(W.baro.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
      main="Baro fC4 = 0.05",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,8),lwd=2,lty=2)
 
 lines(density(baro.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
-     lwd=2,col = plot.col[6])
+      lwd=2,col = plot.col[6])
 
 legend(0.6,8,c("Prior 1","Prior 2"),lwd=c(2,2),lty=c(2,1),
-               col=plot.col[c(6,6)])
+       col=plot.col[c(6,6)])
 
 ###Sensitivity test2: sensitivity to likelihood functions####
 #run the corresponding code in the CS2 file
@@ -1144,7 +1156,7 @@ lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y3, col = "blue", lwd = 1)
 ####plotting GeoB9311 pollen record####
 par(mfrow=c(1,1))
 plot(Wang.veg.compare$Wang.date, rev(GeoB9311.C4.pf), type = "l", ylim = c(0,0.8), xlim = c(0,35),
-     col = plot.col[6], lwd = 2, xlab ="Date, ka BP", ylab = "Pollen fraction")
+     col = plot.col[6], lwd = 2, xlab ="Age (ka)", ylab = "Pollen fraction")
 
 lines(Wang.veg.compare$Wang.date, rev(GeoB9311.SV.pf), col = plot.col[4], lwd = 2)
 lines(Wang.veg.compare$Wang.date, rev(GeoB9311.forest.pf), col = plot.col[2], lwd = 2)
