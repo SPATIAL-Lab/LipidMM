@@ -743,6 +743,18 @@ traplot(Wang.4.0ka.4ch, parms = "FLMC")
 
 save(Wang.4.0ka.4ch, file = "out/Wang_4.0ka_results.RData")
 
+load("out/Wang_4.0ka_results.RData")
+load("out/Wang_33.5ka_results.RData")
+load("out/Wang_30.0ka_results.RData")
+load("out/Wang_22.7ka_results.RData")
+load("out/Wang_18.6ka_results.RData")
+load("out/Wang_15.8ka_results.RData")
+load("out/Wang_13.8ka_results.RData")
+load("out/Wang_12.1ka_results.RData")
+load("out/Wang_10.6ka_results.RData")
+load("out/Wang_7.8ka_results.RData")
+load("out/Wang_4.0ka_results.RData")
+
 #### MAPs, medians, and 89% HDIs ####
 Wang.33.5ka.GR <- MAP_HDI89(Wang.33.5ka.4ch$BUGSoutput$sims.list$FLMC[,1])
 Wang.33.5ka.SV <- MAP_HDI89(Wang.33.5ka.4ch$BUGSoutput$sims.list$FLMC[,2])
@@ -839,30 +851,48 @@ Wang.age <- c(33.375, 29.889, 22.691, 18.598, 15.785, 13.744, 12.063, 10.556, 7.
 
 Wang.d2H.C29.ivc <- c(-148.7, -146.7, -150.9, -146.6, -141, -143.7, -141.8, -145, -141.1, -143.3)
 Wang.d2H.C31.ivc <- c(-159.8, -157.8, -163.8, -157.4, -151.1, -152, -148.5, -147, -146.9, -151.3)
-Wang.veg <- data.frame(Wang.age.median.ka, Wang.RA, Wang.GR, Wang.SV, Wang.RF, Wang.d2H.MAP, 
+Wang.veg <- data.frame(Wang.age, Wang.RA, Wang.GR, Wang.SV, Wang.RF, Wang.d2H.MAP, 
                        Wang.d2H.C29.ivc, Wang.d2H.C31.ivc)
 
 #correlatin tests between estimated MAP d2H and d2H of two n-alkane chains
 #n-C29
 cor.test(Wang.veg$Wang.d2H.C29.ivc,Wang.veg$Wang.d2H_MAP.MAP)
+
 #Pearson's product-moment correlation
 #data:  Wang.veg$Wang.d2H.C29.ivc and Wang.veg$Wang.d2H_MAP.MAP
 #t = 2.8786, df = 8, p-value = 0.02056
 #r = 0.7132981
 
+lm.C29.ivc <- lm(Wang.veg$Wang.d2H_MAP.MAP ~ Wang.veg$Wang.d2H.C29.ivc)
+summary(lm.C29.ivc)
+#                           Estimate Std. Error t value Pr(>|t|)    
+#(Intercept)                86.2794    42.7030   2.020   0.0780 .
+#Wang.veg$Wang.d2H.C29.ivc   0.8483     0.2947   2.879   0.0206 * 
+
 #n-C31
 cor.test(Wang.veg$Wang.d2H.C31.ivc,Wang.veg$Wang.d2H_MAP.MAP)
+
 #Pearson's product-moment correlation
 #data:  Wang.veg$Wang.d2H.C29.ivc and Wang.veg$Wang.d2H_MAP.MAP
 #t = 2.4703, df = 8, p-value = 0.03869
 #r = 0.6578097 
+
+plot(Wang.veg$Wang.d2H_MAP.MAP ~ Wang.veg$Wang.d2H.C29.ivc)
+
+lm.C31.ivc <- lm(Wang.veg$Wang.d2H_MAP.MAP ~ Wang.veg$Wang.d2H.C31.ivc)
+summary(lm.C31.ivc)
+#                           Estimate Std. Error t value Pr(>|t|)    
+#(Intercept)                32.3252    27.9268   1.157   0.2805  
+#Wang.veg$Wang.d2H.C31.ivc   0.4490     0.1817   2.470   0.0387 * 
+
+plot(Wang.veg$Wang.d2H_MAP.MAP ~ Wang.veg$Wang.d2H.C31.ivc)
 
 ###n-C29 has a higher correlation coefficient
 
 ####qualitative comparison between veg reconstructions based on n-alkanes and pollen#
 
 #load eNd depth profile from van der Lubbe et al 2016
-eNd <- read.csv("data/EA-9 van der lubbe et al eNd.csv")
+eNd <- read.csv("data/EA-8 van der lubbe et al eNd.csv")
 
 #use rbacon to create an age depth model#
 library(rbacon)
