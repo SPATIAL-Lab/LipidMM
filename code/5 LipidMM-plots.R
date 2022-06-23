@@ -511,10 +511,10 @@ legend(0.3,15,c("C4","Savanna C3","RF C3"),lwd=c(2,2,2),
 
 #######vegetation fraction through time, with 89% HDI####
 #####Figure 11######
-#top panel 800 x 500
+#1st panel 800 x 400
 par(mfrow=c(5,1))
 plot(Wang.veg$Wang.age, Wang.veg$Wang.RF.MAP, type = "l", ylim = c(0,1), xlim = c(0,35), 
-     lwd = 2, col = plot.col[2], xlab ="Age (ka)", ylab = "FLMC")
+     lwd = 2, col = plot.col[2], xlab ="Age (ka)", ylab = "FLMC", axes=F)
 lines(Wang.veg$Wang.age, Wang.veg$Wang.RF.hdiL, lty = 2, col = plot.col[2], lwd = 1.5)
 lines(Wang.veg$Wang.age, Wang.veg$Wang.RF.hdiH, lty = 2, col = plot.col[2], lwd = 1.5)
 
@@ -527,27 +527,44 @@ lines(Wang.veg$Wang.age, Wang.veg$Wang.SV.hdiL, lty = 2, col = plot.col[4], lwd 
 lines(Wang.veg$Wang.age, Wang.veg$Wang.SV.hdiH, lty = 2, col = plot.col[4], lwd = 1.5)
 legend(25,1,c("C4","Savanna C3","RF C3"),lwd=c(2,2,2),
        col=plot.col[c(6,4,2)])
+axis(2,c(0,0.2,0.4,0.6,0.8,1))
+axis(3,c(0,5,10,15,20,25,30,35))
 
-#middle panel 800 x 500
+#2nd panel 800 x 500
 #relative abundance of n-C29 and n-C31#
 plot(Wang.veg$Wang.age, Wang.veg$RA.n.C29, type = "l", ylim = c(0.1,0.4), xlim = c(0,35), 
-     lwd = 2, col = plot.col[3], xlab ="Age (ka)", ylab = "Relative abundance")
+     lwd = 2, col = plot.col[3], xlab ="Age (ka)", ylab = "Relative abundance", axes=F)
 lines(Wang.veg$Wang.age, Wang.veg$RA.n.C31, lty = 1, col = plot.col[5], lwd = 2)
 lines(Wang.veg$Wang.age, Wang.veg$RA.n.C33, lty = 1, col = plot.col[7], lwd = 2)
 lines(Wang.veg$Wang.age, Wang.veg$RA.n.C27, lty = 1, col = plot.col[1], lwd = 2)
 legend(0,0.4,c("n-C27","n-C29","n-C31","n-C33"),lwd=c(2,2,2),
        col=plot.col[c(1,3,5,7)])
+axis(4,c(0.1,0.2,0.3,0.4))
 
-#bottom panel 800 x 400
-#BIT index from Kasper et al., 2014
+#modeled sea level from Lambeck et al., 2014
+ESL<- read.csv("data/EA-9 Lambeck et al esl.csv")
+plot(ESL$time..ka., ESL$esl, type = "l", xlim = c(0,35), ylim = c(-150,0),
+     lwd = 1.5, col = "blue", xlab ="Age (ka)", ylab = "Estimated sea level", axes=F)
+lines(ESL$time..ka., ESL$esl+ESL$err,col = "blue",lty=2)
+lines(ESL$time..ka., ESL$esl-ESL$err,col = "blue",lty=2)
+axis(2,c(-150,-100,-50,0))
+
+
+#3rd panel 800 x 400
+#BIT index from Kasper et al., 2015
 BIT<- read.csv("data/EA-7 Kasper et al 2015.csv")
 
-plot(BIT$Age..ka.BP., BIT$BIT, type = "l", xlim = c(0,35), 
-     lwd = 1.5, col = "black", xlab ="Age (ka)", ylab = "BIT")
+plot(BIT$Age..ka.BP., BIT$BIT, type = "l", xlim = c(0,35), ylim = c(0,0.7),
+     lwd = 1.5, col = "black", xlab ="Age (ka)", ylab = "BIT Index", axes=F)
+axis(4,c(0,0.1,0.2,0.3,0.4,0.5,0.6,0.7))
 
 #plot epsilon Nd from van der Lubbe et al 2016#
 plot(vdL.age.median.ka, eNd$Nd, type = "l", xlim = c(0,35), ylim = c(-13.0,-15.5),
-     lwd = 1.5, col = "gray", xlab ="Age (ka)", ylab = "eNd")
+     lwd = 1.5, col = "gray", xlab ="Age (ka)", ylab = "eNd", axes=F)
+axis(2,c(-13.0,-13.5,-14,-14.5,-15,-15.5))
+axis(1,c(0,5,10,15,20,25,30,35))
+
+
 
 #####CS3 MAP d2H estimation based on sedimentary record off the Zambezi River mouth####
 #####Figure 12######
