@@ -97,3 +97,27 @@ MAP_HDI89 <- function(MCMC.res){
   return(c(MCMC.MAP, MCMC.HDIL, MCMC.HDIH))
 }
 
+#Function 5: plotting points with error bars
+PlotPE <- function(x, y, error.y, col){
+  if(length(x) != length(y)){
+    warning("Error in plot.xy, x and y have different lengths")
+  }
+  if(length(x) != length(error.y)){
+    warning("Error in plot.xy, x and error.y have different lengths")
+  }
+  if(length(y) != length(error.y)){
+    warning("Error in plot.xy, y and error.y have different lengths")
+  }
+  if(is.null(col)){
+    warning("Please specify plotting color")
+  }
+  
+  n <- length(x)
+
+  for(i in 1:n){
+    arrows(x[i], y[i], x[i], y[i] + error.y[i], length = 0.03, angle = 90, col = col)
+    arrows(x[i], y[i], x[i], y[i] - error.y[i], length = 0.03, angle = 90, col = col)
+  }
+  points (x, y, pch = 16, col = "darkgray")
+  
+}

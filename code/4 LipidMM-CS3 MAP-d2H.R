@@ -898,7 +898,7 @@ eNd <- read.csv("data/EA-8 van der lubbe et al eNd.csv")
 library(rbacon)
 #age-depth model is taken from van der Lubbe et al 2016 
 mydir <- "C:/Users/ydmag/Google Drive/U of U/Proxy project/LipidMM"
-Bacon(coredir = mydir, core = "out",d.max = 1100,cc = 2)
+Bacon(coredir = mydir, core = "",d.max = 1100,cc = 2, run=FALSE)
 
 vdL.age.a <- Bacon.hist(eNd$Depth.in.Core)
 vdL.age.median.ka <- vdL.age.a[,3]/1000 #use the median age for plotting
