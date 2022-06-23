@@ -566,7 +566,7 @@ axis(1,c(0,5,10,15,20,25,30,35))
 
 #####CS3 MAP d2H estimation based on sedimentary record off the Zambezi River mouth####
 #####Figure 12######
-#maxium a posteriori 
+#maximum a posteriori 
 #####Comparing estimated MAP and d2H of n-alkanes#####
 par(mfrow=c(2,1))
 #top panel 800*400
@@ -575,15 +575,28 @@ plot(Wang.veg$Wang.age, Wang.veg$Wang.d2H_MAP.MAP, type = "l", ylim = c(-50,-20)
 #with 89% HDI
 lines(Wang.veg$Wang.age, Wang.veg$Wang.d2H_MAP.hdiL, lty = 2, col = "blue", lwd = 1.5)
 lines(Wang.veg$Wang.age, Wang.veg$Wang.d2H_MAP.hdiH, lty = 2, col = "blue", lwd = 1.5)
+abline(v=15, lty = 2, lwd = 2)
 
-#bottem panel 800*400
+#mid panel TEX86 temperature record
+P.TEX86 <- read.csv("data/EA-10 Powers et al TEX86.csv")
+W.TEX86 <- read.csv("data/EA-11 Woltering et al TEX86.csv")
+W.TEX86 <- na.omit(W.TEX86)
+
+plot(P.TEX86$Age, P.TEX86$Temp, type = "l", xlim = c(0, 35), ylim = c(22,29),
+      xlab= "Age (ka)", ylab= "Lake Malawi TEX86 temperature",col = "orange", lwd = 2)
+PlotPE(P.TEX86$Age, P.TEX86$Temp, P.TEX86$SD, col = "orange")
+
+lines(W.TEX86$age/1000, W.TEX86$TEX86.temp, col = "brown2", lwd = 2)
+abline(v=15, lty = 2, lwd = 2)
+legend(25,29,c("Powers et al., 2005","Woltering et al., 2011"),lwd=c(2,2),
+       col=c("orange","brown2"))
+
+#bottom panel 800*400
 #compared with n-alkane d2H (ice volume corrected) variation
 plot(Wang.veg$Wang.age, Wang.veg$Wang.d2H.C29.ivc, type = "l", xlim = c(0, 35), 
      ylim = c(-165, -135), xlab= "Age (ka)", ylab= "n-alkane d2H IVC",col = plot.col[4], lwd = 2)
 lines(Wang.veg$Wang.age, Wang.veg$Wang.d2H.C31.ivc, lwd =2, col = plot.col[6])
 legend(25,-135,c("n-C29","n-C31"),lwd=c(2,2), col=plot.col[c(4,6)])
-
-
 ###sensitivity test1: different priors####
 
 ###prior2: w.aftrica distributions####

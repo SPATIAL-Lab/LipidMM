@@ -118,6 +118,6 @@ PlotPE <- function(x, y, error.y, col){
     arrows(x[i], y[i], x[i], y[i] + error.y[i], length = 0.03, angle = 90, col = col)
     arrows(x[i], y[i], x[i], y[i] - error.y[i], length = 0.03, angle = 90, col = col)
   }
-  points (x, y, pch = 16, col = "darkgray")
+  points (x, y, pch = 16, col = col)
   
 }
