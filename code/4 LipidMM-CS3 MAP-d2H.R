@@ -6,7 +6,7 @@ library(MASS)
 library(viridisLite)
 library(EnvStats)
 library(bayestestR)
-
+library(rbacon)
 
 setwd("C:/Users/ydmag/Google Drive/U of U/Proxy project/LipidMM")
 plot.col<-viridis(7)
@@ -895,15 +895,22 @@ plot(Wang.veg$Wang.d2H_MAP.MAP ~ Wang.veg$Wang.d2H.C31.ivc)
 eNd <- read.csv("data/EA-8 van der lubbe et al eNd.csv")
 
 #use rbacon to create an age depth model#
-library(rbacon)
-#age-depth model is taken from van der Lubbe et al 2016 
-mydir <- "C:/Users/ydmag/Google Drive/U of U/Proxy project/LipidMM"
-Bacon(coredir = mydir, core = "",d.max = 1100,cc = 2, run=FALSE)
+require(rbacon)
+#age-depth model is based on raw data from van der Lubbe et al 2016 
+#data intake
+mydir <- "C:/Users/ydmag/Google Drive/U of U/Proxy project/LipidMM/data"
+#running the age-depth model with rbacon
+#by default, data will be deposited in the folder "/"
+#Bacon(coredir = mydir, core = "64PE304-80",d.max = 1100,cc = 2)
+
+#reading data from model output, with run = F
+Bacon(coredir = mydir, core = "64PE304-80",d.max = 1100,cc = 2, run=FALSE)
 
 vdL.age.a <- Bacon.hist(eNd$Depth.in.Core)
-vdL.age.median.ka <- vdL.age.a[,3]/1000 #use the median age for plotting
+vdL.age.median.ka <- vdL.age.a[,3]/1000 #use the median age for plotting in plots.R
 
-####loading GeoB9311 pollen record####
+####Quatlitative comparison with the GeoB9311 pollen record####
+####loading GeoB9311 pollen record
 pollen_rec<- read.csv("data/EA-6 GeoB9311 pollen.csv")
 #note that the data are at a much lower temporal resolutoin
 #12.1 ka data point not available
