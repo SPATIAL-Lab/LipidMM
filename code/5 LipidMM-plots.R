@@ -6,6 +6,7 @@ library(viridisLite)
 library(EnvStats)
 library(bayestestR)
 library(dplyr)
+library(palinsol)
 
 plot.col<-viridis(7)
 ###CS1 QTP mixing####
@@ -568,35 +569,57 @@ axis(1,c(0,5,10,15,20,25,30,35))
 #####Figure 12######
 #maximum a posteriori 
 #####Comparing estimated MAP and d2H of n-alkanes#####
-par(mfrow=c(2,1))
-#top panel 800*400
+par(mfrow=c(4,1))
+#panel A: estimated MAP d2H
 plot(Wang.veg$Wang.age, Wang.veg$Wang.d2H_MAP.MAP, type = "l", ylim = c(-50,-20), xlim = c(0,35), 
-     lwd = 2, col = "blue", xlab ="Age (ka)", ylab = "Estimated MAP d2H")
+     lwd = 2, col = "blue", ylab = "Estimated MAP d2H IVC", axes=F)
 #with 89% HDI
 lines(Wang.veg$Wang.age, Wang.veg$Wang.d2H_MAP.hdiL, lty = 2, col = "blue", lwd = 1.5)
 lines(Wang.veg$Wang.age, Wang.veg$Wang.d2H_MAP.hdiH, lty = 2, col = "blue", lwd = 1.5)
 abline(v=15, lty = 2, lwd = 2)
+axis(2,c(-50,-40,-30,-20))
+axis(3,c(0,5,10,15,20,25,30,35))
 
-#mid panel TEX86 temperature record
+#panel B:
+#compared with n-alkane d2H (ice volume corrected) variation
+plot(Wang.veg$Wang.age, Wang.veg$Wang.d2H.C29.ivc, type = "l", xlim = c(0, 35), axes=F,
+     ylim = c(-165, -135), ylab= "n-alkane d2H IVC",col = plot.col[4], lwd = 2)
+lines(Wang.veg$Wang.age, Wang.veg$Wang.d2H.C31.ivc, lwd =2, col = plot.col[6])
+abline(v=15, lty = 2, lwd = 2)
+legend(25,-135,c("n-C29","n-C31"),lwd=c(2,2), col=plot.col[c(4,6)])
+axis(4,c(-165,-155,-145,-135))
+
+#panel C: TEX86 temperature record Lake Malawi
 P.TEX86 <- read.csv("data/EA-10 Powers et al TEX86.csv")
 W.TEX86 <- read.csv("data/EA-11 Woltering et al TEX86.csv")
 W.TEX86 <- na.omit(W.TEX86)
 
-plot(P.TEX86$Age, P.TEX86$Temp, type = "l", xlim = c(0, 35), ylim = c(22,29),
-      xlab= "Age (ka)", ylab= "Lake Malawi TEX86 temperature",col = "orange", lwd = 2)
+plot(P.TEX86$Age, P.TEX86$Temp, type = "l", xlim = c(0, 35), ylim = c(22,29),axes=F,
+      ylab= "Lake Malawi TEX86 temperature",col = "orange", lwd = 2)
+#make sure to preload the helper function #5
 PlotPE(P.TEX86$Age, P.TEX86$Temp, P.TEX86$SD, col = "orange")
 
 lines(W.TEX86$age/1000, W.TEX86$TEX86.temp, col = "brown2", lwd = 2)
 abline(v=15, lty = 2, lwd = 2)
 legend(25,29,c("Powers et al., 2005","Woltering et al., 2011"),lwd=c(2,2),
        col=c("orange","brown2"))
+axis(2,c(22:29))
 
-#bottom panel 800*400
-#compared with n-alkane d2H (ice volume corrected) variation
-plot(Wang.veg$Wang.age, Wang.veg$Wang.d2H.C29.ivc, type = "l", xlim = c(0, 35), 
-     ylim = c(-165, -135), xlab= "Age (ka)", ylab= "n-alkane d2H IVC",col = plot.col[4], lwd = 2)
-lines(Wang.veg$Wang.age, Wang.veg$Wang.d2H.C31.ivc, lwd =2, col = plot.col[6])
-legend(25,-135,c("n-C29","n-C31"),lwd=c(2,2), col=plot.col[c(4,6)])
+#panel D: comparing the curve with solar insolation
+#use the package "palinsol"
+require(palinsol)
+#calculate DecJanFeb insolation at 18degrees S, with the la04 solution (Laskar et al. 2004)
+insolation.18S <- function(times, astrosol=la04,...)
+  sapply(times, function(tt) Insol_d1d2(orbit=astrosol(tt), d1=330 ,d2=60 ,avg=T, lat=-18*pi/180))
+tts <- seq(from = -35e3, to = 0, by = 1e2)
+isl.18S <- insolation.18S(tts, la04)
+
+plot(-tts/1000, isl.18S, typ='l', ylim =c(440,480), lwd = 1.5, axes=F,
+     xlab= "Age (ka)", ylab= "DJF insolation at −18° Latitude (W m–2)")
+abline(v=15, lty = 2, lwd = 2)
+axis(4,c(440,460,480))
+axis(1,c(0,5,10,15,20,25,30,35))
+
 ###sensitivity test1: different priors####
 
 ###prior2: w.aftrica distributions####
