@@ -847,11 +847,15 @@ Wang.RA <- rbind(RA.33.5ka, RA.30.0ka, RA.22.7ka, RA.18.6ka, RA.15.8ka,
                  RA.13.8ka, RA.12.1ka, RA.10.6ka, RA.7.8ka, RA.4.0ka)
 colnames(Wang.RA) <- c("RA.n-C27", "RA.n-C29", "RA.n-C31", "RA.n-C33")
 
+Wang.d13C <- rbind(d13C.33.5ka, d13C.30.0ka, d13C.22.7ka, d13C.18.6ka, d13C.15.8ka,
+                   d13C.13.8ka, d13C.12.1ka, d13C.10.6ka, d13C.7.8ka, d13C.4.0ka)
+colnames(Wang.d13C) <- c("d13C.n-C27", "d13C.n-C29", "d13C.n-C31", "d13C.n-C33")
+
 Wang.age <- c(33.375, 29.889, 22.691, 18.598, 15.785, 13.744, 12.063, 10.556, 7.985, 3.949)
 
 Wang.d2H.C29.ivc <- c(-148.7, -146.7, -150.9, -146.6, -141, -143.7, -141.8, -145, -141.1, -143.3)
 Wang.d2H.C31.ivc <- c(-159.8, -157.8, -163.8, -157.4, -151.1, -152, -148.5, -147, -146.9, -151.3)
-Wang.veg <- data.frame(Wang.age, Wang.RA, Wang.GR, Wang.SV, Wang.RF, Wang.d2H.MAP, 
+Wang.veg <- data.frame(Wang.age, Wang.RA, Wang.d13C, Wang.GR, Wang.SV, Wang.RF, Wang.d2H.MAP, 
                        Wang.d2H.C29.ivc, Wang.d2H.C31.ivc)
 
 #correlatin tests between estimated MAP d2H and d2H of two n-alkane chains

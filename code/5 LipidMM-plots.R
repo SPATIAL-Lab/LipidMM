@@ -531,17 +531,30 @@ legend(25,1,c("C4","Savanna C3","RF C3"),lwd=c(2,2,2),
 axis(2,c(0,0.2,0.4,0.6,0.8,1))
 axis(3,c(0,5,10,15,20,25,30,35))
 
-#panel B: #relative abundance of n-C29 and n-C31#
+#panel B: #relative abundance of n-alkane chains#
 plot(Wang.veg$Wang.age, Wang.veg$RA.n.C29, type = "l", ylim = c(0.1,0.4), xlim = c(0,35), 
      lwd = 2, col = plot.col[3], xlab ="Age (ka)", ylab = "Relative abundance", axes=F)
 lines(Wang.veg$Wang.age, Wang.veg$RA.n.C31, lty = 1, col = plot.col[5], lwd = 2)
 lines(Wang.veg$Wang.age, Wang.veg$RA.n.C33, lty = 1, col = plot.col[7], lwd = 2)
 lines(Wang.veg$Wang.age, Wang.veg$RA.n.C27, lty = 1, col = plot.col[1], lwd = 2)
-legend(0,0.4,c("n-C27","n-C29","n-C31","n-C33"),lwd=c(2,2,2),
+legend(0,0.4,c("n-C27","n-C29","n-C31","n-C33"),lwd=c(2,2,2,2),
        col=plot.col[c(1,3,5,7)])
 axis(4,c(0.1,0.2,0.3,0.4))
 
-#panel C: modeled sea level from Lambeck et al., 2014
+#panel C: d13C of n-alkane chains
+plot.col.2 <- inferno(8)
+
+plot(Wang.veg$Wang.age, Wang.veg$d13C.n.C29, type = "l", ylim = c(-32,-23), xlim = c(0,35), 
+     lwd = 2, col = plot.col.2[3], xlab ="Age (ka)", ylab = "d13C, ‰VPDB", axes = F)
+lines(Wang.veg$Wang.age, Wang.veg$d13C.n.C31, lty = 1, col = plot.col.2[5], lwd = 2)
+lines(Wang.veg$Wang.age, Wang.veg$d13C.n.C33, lty = 1, col = plot.col.2[7], lwd = 2)
+lines(Wang.veg$Wang.age, Wang.veg$d13C.n.C27, lty = 1, col = plot.col.2[1], lwd = 2)
+legend(0,-23,c("n-C27","n-C29","n-C31","n-C33"),lwd=c(2,2,2,2),
+       col=plot.col.2[c(1,3,5,7)])
+axis(2,c(-32:-23))
+
+
+#panel D: modeled sea level from Lambeck et al., 2014
 ESL<- read.csv("data/EA-9 Lambeck et al esl.csv")
 plot(ESL$time..ka., ESL$esl, type = "l", xlim = c(0,35), ylim = c(-150,0),
      lwd = 1.5, col = "blue", xlab ="Age (ka)", ylab = "Estimated sea level", axes=F)
@@ -550,14 +563,14 @@ lines(ESL$time..ka., ESL$esl-ESL$err,col = "blue",lty=2)
 axis(2,c(-150,-100,-50,0))
 
 
-#panel D: BIT index from Kasper et al., 2015
+#panel E: BIT index from Kasper et al., 2015
 BIT<- read.csv("data/EA-7 Kasper et al 2015.csv")
 
 plot(BIT$Age..ka.BP., BIT$BIT, type = "l", xlim = c(0,35), ylim = c(0,0.7),
      lwd = 1.5, col = "black", xlab ="Age (ka)", ylab = "BIT Index", axes=F)
 axis(4,c(0,0.1,0.2,0.3,0.4,0.5,0.6,0.7))
 
-##panel E: plot epsilon Nd from van der Lubbe et al 2016#
+##panel F: plot epsilon Nd from van der Lubbe et al 2016#
 plot(vdL.age.median.ka, eNd$Nd, type = "l", xlim = c(0,35), ylim = c(-13.0,-15.5),
      lwd = 1.5, col = "darkgray", xlab ="Age (ka)", ylab = "eNd", axes=F)
 PlotPE(vdL.age.median.ka, eNd$Nd, eNd$err, col = "darkgray")
@@ -589,23 +602,32 @@ abline(v=15, lty = 2, lwd = 2)
 legend(25,-135,c("n-C29","n-C31"),lwd=c(2,2), col=plot.col[c(4,6)])
 axis(4,c(-165,-155,-145,-135))
 
-#panel C: TEX86 temperature record Lake Malawi
-P.TEX86 <- read.csv("data/EA-10 Powers et al TEX86.csv")
-W.TEX86 <- read.csv("data/EA-11 Woltering et al TEX86.csv")
-W.TEX86 <- na.omit(W.TEX86)
+# #panel C should be removed
+# #panel C: TEX86 temperature record Lake Malawi
+# P.TEX86 <- read.csv("data/EA-10 Powers et al TEX86.csv")
+# W.TEX86 <- read.csv("data/EA-11 Woltering et al TEX86.csv")
+# W.TEX86 <- na.omit(W.TEX86)
+# 
+# plot(P.TEX86$Age, P.TEX86$Temp, type = "l", xlim = c(0, 35), ylim = c(22,29),axes=F,
+#       ylab= "Lake Malawi TEX86 temperature",col = "orange", lwd = 2)
+# #make sure to preload the helper function #5
+# PlotPE(P.TEX86$Age, P.TEX86$Temp, P.TEX86$SD, col = "orange")
+# 
+# lines(W.TEX86$age/1000, W.TEX86$TEX86.temp, col = "brown2", lwd = 2)
+# abline(v=15, lty = 2, lwd = 2)
+# legend(25,29,c("Powers et al., 2005","Woltering et al., 2011"),lwd=c(2,2),
+#        col=c("orange","brown2"))
+# axis(2,c(22:29))
 
-plot(P.TEX86$Age, P.TEX86$Temp, type = "l", xlim = c(0, 35), ylim = c(22,29),axes=F,
-      ylab= "Lake Malawi TEX86 temperature",col = "orange", lwd = 2)
-#make sure to preload the helper function #5
-PlotPE(P.TEX86$Age, P.TEX86$Temp, P.TEX86$SD, col = "orange")
+#panel C: Konecky 2011 Lake Malawi
+malawi<- read.csv("data/EA-10 Konecky et al 2011.csv")
 
-lines(W.TEX86$age/1000, W.TEX86$TEX86.temp, col = "brown2", lwd = 2)
-abline(v=15, lty = 2, lwd = 2)
-legend(25,29,c("Powers et al., 2005","Woltering et al., 2011"),lwd=c(2,2),
-       col=c("orange","brown2"))
-axis(2,c(22:29))
+plot(malawi$Age..years.BP./1000, malawi$deltaD.corrected.for.ice.volume, 
+     type = "l", xlim = c(0, 35), ylim = c(-120,-90),
+      ylab= "Lake Malawi n-C28 alkanoic acid",col = "orange", lwd = 2)
 
-#panel D: comparing the curve with solar insolation
+#panel D: comparing the curve with SH insolation, 
+#with precipitation amount explained by the strength of local convection
 #use the package "palinsol"
 require(palinsol)
 #calculate DecJanFeb insolation at 18degrees S, with the la04 solution (Laskar et al. 2004)
