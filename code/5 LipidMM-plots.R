@@ -560,7 +560,7 @@ plot(ESL$time..ka., ESL$esl, type = "l", xlim = c(0,35), ylim = c(-150,0),
      lwd = 1.5, col = "blue", xlab ="Age (ka)", ylab = "Estimated sea level", axes=F)
 lines(ESL$time..ka., ESL$esl+ESL$err,col = "blue",lty=2)
 lines(ESL$time..ka., ESL$esl-ESL$err,col = "blue",lty=2)
-axis(2,c(-150,-100,-50,0))
+axis(4,c(-150,-100,-50,0))
 
 
 #panel E: BIT index from Kasper et al., 2015
@@ -568,14 +568,14 @@ BIT<- read.csv("data/EA-7 Kasper et al 2015.csv")
 
 plot(BIT$Age..ka.BP., BIT$BIT, type = "l", xlim = c(0,35), ylim = c(0,0.7),
      lwd = 1.5, col = "black", xlab ="Age (ka)", ylab = "BIT Index", axes=F)
-axis(4,c(0,0.1,0.2,0.3,0.4,0.5,0.6,0.7))
+axis(2,c(0,0.1,0.2,0.3,0.4,0.5,0.6,0.7))
 
 ##panel F: plot epsilon Nd from van der Lubbe et al 2016#
 plot(vdL.age.median.ka, eNd$Nd, type = "l", xlim = c(0,35), ylim = c(-13.0,-15.5),
      lwd = 1.5, col = "darkgray", xlab ="Age (ka)", ylab = "eNd", axes=F)
 PlotPE(vdL.age.median.ka, eNd$Nd, eNd$err, col = "darkgray")
 #points(vdL.age.median.ka, eNd$Nd, pch = 16, col = "darkgray")
-axis(2,c(-13.0,-13.5,-14,-14.5,-15,-15.5))
+axis(4,c(-13.0,-13.5,-14,-14.5,-15,-15.5))
 axis(1,c(0,5,10,15,20,25,30,35))
 
 #####CS3 MAP d2H estimation based on sedimentary record off the Zambezi River mouth####
@@ -620,27 +620,27 @@ axis(4,c(-165,-155,-145,-135))
 # axis(2,c(22:29))
 
 #panel C: Konecky 2011 Lake Malawi
-malawi<- read.csv("data/EA-10 Konecky et al 2011.csv")
-
-plot(malawi$Age..years.BP./1000, malawi$deltaD.corrected.for.ice.volume, 
-     type = "l", xlim = c(0, 35), ylim = c(-120,-90),
-      ylab= "Lake Malawi n-C28 alkanoic acid",col = "orange", lwd = 2)
+# malawi<- read.csv("data/EA-10 Konecky et al 2011.csv")
+# 
+# plot(malawi$Age..years.BP./1000, malawi$deltaD.corrected.for.ice.volume, 
+#      type = "l", xlim = c(0, 35), ylim = c(-120,-90),
+#       ylab= "Lake Malawi n-C28 alkanoic acid",col = "orange", lwd = 2)
 
 #panel D: comparing the curve with SH insolation, 
 #with precipitation amount explained by the strength of local convection
 #use the package "palinsol"
-require(palinsol)
-#calculate DecJanFeb insolation at 18degrees S, with the la04 solution (Laskar et al. 2004)
-insolation.18S <- function(times, astrosol=la04,...)
-  sapply(times, function(tt) Insol_d1d2(orbit=astrosol(tt), d1=330 ,d2=60 ,avg=T, lat=-18*pi/180))
-tts <- seq(from = -35e3, to = 0, by = 1e2)
-isl.18S <- insolation.18S(tts, la04)
-
-plot(-tts/1000, isl.18S, typ='l', ylim =c(440,480), lwd = 1.5, axes=F,
-     xlab= "Age (ka)", ylab= "DJF insolation at −18° Latitude (W m–2)")
-abline(v=15, lty = 2, lwd = 2)
-axis(4,c(440,460,480))
-axis(1,c(0,5,10,15,20,25,30,35))
+# require(palinsol)
+# #calculate DecJanFeb insolation at 18degrees S, with the la04 solution (Laskar et al. 2004)
+# insolation.18S <- function(times, astrosol=la04,...)
+#   sapply(times, function(tt) Insol_d1d2(orbit=astrosol(tt), d1=330 ,d2=60 ,avg=T, lat=-18*pi/180))
+# tts <- seq(from = -35e3, to = 0, by = 1e2)
+# isl.18S <- insolation.18S(tts, la04)
+# 
+# plot(-tts/1000, isl.18S, typ='l', ylim =c(440,480), lwd = 1.5, axes=F,
+#      xlab= "Age (ka)", ylab= "DJF insolation at −18° Latitude (W m–2)")
+# abline(v=15, lty = 2, lwd = 2)
+# axis(4,c(440,460,480))
+# axis(1,c(0,5,10,15,20,25,30,35))
 
 ###sensitivity test1: different priors####
 
