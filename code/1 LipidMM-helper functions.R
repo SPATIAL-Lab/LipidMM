@@ -86,12 +86,12 @@ contour.fn<-function(MCMC.f){
   return(results)
 }
 
-#Function 4: calculate MAP and 89% HDI of MCMC result
-MAP_HDI89 <- function(MCMC.res){
+#Function 4: calculate MAP and CI% HDI of MCMC result
+MAP_HDI <- function(MCMC.res, CI){
   require(bayestestR)
   require(KernSmooth)
   MCMC.MAP <- map_estimate(MCMC.res, method = "KernSmooth")
-  MCMC.HDI <- hdi(MCMC.res, ci = .89)
+  MCMC.HDI <- hdi(MCMC.res, ci = CI)
   MCMC.HDIL <- MCMC.HDI[1,2]
   MCMC.HDIH <- MCMC.HDI[1,3]
   return(c(MCMC.MAP, MCMC.HDIL, MCMC.HDIH))
