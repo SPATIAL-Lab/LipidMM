@@ -12,7 +12,8 @@ plot.col<-viridis(7)
 
 #setwd("C:/Users/ydmag/Google Drive/U of U/Proxy project/LipidMM")
 
-####make sure to run all the helper functions in "code/LipidMM-helper functions.R"
+source("code/1 LipidMM-helper functions.R")
+
 map_rec<- read.csv("data/EA-5 data map_rec.csv")
 
 map_rec.GR <- map_rec[which(map_rec$Source == "GR"),]

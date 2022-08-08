@@ -9,7 +9,7 @@ library(bayestestR)
 
 #setwd("C:/Users/ydmag/Google Drive/U of U/Proxy project/LipidMM")
 
-####make sure to run all the helper functions in "code/LipidMM-helper functions.R"
+source("code/1 LipidMM-helper functions.R")
 
 Q.Tibet <- read.csv("data/EA-2 data qtp.csv")
 

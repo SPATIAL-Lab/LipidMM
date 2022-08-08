@@ -7,9 +7,10 @@ library(viridisLite)
 library(EnvStats)
 library(bayestestR)
 
-setwd("C:/Users/ydmag/Google Drive/U of U/Proxy project/LipidMM")
+#setwd("C:/Users/ydmag/Google Drive/U of U/Proxy project/LipidMM")
 
-####make sure to run all the helper functions in "code/LipidMM-helper functions.R"
+source("code/1 LipidMM-helper functions.R")
+
 African <- read.csv("data/EA-3 data afr.csv")
 
 #subset the data
