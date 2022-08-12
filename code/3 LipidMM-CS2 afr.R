@@ -14,9 +14,9 @@ source("code/1 LipidMM-helper functions.R")
 African <- read.csv("data/EA-3 data afr.csv")
 
 #subset the data
-GR <- African[which(African$Source == "GR"),]
-SV <- African[which(African$Source == "SV"),]
-RF <- African[which(African$Source == "RF"),]
+GR <- subset(African, African$Source == "GR")
+SV <- subset(African, African$Source == "SV")
+RF <- subset(African, African$Source == "RF")
 
 ###compile prior parameters######
 
@@ -252,9 +252,9 @@ baro.l.RF.hdi <- hdi(baro.l.mix$BUGSoutput$sims.list$FLMC[,3], ci = .89)
 W.African <- read.csv("data/EA-4 data w-afr.csv")
 
 #subset data
-W.GR <- W.African[which(W.African$Source == "GR"),]
-W.SV <- W.African[which(W.African$Source == "SV"),]
-W.RF <- W.African[which(W.African$Source == "RF"),]
+W.GR <- subset(W.African, W.African$Source == "GR")
+W.SV <- subset(W.African, W.African$Source == "SV")
+W.RF <- subset(W.African, W.African$Source == "RF")
 
 ###compile parameters
 #concentration

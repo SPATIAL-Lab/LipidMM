@@ -14,10 +14,10 @@ source("code/1 LipidMM-helper functions.R")
 Q.Tibet <- read.csv("data/EA-2 data qtp.csv")
 
 #subset tje data
-Mac <- Q.Tibet[which(Q.Tibet$Type == "macrophyte"),]
-Ter <- Q.Tibet[which(Q.Tibet$Type == "land"),]
-Alg <- Q.Tibet[which(Q.Tibet$Type == "algae"),]
-
+Mac <- subset(Q.Tibet, Q.Tibet$Type == "macrophyte")
+Ter <- subset(Q.Tibet, Q.Tibet$Type == "land")
+Alg <- subset(Q.Tibet, Q.Tibet$Type == "algae")
+  
 ###compile prior parameters######
 
 ##d13C
