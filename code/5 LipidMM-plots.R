@@ -9,6 +9,9 @@ library(dplyr)
 library(palinsol)
 
 plot.col<-viridis(7)
+
+source("code/1 LipidMM-helper functions.R")
+
 ###CS1 QTP mixing####
 
 ###CS1 QTP d13C prior distribution#####
@@ -602,46 +605,6 @@ abline(v=15, lty = 2, lwd = 2)
 legend(25,-135,c("n-C29","n-C31"),lwd=c(2,2), col=plot.col[c(4,6)])
 axis(4,c(-165,-155,-145,-135))
 
-# #panel C should be removed
-# #panel C: TEX86 temperature record Lake Malawi
-# P.TEX86 <- read.csv("data/EA-10 Powers et al TEX86.csv")
-# W.TEX86 <- read.csv("data/EA-11 Woltering et al TEX86.csv")
-# W.TEX86 <- na.omit(W.TEX86)
-# 
-# plot(P.TEX86$Age, P.TEX86$Temp, type = "l", xlim = c(0, 35), ylim = c(22,29),axes=F,
-#       ylab= "Lake Malawi TEX86 temperature",col = "orange", lwd = 2)
-# #make sure to preload the helper function #5
-# PlotPE(P.TEX86$Age, P.TEX86$Temp, P.TEX86$SD, col = "orange")
-# 
-# lines(W.TEX86$age/1000, W.TEX86$TEX86.temp, col = "brown2", lwd = 2)
-# abline(v=15, lty = 2, lwd = 2)
-# legend(25,29,c("Powers et al., 2005","Woltering et al., 2011"),lwd=c(2,2),
-#        col=c("orange","brown2"))
-# axis(2,c(22:29))
-
-#panel C: Konecky 2011 Lake Malawi
-# malawi<- read.csv("data/EA-10 Konecky et al 2011.csv")
-# 
-# plot(malawi$Age..years.BP./1000, malawi$deltaD.corrected.for.ice.volume, 
-#      type = "l", xlim = c(0, 35), ylim = c(-120,-90),
-#       ylab= "Lake Malawi n-C28 alkanoic acid",col = "orange", lwd = 2)
-
-#panel D: comparing the curve with SH insolation, 
-#with precipitation amount explained by the strength of local convection
-#use the package "palinsol"
-# require(palinsol)
-# #calculate DecJanFeb insolation at 18degrees S, with the la04 solution (Laskar et al. 2004)
-# insolation.18S <- function(times, astrosol=la04,...)
-#   sapply(times, function(tt) Insol_d1d2(orbit=astrosol(tt), d1=330 ,d2=60 ,avg=T, lat=-18*pi/180))
-# tts <- seq(from = -35e3, to = 0, by = 1e2)
-# isl.18S <- insolation.18S(tts, la04)
-# 
-# plot(-tts/1000, isl.18S, typ='l', ylim =c(440,480), lwd = 1.5, axes=F,
-#      xlab= "Age (ka)", ylab= "DJF insolation at −18° Latitude (W m–2)")
-# abline(v=15, lty = 2, lwd = 2)
-# axis(4,c(440,460,480))
-# axis(1,c(0,5,10,15,20,25,30,35))
-
 ###sensitivity test1: different priors####
 
 ###prior2: w.aftrica distributions####
@@ -802,20 +765,10 @@ plot(density(rhum.l.test.a$BUGSoutput$sims.list$FLMC[,1],from=0,to=1),
 lines(density(rhum.l.test.a$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),col=plot.col[4],lwd=2)
 lines(density(rhum.l.test.a$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),col=plot.col[2],lwd=2)
 
-# plot(density(rhum.l.test.b$BUGSoutput$sims.list$FLMC[,1],from=0,to=1),
-#      main="inflated RA",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,6),lwd=2)
-# lines(density(rhum.l.test.b$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),col=plot.col[4],lwd=2)
-# lines(density(rhum.l.test.b$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),col=plot.col[2],lwd=2)
-
 plot(density(rhum.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
      main = "Rhum default", xlab="FLMC", xlim=c(0,1), ylim =c(0,6),lwd=2,col = plot.col[6])
 lines(density(rhum.l.mix$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),lwd=2,col = plot.col[4])
 lines(density(rhum.l.mix$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),lwd=2,col = plot.col[2])
-
-# plot(density(rhum.l.test.d$BUGSoutput$sims.list$FLMC[,1],from=0,to=1),
-#      main="inflated d13C",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,6),lwd=2)
-# lines(density(rhum.l.test.d$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),col=plot.col[4],lwd=2)
-# lines(density(rhum.l.test.d$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),col=plot.col[2],lwd=2)
 
 plot(density(rhum.l.test.c$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
      main="No d13C",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,6),lwd=2)
@@ -828,20 +781,10 @@ plot(density(asso.l.test.a$BUGSoutput$sims.list$FLMC[,1],from=0,to=1),
 lines(density(asso.l.test.a$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),col=plot.col[4],lwd=2)
 lines(density(asso.l.test.a$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),col=plot.col[2],lwd=2)
 
-# plot(density(asso.l.test.b$BUGSoutput$sims.list$FLMC[,1],from=0,to=1),
-#      main="inflated RA",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,8),lwd=2)
-# lines(density(asso.l.test.b$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),col=plot.col[4],lwd=2)
-# lines(density(asso.l.test.b$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),col=plot.col[2],lwd=2)
-
 plot(density(asso.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
      main = "Asso default", xlab="FLMC", xlim=c(0,1), ylim =c(0,8),lwd=2,col = plot.col[6])
 lines(density(asso.l.mix$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),lwd=2,col = plot.col[4])
 lines(density(asso.l.mix$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),lwd=2,col = plot.col[2])
-
-# plot(density(asso.l.test.d$BUGSoutput$sims.list$FLMC[,1],from=0,to=1),
-#      main="inflated d13C",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,8),lwd=2)
-# lines(density(asso.l.test.d$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),col=plot.col[4],lwd=2)
-# lines(density(asso.l.test.d$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),col=plot.col[2],lwd=2)
 
 plot(density(asso.l.test.c$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
      main="No d13C",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,8),lwd=2)
@@ -854,20 +797,10 @@ plot(density(baro.l.test.a$BUGSoutput$sims.list$FLMC[,1],from=0,to=1),
 lines(density(baro.l.test.a$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),col=plot.col[4],lwd=2)
 lines(density(baro.l.test.a$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),col=plot.col[2],lwd=2)
 
-# plot(density(baro.l.test.b$BUGSoutput$sims.list$FLMC[,1],from=0,to=1),
-#      main="inflated RA",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,8),lwd=2)
-# lines(density(baro.l.test.b$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),col=plot.col[4],lwd=2)
-# lines(density(baro.l.test.b$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),col=plot.col[2],lwd=2)
-
 plot(density(baro.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
      main = "Baro default", xlab="FLMC", xlim=c(0,1), ylim =c(0,8),lwd=2,col = plot.col[6])
 lines(density(baro.l.mix$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),lwd=2,col = plot.col[4])
 lines(density(baro.l.mix$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),lwd=2,col = plot.col[2])
-
-# plot(density(baro.l.test.d$BUGSoutput$sims.list$FLMC[,1],from=0,to=1),
-#      main="inflated d13C",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,8),lwd=2)
-# lines(density(baro.l.test.d$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),col=plot.col[4],lwd=2)
-# lines(density(baro.l.test.d$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),col=plot.col[2],lwd=2)
 
 plot(density(baro.l.test.c$BUGSoutput$sims.list$FLMC[,1],from=0,to=1), 
      main="No d13C",xlab="FLMC",xlim=c(0,1),col=plot.col[6], ylim =c(0,8),lwd=2)

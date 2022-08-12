@@ -16,9 +16,9 @@ source("code/1 LipidMM-helper functions.R")
 
 map_rec<- read.csv("data/EA-5 data map_rec.csv")
 
-map_rec.GR <- map_rec[which(map_rec$Source == "GR"),]
-map_rec.SV <- map_rec[which(map_rec$Source == "SV"),]
-map_rec.RF <- map_rec[which(map_rec$Source == "RF"),]
+map_rec.GR <- subset(map_rec, map_rec$Source == "GR")
+map_rec.SV <- subset(map_rec, map_rec$Source == "SV")
+map_rec.RF <- subset(map_rec, map_rec$Source == "RF")
 
 #the three chains used in this case study are Cn-27, Cn-29, and Cn-31
 ###compile prior parameters######
@@ -68,9 +68,9 @@ map_rec.epsilon.app.vcov
 African <- read.csv("data\EA-3 data afr.csv")
 
 #subset the data
-GR <- African[which(African$Source == "GR"),]
-SV <- African[which(African$Source == "SV"),]
-RF <- African[which(African$Source == "RF"),]
+GR <- subset(African, African$Source == "GR")
+SV <- subset(African, African$Source == "SV")
+RF <- subset(African, African$Source == "RF")
 
 ###compile prior parameters######
 
