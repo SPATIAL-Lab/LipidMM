@@ -6,7 +6,7 @@ library(MASS)
 library(viridisLite)
 library(EnvStats)
 library(bayestestR)
-library(rbacon)
+library(dplyr)
 
 plot.col<-viridis(7)
 
@@ -65,7 +65,7 @@ map_rec.epsilon.app.mu
 map_rec.epsilon.app.vcov
 
 ####Adopt the d13C and n-alkane concentrations from CS2
-African <- read.csv("data\EA-3 data afr.csv")
+African <- read.csv("data/EA-3 data afr.csv")
 
 #subset the data
 GR <- subset(African, African$Source == "GR")
@@ -745,7 +745,7 @@ traplot(Wang.4.0ka.4ch, parms = "FLMC")
 
 save(Wang.4.0ka.4ch, file = "out/Wang_4.0ka_results.RData")
 
-load("out/Wang_4.0ka_results.RData")
+###summary of results###
 load("out/Wang_33.5ka_results.RData")
 load("out/Wang_30.0ka_results.RData")
 load("out/Wang_22.7ka_results.RData")
@@ -871,7 +871,7 @@ cor.test(Wang.veg$Wang.d2H.C31.ivc,Wang.veg$Wang.d2H_MAP.MAP)
 #t = 2.4703, df = 8, p-value = 0.03869
 #r = 0.6578097 
 
-plot(Wang.veg$Wang.d2H_MAP.MAP ~ Wang.veg$Wang.d2H.C29.ivc)
+#plot(Wang.veg$Wang.d2H_MAP.MAP ~ Wang.veg$Wang.d2H.C29.ivc)
 
 lm.C31.ivc <- lm(Wang.veg$Wang.d2H_MAP.MAP ~ Wang.veg$Wang.d2H.C31.ivc)
 summary(lm.C31.ivc)
@@ -879,43 +879,24 @@ summary(lm.C31.ivc)
 #(Intercept)                32.3252    27.9268   1.157   0.2805  
 #Wang.veg$Wang.d2H.C31.ivc   0.4490     0.1817   2.470   0.0387 * 
 
-plot(Wang.veg$Wang.d2H_MAP.MAP ~ Wang.veg$Wang.d2H.C31.ivc)
+#plot(Wang.veg$Wang.d2H_MAP.MAP ~ Wang.veg$Wang.d2H.C31.ivc)
 
 ###n-C29 has a higher correlation coefficient
 
-####qualitative comparison between veg reconstructions based on n-alkanes and pollen#
 
-#load eNd depth profile from van der Lubbe et al 2016
-eNd <- read.csv("data/EA-8 van der lubbe et al eNd.csv")
-
-#use rbacon to create an age depth model#
-require(rbacon)
-#age-depth model is based on raw data from van der Lubbe et al 2016 
-#data intake
-mydir <- "C:/Users/ydmag/Google Drive/U of U/Proxy project/LipidMM/data"
-#running the age-depth model with rbacon
-#by default, data will be deposited in the folder "/"
-#Bacon(coredir = mydir, core = "64PE304-80",d.max = 1100,cc = 2)
-
-#reading data from model output, with run = F
-Bacon(coredir = mydir, core = "64PE304-80",d.max = 1100,cc = 2, run=FALSE)
-
-vdL.age.a <- Bacon.hist(eNd$Depth.in.Core)
-vdL.age.median.ka <- vdL.age.a[,3]/1000 #use the median age for plotting in plots.R
-
-####Quatlitative comparison with the GeoB9311 pollen record####
+####Qualitative comparison with the GeoB9311 pollen record####
 ####loading GeoB9311 pollen record
 pollen_rec<- read.csv("data/EA-6 GeoB9311 pollen.csv")
 #note that the data are at a much lower temporal resolutoin
 #12.1 ka data point not available
 
 #use taxon groups by Dupont and Kuhlmann, 2017
-GeoB9311.RF <- dplyr::filter(pollen_rec, Habitat == "RF")
-GeoB9311.SV <- dplyr::filter(pollen_rec, Habitat == "SV")
-GeoB9311.C4 <- dplyr::filter(pollen_rec, Habitat == "C4")
-GeoB9311.MT <- dplyr::filter(pollen_rec, Habitat == "MT")
-GeoB9311.SW <- dplyr::filter(pollen_rec, Habitat == "SW")
-GeoB9311.Fern <- dplyr::filter(pollen_rec, Habitat == "Fern")
+GeoB9311.RF <- subset(pollen_rec, Habitat == "RF")
+GeoB9311.SV <- subset(pollen_rec, Habitat == "SV")
+GeoB9311.C4 <- subset(pollen_rec, Habitat == "C4")
+GeoB9311.MT <- subset(pollen_rec, Habitat == "MT")
+GeoB9311.SW <- subset(pollen_rec, Habitat == "SW")
+GeoB9311.Fern <- subset(pollen_rec, Habitat == "Fern")
 
 GeoB9311.RF.sum <- dplyr::summarise_each(GeoB9311.RF[4:11], list(total = sum))
 GeoB9311.SV.sum <- dplyr::summarise_each(GeoB9311.SV[4:11], list(total = sum))
@@ -943,28 +924,28 @@ Wang.veg.compare <- Wang.veg[Wang.indeces,]
 ####qualitative comparison with non-parametric tests#####
 #spearman's rank correlation#
 
-cor.test(Wang.veg$Wang.GR.MAP, rev(GeoB9311.C4.pf), method = "spearman")
+cor.test(Wang.veg.compare$Wang.GR.MAP, rev(GeoB9311.C4.pf), method = "spearman")
 #S = 24, p-value = 0.05759
 #      rho 
 #0.7142857
-cor.test(Wang.veg$Wang.SV.MAP, rev(GeoB9311.SV.pf), method = "spearman")
+cor.test(Wang.veg.compare$Wang.SV.MAP, rev(GeoB9311.SV.pf), method = "spearman")
 #S = 32, p-value = 0.115
 #rho 
 #0.6190476 
-cor.test(Wang.veg$Wang.RF.MAP, rev(GeoB9311.forest.pf), method = "spearman")
+cor.test(Wang.veg.compare$Wang.RF.MAP, rev(GeoB9311.forest.pf), method = "spearman")
 #S = 116, p-value = 0.3599
 #       rho 
 #-0.3809524
 
-cor.test(Wang.veg$Wang.GR.MAP, rev(GeoB9311.C4.pf), method = "kendall")
+cor.test(Wang.veg.compare$Wang.GR.MAP, rev(GeoB9311.C4.pf), method = "kendall")
 #T = 22, p-value = 0.06101
 #      tau 
 #0.5714286  
-cor.test(Wang.veg$Wang.SV.MAP, rev(GeoB9311.SV.pf), method = "kendall")
+cor.test(Wang.veg.compare$Wang.SV.MAP, rev(GeoB9311.SV.pf), method = "kendall")
 #T = 20, p-value = 0.1789
 #      tau 
 #0.4285714
-cor.test(Wang.veg$Wang.RF.MAP, rev(GeoB9311.forest.pf), method = "kendall")
+cor.test(Wang.veg.compare$Wang.RF.MAP, rev(GeoB9311.forest.pf), method = "kendall")
 #T = 10, p-value = 0.3988
 #       tau 
 #-0.2857143

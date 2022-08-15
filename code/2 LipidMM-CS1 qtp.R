@@ -125,7 +125,7 @@ QHS13_5S.mix$BUGSoutput$summary[1:3,]
 #traceplots
 traplot(QHS13_5S.mix, parms = "FLMC")
 
-#save(QHS13_5S.mix, file = "out/QHS13_5S_results.RData")
+save(QHS13_5S.mix, file = "out/QHS13_5S_results.RData")
 
 ####Second data point: Liu et al. 2015 QHS13-07S######
 
@@ -166,7 +166,7 @@ QHS13_7S.mix$BUGSoutput$summary[1:3,]
 #traceplots
 traplot(QHS13_7S.mix, parms = "FLMC")
 
-#save(QHS13_7S.mix, file = "out/QHS13_7S_results.RData")
+save(QHS13_7S.mix, file = "out/QHS13_7S_results.RData")
 
 ####third data point: Liu et al. 2015 QHS13-09S######
 
@@ -208,12 +208,12 @@ QHS13_9S.mix$BUGSoutput$summary[1:3,]
 #traceplots
 traplot(QHS13_9S.mix, parms = "FLMC")
 
-#save(QHS13_9S.mix, file = "out/QHS13_9S_results.RData")
+save(QHS13_9S.mix, file = "out/QHS13_9S_results.RData")
 
 #### MAPs, medians, and 89% HDIs ####
-#load("out/QHS13_5S_results.RData")
-#load("out/QHS13_7S_results.RData")
-#load("out/QHS13_9S_results.RData")
+load("out/QHS13_5S_results.RData")
+load("out/QHS13_7S_results.RData")
+load("out/QHS13_9S_results.RData")
 
 QHS13_5S.ter.map <- map_estimate(QHS13_5S.mix$BUGSoutput$sims.list$FLMC[,1], method = "KernSmooth")
 QHS13_5S.ter.median <- median(QHS13_5S.mix$BUGSoutput$sims.list$FLMC[,1])

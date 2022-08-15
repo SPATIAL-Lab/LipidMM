@@ -5,16 +5,15 @@ library(MASS)
 library(viridisLite)
 library(EnvStats)
 library(bayestestR)
-library(dplyr)
-library(palinsol)
+library(rbacon)
 
 plot.col<-viridis(7)
 
 source("code/1 LipidMM-helper functions.R")
 
-###CS1 QTP mixing####
+###CS1 QTP mixing###
 
-###CS1 QTP d13C prior distribution#####
+###CS1 QTP d13C prior distribution###
 #calculate prior densities by using the helper function "pri.multi.norm.den"
 QTP.d13C.prior.ter<-pri.multi.norm.den(-45,-5,QTP.d13C.mu[1,],QTP.d13C.vcov[1:3,1:3])
 QTP.d13C.prior.mac<-pri.multi.norm.den(-45,-5,QTP.d13C.mu[2,],QTP.d13C.vcov[4:6,1:3])
@@ -95,12 +94,194 @@ lines(QTP.conc.prior.alg$x,QTP.conc.prior.alg$y[3,], col = "blue", lwd = 2)
 #use log scale axes
 axis(2,c(0,2.5))
 axis(1,log(c(0.01,0.1,1,10,100,1000,10000)))
+#####End of Figure 2######
 
-###CS1 QTP results: mixing ratios####
+######CS2 Western Africa transect###
+
+###CS2 n-alkane d13C prior distributions###
+#calculate prior densities by using the helper function "pri.multi.norm.den"
+Afr.d13C.prior.GR<-pri.multi.norm.den(-50,-15,Afr.d13C.mu[1,],Afr.d13C.vcov[1:3,1:3])
+Afr.d13C.prior.SV<-pri.multi.norm.den(-50,-15,Afr.d13C.mu[2,],Afr.d13C.vcov[4:6,1:3])
+Afr.d13C.prior.RF<-pri.multi.norm.den(-50,-15,Afr.d13C.mu[3,],Afr.d13C.vcov[7:9,1:3])
+
+#histograms are empirical distributions, blue lines are parameterized distributions
+#####Figure 3######
+par(mfrow=c(3,3)) #900*800
+#C4 grasses 
+hist(GR$d.n.C29, xlim = c(-50,-15),freq = F,breaks=11, ylim = c(0,0.3), main = "C4 n-C29 d13C")
+lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y[1,], col = "blue", lwd = 2)
+
+hist(GR$d.n.C31, xlim = c(-50,-15),freq = F,breaks=11, ylim = c(0,0.3), main = "C4 n-C31 d13C")
+lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y[2,], col = "blue", lwd = 2)
+
+hist(GR$d.n.C33, xlim = c(-50,-15),freq = F,breaks=11, ylim = c(0,0.3), main = "C4 n-C33 d13C")
+lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y[3,], col = "blue", lwd = 2)
+
+#savanna C3 plants
+hist(SV$d.n.C29, xlim = c(-50,-15),freq = F,breaks=11, ylim = c(0,0.3), main = "SV n-C29 d13C")
+lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y[1,], col = "blue", lwd = 2)
+
+hist(SV$d.n.C31, xlim = c(-50,-15),freq = F,breaks=11, ylim = c(0,0.3), main = "SV n-C31 d13C")
+lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y[2,], col = "blue", lwd = 2)
+
+hist(SV$d.n.C33, xlim = c(-50,-15),freq = F,breaks=11, ylim = c(0,0.3), main = "SV n-C33 d13C")
+lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y[3,], col = "blue", lwd = 2)
+
+#Rainforest plants
+hist(RF$d.n.C29, xlim = c(-50,-15),freq = F,breaks=11, ylim = c(0,0.3), main = "RF n-C29 d13C")
+lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y[1,], col = "blue", lwd = 2)
+
+hist(RF$d.n.C31, xlim = c(-50,-15),freq = F,breaks=11, ylim = c(0,0.3), main = "RF n-C31 d13C")
+lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y[2,], col = "blue", lwd = 2)
+
+hist(RF$d.n.C33, xlim = c(-50,-15),freq = F,breaks=11, ylim = c(0,0.3), main = "RF n-C33 d13C")
+lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y[3,], col = "blue", lwd = 2)
+
+###CS2 n-alkane concentration prior distributions###
+Afr.conc.prior.GR<-pri.multi.norm.den(-4,13,Afr.conc.mu[1,],Afr.conc.vcov[1:3,1:3])
+Afr.conc.prior.SV<-pri.multi.norm.den(-4,13,Afr.conc.mu[2,],Afr.conc.vcov[4:6,1:3])
+Afr.conc.prior.RF<-pri.multi.norm.den(-4,13,Afr.conc.mu[3,],Afr.conc.vcov[7:9,1:3])
+
+par(mfrow=c(3,3))
+hist(log(GR$c.n.C29), xlim = c(-4,13),freq = F,breaks=11, ylim = c(0,0.5), main = "n-C29 concentration")
+lines(Afr.conc.prior.GR$x,Afr.conc.prior.GR$y[1,], col = "blue", lwd = 2)
+
+hist(log(GR$c.n.C31), xlim = c(-4,13),freq = F,breaks=11, ylim = c(0,0.5), main = "n-C31 concentration")
+lines(Afr.conc.prior.GR$x,Afr.conc.prior.GR$y[2,], col = "blue", lwd = 2)
+
+hist(log(GR$c.n.C33), xlim = c(-4,13),freq = F,breaks=11, ylim = c(0,0.5), main = "n-C33 concentration")
+lines(Afr.conc.prior.GR$x,Afr.conc.prior.GR$y[3,], col = "blue", lwd = 2)
+
+hist(log(SV$c.n.C29), xlim = c(-4,13),freq = F,breaks=11, ylim = c(0,0.5), main = "n-C29 concentration")
+lines(Afr.conc.prior.SV$x,Afr.conc.prior.SV$y[1,], col = "blue", lwd = 2)
+
+hist(log(SV$c.n.C31), xlim = c(-4,13),freq = F,breaks=11, ylim = c(0,0.5), main = "n-C31 concentration")
+lines(Afr.conc.prior.SV$x,Afr.conc.prior.SV$y[2,], col = "blue", lwd = 2)
+
+hist(log(SV$c.n.C33), xlim = c(-4,13),freq = F,breaks=11, ylim = c(0,0.5), main = "n-C33 concentration")
+lines(Afr.conc.prior.SV$x,Afr.conc.prior.SV$y[3,], col = "blue", lwd = 2)
+
+hist(log(RF$c.n.C29), xlim = c(-4,13),freq = F,breaks=11, ylim = c(0,0.5), main = "n-C29 concentration")
+lines(Afr.conc.prior.RF$x,Afr.conc.prior.RF$y[1,], col = "blue", lwd = 2)
+
+hist(log(RF$c.n.C31), xlim = c(-4,13),freq = F,breaks=11, ylim = c(0,0.5), main = "n-C31 concentration")
+lines(Afr.conc.prior.RF$x,Afr.conc.prior.RF$y[2,], col = "blue", lwd = 2)
+
+hist(log(RF$c.n.C33), xlim = c(-4,13),freq = F,breaks=11, ylim = c(0,0.5), 
+     main = "n-C33 concentration", axes=F)
+lines(Afr.conc.prior.RF$x,Afr.conc.prior.RF$y[3,], col = "blue", lwd = 2)
+#use log scale axes
+axis(2,c(0,0.5))
+axis(1,log(c(0.01,0.1,1,10,100,1e3,1e4,1e5)))
+#####End of Figure 3######
+
+###sensitivity test1: different priors###
+
+###prior2: w.aftrica distributions###
+#####Figure 4######
+#use the same functions to calculate prior densities
+#concentration
+W.conc.prior.GR<-pri.multi.norm.den(-4,13,W.conc.mu[1,],W.conc.vcov[1:3,1:3])
+W.conc.prior.SV<-pri.multi.norm.den(-4,13,W.conc.mu[2,],W.conc.vcov[4:6,1:3])
+W.conc.prior.RF<-pri.multi.norm.den(-4,13,W.conc.mu[3,],W.conc.vcov[7:9,1:3])
+
+#comparing two priors
+#default prior is blue
+#western Africa only prior is red
+par(mfrow=c(3,3))
+plot(W.conc.prior.GR$x,W.conc.prior.GR$y[1,], type = "l", lwd=2, col = "red",
+     xlim = c(-4,13), ylim = c(0,0.4), main = "n-C29 concentration")
+lines(Afr.conc.prior.GR$x,Afr.conc.prior.GR$y[1,], col = "blue", lwd = 1)
+
+plot(W.conc.prior.GR$x,W.conc.prior.GR$y[2,], type = "l", lwd=2, col = "red",
+     xlim = c(-4,13), ylim = c(0,0.4), main = "n-C31 concentration")
+lines(Afr.conc.prior.GR$x,Afr.conc.prior.GR$y[2,], col = "blue", lwd = 1)
+
+plot(W.conc.prior.GR$x,W.conc.prior.GR$y[3,], type = "l", lwd=2, col = "red",
+     xlim = c(-4,13),ylim = c(0,0.4), main = "n-C33 concentration")
+lines(Afr.conc.prior.GR$x,Afr.conc.prior.GR$y[3,], col = "blue", lwd = 1)
+
+plot(W.conc.prior.SV$x,W.conc.prior.SV$y[1,], type = "l", lwd=2, col = "red",
+     xlim = c(-4,13),ylim = c(0,0.3), main = "n-C29 concentration")
+lines(Afr.conc.prior.SV$x,Afr.conc.prior.SV$y[1,], col = "blue", lwd = 1)
+
+plot(W.conc.prior.SV$x,W.conc.prior.SV$y[2,], type = "l", lwd=2, col = "red",
+     xlim = c(-4,13),ylim = c(0,0.3), main = "n-C31 concentration")
+lines(Afr.conc.prior.SV$x,Afr.conc.prior.SV$y[2,], col = "blue", lwd = 1)
+
+plot(W.conc.prior.SV$x,W.conc.prior.SV$y[3,], type = "l", lwd=2, col = "red",
+     xlim = c(-4,13),ylim = c(0,0.3), main = "n-C33 concentration")
+lines(Afr.conc.prior.SV$x,Afr.conc.prior.SV$y[3,], col = "blue", lwd = 1)
+
+plot(W.conc.prior.RF$x,W.conc.prior.RF$y[1,], type = "l", lwd=2, col = "red",
+     xlim = c(-4,13),ylim = c(0,0.3), main = "n-C29 concentration")
+lines(Afr.conc.prior.RF$x,Afr.conc.prior.RF$y[1,], col = "blue", lwd = 1)
+
+plot(W.conc.prior.RF$x,W.conc.prior.RF$y[2,], type = "l", lwd=2, col = "red",
+     xlim = c(-4,13),ylim = c(0,0.3), main = "n-C31 concentration")
+lines(Afr.conc.prior.RF$x,Afr.conc.prior.RF$y[2,], col = "blue", lwd = 1)
+
+plot(W.conc.prior.RF$x,W.conc.prior.RF$y[3,], type = "l", lwd=2, col = "red",
+     xlim = c(-4,13),ylim = c(0,0.3), main = "n-C33 concentration", axes=F)
+lines(Afr.conc.prior.RF$x,Afr.conc.prior.RF$y[3,], col = "blue", lwd = 1)
+#log-scale axis
+axis(2,c(0,0.3))
+axis(1,log(c(0.01,0.1,1,10,100,1e3,1e4,1e5)))
+
+#d13C
+W.d13C.prior.GR<-pri.multi.norm.den(-50,-15,W.d13C.mu[1,],W.d13C.vcov[1:3,1:3])
+W.d13C.prior.SV<-pri.multi.norm.den(-50,-15,W.d13C.mu[2,],W.d13C.vcov[4:6,1:3])
+W.d13C.prior.RF<-pri.multi.norm.den(-50,-15,W.d13C.mu[3,],W.d13C.vcov[7:9,1:3])
+
+#comparing two priors
+#default prior is blue
+#western Africa only prior is red
+par(mfrow=c(3,3)) #900*800
+#C4 grasses 
+plot(W.d13C.prior.GR$x,W.d13C.prior.GR$y[1,], type = "l", lwd=2, col = "red",
+     xlim = c(-50,-15), ylim = c(0,0.3), main = "C4 n-C29 d13C")
+lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y[1,], col = "blue", lwd = 1)
+
+plot(W.d13C.prior.GR$x,W.d13C.prior.GR$y[2,], type = "l", lwd=2, col = "red",
+     xlim = c(-50,-15),ylim = c(0,0.3), main = "C4 n-C31 d13C")
+lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y[2,], col = "blue", lwd = 1)
+
+plot(W.d13C.prior.GR$x,W.d13C.prior.GR$y[3,], type = "l", lwd=2, col = "red",
+     xlim = c(-50,-15), ylim = c(0,0.3), main = "C4 n-C33 d13C")
+lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y[3,], col = "blue", lwd = 1)
+
+#savanna C3 plants
+plot(W.d13C.prior.SV$x,W.d13C.prior.SV$y[1,], type = "l", lwd=2, col = "red",
+     xlim = c(-50,-15),ylim = c(0,0.3), main = "SV n-C29 d13C")
+lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y[1,], col = "blue", lwd = 1)
+
+plot(W.d13C.prior.SV$x,W.d13C.prior.SV$y[2,], type = "l", lwd=2, col = "red",
+     xlim = c(-50,-15), ylim = c(0,0.3), main = "SV n-C31 d13C")
+lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y[2,], col = "blue", lwd = 1)
+
+plot(W.d13C.prior.SV$x,W.d13C.prior.SV$y[3,], type = "l", lwd=2, col = "red",
+     xlim = c(-50,-15), ylim = c(0,0.3), main = "SV n-C33 d13C")
+lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y[3,], col = "blue", lwd = 1)
+
+#Rainforest plants
+plot(W.d13C.prior.RF$x,W.d13C.prior.RF$y[1,], type = "l", lwd=2, col = "red",
+     xlim = c(-50,-15),ylim = c(0,0.3), main = "RF n-C29 d13C")
+lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y[1,], col = "blue", lwd = 1)
+
+plot(W.d13C.prior.RF$x,W.d13C.prior.RF$y[2,], type = "l", lwd=2, col = "red",
+     xlim = c(-50,-15),ylim = c(0,0.3), main = "RF n-C31 d13C")
+lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y[2,], col = "blue", lwd = 1)
+
+plot(W.d13C.prior.RF$x,W.d13C.prior.RF$y[3,], type = "l", lwd=2, col = "red",
+     xlim = c(-50,-15), ylim = c(0,0.3), main = "RF n-C33 d13C")
+lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y[3,], col = "blue", lwd = 1)
+#####End of Figure 4######
+
+###CS1 QTP results: mixing ratios###
 #run the corresponding code in the CS1 file
-#load("out/QHS13_5S_results.RData")
-#load("out/QHS13_7S_results.RData")
-#load("out/QHS13_9S_results.RData")
+load("out/QHS13_5S_results.RData")
+load("out/QHS13_7S_results.RData")
+load("out/QHS13_9S_results.RData")
 
 #####Figure 5######
 par(mfrow=c(3,3)) #800*800
@@ -172,6 +353,7 @@ lines(density(QHS13_9S.mix$BUGSoutput$sims.list$FLMC[,3], kernel = "gaussian", f
       col = plot.col[2], lwd = 2)
 legend(0.6, 8, c("Terrestrial","Macrophyte","Algae"),lwd = c(2, 2, 2),
        col = plot.col[c(6, 4, 2)])
+#####End of Figure 5######
 
 ######CS1 QTP Bivariate density plots####
 #####Figure 6######
@@ -211,6 +393,7 @@ contour(QHS13_7S.countours[[6]], lwd = 0.6, add = TRUE, labcex = 0.5)
 
 image(QHS13_9S.countours[[6]],col=viridis(64),xlab="FLMC macrophyte",ylab="FLMC algae")
 contour(QHS13_9S.countours[[6]], lwd = 0.6, add = TRUE, labcex = 0.5)
+#####End of Figure 6######
 
 ###CS1 QTP chain specific mixing ratios####
 #####Figure 7######
@@ -270,91 +453,14 @@ lines(density(QHS13_9S.FSC[,2,3],from=0,to=1),lwd=2,col=plot.col[4])
 lines(density(QHS13_9S.FSC[,3,3],from=0,to=1),lwd=2,col=plot.col[2])
 legend(0.3,30,c("Terrestrial","Macrophyte","Algae"),lwd=c(2,2,2),
        col=c(plot.col[c(6,4,2)]))
+#####End of Figure 7######
 
 ######CS2 Western Africa transect####
-
-###CS2 n-alkane d13C prior distributions####
-#calculate prior densities by using the helper function "pri.multi.norm.den"
-Afr.d13C.prior.GR<-pri.multi.norm.den(-50,-15,Afr.d13C.mu[1,],Afr.d13C.vcov[1:3,1:3])
-Afr.d13C.prior.SV<-pri.multi.norm.den(-50,-15,Afr.d13C.mu[2,],Afr.d13C.vcov[4:6,1:3])
-Afr.d13C.prior.RF<-pri.multi.norm.den(-50,-15,Afr.d13C.mu[3,],Afr.d13C.vcov[7:9,1:3])
-
-#histograms are empirical distributions, blue lines are parameterized distributions
-#####Figure 3######
-par(mfrow=c(3,3)) #900*800
-#C4 grasses 
-hist(GR$d.n.C29, xlim = c(-50,-15),freq = F,breaks=11, ylim = c(0,0.3), main = "C4 n-C29 d13C")
-lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y1, col = "blue", lwd = 2)
-
-hist(GR$d.n.C31, xlim = c(-50,-15),freq = F,breaks=11, ylim = c(0,0.3), main = "C4 n-C31 d13C")
-lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y2, col = "blue", lwd = 2)
-
-hist(GR$d.n.C33, xlim = c(-50,-15),freq = F,breaks=11, ylim = c(0,0.3), main = "C4 n-C33 d13C")
-lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y3, col = "blue", lwd = 2)
-
-#savanna C3 plants
-hist(SV$d.n.C29, xlim = c(-50,-15),freq = F,breaks=11, ylim = c(0,0.3), main = "SV n-C29 d13C")
-lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y1, col = "blue", lwd = 2)
-
-hist(SV$d.n.C31, xlim = c(-50,-15),freq = F,breaks=11, ylim = c(0,0.3), main = "SV n-C31 d13C")
-lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y2, col = "blue", lwd = 2)
-
-hist(SV$d.n.C33, xlim = c(-50,-15),freq = F,breaks=11, ylim = c(0,0.3), main = "SV n-C33 d13C")
-lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y3, col = "blue", lwd = 2)
-
-#Rainforest plants
-hist(RF$d.n.C29, xlim = c(-50,-15),freq = F,breaks=11, ylim = c(0,0.3), main = "RF n-C29 d13C")
-lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y1, col = "blue", lwd = 2)
-
-hist(RF$d.n.C31, xlim = c(-50,-15),freq = F,breaks=11, ylim = c(0,0.3), main = "RF n-C31 d13C")
-lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y2, col = "blue", lwd = 2)
-
-hist(RF$d.n.C33, xlim = c(-50,-15),freq = F,breaks=11, ylim = c(0,0.3), main = "RF n-C33 d13C")
-lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y3, col = "blue", lwd = 2)
-
-
-###CS2 n-alkane concentration prior distributions####
-Afr.conc.prior.GR<-pri.multi.norm.den(-4,13,Afr.conc.mu[1,],Afr.conc.vcov[1:3,1:3])
-Afr.conc.prior.SV<-pri.multi.norm.den(-4,13,Afr.conc.mu[2,],Afr.conc.vcov[4:6,1:3])
-Afr.conc.prior.RF<-pri.multi.norm.den(-4,13,Afr.conc.mu[3,],Afr.conc.vcov[7:9,1:3])
-
-par(mfrow=c(3,3))
-hist(log(GR$c.n.C29), xlim = c(-4,13),freq = F,breaks=11, ylim = c(0,0.5), main = "n-C29 concentration")
-lines(Afr.conc.prior.GR$x,Afr.conc.prior.GR$y1, col = "blue", lwd = 2)
-
-hist(log(GR$c.n.C31), xlim = c(-4,13),freq = F,breaks=11, ylim = c(0,0.5), main = "n-C31 concentration")
-lines(Afr.conc.prior.GR$x,Afr.conc.prior.GR$y2, col = "blue", lwd = 2)
-
-hist(log(GR$c.n.C33), xlim = c(-4,13),freq = F,breaks=11, ylim = c(0,0.5), main = "n-C33 concentration")
-lines(Afr.conc.prior.GR$x,Afr.conc.prior.GR$y3, col = "blue", lwd = 2)
-
-hist(log(SV$c.n.C29), xlim = c(-4,13),freq = F,breaks=11, ylim = c(0,0.5), main = "n-C29 concentration")
-lines(Afr.conc.prior.SV$x,Afr.conc.prior.SV$y1, col = "blue", lwd = 2)
-
-hist(log(SV$c.n.C31), xlim = c(-4,13),freq = F,breaks=11, ylim = c(0,0.5), main = "n-C31 concentration")
-lines(Afr.conc.prior.SV$x,Afr.conc.prior.SV$y2, col = "blue", lwd = 2)
-
-hist(log(SV$c.n.C33), xlim = c(-4,13),freq = F,breaks=11, ylim = c(0,0.5), main = "n-C33 concentration")
-lines(Afr.conc.prior.SV$x,Afr.conc.prior.SV$y3, col = "blue", lwd = 2)
-
-hist(log(RF$c.n.C29), xlim = c(-4,13),freq = F,breaks=11, ylim = c(0,0.5), main = "n-C29 concentration")
-lines(Afr.conc.prior.RF$x,Afr.conc.prior.RF$y1, col = "blue", lwd = 2)
-
-hist(log(RF$c.n.C31), xlim = c(-4,13),freq = F,breaks=11, ylim = c(0,0.5), main = "n-C31 concentration")
-lines(Afr.conc.prior.RF$x,Afr.conc.prior.RF$y2, col = "blue", lwd = 2)
-
-hist(log(RF$c.n.C33), xlim = c(-4,13),freq = F,breaks=11, ylim = c(0,0.5), 
-     main = "n-C33 concentration", axes=F)
-lines(Afr.conc.prior.RF$x,Afr.conc.prior.RF$y3, col = "blue", lwd = 2)
-#use log scale axes
-axis(2,c(0,0.5))
-axis(1,log(c(0.01,0.1,1,10,100,1e3,1e4,1e5)))
-
 ###CS2 mixing results####
 #run the corresponding code in the CS2 file
-#load("out/rhum_l_results.RData")
-#load("out/asso_l_results.RData")
-#load("out/baro_l_results.RData")
+load("out/rhum_l_results.RData")
+load("out/asso_l_results.RData")
+load("out/baro_l_results.RData")
 
 #####Figure 8######
 #bar plots for relative abundance
@@ -413,6 +519,7 @@ lines(density(baro.l.mix$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),lwd=2,col = 
 lines(density(baro.l.mix$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),lwd=2,col = plot.col[2])
 legend(0.4,8,c("C4","Savanna C3","RF C3"),lwd=c(2,2,2),
        col=plot.col[c(6,4,2)])
+#####End of Figure 8######
 
 ######CS2 Bivariate density plots####
 #####Figure 9######
@@ -452,6 +559,7 @@ contour(asso.l.countours[[6]], lwd = 0.6, add = TRUE, labcex = 0.5)
 
 image(baro.l.countours[[6]],col=viridis(64),xlab="FLMC SV C3",ylab="FLMC RF C3")
 contour(baro.l.countours[[6]], lwd = 0.6, add = TRUE, labcex = 0.5)
+#####End of Figure 9######
 
 ###CS2: FSCns can be used to help to interpret d2H####
 #####Figure 10######
@@ -510,13 +618,34 @@ lines(density(baro.l.FSC[,2,3],from=0,to=1),lwd=2,col=plot.col[4])
 lines(density(baro.l.FSC[,3,3],from=0,to=1),lwd=2,col=plot.col[2])
 legend(0.3,15,c("C4","Savanna C3","RF C3"),lwd=c(2,2,2),
        col=c(plot.col[c(6,4,2)]))
+#####End of Figure 10######
 
-####CS3 Zambezi vegetation and d2H MAP estimation through time###
+####CS3 Zambezi vegetation and d2H MAP estimation through time####
+#Preparation: load eNd depth profile from van der Lubbe et al 2016
+eNd <- read.csv("data/EA-8 van der lubbe et al eNd.csv")
+
+#use rbacon to create an age depth model#
+require(rbacon)
+#age-depth model is based on raw data from van der Lubbe et al 2016 
+#data intake
+mydir <- "C:/Users/ydmag/Google Drive/U of U/Proxy project/LipidMM/data"
+#running the age-depth model with rbacon
+#by default, data will be deposited in the folder "/"
+#Bacon(coredir = mydir, core = "64PE304-80",d.max = 1100,cc = 2)
+
+#reading data from model output, with run = F
+#####!!!! note: the following line should be run separately !!!!###
+Bacon(coredir = mydir, core = "64PE304-80",d.max = 1100,cc = 2, run=FALSE)
+#enter "y" for both prompts
+###end of the Bacon run###
+
+vdL.age.a <- Bacon.hist(eNd$Depth.in.Core)
+vdL.age.median.ka <- vdL.age.a[,3]/1000 #use the median age for plotting in plots.R
 
 #######vegetation fraction through time, with 89% HDI####
 #####Figure 11######
 #panel A: FLMC of the sources 
-#par(mfrow=c(5,1))
+par(mfrow=c(3,1)) #3 panels for better visualization
 plot(Wang.veg$Wang.age, Wang.veg$Wang.RF.MAP, type = "l", ylim = c(0,1), xlim = c(0,35), 
      lwd = 2, col = plot.col[2], xlab ="Age (ka)", ylab = "FLMC", axes=F)
 lines(Wang.veg$Wang.age, Wang.veg$Wang.RF.hdiL, lty = 2, col = plot.col[2], lwd = 1.5)
@@ -574,143 +703,47 @@ plot(BIT$Age..ka.BP., BIT$BIT, type = "l", xlim = c(0,35), ylim = c(0,0.7),
 axis(2,c(0,0.1,0.2,0.3,0.4,0.5,0.6,0.7))
 
 ##panel F: plot epsilon Nd from van der Lubbe et al 2016#
+
 plot(vdL.age.median.ka, eNd$Nd, type = "l", xlim = c(0,35), ylim = c(-13.0,-15.5),
      lwd = 1.5, col = "darkgray", xlab ="Age (ka)", ylab = "eNd", axes=F)
 PlotPE(vdL.age.median.ka, eNd$Nd, eNd$err, col = "darkgray")
 #points(vdL.age.median.ka, eNd$Nd, pch = 16, col = "darkgray")
 axis(4,c(-13.0,-13.5,-14,-14.5,-15,-15.5))
 axis(1,c(0,5,10,15,20,25,30,35))
+#####End of Figure 11######
 
 #####CS3 MAP d2H estimation based on sedimentary record off the Zambezi River mouth####
 #####Figure 12######
 #maximum a posteriori 
 #####Comparing estimated MAP and d2H of n-alkanes#####
-par(mfrow=c(4,1))
+par(mfrow=c(2,1))
 #panel A: estimated MAP d2H
 plot(Wang.veg$Wang.age, Wang.veg$Wang.d2H_MAP.MAP, type = "l", ylim = c(-50,-20), xlim = c(0,35), 
-     lwd = 2, col = "blue", ylab = "Estimated MAP d2H IVC", axes=F)
+     lwd = 2, col = "blue", ylab = "Estimated MAP d2H IVC", axes=F, xlab = "")
 #with 89% HDI
 lines(Wang.veg$Wang.age, Wang.veg$Wang.d2H_MAP.hdiL, lty = 2, col = "blue", lwd = 1.5)
 lines(Wang.veg$Wang.age, Wang.veg$Wang.d2H_MAP.hdiH, lty = 2, col = "blue", lwd = 1.5)
-abline(v=15, lty = 2, lwd = 2)
+
 axis(2,c(-50,-40,-30,-20))
 axis(3,c(0,5,10,15,20,25,30,35))
 
 #panel B:
 #compared with n-alkane d2H (ice volume corrected) variation
 plot(Wang.veg$Wang.age, Wang.veg$Wang.d2H.C29.ivc, type = "l", xlim = c(0, 35), axes=F,
-     ylim = c(-165, -135), ylab= "n-alkane d2H IVC",col = plot.col[4], lwd = 2)
+     ylim = c(-165, -135), ylab= "n-alkane d2H IVC",col = plot.col[4], lwd = 2,
+     xlab = "Age ka")
 lines(Wang.veg$Wang.age, Wang.veg$Wang.d2H.C31.ivc, lwd =2, col = plot.col[6])
-abline(v=15, lty = 2, lwd = 2)
+
 legend(25,-135,c("n-C29","n-C31"),lwd=c(2,2), col=plot.col[c(4,6)])
 axis(4,c(-165,-155,-145,-135))
-
-###sensitivity test1: different priors####
-
-###prior2: w.aftrica distributions####
-#####Figure 4######
-#use the same functions to calculate prior densities
-#concentration
-W.conc.prior.GR<-pri.multi.norm.den(-4,13,W.conc.mu[1,],W.conc.vcov[1:3,1:3])
-W.conc.prior.SV<-pri.multi.norm.den(-4,13,W.conc.mu[2,],W.conc.vcov[4:6,1:3])
-W.conc.prior.RF<-pri.multi.norm.den(-4,13,W.conc.mu[3,],W.conc.vcov[7:9,1:3])
-
-#comparing two priors
-#default prior is blue
-#western Africa only prior is red
-par(mfrow=c(3,3))
-plot(W.conc.prior.GR$x,W.conc.prior.GR$y1, type = "l", lwd=2, col = "red",
-     xlim = c(-4,13), ylim = c(0,0.4), main = "n-C29 concentration")
-lines(Afr.conc.prior.GR$x,Afr.conc.prior.GR$y[1,], col = "blue", lwd = 1)
-
-plot(W.conc.prior.GR$x,W.conc.prior.GR$y2, type = "l", lwd=2, col = "red",
-     xlim = c(-4,13), ylim = c(0,0.4), main = "n-C31 concentration")
-lines(Afr.conc.prior.GR$x,Afr.conc.prior.GR$y[2,], col = "blue", lwd = 1)
-
-plot(W.conc.prior.GR$x,W.conc.prior.GR$y3, type = "l", lwd=2, col = "red",
-     xlim = c(-4,13),ylim = c(0,0.4), main = "n-C33 concentration")
-lines(Afr.conc.prior.GR$x,Afr.conc.prior.GR$y[3,], col = "blue", lwd = 1)
-
-plot(W.conc.prior.SV$x,W.conc.prior.SV$y1, type = "l", lwd=2, col = "red",
-     xlim = c(-4,13),ylim = c(0,0.3), main = "n-C29 concentration")
-lines(Afr.conc.prior.SV$x,Afr.conc.prior.SV$y[1,], col = "blue", lwd = 1)
-
-plot(W.conc.prior.SV$x,W.conc.prior.SV$y2, type = "l", lwd=2, col = "red",
-     xlim = c(-4,13),ylim = c(0,0.3), main = "n-C31 concentration")
-lines(Afr.conc.prior.SV$x,Afr.conc.prior.SV$y[2,], col = "blue", lwd = 1)
-
-plot(W.conc.prior.SV$x,W.conc.prior.SV$y3, type = "l", lwd=2, col = "red",
-     xlim = c(-4,13),ylim = c(0,0.3), main = "n-C33 concentration")
-lines(Afr.conc.prior.SV$x,Afr.conc.prior.SV$y[3,], col = "blue", lwd = 1)
-
-plot(W.conc.prior.RF$x,W.conc.prior.RF$y1, type = "l", lwd=2, col = "red",
-     xlim = c(-4,13),ylim = c(0,0.3), main = "n-C29 concentration")
-lines(Afr.conc.prior.RF$x,Afr.conc.prior.RF$y[1,], col = "blue", lwd = 1)
-
-plot(W.conc.prior.RF$x,W.conc.prior.RF$y2, type = "l", lwd=2, col = "red",
-     xlim = c(-4,13),ylim = c(0,0.3), main = "n-C31 concentration")
-lines(Afr.conc.prior.RF$x,Afr.conc.prior.RF$y[2,], col = "blue", lwd = 1)
-
-plot(W.conc.prior.RF$x,W.conc.prior.RF$y3, type = "l", lwd=2, col = "red",
-     xlim = c(-4,13),ylim = c(0,0.3), main = "n-C33 concentration", axes=F)
-lines(Afr.conc.prior.RF$x,Afr.conc.prior.RF$y[3,], col = "blue", lwd = 1)
-#log-scale axis
-axis(2,c(0,0.3))
-axis(1,log(c(0.01,0.1,1,10,100,1e3,1e4,1e5)))
-
-#d13C
-W.d13C.prior.GR<-pri.multi.norm.den(-50,-15,W.d13C.mu[1,],W.d13C.vcov[1:3,1:3])
-W.d13C.prior.SV<-pri.multi.norm.den(-50,-15,W.d13C.mu[2,],W.d13C.vcov[4:6,1:3])
-W.d13C.prior.RF<-pri.multi.norm.den(-50,-15,W.d13C.mu[3,],W.d13C.vcov[7:9,1:3])
-
-#comparing two priors
-#default prior is blue
-#western Africa only prior is red
-par(mfrow=c(3,3)) #900*800
-#C4 grasses 
-plot(W.d13C.prior.GR$x,W.d13C.prior.GR$y1, type = "l", lwd=2, col = "red",
-     xlim = c(-50,-15), ylim = c(0,0.3), main = "C4 n-C29 d13C")
-lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y1, col = "blue", lwd = 1)
-
-plot(W.d13C.prior.GR$x,W.d13C.prior.GR$y2, type = "l", lwd=2, col = "red",
-     xlim = c(-50,-15),ylim = c(0,0.3), main = "C4 n-C31 d13C")
-lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y2, col = "blue", lwd = 1)
-
-plot(W.d13C.prior.GR$x,W.d13C.prior.GR$y3, type = "l", lwd=2, col = "red",
-     xlim = c(-50,-15), ylim = c(0,0.3), main = "C4 n-C33 d13C")
-lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y3, col = "blue", lwd = 1)
-
-#savanna C3 plants
-plot(W.d13C.prior.SV$x,W.d13C.prior.SV$y1, type = "l", lwd=2, col = "red",
-     xlim = c(-50,-15),ylim = c(0,0.3), main = "SV n-C29 d13C")
-lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y1, col = "blue", lwd = 1)
-
-plot(W.d13C.prior.SV$x,W.d13C.prior.SV$y2, type = "l", lwd=2, col = "red",
-     xlim = c(-50,-15), ylim = c(0,0.3), main = "SV n-C31 d13C")
-lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y2, col = "blue", lwd = 1)
-
-plot(W.d13C.prior.SV$x,W.d13C.prior.SV$y3, type = "l", lwd=2, col = "red",
-     xlim = c(-50,-15), ylim = c(0,0.3), main = "SV n-C33 d13C")
-lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y3, col = "blue", lwd = 1)
-
-#Rainforest plants
-plot(W.d13C.prior.RF$x,W.d13C.prior.RF$y1, type = "l", lwd=2, col = "red",
-     xlim = c(-50,-15),ylim = c(0,0.3), main = "RF n-C29 d13C")
-lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y1, col = "blue", lwd = 1)
-
-plot(W.d13C.prior.RF$x,W.d13C.prior.RF$y2, type = "l", lwd=2, col = "red",
-     xlim = c(-50,-15),ylim = c(0,0.3), main = "RF n-C31 d13C")
-lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y2, col = "blue", lwd = 1)
-
-plot(W.d13C.prior.RF$x,W.d13C.prior.RF$y3, type = "l", lwd=2, col = "red",
-     xlim = c(-50,-15), ylim = c(0,0.3), main = "RF n-C33 d13C")
-lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y3, col = "blue", lwd = 1)
+axis(1,c(0,5,10,15,20,25,30,35))
+#####End of Figure 12######
 
 ###Sensitivity test1 vs CS2 mixing ratios####
 #run the corresponding code in the CS2 file
-#load("out/W_rhum_l_results.RData")
-#load("out/W_asso_l_results.RData")
-#load("out/W_baro_l_results.RData")
+load("out/W_rhum_l_results.RData")
+load("out/W_asso_l_results.RData")
+load("out/W_baro_l_results.RData")
 
 #####Figure 13######
 #comparing results using two priors
@@ -737,24 +770,19 @@ lines(density(baro.l.mix$BUGSoutput$sims.list$FLMC[,1],from=0,to=1),
 
 legend(0.6,8,c("Prior 1","Prior 2"),lwd=c(2,2),lty=c(2,1),
        col=plot.col[c(6,6)])
+#####End of Figure 13######
 
 ###Sensitivity test2: sensitivity to likelihood functions####
 #run the corresponding code in the CS2 file
-# load("out/rhum_l_test_a.RData")
-# load("out/asso_l_test_a.RData")
-# load("out/baro_l_test_a.RData")
-# load("out/rhum_l_test_b.RData")
-# load("out/asso_l_test_b.RData")
-# load("out/baro_l_test_b.RData")
-# load("out/rhum_l_test_c.RData")
-# load("out/asso_l_test_c.RData")
-# load("out/baro_l_test_c.RData")
-# load("out/rhum_l_test_d.RData")
-# load("out/asso_l_test_d.RData")
-# load("out/baro_l_test_d.RData")
+load("out/rhum_l_test_a.RData")
+load("out/asso_l_test_a.RData")
+load("out/baro_l_test_a.RData")
+load("out/rhum_l_test_c.RData")
+load("out/asso_l_test_c.RData")
+load("out/baro_l_test_c.RData")
 
 #plotting order
-#rows: test a|  test b|  default| test d| test c|
+#rows: test a|  default|  test c|
 #columns: sample
 #par(mfrow=c(3,5))#1200*600
 #####Figure 14######
@@ -808,8 +836,10 @@ lines(density(baro.l.test.c$BUGSoutput$sims.list$FLMC[,2],from=0,to=1),col=plot.
 lines(density(baro.l.test.c$BUGSoutput$sims.list$FLMC[,3],from=0,to=1),col=plot.col[2],lwd=2)
 legend(0.2,8,c("C4 Grass","C3 Savanna","C3 Forest"),lwd=c(2,2,2),
        col=plot.col[c(6,4,2)])
+#####End of Figure 14######
 
 #####Supplementary plots#####
+####Figure S1####
 #Q-Q plot of QTP sources#
 ####parameter estimates leaf wax concentration, log-normal distribution, 
 ##using the elnorm function in the EnvStat package
@@ -869,7 +899,9 @@ qqPlot(Alg$c.n.C29,distribution = "lnorm",
        param.list=list(mean=Alg.C29.mean,sd=Alg.C29.sd),add.line=T)
 qqPlot(Alg$c.n.C31,distribution = "lnorm",
        param.list=list(mean=Alg.C31.mean,sd=Alg.C31.sd),add.line=T)
+#####End of Figure S1######
 
+####Figure S2####
 #Q-Q plot of Afr sources#
 ####parameter estimates leaf wax concentration, log-normal distribution, 
 ##using the elnorm function in the EnvStat package
@@ -929,8 +961,10 @@ qqPlot(RF$c.n.C31,distribution = "lnorm",
        param.list=list(mean=RF.c.n.C31.mean,sd=RF.c.n.C31.sd),add.line=T)
 qqPlot(RF$c.n.C33,distribution = "lnorm",
        param.list=list(mean=RF.c.n.C33.mean,sd=RF.c.n.C33.sd),add.line=T)
+#####End of Figure S2######
 
 ###CS3 Zambezi####
+####Figure S3####
 ###prior distributions of epsilon####
 #calculate prior densities by using the helper function "pri.multi.norm.den"
 map_rec.epsilon.app.prior.GR<-pri.multi.norm.den(-230,-10,map_rec.epsilon.app.mu[1,],
@@ -991,180 +1025,190 @@ lines(map_rec.epsilon.app.prior.RF$x,map_rec.epsilon.app.prior.RF$y[3,], col = "
 hist(map_rec.RF$eC33.MAP_OIPC, xlim = c(-230,-10),freq = F,breaks=11, ylim = c(0,0.03), 
      main = "RF n-C33 epsilon")
 lines(map_rec.epsilon.app.prior.RF$x,map_rec.epsilon.app.prior.RF$y[4,], col = "blue", lwd = 2)
+#####End of Figure S3######
 
 ####CS1 QTP prior vs posterior density of n-alkane concentration###
+####Figure S4####
 #blue is prior, red is posterior
 par(mfrow=c(3,3)) #900*800
 plot(density(log(QHS13_5S.mix$BUGSoutput$sims.list$exp.conc_k[,,1,1])),
      col = "red", lwd = 2,type="l",main="n-C27 Terrestrial",xlim=c(-5,10),ylim=c(0,0.4))
-lines(QTP.conc.prior.ter$x,QTP.conc.prior.ter$y1, col = "blue", lwd = 1)
+lines(QTP.conc.prior.ter$x,QTP.conc.prior.ter$y[1,], col = "blue", lwd = 1)
 
 plot(density(log(QHS13_5S.mix$BUGSoutput$sims.list$exp.conc_k[,,1,2])),
      col = "red", lwd = 2,type="l",main="n-C29 Terrestrial",xlim=c(-5,10),ylim=c(0,0.4))
-lines(QTP.conc.prior.ter$x,QTP.conc.prior.ter$y2, col = "blue", lwd = 1)
+lines(QTP.conc.prior.ter$x,QTP.conc.prior.ter$y[2,], col = "blue", lwd = 1)
 
 plot(density(log(QHS13_5S.mix$BUGSoutput$sims.list$exp.conc_k[,,1,3])),
      col = "red", lwd = 2,type="l",main="n-C33 Terrestrial",xlim=c(-5,10),ylim=c(0,0.4))
-lines(QTP.conc.prior.ter$x,QTP.conc.prior.ter$y3, col = "blue", lwd = 1)
+lines(QTP.conc.prior.ter$x,QTP.conc.prior.ter$y[3,], col = "blue", lwd = 1)
 
 #macrophyte
 plot(density(log(QHS13_5S.mix$BUGSoutput$sims.list$exp.conc_k[,,2,1])),
      col = "red", lwd = 2,type="l",main="n-C27 Macrophyte",xlim=c(-5,10),ylim = c(0,0.5))
-lines(QTP.conc.prior.mac$x,QTP.conc.prior.mac$y1, col = "blue", lwd = 1)
+lines(QTP.conc.prior.mac$x,QTP.conc.prior.mac$y[1,], col = "blue", lwd = 1)
 
 plot(density(log(QHS13_5S.mix$BUGSoutput$sims.list$exp.conc_k[,,2,2])),
      col = "red", lwd = 2,type="l",main="n-C29 Macrophyte",xlim=c(-5,10),ylim = c(0,0.5))
-lines(QTP.conc.prior.mac$x,QTP.conc.prior.mac$y2, col = "blue", lwd = 1)
+lines(QTP.conc.prior.mac$x,QTP.conc.prior.mac$y[2,], col = "blue", lwd = 1)
 
 plot(density(log(QHS13_5S.mix$BUGSoutput$sims.list$exp.conc_k[,,2,3])),
      col = "red", lwd = 2,type="l",main="n-C31 Macrophyte",xlim=c(-5,10),ylim = c(0,0.5))
-lines(QTP.conc.prior.mac$x,QTP.conc.prior.mac$y3, col = "blue", lwd = 1)
+lines(QTP.conc.prior.mac$x,QTP.conc.prior.mac$y[3,], col = "blue", lwd = 1)
 
 #algae
 plot(density(log(QHS13_5S.mix$BUGSoutput$sims.list$exp.conc_k[,,3,1])),
      col = "red", lwd = 2,type="l",main="n-C27 Algae",xlim=c(-5,10),ylim = c(0,0.6))
-lines(QTP.conc.prior.alg$x,QTP.conc.prior.alg$y1, col = "blue", lwd = 1)
+lines(QTP.conc.prior.alg$x,QTP.conc.prior.alg$y[1,], col = "blue", lwd = 1)
 
 plot(density(log(QHS13_5S.mix$BUGSoutput$sims.list$exp.conc_k[,,3,2])),
      col = "red", lwd = 2,type="l",main="n-C29 Algae",xlim=c(-5,10),ylim = c(0,0.6))
-lines(QTP.conc.prior.alg$x,QTP.conc.prior.alg$y2, col = "blue", lwd = 1)
+lines(QTP.conc.prior.alg$x,QTP.conc.prior.alg$y[2,], col = "blue", lwd = 1)
 
 plot(density(log(QHS13_5S.mix$BUGSoutput$sims.list$exp.conc_k[,,3,3])),
      col = "red", lwd = 2,type="l",main="n-C31 Algae",xlim=c(-5,10),ylim = c(0,0.6),axes=F)
-lines(QTP.conc.prior.alg$x,QTP.conc.prior.alg$y3, col = "blue", lwd = 1)
-
+lines(QTP.conc.prior.alg$x,QTP.conc.prior.alg$y[3,], col = "blue", lwd = 1)
 #make a log-scale axis
 axis(2,c(0,0.6))
 axis(1,log(c(0.01,0.1,1,10,100,1000,10000)))
+#####End of Figure S4######
 
 #####CS1 QTP prior vs posterior density of n-alkane d13C###
+####Figure S5####
 #blue is prior, red is posterior
 plot(density(QHS13_5S.mix$BUGSoutput$sims.list$d13C.k[,,1,1]),
      col = "red", lwd = 2,type="l",main="n-C27 Terrestrial",xlim=c(-40,-10),ylim = c(0,0.4))
-lines(QTP.d13C.prior.ter$x,QTP.d13C.prior.ter$y1, col = "blue", lwd = 1)
+lines(QTP.d13C.prior.ter$x,QTP.d13C.prior.ter$y[1,], col = "blue", lwd = 1)
 
 plot(density(QHS13_5S.mix$BUGSoutput$sims.list$d13C.k[,,1,2]),
      col = "red", lwd = 2,type="l",main="n-C29 Terrestrial",xlim=c(-40,-10),ylim = c(0,0.4))
-lines(QTP.d13C.prior.ter$x,QTP.d13C.prior.ter$y2, col = "blue", lwd = 1)
+lines(QTP.d13C.prior.ter$x,QTP.d13C.prior.ter$y[2,], col = "blue", lwd = 1)
 
 plot(density(QHS13_5S.mix$BUGSoutput$sims.list$d13C.k[,,1,3]),
      col = "red", lwd = 2,type="l",main="n-C31 Terrestrial",xlim=c(-40,-10),ylim = c(0,0.4))
-lines(QTP.d13C.prior.ter$x,QTP.d13C.prior.ter$y3, col = "blue", lwd = 1)
+lines(QTP.d13C.prior.ter$x,QTP.d13C.prior.ter$y[3,], col = "blue", lwd = 1)
 
 plot(density(QHS13_5S.mix$BUGSoutput$sims.list$d13C.k[,,2,1]),
      col = "red", lwd = 2,type="l",main="n-C27 Macrophyte",xlim=c(-40,-10),ylim = c(0,0.12))
-lines(QTP.d13C.prior.mac$x,QTP.d13C.prior.mac$y1, col = "blue", lwd = 1)
+lines(QTP.d13C.prior.mac$x,QTP.d13C.prior.mac$y[1,], col = "blue", lwd = 1)
 
 plot(density(QHS13_5S.mix$BUGSoutput$sims.list$d13C.k[,,2,2]),
      col = "red", lwd = 2,type="l",main="n-C29 Macrophyte",xlim=c(-40,-10),ylim = c(0,0.12))
-lines(QTP.d13C.prior.mac$x,QTP.d13C.prior.mac$y2, col = "blue", lwd = 1)
+lines(QTP.d13C.prior.mac$x,QTP.d13C.prior.mac$y[2,], col = "blue", lwd = 1)
 
 plot(density(QHS13_5S.mix$BUGSoutput$sims.list$d13C.k[,,2,3]),
      col = "red", lwd = 2,type="l",main="n-C31 Macrophyte",xlim=c(-40,-10),ylim = c(0,0.12))
-lines(QTP.d13C.prior.mac$x,QTP.d13C.prior.mac$y3, col = "blue", lwd = 1)
+lines(QTP.d13C.prior.mac$x,QTP.d13C.prior.mac$y[3,], col = "blue", lwd = 1)
 
 plot(density(QHS13_5S.mix$BUGSoutput$sims.list$d13C.k[,,3,1]),
      col = "red", lwd = 2,type="l",main="n-C27 Algae",xlim=c(-40,-10),ylim = c(0,0.25))
-lines(QTP.d13C.prior.alg$x,QTP.d13C.prior.alg$y1, col = "blue", lwd = 1)
+lines(QTP.d13C.prior.alg$x,QTP.d13C.prior.alg$y[1,], col = "blue", lwd = 1)
 
 plot(density(QHS13_5S.mix$BUGSoutput$sims.list$d13C.k[,,3,2]),
      col = "red", lwd = 2,type="l",main="n-C29 Algae",xlim=c(-40,-10),ylim = c(0,0.25))
-lines(QTP.d13C.prior.alg$x,QTP.d13C.prior.alg$y2, col = "blue", lwd = 1)
+lines(QTP.d13C.prior.alg$x,QTP.d13C.prior.alg$y[2,], col = "blue", lwd = 1)
 
 plot(density(QHS13_5S.mix$BUGSoutput$sims.list$d13C.k[,,3,3]),
      col = "red", lwd = 2,type="l",main="n-C31 Algae",xlim=c(-40,-10),ylim = c(0,0.25))
-lines(QTP.d13C.prior.alg$x,QTP.d13C.prior.alg$y3, col = "blue", lwd = 1)
+lines(QTP.d13C.prior.alg$x,QTP.d13C.prior.alg$y[3,], col = "blue", lwd = 1)
+#####End of Figure S5######
 
 ###CS2: prior vs posterior density concentration####
+####Figure S6####
 #blue is prior, red is posterior
 par(mfrow=c(3,3)) #700*800
 plot(density(log(asso.l.mix$BUGSoutput$sims.list$exp.conc_k[,,1,1])),
      col = "red", lwd = 2,type="l",main="n-C29 C4",xlim=c(-4,13),ylim=c(0,0.4))
-lines(Afr.conc.prior.GR$x,Afr.conc.prior.GR$y1, col = "blue", lwd = 1)
+lines(Afr.conc.prior.GR$x,Afr.conc.prior.GR$y[1,], col = "blue", lwd = 1)
 
 plot(density(log(asso.l.mix$BUGSoutput$sims.list$exp.conc_k[,,1,2])),
      col = "red", lwd = 2,type="l",main="n-C31 C4",xlim=c(-4,13),ylim=c(0,0.4))
-lines(Afr.conc.prior.GR$x,Afr.conc.prior.GR$y2, col = "blue", lwd = 1)
+lines(Afr.conc.prior.GR$x,Afr.conc.prior.GR$y[2,], col = "blue", lwd = 1)
 
 plot(density(log(asso.l.mix$BUGSoutput$sims.list$exp.conc_k[,,1,3])),
      col = "red", lwd = 2,type="l",main="n-C33 C4",xlim=c(-4,13),ylim=c(0,0.4))
-lines(Afr.conc.prior.GR$x,Afr.conc.prior.GR$y3, col = "blue", lwd = 1)
+lines(Afr.conc.prior.GR$x,Afr.conc.prior.GR$y[3,], col = "blue", lwd = 1)
 
 #SV
 plot(density(log(asso.l.mix$BUGSoutput$sims.list$exp.conc_k[,,2,1])),
      col = "red", lwd = 2,type="l",main="n-C29 SV",xlim=c(-4,13),ylim = c(0,0.3))
-lines(Afr.conc.prior.SV$x,Afr.conc.prior.SV$y1, col = "blue", lwd = 1)
+lines(Afr.conc.prior.SV$x,Afr.conc.prior.SV$y[1,], col = "blue", lwd = 1)
 
 plot(density(log(asso.l.mix$BUGSoutput$sims.list$exp.conc_k[,,2,2])),
      col = "red", lwd = 2,type="l",main="n-C31 SV",xlim=c(-4,13),ylim = c(0,0.3))
-lines(Afr.conc.prior.SV$x,Afr.conc.prior.SV$y2, col = "blue", lwd = 1)
+lines(Afr.conc.prior.SV$x,Afr.conc.prior.SV$y[2,], col = "blue", lwd = 1)
 
 plot(density(log(asso.l.mix$BUGSoutput$sims.list$exp.conc_k[,,2,3])),
      col = "red", lwd = 2,type="l",main="n-C33 SV",xlim=c(-4,13),ylim = c(0,0.3))
-lines(Afr.conc.prior.SV$x,Afr.conc.prior.SV$y3, col = "blue", lwd = 1)
+lines(Afr.conc.prior.SV$x,Afr.conc.prior.SV$y[3,], col = "blue", lwd = 1)
 
 #RF
 plot(density(log(asso.l.mix$BUGSoutput$sims.list$exp.conc_k[,,3,1])),
      col = "red", lwd = 2,type="l",main="n-C29 RF",xlim=c(-4,13),ylim = c(0,0.3))
-lines(Afr.conc.prior.RF$x,Afr.conc.prior.RF$y1, col = "blue", lwd = 1)
+lines(Afr.conc.prior.RF$x,Afr.conc.prior.RF$y[1,], col = "blue", lwd = 1)
 
 plot(density(log(asso.l.mix$BUGSoutput$sims.list$exp.conc_k[,,3,2])),
      col = "red", lwd = 2,type="l",main="n-C31 RF",xlim=c(-4,13),ylim = c(0,0.3))
-lines(Afr.conc.prior.RF$x,Afr.conc.prior.RF$y2, col = "blue", lwd = 1)
+lines(Afr.conc.prior.RF$x,Afr.conc.prior.RF$y[2,], col = "blue", lwd = 1)
 
 plot(density(log(asso.l.mix$BUGSoutput$sims.list$exp.conc_k[,,3,3])),
      col = "red", lwd = 2,type="l",main="n-C33 RF",
      xlim=c(-4,13),ylim = c(0,0.3),axes=F)
-lines(Afr.conc.prior.RF$x,Afr.conc.prior.RF$y3, col = "blue", lwd = 1)
+lines(Afr.conc.prior.RF$x,Afr.conc.prior.RF$y[3,], col = "blue", lwd = 1)
 #log-scale axis
 axis(2,c(0,0.3))
 axis(1,log(c(0.01,0.1,1,10,100,1e3,1e4,1e5)))
+#####End of Figure S6######
 
 ###CS2: prior vs posterior density of d13C####
+####Figure S7####
 #blue is prior, red is posterior
 par(mfrow=c(3,3)) #700*800
 plot(density(asso.l.mix$BUGSoutput$sims.list$d13C.k[,,1,1]),
      col = "red", lwd = 2,type="l",main="n-C29 GR",xlim=c(-50,-15),ylim = c(0,0.25))
-lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y1, col = "blue", lwd = 1)
+lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y[1,], col = "blue", lwd = 1)
 
 plot(density(asso.l.mix$BUGSoutput$sims.list$d13C.k[,,1,2]),
      col = "red", lwd = 2,type="l",main="n-C31 GR",xlim=c(-50,-15),ylim = c(0,0.25))
-lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y2, col = "blue", lwd = 1)
+lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y[2,], col = "blue", lwd = 1)
 
 plot(density(asso.l.mix$BUGSoutput$sims.list$d13C.k[,,1,3]),
      col = "red", lwd = 2,type="l",main="n-C33 GR",xlim=c(-50,-15),ylim = c(0,0.25))
-lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y3, col = "blue", lwd = 1)
+lines(Afr.d13C.prior.GR$x,Afr.d13C.prior.GR$y[3,], col = "blue", lwd = 1)
 
 plot(density(asso.l.mix$BUGSoutput$sims.list$d13C.k[,,2,1]),
      col = "red", lwd = 2,type="l",main="n-C29 SV",xlim=c(-50,-15),ylim = c(0,0.25))
-lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y1, col = "blue", lwd = 1)
+lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y[1,], col = "blue", lwd = 1)
 
 plot(density(asso.l.mix$BUGSoutput$sims.list$d13C.k[,,2,2]),
      col = "red", lwd = 2,type="l",main="n-C31 SV",xlim=c(-50,-15),ylim = c(0,0.25))
-lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y2, col = "blue", lwd = 1)
+lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y[2,], col = "blue", lwd = 1)
 
 plot(density(asso.l.mix$BUGSoutput$sims.list$d13C.k[,,2,3]),
      col = "red", lwd = 2,type="l",main="n-C33 SV",xlim=c(-50,-15),ylim = c(0,0.25))
-lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y3, col = "blue", lwd = 1)
+lines(Afr.d13C.prior.SV$x,Afr.d13C.prior.SV$y[3,], col = "blue", lwd = 1)
 
 plot(density(asso.l.mix$BUGSoutput$sims.list$d13C.k[,,3,1]),
      col = "red", lwd = 2,type="l",main="n-C29 RF",xlim=c(-50,-15),ylim = c(0,0.25))
-lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y1, col = "blue", lwd = 1)
+lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y[1,], col = "blue", lwd = 1)
 
 plot(density(asso.l.mix$BUGSoutput$sims.list$d13C.k[,,3,2]),
      col = "red", lwd = 2,type="l",main="n-C31 RF",xlim=c(-50,-15),ylim = c(0,0.25))
-lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y2, col = "blue", lwd = 1)
+lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y[2,], col = "blue", lwd = 1)
 
 plot(density(asso.l.mix$BUGSoutput$sims.list$d13C.k[,,3,3]),
      col = "red", lwd = 2,type="l",main="n-C33 RF",xlim=c(-50,-15),ylim = c(0,0.25))
-lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y3, col = "blue", lwd = 1)
+lines(Afr.d13C.prior.RF$x,Afr.d13C.prior.RF$y[3,], col = "blue", lwd = 1)
+#####End of Figure S7######
 
 ####plotting GeoB9311 pollen record####
+####Figure S8####
 par(mfrow=c(1,1))
-plot(Wang.veg.compare$Wang.date, rev(GeoB9311.C4.pf), type = "l", ylim = c(0,0.8), xlim = c(0,35),
+plot(Wang.veg.compare$Wang.age, rev(GeoB9311.C4.pf), type = "l", ylim = c(0,0.8), xlim = c(0,35),
      col = plot.col[6], lwd = 2, xlab ="Age (ka)", ylab = "Pollen fraction")
 
-lines(Wang.veg.compare$Wang.date, rev(GeoB9311.SV.pf), col = plot.col[4], lwd = 2)
-lines(Wang.veg.compare$Wang.date, rev(GeoB9311.forest.pf), col = plot.col[2], lwd = 2)
+lines(Wang.veg.compare$Wang.age, rev(GeoB9311.SV.pf), col = plot.col[4], lwd = 2)
+lines(Wang.veg.compare$Wang.age, rev(GeoB9311.forest.pf), col = plot.col[2], lwd = 2)
 legend(20,0.8,c("Grasses & sedges","Woodland/Savanna","Forest, Afromontane & Swamp"),lwd=c(2,2,2),
        col=plot.col[c(6,4,2)])
+#####End of Figure S8######
