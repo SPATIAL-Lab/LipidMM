@@ -122,7 +122,7 @@ rhum.l.mix$BUGSoutput$summary[1:3,]
 #traceplots
 traplot(rhum.l.mix, parms = "FLMC")
 
-#save(rhum.l.mix, file = "out/rhum_l_results.RData")
+save(rhum.l.mix, file = "out/rhum_l_results.RData")
 
 ####second data point: Garcin et al. 2014 Asso lake
 
@@ -163,7 +163,7 @@ asso.l.mix$BUGSoutput$summary[1:3,]
 #traceplots
 traplot(asso.l.mix, parms = "FLMC")
 
-#save(asso.l.mix, file = "out/asso_l_results.RData")
+save(asso.l.mix, file = "out/asso_l_results.RData")
 
 ####third data point: Garcin et al. 2014 Baro lake
 
@@ -206,7 +206,7 @@ baro.l.mix$BUGSoutput$summary[1:3,]
 #traceplots
 traplot(baro.l.mix, parms = "FLMC")
 
-#save(baro.l.mix, file = "out/baro_l_results.RData")
+save(baro.l.mix, file = "out/baro_l_results.RData")
 
 #### MAPs, medians, and 89% HDIs ####
 
@@ -323,7 +323,7 @@ W.rhum.l.mix$BUGSoutput$summary[1:3,]
 #traceplots
 traplot(W.rhum.l.mix, parms = "FLMC")
 
-#save(W.rhum.l.mix, file = "out/W_rhum_l_results.RData")
+save(W.rhum.l.mix, file = "out/W_rhum_l_results.RData")
 
 ##data point 2: asso
 ##Data to pass to the model
@@ -354,7 +354,7 @@ W.asso.l.mix$BUGSoutput$summary[1:3,]
 #traceplots
 traplot(W.asso.l.mix, parms = "FLMC")
 
-#save(W.asso.l.mix, file = "out/W_asso_l_results.RData")
+save(W.asso.l.mix, file = "out/W_asso_l_results.RData")
 
 ##data point 3: baro
 ##Data to pass to the model
@@ -385,7 +385,7 @@ W.baro.l.mix$BUGSoutput$summary[1:3,]
 #traceplots
 traplot(W.baro.l.mix, parms = "FLMC")
 
-#save(W.baro.l.mix, file = "out/W_baro_l_results.RData")
+save(W.baro.l.mix, file = "out/W_baro_l_results.RData")
 
 ####test 2: sensitivity to proxy type (likelihood functions)####
 ### a) RA likelihood functions completely ignored
@@ -414,7 +414,7 @@ rhum.l.test.a$BUGSoutput$summary[1:3,]
 #traceplots
 traplot(rhum.l.test.a, parms = "FLMC")
 
-#save(rhum.l.test.a, file = "out/rhum_l_test_a.RData")
+save(rhum.l.test.a, file = "out/rhum_l_test_a.RData")
 
 ##data point 2: asso
 ##Data to pass to the model
@@ -441,7 +441,7 @@ asso.l.test.a$BUGSoutput$summary[1:3,]
 #traceplots
 traplot(asso.l.test.a, parms = "FLMC")
 
-#save(asso.l.test.a, file = "out/asso_l_test_a.RData")
+save(asso.l.test.a, file = "out/asso_l_test_a.RData")
 
 ##data point 3: baro
 ##Data to pass to the model
@@ -468,7 +468,7 @@ baro.l.test.a$BUGSoutput$summary[1:3,]
 #traceplots
 traplot(baro.l.test.a, parms = "FLMC")
 
-#save(baro.l.test.a, file = "out/baro_l_test_a.RData")
+save(baro.l.test.a, file = "out/baro_l_test_a.RData")
 
 ### c) d13C likelihood functions completely ignored
 
@@ -497,7 +497,7 @@ rhum.l.test.c$BUGSoutput$summary[1:3,]
 #traceplots
 traplot(rhum.l.test.c, parms = "FLMC")
 
-#save(rhum.l.test.c, file = "out/rhum_l_test_c.RData")
+save(rhum.l.test.c, file = "out/rhum_l_test_c.RData")
 
 ##data point 2: asso
 ##Data to pass to the model
@@ -524,7 +524,7 @@ asso.l.test.c$BUGSoutput$summary[1:3,]
 #traceplots
 traplot(asso.l.test.c, parms = "FLMC")
 
-#save(asso.l.test.c, file = "out/asso_l_test_c.RData")
+save(asso.l.test.c, file = "out/asso_l_test_c.RData")
 
 ##data point 3: baro
 ##Data to pass to the model
@@ -551,4 +551,4 @@ baro.l.test.c$BUGSoutput$summary[1:3,]
 #traceplots
 traplot(baro.l.test.c, parms = "FLMC")
 
-#save(baro.l.test.c, file = "out/baro_l_test_c.RData")
+save(baro.l.test.c, file = "out/baro_l_test_c.RData")

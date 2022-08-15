@@ -1,4 +1,4 @@
-## Ran on Mon Jun 27 16:44:46 2022 
+## Ran on Mon Aug 15 13:08:48 2022 
 
 Cal 0 : ConstCal;
 Cal 1 : IntCal20, 0;
@@ -31,4 +31,4 @@ Det 21 : KIA 43825 , 37740, 1035, 1071;
 Det 22 : NA , 37740, 37740000, 1100;
 
 ##		 K   MinAge   MaxAge   th0   th0p   w.a   w.b   alpha  beta  dmin  dmax seed
-Bacon 0: FixT, 110,  -72,  1e+06,  416,  531,  5,  5,  1.5,  0.03, 10, 1110, 281204;
+Bacon 0: FixT, 110,  -72,  1e+06,  458,  465,  5,  5,  1.5,  0.03, 10, 1110, 14092;
