@@ -14,7 +14,7 @@ All case studies use published data from the literature.
 The "data" folder consists of compiled empirical records of modern plant wax n-alkanes for the case studies. These records are used to inform the prior distributions used in the Bayesian framework. It also contains published data on the chronology and sedimentary sourcing patterns for interpretation of results in Case Study 3.
 
 ## Software requirements
-The code is developed calling the standalone JAGS (Just Another Gibbs Sampler) program, which is required before the code can be run. The JAGS program can be downloaded via [this link](https://sourceforge.net/projects/mcmc-jags/). Please make sure to download the version that is appropriate for your operating system.
+The code is developed in R calling the standalone JAGS (Just Another Gibbs Sampler) program, which is required before the code can be run. The JAGS program can be downloaded via [this link](https://sourceforge.net/projects/mcmc-jags/). Please make sure to download the version that is appropriate for your operating system.
 
 To call JAGS from RStudio, the R packages "rjags" and "R2jags" are also required.
 
