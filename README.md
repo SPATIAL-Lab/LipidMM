@@ -27,4 +27,4 @@ Other R packages specified in the file headers help to visualize data.
 in revision: Yang, D. and Bowen, G.J. Integrating plant wax abundance and isotopes for paleovegetation and paleoclimate reconstructions: A multi-source mixing model using a Bayesian framework. [Climate of the Past (preprint)](https://egusphere.copernicus.org/preprints/2022/egusphere-2022-23/).
 
 ## How to cite this software
-D. Yang (2022), LipidMM: A multi-source mixing model for plant wax lipids using a Bayesian framework. [https://github.com/SPATIAL-Lab/LipidMM/](https://github.com/SPATIAL-Lab/LipidMM/).
+Yang, D. (2022), LipidMM: A multi-source mixing model for plant wax lipids using a Bayesian framework. [https://github.com/SPATIAL-Lab/LipidMM/](https://github.com/SPATIAL-Lab/LipidMM/).
